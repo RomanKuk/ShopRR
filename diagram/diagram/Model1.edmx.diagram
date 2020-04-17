@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="16225cccef5049cbb31e8dce57215c6b" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="DBModel.Address" Width="1.5" PointX="4.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Basket" Width="1.5" PointX="11.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Brand" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Categories" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.City" Width="1.5" PointX="0.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Countries" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Customers" Width="1.5" PointX="7.375" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Employee" Width="1.5" PointX="10.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Goods" Width="1.5" PointX="0.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.GoodsShops" Width="1.5" PointX="6.5" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Makers" Width="1.5" PointX="2.625" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Profession" Width="1.5" PointX="12.375" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Sales" Width="1.5" PointX="9.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Shops" Width="1.5" PointX="4.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Transportation" Width="1.5" PointX="8.5" PointY="13.375" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.fk_Address_City_City_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Customers_Address_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Employee_Address_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Shops_Address_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Basket_GoodsShops_GoodsShops_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Basket_Sales_Sales_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Brand_Countries_Country_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Categories_Categories_SeniorCategory_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Goods_Categories_Category_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_City_Countries_Country_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Makers_Countries_Country_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Sales_Customers_Customer_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Employee_Profession_Profession_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Employee_Shops_Shop_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Sales_Employee_Employee_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Transportation_Employee_Employee_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Goods_Makers_Maker_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_GoodsShops_Goods_Good_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_GoodsShops_Shops_Shop_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Transportation_GoodsShops_GS_from_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Transportation_GoodsShops_GS_in_ID" ManuallyRouted="false" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

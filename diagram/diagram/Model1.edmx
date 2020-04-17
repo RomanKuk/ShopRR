@@ -1,0 +1,2216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Address_ID" />
+          </Key>
+          <Property Name="Address_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="City_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Basket">
+          <Key>
+            <PropertyRef Name="Basket_ID" />
+          </Key>
+          <Property Name="Basket_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GoodsShops_ID" Type="int" Nullable="false" />
+          <Property Name="Sales_ID" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="Brand_ID" />
+          </Key>
+          <Property Name="Brand_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Country_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BrandSC">
+          <Key>
+            <PropertyRef Name="SC_ID" />
+            <PropertyRef Name="Brand_ID" />
+          </Key>
+          <Property Name="SC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Brand_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Breakage">
+          <Key>
+            <PropertyRef Name="Breakage_ID" />
+          </Key>
+          <Property Name="Breakage_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Breakege" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="SeniorCategory_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="CategoriesSC">
+          <Key>
+            <PropertyRef Name="SC_ID" />
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="SC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="City_ID" />
+          </Key>
+          <Property Name="City_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Country_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="Country_ID" />
+          </Key>
+          <Property Name="Country_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Bonuses" Type="int" />
+          <Property Name="Address" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="Deliver_ID" />
+          </Key>
+          <Property Name="Deliver_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Good_ID" Type="int" Nullable="false" />
+          <Property Name="ProvideOrder_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Address" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="char" MaxLength="10" />
+          <Property Name="Profession_ID" Type="int" Nullable="false" />
+          <Property Name="HiringDate" Type="date" Nullable="false" />
+          <Property Name="Shop_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="EmployeeAccount">
+          <Key>
+            <PropertyRef Name="EmployeeAccount_ID" />
+          </Key>
+          <Property Name="EmployeeAccount_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginName" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Employee_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Goods">
+          <Key>
+            <PropertyRef Name="Good_ID" />
+          </Key>
+          <Property Name="Good_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Model" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Maker_ID" Type="int" Nullable="false" />
+          <Property Name="Category_ID" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="RevenuePrice" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="GuaranteePeriod" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GoodsShops">
+          <Key>
+            <PropertyRef Name="GoodsShops_ID" />
+          </Key>
+          <Property Name="GoodsShops_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Good_ID" Type="int" Nullable="false" />
+          <Property Name="Shop_ID" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Makers">
+          <Key>
+            <PropertyRef Name="Maker_ID" />
+          </Key>
+          <Property Name="Maker_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Country_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profession">
+          <Key>
+            <PropertyRef Name="Profession_ID" />
+          </Key>
+          <Property Name="Profession_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Salary" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Provide">
+          <Key>
+            <PropertyRef Name="Provide_ID" />
+          </Key>
+          <Property Name="Provide_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="ContactPerson" Type="varchar" MaxLength="25" />
+          <Property Name="Address" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="ProvideOrder">
+          <Key>
+            <PropertyRef Name="ProvideOrder_ID" />
+          </Key>
+          <Property Name="ProvideOrder_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="TotalCost" Type="int" Nullable="false" />
+          <Property Name="Provide_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Repair">
+          <Key>
+            <PropertyRef Name="Repair_ID" />
+          </Key>
+          <Property Name="Repair_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceTransportation_ID" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="varchar" MaxLength="50" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sales">
+          <Key>
+            <PropertyRef Name="Sales_ID" />
+          </Key>
+          <Property Name="Sales_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SalesCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Employee_ID" Type="int" Nullable="false" />
+          <Property Name="Customer_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Service_ID" />
+          </Key>
+          <Property Name="Service_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Breakage_ID" Type="int" Nullable="false" />
+          <Property Name="Status_ID" Type="int" Nullable="false" />
+          <Property Name="Basket_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiceCenter">
+          <Key>
+            <PropertyRef Name="SC_ID" />
+          </Key>
+          <Property Name="SC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiceTransportation">
+          <Key>
+            <PropertyRef Name="ServiceTransportation_ID" />
+          </Key>
+          <Property Name="ServiceTransportation_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Service_ID" Type="int" Nullable="false" />
+          <Property Name="SC_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Shipment">
+          <Key>
+            <PropertyRef Name="Shipment_ID" />
+          </Key>
+          <Property Name="Shipment_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Deliver_ID" Type="int" Nullable="false" />
+          <Property Name="GoodsShops_ID" Type="int" Nullable="false" />
+          <Property Name="Employee_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Shops">
+          <Key>
+            <PropertyRef Name="Shop_ID" />
+          </Key>
+          <Property Name="Shop_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Status_ID" />
+          </Key>
+          <Property Name="Status_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Transportation">
+          <Key>
+            <PropertyRef Name="Transportation_ID" />
+          </Key>
+          <Property Name="Transportation_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GS_from_ID" Type="int" Nullable="false" />
+          <Property Name="GS_in_ID" Type="int" Nullable="false" />
+          <Property Name="Employee_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_Address_City_City_ID">
+          <End Role="City" Type="Self.City" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="City_ID" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="City_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Basket_GoodsShops_GoodsShops_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Basket_Sales_Sales_ID">
+          <End Role="Sales" Type="Self.Sales" Multiplicity="1" />
+          <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sales">
+              <PropertyRef Name="Sales_ID" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="Sales_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Brand_Countries_Country_ID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Brand" Type="Self.Brand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Country_ID" />
+            </Principal>
+            <Dependent Role="Brand">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_BrandSC_Brand_Brand_ID">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="1" />
+          <End Role="BrandSC" Type="Self.BrandSC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="Brand_ID" />
+            </Principal>
+            <Dependent Role="BrandSC">
+              <PropertyRef Name="Brand_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_BrandSC_ServiceCenter_SC_ID">
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="1" />
+          <End Role="BrandSC" Type="Self.BrandSC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCenter">
+              <PropertyRef Name="SC_ID" />
+            </Principal>
+            <Dependent Role="BrandSC">
+              <PropertyRef Name="SC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Categories_Categories_SeniorCategory_ID">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Categories1" Type="Self.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="Categories1">
+              <PropertyRef Name="SeniorCategory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_CategoriesSC_Categories_Category_ID">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="CategoriesSC" Type="Self.CategoriesSC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="CategoriesSC">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_CategoriesSC_ServiceCenter_SC_ID">
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="1" />
+          <End Role="CategoriesSC" Type="Self.CategoriesSC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCenter">
+              <PropertyRef Name="SC_ID" />
+            </Principal>
+            <Dependent Role="CategoriesSC">
+              <PropertyRef Name="SC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_City_Countries_Country_ID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="City" Type="Self.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Country_ID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Customers_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Delivery_Goods_Good_ID">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Good_ID" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="Good_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Delivery_ProvideOrder_ProvideOrder_ID">
+          <End Role="ProvideOrder" Type="Self.ProvideOrder" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProvideOrder">
+              <PropertyRef Name="ProvideOrder_ID" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="ProvideOrder_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Profession_Profession_ID">
+          <End Role="Profession" Type="Self.Profession" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profession">
+              <PropertyRef Name="Profession_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Profession_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Shops_Shop_ID">
+          <End Role="Shops" Type="Self.Shops" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shops">
+              <PropertyRef Name="Shop_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Shop_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_EmployeeAccount_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="EmployeeAccount" Type="Self.EmployeeAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="EmployeeAccount">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Goods_Categories_Category_ID">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="Goods">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Goods_Makers_Maker_ID">
+          <End Role="Makers" Type="Self.Makers" Multiplicity="1" />
+          <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Makers">
+              <PropertyRef Name="Maker_ID" />
+            </Principal>
+            <Dependent Role="Goods">
+              <PropertyRef Name="Maker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_GoodsShops_Goods_Good_ID">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Good_ID" />
+            </Principal>
+            <Dependent Role="GoodsShops">
+              <PropertyRef Name="Good_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_GoodsShops_Shops_Shop_ID">
+          <End Role="Shops" Type="Self.Shops" Multiplicity="1" />
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shops">
+              <PropertyRef Name="Shop_ID" />
+            </Principal>
+            <Dependent Role="GoodsShops">
+              <PropertyRef Name="Shop_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Makers_Countries_Country_ID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Makers" Type="Self.Makers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Country_ID" />
+            </Principal>
+            <Dependent Role="Makers">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Provide_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Provide" Type="Self.Provide" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Provide">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ProvideOrder_Provide_Provide_ID">
+          <End Role="Provide" Type="Self.Provide" Multiplicity="1" />
+          <End Role="ProvideOrder" Type="Self.ProvideOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provide">
+              <PropertyRef Name="Provide_ID" />
+            </Principal>
+            <Dependent Role="ProvideOrder">
+              <PropertyRef Name="Provide_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Repair_ServiceTransportation_ServiceTransportation_ID">
+          <End Role="ServiceTransportation" Type="Self.ServiceTransportation" Multiplicity="1" />
+          <End Role="Repair" Type="Self.Repair" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceTransportation">
+              <PropertyRef Name="ServiceTransportation_ID" />
+            </Principal>
+            <Dependent Role="Repair">
+              <PropertyRef Name="ServiceTransportation_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sales_Customers_Customer_ID">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="Customer_ID" />
+            </Principal>
+            <Dependent Role="Sales">
+              <PropertyRef Name="Customer_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sales_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Sales">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Service_Basket_Basket_ID">
+          <End Role="Basket" Type="Self.Basket" Multiplicity="1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Basket">
+              <PropertyRef Name="Basket_ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="Basket_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Service_Breakage_Breakage_ID">
+          <End Role="Breakage" Type="Self.Breakage" Multiplicity="1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Breakage">
+              <PropertyRef Name="Breakage_ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="Breakage_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Service_Status_Status_ID">
+          <End Role="Status" Type="Self.Status" Multiplicity="1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="Status_ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="Status_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ServiceCenter_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="ServiceCenter">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ServiceTransportation_Service_Service_ID">
+          <End Role="Service" Type="Self.Service" Multiplicity="1" />
+          <End Role="ServiceTransportation" Type="Self.ServiceTransportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="Service_ID" />
+            </Principal>
+            <Dependent Role="ServiceTransportation">
+              <PropertyRef Name="Service_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ServiceTransportation_ServiceCenter_SC_ID">
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="1" />
+          <End Role="ServiceTransportation" Type="Self.ServiceTransportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCenter">
+              <PropertyRef Name="SC_ID" />
+            </Principal>
+            <Dependent Role="ServiceTransportation">
+              <PropertyRef Name="SC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipment_Delivery_Deliver_ID">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="1" />
+          <End Role="Shipment" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="Deliver_ID" />
+            </Principal>
+            <Dependent Role="Shipment">
+              <PropertyRef Name="Deliver_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipment_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Shipment" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Shipment">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipment_GoodsShops_GoodsShops_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Shipment" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Shipment">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shops_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Shops" Type="Self.Shops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Shops">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Transportation_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Transportation_GoodsShops_GS_from_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="GS_from_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Transportation_GoodsShops_GS_in_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="GS_in_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Basket" EntityType="Self.Basket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandSC" EntityType="Self.BrandSC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Breakage" EntityType="Self.Breakage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoriesSC" EntityType="Self.CategoriesSC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeAccount" EntityType="Self.EmployeeAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Goods" EntityType="Self.Goods" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GoodsShops" EntityType="Self.GoodsShops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Makers" EntityType="Self.Makers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profession" EntityType="Self.Profession" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provide" EntityType="Self.Provide" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvideOrder" EntityType="Self.ProvideOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Repair" EntityType="Self.Repair" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceCenter" EntityType="Self.ServiceCenter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceTransportation" EntityType="Self.ServiceTransportation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Shipment" EntityType="Self.Shipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transportation" EntityType="Self.Transportation" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_Address_City_City_ID" Association="Self.fk_Address_City_City_ID">
+            <End Role="City" EntitySet="City" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Basket_GoodsShops_GoodsShops_ID" Association="Self.fk_Basket_GoodsShops_GoodsShops_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Basket_Sales_Sales_ID" Association="Self.fk_Basket_Sales_Sales_ID">
+            <End Role="Sales" EntitySet="Sales" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Brand_Countries_Country_ID" Association="Self.fk_Brand_Countries_Country_ID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Brand" EntitySet="Brand" />
+          </AssociationSet>
+          <AssociationSet Name="fk_BrandSC_Brand_Brand_ID" Association="Self.fk_BrandSC_Brand_Brand_ID">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="BrandSC" EntitySet="BrandSC" />
+          </AssociationSet>
+          <AssociationSet Name="fk_BrandSC_ServiceCenter_SC_ID" Association="Self.fk_BrandSC_ServiceCenter_SC_ID">
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+            <End Role="BrandSC" EntitySet="BrandSC" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Categories_Categories_SeniorCategory_ID" Association="Self.fk_Categories_Categories_SeniorCategory_ID">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Categories1" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="fk_CategoriesSC_Categories_Category_ID" Association="Self.fk_CategoriesSC_Categories_Category_ID">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="CategoriesSC" EntitySet="CategoriesSC" />
+          </AssociationSet>
+          <AssociationSet Name="fk_CategoriesSC_ServiceCenter_SC_ID" Association="Self.fk_CategoriesSC_ServiceCenter_SC_ID">
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+            <End Role="CategoriesSC" EntitySet="CategoriesSC" />
+          </AssociationSet>
+          <AssociationSet Name="fk_City_Countries_Country_ID" Association="Self.fk_City_Countries_Country_ID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Customers_Address_Address" Association="Self.fk_Customers_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Delivery_Goods_Good_ID" Association="Self.fk_Delivery_Goods_Good_ID">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Delivery_ProvideOrder_ProvideOrder_ID" Association="Self.fk_Delivery_ProvideOrder_ProvideOrder_ID">
+            <End Role="ProvideOrder" EntitySet="ProvideOrder" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Address_Address" Association="Self.fk_Employee_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Profession_Profession_ID" Association="Self.fk_Employee_Profession_Profession_ID">
+            <End Role="Profession" EntitySet="Profession" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Shops_Shop_ID" Association="Self.fk_Employee_Shops_Shop_ID">
+            <End Role="Shops" EntitySet="Shops" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_EmployeeAccount_Employee_Employee_ID" Association="Self.fk_EmployeeAccount_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmployeeAccount" EntitySet="EmployeeAccount" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Goods_Categories_Category_ID" Association="Self.fk_Goods_Categories_Category_ID">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Goods" EntitySet="Goods" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Goods_Makers_Maker_ID" Association="Self.fk_Goods_Makers_Maker_ID">
+            <End Role="Makers" EntitySet="Makers" />
+            <End Role="Goods" EntitySet="Goods" />
+          </AssociationSet>
+          <AssociationSet Name="fk_GoodsShops_Goods_Good_ID" Association="Self.fk_GoodsShops_Goods_Good_ID">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+          </AssociationSet>
+          <AssociationSet Name="fk_GoodsShops_Shops_Shop_ID" Association="Self.fk_GoodsShops_Shops_Shop_ID">
+            <End Role="Shops" EntitySet="Shops" />
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Makers_Countries_Country_ID" Association="Self.fk_Makers_Countries_Country_ID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Makers" EntitySet="Makers" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Provide_Address_Address" Association="Self.fk_Provide_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Provide" EntitySet="Provide" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ProvideOrder_Provide_Provide_ID" Association="Self.fk_ProvideOrder_Provide_Provide_ID">
+            <End Role="Provide" EntitySet="Provide" />
+            <End Role="ProvideOrder" EntitySet="ProvideOrder" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Repair_ServiceTransportation_ServiceTransportation_ID" Association="Self.fk_Repair_ServiceTransportation_ServiceTransportation_ID">
+            <End Role="ServiceTransportation" EntitySet="ServiceTransportation" />
+            <End Role="Repair" EntitySet="Repair" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sales_Customers_Customer_ID" Association="Self.fk_Sales_Customers_Customer_ID">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Sales" EntitySet="Sales" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sales_Employee_Employee_ID" Association="Self.fk_Sales_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Sales" EntitySet="Sales" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Service_Basket_Basket_ID" Association="Self.fk_Service_Basket_Basket_ID">
+            <End Role="Basket" EntitySet="Basket" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Service_Breakage_Breakage_ID" Association="Self.fk_Service_Breakage_Breakage_ID">
+            <End Role="Breakage" EntitySet="Breakage" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Service_Status_Status_ID" Association="Self.fk_Service_Status_Status_ID">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ServiceCenter_Address_Address" Association="Self.fk_ServiceCenter_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ServiceTransportation_Service_Service_ID" Association="Self.fk_ServiceTransportation_Service_Service_ID">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="ServiceTransportation" EntitySet="ServiceTransportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ServiceTransportation_ServiceCenter_SC_ID" Association="Self.fk_ServiceTransportation_ServiceCenter_SC_ID">
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+            <End Role="ServiceTransportation" EntitySet="ServiceTransportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipment_Delivery_Deliver_ID" Association="Self.fk_Shipment_Delivery_Deliver_ID">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="Shipment" EntitySet="Shipment" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipment_Employee_Employee_ID" Association="Self.fk_Shipment_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Shipment" EntitySet="Shipment" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipment_GoodsShops_GoodsShops_ID" Association="Self.fk_Shipment_GoodsShops_GoodsShops_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Shipment" EntitySet="Shipment" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shops_Address_Address" Association="Self.fk_Shops_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Shops" EntitySet="Shops" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Transportation_Employee_Employee_ID" Association="Self.fk_Transportation_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Transportation_GoodsShops_GS_from_ID" Association="Self.fk_Transportation_GoodsShops_GS_from_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Transportation_GoodsShops_GS_in_ID" Association="Self.fk_Transportation_GoodsShops_GS_in_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Address_ID" />
+          </Key>
+          <Property Name="Address_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="City" Relationship="Self.fk_Address_City_City_ID" FromRole="Address" ToRole="City" />
+          <NavigationProperty Name="Customers" Relationship="Self.fk_Customers_Address_Address" FromRole="Address" ToRole="Customers" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_Employee_Address_Address" FromRole="Address" ToRole="Employee" />
+          <NavigationProperty Name="Provide" Relationship="Self.fk_Provide_Address_Address" FromRole="Address" ToRole="Provide" />
+          <NavigationProperty Name="ServiceCenter" Relationship="Self.fk_ServiceCenter_Address_Address" FromRole="Address" ToRole="ServiceCenter" />
+          <NavigationProperty Name="Shops" Relationship="Self.fk_Shops_Address_Address" FromRole="Address" ToRole="Shops" />
+        </EntityType>
+        <EntityType Name="Basket">
+          <Key>
+            <PropertyRef Name="Basket_ID" />
+          </Key>
+          <Property Name="Basket_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GoodsShops_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sales_ID" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="GoodsShops" Relationship="Self.fk_Basket_GoodsShops_GoodsShops_ID" FromRole="Basket" ToRole="GoodsShops" />
+          <NavigationProperty Name="Sales" Relationship="Self.fk_Basket_Sales_Sales_ID" FromRole="Basket" ToRole="Sales" />
+          <NavigationProperty Name="Service" Relationship="Self.fk_Service_Basket_Basket_ID" FromRole="Basket" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="Brand_ID" />
+          </Key>
+          <Property Name="Brand_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Country_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Countries" Relationship="Self.fk_Brand_Countries_Country_ID" FromRole="Brand" ToRole="Countries" />
+          <NavigationProperty Name="ServiceCenter" Relationship="Self.BrandSC" FromRole="Brand" ToRole="ServiceCenter" />
+        </EntityType>
+        <EntityType Name="Breakage">
+          <Key>
+            <PropertyRef Name="Breakage_ID" />
+          </Key>
+          <Property Name="Breakage_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Breakege" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Service" Relationship="Self.fk_Service_Breakage_Breakage_ID" FromRole="Breakage" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SeniorCategory_ID" Type="Int32" />
+          <NavigationProperty Name="Categories1" Relationship="Self.fk_Categories_Categories_SeniorCategory_ID" FromRole="Categories" ToRole="Categories1" />
+          <NavigationProperty Name="Categories2" Relationship="Self.fk_Categories_Categories_SeniorCategory_ID" FromRole="Categories1" ToRole="Categories" />
+          <NavigationProperty Name="Goods" Relationship="Self.fk_Goods_Categories_Category_ID" FromRole="Categories" ToRole="Goods" />
+          <NavigationProperty Name="ServiceCenter" Relationship="Self.CategoriesSC" FromRole="Categories" ToRole="ServiceCenter" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="City_ID" />
+          </Key>
+          <Property Name="City_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Country_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Address" Relationship="Self.fk_Address_City_City_ID" FromRole="City" ToRole="Address" />
+          <NavigationProperty Name="Countries" Relationship="Self.fk_City_Countries_Country_ID" FromRole="City" ToRole="Countries" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="Country_ID" />
+          </Key>
+          <Property Name="Country_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Brand" Relationship="Self.fk_Brand_Countries_Country_ID" FromRole="Countries" ToRole="Brand" />
+          <NavigationProperty Name="City" Relationship="Self.fk_City_Countries_Country_ID" FromRole="Countries" ToRole="City" />
+          <NavigationProperty Name="Makers" Relationship="Self.fk_Makers_Countries_Country_ID" FromRole="Countries" ToRole="Makers" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Bonuses" Type="Int32" />
+          <Property Name="Address" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Address1" Relationship="Self.fk_Customers_Address_Address" FromRole="Customers" ToRole="Address" />
+          <NavigationProperty Name="Sales" Relationship="Self.fk_Sales_Customers_Customer_ID" FromRole="Customers" ToRole="Sales" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="Deliver_ID" />
+          </Key>
+          <Property Name="Deliver_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Good_ID" Type="Int32" Nullable="false" />
+          <Property Name="ProvideOrder_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Goods" Relationship="Self.fk_Delivery_Goods_Good_ID" FromRole="Delivery" ToRole="Goods" />
+          <NavigationProperty Name="ProvideOrder" Relationship="Self.fk_Delivery_ProvideOrder_ProvideOrder_ID" FromRole="Delivery" ToRole="ProvideOrder" />
+          <NavigationProperty Name="Shipment" Relationship="Self.fk_Shipment_Delivery_Deliver_ID" FromRole="Delivery" ToRole="Shipment" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Profession_ID" Type="Int32" Nullable="false" />
+          <Property Name="HiringDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Shop_ID" Type="Int32" />
+          <NavigationProperty Name="Address1" Relationship="Self.fk_Employee_Address_Address" FromRole="Employee" ToRole="Address" />
+          <NavigationProperty Name="Profession" Relationship="Self.fk_Employee_Profession_Profession_ID" FromRole="Employee" ToRole="Profession" />
+          <NavigationProperty Name="Shops" Relationship="Self.fk_Employee_Shops_Shop_ID" FromRole="Employee" ToRole="Shops" />
+          <NavigationProperty Name="EmployeeAccount" Relationship="Self.fk_EmployeeAccount_Employee_Employee_ID" FromRole="Employee" ToRole="EmployeeAccount" />
+          <NavigationProperty Name="Sales" Relationship="Self.fk_Sales_Employee_Employee_ID" FromRole="Employee" ToRole="Sales" />
+          <NavigationProperty Name="Shipment" Relationship="Self.fk_Shipment_Employee_Employee_ID" FromRole="Employee" ToRole="Shipment" />
+          <NavigationProperty Name="Transportation" Relationship="Self.fk_Transportation_Employee_Employee_ID" FromRole="Employee" ToRole="Transportation" />
+        </EntityType>
+        <EntityType Name="EmployeeAccount">
+          <Key>
+            <PropertyRef Name="EmployeeAccount_ID" />
+          </Key>
+          <Property Name="EmployeeAccount_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_EmployeeAccount_Employee_Employee_ID" FromRole="EmployeeAccount" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Goods">
+          <Key>
+            <PropertyRef Name="Good_ID" />
+          </Key>
+          <Property Name="Good_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Model" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Maker_ID" Type="Int32" Nullable="false" />
+          <Property Name="Category_ID" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="RevenuePrice" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GuaranteePeriod" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Categories" Relationship="Self.fk_Goods_Categories_Category_ID" FromRole="Goods" ToRole="Categories" />
+          <NavigationProperty Name="Delivery" Relationship="Self.fk_Delivery_Goods_Good_ID" FromRole="Goods" ToRole="Delivery" />
+          <NavigationProperty Name="Makers" Relationship="Self.fk_Goods_Makers_Maker_ID" FromRole="Goods" ToRole="Makers" />
+          <NavigationProperty Name="GoodsShops" Relationship="Self.fk_GoodsShops_Goods_Good_ID" FromRole="Goods" ToRole="GoodsShops" />
+        </EntityType>
+        <EntityType Name="GoodsShops">
+          <Key>
+            <PropertyRef Name="GoodsShops_ID" />
+          </Key>
+          <Property Name="GoodsShops_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Good_ID" Type="Int32" Nullable="false" />
+          <Property Name="Shop_ID" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Basket" Relationship="Self.fk_Basket_GoodsShops_GoodsShops_ID" FromRole="GoodsShops" ToRole="Basket" />
+          <NavigationProperty Name="Goods" Relationship="Self.fk_GoodsShops_Goods_Good_ID" FromRole="GoodsShops" ToRole="Goods" />
+          <NavigationProperty Name="Shops" Relationship="Self.fk_GoodsShops_Shops_Shop_ID" FromRole="GoodsShops" ToRole="Shops" />
+          <NavigationProperty Name="Shipment" Relationship="Self.fk_Shipment_GoodsShops_GoodsShops_ID" FromRole="GoodsShops" ToRole="Shipment" />
+          <NavigationProperty Name="Transportation" Relationship="Self.fk_Transportation_GoodsShops_GS_from_ID" FromRole="GoodsShops" ToRole="Transportation" />
+          <NavigationProperty Name="Transportation1" Relationship="Self.fk_Transportation_GoodsShops_GS_in_ID" FromRole="GoodsShops" ToRole="Transportation" />
+        </EntityType>
+        <EntityType Name="Makers">
+          <Key>
+            <PropertyRef Name="Maker_ID" />
+          </Key>
+          <Property Name="Maker_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Country_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Countries" Relationship="Self.fk_Makers_Countries_Country_ID" FromRole="Makers" ToRole="Countries" />
+          <NavigationProperty Name="Goods" Relationship="Self.fk_Goods_Makers_Maker_ID" FromRole="Makers" ToRole="Goods" />
+        </EntityType>
+        <EntityType Name="Profession">
+          <Key>
+            <PropertyRef Name="Profession_ID" />
+          </Key>
+          <Property Name="Profession_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Salary" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_Employee_Profession_Profession_ID" FromRole="Profession" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Provide">
+          <Key>
+            <PropertyRef Name="Provide_ID" />
+          </Key>
+          <Property Name="Provide_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContactPerson" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Address1" Relationship="Self.fk_Provide_Address_Address" FromRole="Provide" ToRole="Address" />
+          <NavigationProperty Name="ProvideOrder" Relationship="Self.fk_ProvideOrder_Provide_Provide_ID" FromRole="Provide" ToRole="ProvideOrder" />
+        </EntityType>
+        <EntityType Name="ProvideOrder">
+          <Key>
+            <PropertyRef Name="ProvideOrder_ID" />
+          </Key>
+          <Property Name="ProvideOrder_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TotalCost" Type="Int32" Nullable="false" />
+          <Property Name="Provide_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Delivery" Relationship="Self.fk_Delivery_ProvideOrder_ProvideOrder_ID" FromRole="ProvideOrder" ToRole="Delivery" />
+          <NavigationProperty Name="Provide" Relationship="Self.fk_ProvideOrder_Provide_Provide_ID" FromRole="ProvideOrder" ToRole="Provide" />
+        </EntityType>
+        <EntityType Name="Repair">
+          <Key>
+            <PropertyRef Name="Repair_ID" />
+          </Key>
+          <Property Name="Repair_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceTransportation_ID" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="ServiceTransportation" Relationship="Self.fk_Repair_ServiceTransportation_ServiceTransportation_ID" FromRole="Repair" ToRole="ServiceTransportation" />
+        </EntityType>
+        <EntityType Name="Sales">
+          <Key>
+            <PropertyRef Name="Sales_ID" />
+          </Key>
+          <Property Name="Sales_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SalesCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+          <Property Name="Customer_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Total" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Basket" Relationship="Self.fk_Basket_Sales_Sales_ID" FromRole="Sales" ToRole="Basket" />
+          <NavigationProperty Name="Customers" Relationship="Self.fk_Sales_Customers_Customer_ID" FromRole="Sales" ToRole="Customers" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_Sales_Employee_Employee_ID" FromRole="Sales" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Service_ID" />
+          </Key>
+          <Property Name="Service_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Breakage_ID" Type="Int32" Nullable="false" />
+          <Property Name="Status_ID" Type="Int32" Nullable="false" />
+          <Property Name="Basket_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Basket" Relationship="Self.fk_Service_Basket_Basket_ID" FromRole="Service" ToRole="Basket" />
+          <NavigationProperty Name="Breakage" Relationship="Self.fk_Service_Breakage_Breakage_ID" FromRole="Service" ToRole="Breakage" />
+          <NavigationProperty Name="Status" Relationship="Self.fk_Service_Status_Status_ID" FromRole="Service" ToRole="Status" />
+          <NavigationProperty Name="ServiceTransportation" Relationship="Self.fk_ServiceTransportation_Service_Service_ID" FromRole="Service" ToRole="ServiceTransportation" />
+        </EntityType>
+        <EntityType Name="ServiceCenter">
+          <Key>
+            <PropertyRef Name="SC_ID" />
+          </Key>
+          <Property Name="SC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Address1" Relationship="Self.fk_ServiceCenter_Address_Address" FromRole="ServiceCenter" ToRole="Address" />
+          <NavigationProperty Name="ServiceTransportation" Relationship="Self.fk_ServiceTransportation_ServiceCenter_SC_ID" FromRole="ServiceCenter" ToRole="ServiceTransportation" />
+          <NavigationProperty Name="Brand" Relationship="Self.BrandSC" FromRole="ServiceCenter" ToRole="Brand" />
+          <NavigationProperty Name="Categories" Relationship="Self.CategoriesSC" FromRole="ServiceCenter" ToRole="Categories" />
+        </EntityType>
+        <EntityType Name="ServiceTransportation">
+          <Key>
+            <PropertyRef Name="ServiceTransportation_ID" />
+          </Key>
+          <Property Name="ServiceTransportation_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Service_ID" Type="Int32" Nullable="false" />
+          <Property Name="SC_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Repair" Relationship="Self.fk_Repair_ServiceTransportation_ServiceTransportation_ID" FromRole="ServiceTransportation" ToRole="Repair" />
+          <NavigationProperty Name="Service" Relationship="Self.fk_ServiceTransportation_Service_Service_ID" FromRole="ServiceTransportation" ToRole="Service" />
+          <NavigationProperty Name="ServiceCenter" Relationship="Self.fk_ServiceTransportation_ServiceCenter_SC_ID" FromRole="ServiceTransportation" ToRole="ServiceCenter" />
+        </EntityType>
+        <EntityType Name="Shipment">
+          <Key>
+            <PropertyRef Name="Shipment_ID" />
+          </Key>
+          <Property Name="Shipment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Deliver_ID" Type="Int32" Nullable="false" />
+          <Property Name="GoodsShops_ID" Type="Int32" Nullable="false" />
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Delivery" Relationship="Self.fk_Shipment_Delivery_Deliver_ID" FromRole="Shipment" ToRole="Delivery" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_Shipment_Employee_Employee_ID" FromRole="Shipment" ToRole="Employee" />
+          <NavigationProperty Name="GoodsShops" Relationship="Self.fk_Shipment_GoodsShops_GoodsShops_ID" FromRole="Shipment" ToRole="GoodsShops" />
+        </EntityType>
+        <EntityType Name="Shops">
+          <Key>
+            <PropertyRef Name="Shop_ID" />
+          </Key>
+          <Property Name="Shop_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Address1" Relationship="Self.fk_Shops_Address_Address" FromRole="Shops" ToRole="Address" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_Employee_Shops_Shop_ID" FromRole="Shops" ToRole="Employee" />
+          <NavigationProperty Name="GoodsShops" Relationship="Self.fk_GoodsShops_Shops_Shop_ID" FromRole="Shops" ToRole="GoodsShops" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Status_ID" />
+          </Key>
+          <Property Name="Status_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Service" Relationship="Self.fk_Service_Status_Status_ID" FromRole="Status" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Transportation">
+          <Key>
+            <PropertyRef Name="Transportation_ID" />
+          </Key>
+          <Property Name="Transportation_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GS_from_ID" Type="Int32" Nullable="false" />
+          <Property Name="GS_in_ID" Type="Int32" Nullable="false" />
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_Transportation_Employee_Employee_ID" FromRole="Transportation" ToRole="Employee" />
+          <NavigationProperty Name="GoodsShops" Relationship="Self.fk_Transportation_GoodsShops_GS_from_ID" FromRole="Transportation" ToRole="GoodsShops" />
+          <NavigationProperty Name="GoodsShops1" Relationship="Self.fk_Transportation_GoodsShops_GS_in_ID" FromRole="Transportation" ToRole="GoodsShops" />
+        </EntityType>
+        <Association Name="fk_Address_City_City_ID">
+          <End Role="City" Type="Self.City" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="City_ID" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="City_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Customers_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Provide_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Provide" Type="Self.Provide" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Provide">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ServiceCenter_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="ServiceCenter">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shops_Address_Address">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Shops" Type="Self.Shops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Address_ID" />
+            </Principal>
+            <Dependent Role="Shops">
+              <PropertyRef Name="Address" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Basket_GoodsShops_GoodsShops_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Basket_Sales_Sales_ID">
+          <End Role="Sales" Type="Self.Sales" Multiplicity="1" />
+          <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sales">
+              <PropertyRef Name="Sales_ID" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="Sales_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Service_Basket_Basket_ID">
+          <End Role="Basket" Type="Self.Basket" Multiplicity="1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Basket">
+              <PropertyRef Name="Basket_ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="Basket_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Brand_Countries_Country_ID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Brand" Type="Self.Brand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Country_ID" />
+            </Principal>
+            <Dependent Role="Brand">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Service_Breakage_Breakage_ID">
+          <End Role="Breakage" Type="Self.Breakage" Multiplicity="1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Breakage">
+              <PropertyRef Name="Breakage_ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="Breakage_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Categories_Categories_SeniorCategory_ID">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Categories1" Type="Self.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="Categories1">
+              <PropertyRef Name="SeniorCategory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Goods_Categories_Category_ID">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="Goods">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_City_Countries_Country_ID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="City" Type="Self.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Country_ID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Makers_Countries_Country_ID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Makers" Type="Self.Makers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Country_ID" />
+            </Principal>
+            <Dependent Role="Makers">
+              <PropertyRef Name="Country_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sales_Customers_Customer_ID">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="Customer_ID" />
+            </Principal>
+            <Dependent Role="Sales">
+              <PropertyRef Name="Customer_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Delivery_Goods_Good_ID">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Good_ID" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="Good_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Delivery_ProvideOrder_ProvideOrder_ID">
+          <End Role="ProvideOrder" Type="Self.ProvideOrder" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProvideOrder">
+              <PropertyRef Name="ProvideOrder_ID" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="ProvideOrder_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipment_Delivery_Deliver_ID">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="1" />
+          <End Role="Shipment" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="Deliver_ID" />
+            </Principal>
+            <Dependent Role="Shipment">
+              <PropertyRef Name="Deliver_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Profession_Profession_ID">
+          <End Role="Profession" Type="Self.Profession" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profession">
+              <PropertyRef Name="Profession_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Profession_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Shops_Shop_ID">
+          <End Role="Shops" Type="Self.Shops" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shops">
+              <PropertyRef Name="Shop_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Shop_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_EmployeeAccount_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="EmployeeAccount" Type="Self.EmployeeAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="EmployeeAccount">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sales_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Sales">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipment_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Shipment" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Shipment">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Transportation_Employee_Employee_ID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Goods_Makers_Maker_ID">
+          <End Role="Makers" Type="Self.Makers" Multiplicity="1" />
+          <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Makers">
+              <PropertyRef Name="Maker_ID" />
+            </Principal>
+            <Dependent Role="Goods">
+              <PropertyRef Name="Maker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_GoodsShops_Goods_Good_ID">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Good_ID" />
+            </Principal>
+            <Dependent Role="GoodsShops">
+              <PropertyRef Name="Good_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_GoodsShops_Shops_Shop_ID">
+          <End Role="Shops" Type="Self.Shops" Multiplicity="1" />
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shops">
+              <PropertyRef Name="Shop_ID" />
+            </Principal>
+            <Dependent Role="GoodsShops">
+              <PropertyRef Name="Shop_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipment_GoodsShops_GoodsShops_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Shipment" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Shipment">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Transportation_GoodsShops_GS_from_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="GS_from_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Transportation_GoodsShops_GS_in_ID">
+          <End Role="GoodsShops" Type="Self.GoodsShops" Multiplicity="1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoodsShops">
+              <PropertyRef Name="GoodsShops_ID" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="GS_in_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ProvideOrder_Provide_Provide_ID">
+          <End Role="Provide" Type="Self.Provide" Multiplicity="1" />
+          <End Role="ProvideOrder" Type="Self.ProvideOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provide">
+              <PropertyRef Name="Provide_ID" />
+            </Principal>
+            <Dependent Role="ProvideOrder">
+              <PropertyRef Name="Provide_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Repair_ServiceTransportation_ServiceTransportation_ID">
+          <End Role="ServiceTransportation" Type="Self.ServiceTransportation" Multiplicity="1" />
+          <End Role="Repair" Type="Self.Repair" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceTransportation">
+              <PropertyRef Name="ServiceTransportation_ID" />
+            </Principal>
+            <Dependent Role="Repair">
+              <PropertyRef Name="ServiceTransportation_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Service_Status_Status_ID">
+          <End Role="Status" Type="Self.Status" Multiplicity="1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="Status_ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="Status_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ServiceTransportation_Service_Service_ID">
+          <End Role="Service" Type="Self.Service" Multiplicity="1" />
+          <End Role="ServiceTransportation" Type="Self.ServiceTransportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="Service_ID" />
+            </Principal>
+            <Dependent Role="ServiceTransportation">
+              <PropertyRef Name="Service_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ServiceTransportation_ServiceCenter_SC_ID">
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="1" />
+          <End Role="ServiceTransportation" Type="Self.ServiceTransportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCenter">
+              <PropertyRef Name="SC_ID" />
+            </Principal>
+            <Dependent Role="ServiceTransportation">
+              <PropertyRef Name="SC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BrandSC">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="*" />
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="*" />
+        </Association>
+        <Association Name="CategoriesSC">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="*" />
+          <End Role="ServiceCenter" Type="Self.ServiceCenter" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="my_db_for_db_2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Address" EntityType="Self.Address" />
+          <EntitySet Name="Basket" EntityType="Self.Basket" />
+          <EntitySet Name="Brand" EntityType="Self.Brand" />
+          <EntitySet Name="Breakage" EntityType="Self.Breakage" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" />
+          <EntitySet Name="City" EntityType="Self.City" />
+          <EntitySet Name="Countries" EntityType="Self.Countries" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" />
+          <EntitySet Name="Delivery" EntityType="Self.Delivery" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="EmployeeAccount" EntityType="Self.EmployeeAccount" />
+          <EntitySet Name="Goods" EntityType="Self.Goods" />
+          <EntitySet Name="GoodsShops" EntityType="Self.GoodsShops" />
+          <EntitySet Name="Makers" EntityType="Self.Makers" />
+          <EntitySet Name="Profession" EntityType="Self.Profession" />
+          <EntitySet Name="Provide" EntityType="Self.Provide" />
+          <EntitySet Name="ProvideOrder" EntityType="Self.ProvideOrder" />
+          <EntitySet Name="Repair" EntityType="Self.Repair" />
+          <EntitySet Name="Sales" EntityType="Self.Sales" />
+          <EntitySet Name="Service" EntityType="Self.Service" />
+          <EntitySet Name="ServiceCenter" EntityType="Self.ServiceCenter" />
+          <EntitySet Name="ServiceTransportation" EntityType="Self.ServiceTransportation" />
+          <EntitySet Name="Shipment" EntityType="Self.Shipment" />
+          <EntitySet Name="Shops" EntityType="Self.Shops" />
+          <EntitySet Name="Status" EntityType="Self.Status" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Transportation" EntityType="Self.Transportation" />
+          <AssociationSet Name="fk_Address_City_City_ID" Association="Self.fk_Address_City_City_ID">
+            <End Role="City" EntitySet="City" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Customers_Address_Address" Association="Self.fk_Customers_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Address_Address" Association="Self.fk_Employee_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Provide_Address_Address" Association="Self.fk_Provide_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Provide" EntitySet="Provide" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ServiceCenter_Address_Address" Association="Self.fk_ServiceCenter_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shops_Address_Address" Association="Self.fk_Shops_Address_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Shops" EntitySet="Shops" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Basket_GoodsShops_GoodsShops_ID" Association="Self.fk_Basket_GoodsShops_GoodsShops_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Basket_Sales_Sales_ID" Association="Self.fk_Basket_Sales_Sales_ID">
+            <End Role="Sales" EntitySet="Sales" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Service_Basket_Basket_ID" Association="Self.fk_Service_Basket_Basket_ID">
+            <End Role="Basket" EntitySet="Basket" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Brand_Countries_Country_ID" Association="Self.fk_Brand_Countries_Country_ID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Brand" EntitySet="Brand" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Service_Breakage_Breakage_ID" Association="Self.fk_Service_Breakage_Breakage_ID">
+            <End Role="Breakage" EntitySet="Breakage" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Categories_Categories_SeniorCategory_ID" Association="Self.fk_Categories_Categories_SeniorCategory_ID">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Categories1" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Goods_Categories_Category_ID" Association="Self.fk_Goods_Categories_Category_ID">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Goods" EntitySet="Goods" />
+          </AssociationSet>
+          <AssociationSet Name="fk_City_Countries_Country_ID" Association="Self.fk_City_Countries_Country_ID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Makers_Countries_Country_ID" Association="Self.fk_Makers_Countries_Country_ID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Makers" EntitySet="Makers" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sales_Customers_Customer_ID" Association="Self.fk_Sales_Customers_Customer_ID">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Sales" EntitySet="Sales" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Delivery_Goods_Good_ID" Association="Self.fk_Delivery_Goods_Good_ID">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Delivery_ProvideOrder_ProvideOrder_ID" Association="Self.fk_Delivery_ProvideOrder_ProvideOrder_ID">
+            <End Role="ProvideOrder" EntitySet="ProvideOrder" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipment_Delivery_Deliver_ID" Association="Self.fk_Shipment_Delivery_Deliver_ID">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="Shipment" EntitySet="Shipment" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Profession_Profession_ID" Association="Self.fk_Employee_Profession_Profession_ID">
+            <End Role="Profession" EntitySet="Profession" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Shops_Shop_ID" Association="Self.fk_Employee_Shops_Shop_ID">
+            <End Role="Shops" EntitySet="Shops" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_EmployeeAccount_Employee_Employee_ID" Association="Self.fk_EmployeeAccount_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmployeeAccount" EntitySet="EmployeeAccount" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sales_Employee_Employee_ID" Association="Self.fk_Sales_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Sales" EntitySet="Sales" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipment_Employee_Employee_ID" Association="Self.fk_Shipment_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Shipment" EntitySet="Shipment" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Transportation_Employee_Employee_ID" Association="Self.fk_Transportation_Employee_Employee_ID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Goods_Makers_Maker_ID" Association="Self.fk_Goods_Makers_Maker_ID">
+            <End Role="Makers" EntitySet="Makers" />
+            <End Role="Goods" EntitySet="Goods" />
+          </AssociationSet>
+          <AssociationSet Name="fk_GoodsShops_Goods_Good_ID" Association="Self.fk_GoodsShops_Goods_Good_ID">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+          </AssociationSet>
+          <AssociationSet Name="fk_GoodsShops_Shops_Shop_ID" Association="Self.fk_GoodsShops_Shops_Shop_ID">
+            <End Role="Shops" EntitySet="Shops" />
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipment_GoodsShops_GoodsShops_ID" Association="Self.fk_Shipment_GoodsShops_GoodsShops_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Shipment" EntitySet="Shipment" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Transportation_GoodsShops_GS_from_ID" Association="Self.fk_Transportation_GoodsShops_GS_from_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Transportation_GoodsShops_GS_in_ID" Association="Self.fk_Transportation_GoodsShops_GS_in_ID">
+            <End Role="GoodsShops" EntitySet="GoodsShops" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ProvideOrder_Provide_Provide_ID" Association="Self.fk_ProvideOrder_Provide_Provide_ID">
+            <End Role="Provide" EntitySet="Provide" />
+            <End Role="ProvideOrder" EntitySet="ProvideOrder" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Repair_ServiceTransportation_ServiceTransportation_ID" Association="Self.fk_Repair_ServiceTransportation_ServiceTransportation_ID">
+            <End Role="ServiceTransportation" EntitySet="ServiceTransportation" />
+            <End Role="Repair" EntitySet="Repair" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Service_Status_Status_ID" Association="Self.fk_Service_Status_Status_ID">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ServiceTransportation_Service_Service_ID" Association="Self.fk_ServiceTransportation_Service_Service_ID">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="ServiceTransportation" EntitySet="ServiceTransportation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ServiceTransportation_ServiceCenter_SC_ID" Association="Self.fk_ServiceTransportation_ServiceCenter_SC_ID">
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+            <End Role="ServiceTransportation" EntitySet="ServiceTransportation" />
+          </AssociationSet>
+          <AssociationSet Name="BrandSC" Association="Self.BrandSC">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+          </AssociationSet>
+          <AssociationSet Name="CategoriesSC" Association="Self.CategoriesSC">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="ServiceCenter" EntitySet="ServiceCenter" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="my_db_for_db_2Entities">
+          <EntitySetMapping Name="Address">
+            <EntityTypeMapping TypeName="DBModel.Address">
+              <MappingFragment StoreEntitySet="Address">
+                <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Basket">
+            <EntityTypeMapping TypeName="DBModel.Basket">
+              <MappingFragment StoreEntitySet="Basket">
+                <ScalarProperty Name="Basket_ID" ColumnName="Basket_ID" />
+                <ScalarProperty Name="GoodsShops_ID" ColumnName="GoodsShops_ID" />
+                <ScalarProperty Name="Sales_ID" ColumnName="Sales_ID" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brand">
+            <EntityTypeMapping TypeName="DBModel.Brand">
+              <MappingFragment StoreEntitySet="Brand">
+                <ScalarProperty Name="Brand_ID" ColumnName="Brand_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Breakage">
+            <EntityTypeMapping TypeName="DBModel.Breakage">
+              <MappingFragment StoreEntitySet="Breakage">
+                <ScalarProperty Name="Breakage_ID" ColumnName="Breakage_ID" />
+                <ScalarProperty Name="Breakege" ColumnName="Breakege" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="DBModel.Categories">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SeniorCategory_ID" ColumnName="SeniorCategory_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="City">
+            <EntityTypeMapping TypeName="DBModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="DBModel.Countries">
+              <MappingFragment StoreEntitySet="Countries">
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="DBModel.Customers">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Bonuses" ColumnName="Bonuses" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Delivery">
+            <EntityTypeMapping TypeName="DBModel.Delivery">
+              <MappingFragment StoreEntitySet="Delivery">
+                <ScalarProperty Name="Deliver_ID" ColumnName="Deliver_ID" />
+                <ScalarProperty Name="Good_ID" ColumnName="Good_ID" />
+                <ScalarProperty Name="ProvideOrder_ID" ColumnName="ProvideOrder_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee">
+            <EntityTypeMapping TypeName="DBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
+                <ScalarProperty Name="HiringDate" ColumnName="HiringDate" />
+                <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeAccount">
+            <EntityTypeMapping TypeName="DBModel.EmployeeAccount">
+              <MappingFragment StoreEntitySet="EmployeeAccount">
+                <ScalarProperty Name="EmployeeAccount_ID" ColumnName="EmployeeAccount_ID" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Goods">
+            <EntityTypeMapping TypeName="DBModel.Goods">
+              <MappingFragment StoreEntitySet="Goods">
+                <ScalarProperty Name="Good_ID" ColumnName="Good_ID" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Maker_ID" ColumnName="Maker_ID" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="RevenuePrice" ColumnName="RevenuePrice" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="GuaranteePeriod" ColumnName="GuaranteePeriod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GoodsShops">
+            <EntityTypeMapping TypeName="DBModel.GoodsShops">
+              <MappingFragment StoreEntitySet="GoodsShops">
+                <ScalarProperty Name="GoodsShops_ID" ColumnName="GoodsShops_ID" />
+                <ScalarProperty Name="Good_ID" ColumnName="Good_ID" />
+                <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Makers">
+            <EntityTypeMapping TypeName="DBModel.Makers">
+              <MappingFragment StoreEntitySet="Makers">
+                <ScalarProperty Name="Maker_ID" ColumnName="Maker_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profession">
+            <EntityTypeMapping TypeName="DBModel.Profession">
+              <MappingFragment StoreEntitySet="Profession">
+                <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provide">
+            <EntityTypeMapping TypeName="DBModel.Provide">
+              <MappingFragment StoreEntitySet="Provide">
+                <ScalarProperty Name="Provide_ID" ColumnName="Provide_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvideOrder">
+            <EntityTypeMapping TypeName="DBModel.ProvideOrder">
+              <MappingFragment StoreEntitySet="ProvideOrder">
+                <ScalarProperty Name="ProvideOrder_ID" ColumnName="ProvideOrder_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="Provide_ID" ColumnName="Provide_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Repair">
+            <EntityTypeMapping TypeName="DBModel.Repair">
+              <MappingFragment StoreEntitySet="Repair">
+                <ScalarProperty Name="Repair_ID" ColumnName="Repair_ID" />
+                <ScalarProperty Name="ServiceTransportation_ID" ColumnName="ServiceTransportation_ID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sales">
+            <EntityTypeMapping TypeName="DBModel.Sales">
+              <MappingFragment StoreEntitySet="Sales">
+                <ScalarProperty Name="Sales_ID" ColumnName="Sales_ID" />
+                <ScalarProperty Name="SalesCode" ColumnName="SalesCode" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service">
+            <EntityTypeMapping TypeName="DBModel.Service">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
+                <ScalarProperty Name="Breakage_ID" ColumnName="Breakage_ID" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+                <ScalarProperty Name="Basket_ID" ColumnName="Basket_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceCenter">
+            <EntityTypeMapping TypeName="DBModel.ServiceCenter">
+              <MappingFragment StoreEntitySet="ServiceCenter">
+                <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceTransportation">
+            <EntityTypeMapping TypeName="DBModel.ServiceTransportation">
+              <MappingFragment StoreEntitySet="ServiceTransportation">
+                <ScalarProperty Name="ServiceTransportation_ID" ColumnName="ServiceTransportation_ID" />
+                <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
+                <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shipment">
+            <EntityTypeMapping TypeName="DBModel.Shipment">
+              <MappingFragment StoreEntitySet="Shipment">
+                <ScalarProperty Name="Shipment_ID" ColumnName="Shipment_ID" />
+                <ScalarProperty Name="Deliver_ID" ColumnName="Deliver_ID" />
+                <ScalarProperty Name="GoodsShops_ID" ColumnName="GoodsShops_ID" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shops">
+            <EntityTypeMapping TypeName="DBModel.Shops">
+              <MappingFragment StoreEntitySet="Shops">
+                <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="DBModel.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+                <ScalarProperty Name="Status1" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transportation">
+            <EntityTypeMapping TypeName="DBModel.Transportation">
+              <MappingFragment StoreEntitySet="Transportation">
+                <ScalarProperty Name="Transportation_ID" ColumnName="Transportation_ID" />
+                <ScalarProperty Name="GS_from_ID" ColumnName="GS_from_ID" />
+                <ScalarProperty Name="GS_in_ID" ColumnName="GS_in_ID" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="BrandSC" TypeName="DBModel.BrandSC" StoreEntitySet="BrandSC">
+            <EndProperty Name="Brand">
+              <ScalarProperty Name="Brand_ID" ColumnName="Brand_ID" />
+            </EndProperty>
+            <EndProperty Name="ServiceCenter">
+              <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="CategoriesSC" TypeName="DBModel.CategoriesSC" StoreEntitySet="CategoriesSC">
+            <EndProperty Name="Categories">
+              <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+            </EndProperty>
+            <EndProperty Name="ServiceCenter">
+              <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
