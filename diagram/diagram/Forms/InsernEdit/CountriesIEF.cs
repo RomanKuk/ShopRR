@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace diagram
 {
-    public partial class Form2 : Form
+    public partial class CountriesIEF : Form
     {
         my_db_for_db_2Entities db;
-        public Form2(Countries obj, my_db_for_db_2Entities _db)
+        public CountriesIEF(Countries obj, my_db_for_db_2Entities _db)
         {
             InitializeComponent();
             db = _db;

@@ -1,6 +1,6 @@
 ﻿namespace diagram
 {
-    partial class Form2
+    partial class CountriesIEF
     {
         /// <summary>
         /// Required designer variable.

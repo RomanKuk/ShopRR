@@ -1,4 +1,5 @@
-﻿using System;
+﻿using diagram.Forms.Table;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace diagram
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var db = new my_db_for_db_2Entities();
-            Application.Run(new Form3(db));
+            //Application.Run(new BasketForm(db));
         }
     }
 }

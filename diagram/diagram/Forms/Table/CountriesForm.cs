@@ -10,55 +10,56 @@ using System.Windows.Forms;
 
 namespace diagram
 {
-    public partial class Form3 : Form
+    public partial class CountriesForm : Form
     {
         my_db_for_db_2Entities db;
-        public Form3(my_db_for_db_2Entities _db)
+        public CountriesForm(my_db_for_db_2Entities _db)
         {
             InitializeComponent();
             db = _db;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
+
             countriesBindingSource.DataSource = db.Countries.ToList();
-            cityBindingSource.DataSource = db.City.ToList();
+
         }
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            using (Form4 frm = new Form4(null, db))
+            using (CountriesIEF frm = new CountriesIEF(null,db))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    cityBindingSource.DataSource = db.City.ToList();
+                    countriesBindingSource.DataSource = db.Countries.ToList();
                 }
             }
         }
 
-        private void Update_Click(object sender, EventArgs e)
+        private void Edit_Click(object sender, EventArgs e)
         {
-            if (cityBindingSource.Current == null)
+            if (countriesBindingSource.Current == null)
             {
                 return;
             }
-            using (Form4 frm = new Form4(cityBindingSource.Current as City, db))
+            using (CountriesIEF frm = new CountriesIEF(countriesBindingSource.Current as Countries,db))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    cityBindingSource.DataSource = db.City.ToList();
+                    countriesBindingSource.DataSource = db.Countries.ToList();
                 }
             }
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            if (cityBindingSource.Current != null)
+            if (countriesBindingSource.Current != null)
             {
                 if (MessageBox.Show("Are you sure", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.City.Remove(cityBindingSource.Current as City);
-                    cityBindingSource.RemoveCurrent();
+                    db.Countries.Remove(countriesBindingSource.Current as Countries);
+                    countriesBindingSource.RemoveCurrent();
                     db.SaveChanges();
                 }
             }

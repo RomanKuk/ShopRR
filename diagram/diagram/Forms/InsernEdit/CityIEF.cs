@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace diagram
 {
-    public partial class Form4 : Form
+    public partial class CityIEF : Form
     {
         my_db_for_db_2Entities db;
-        public Form4(City obj, my_db_for_db_2Entities _db)
+        public CityIEF(City obj, my_db_for_db_2Entities _db)
         {
             InitializeComponent();
             db = _db;
@@ -29,11 +29,6 @@ namespace diagram
                 cityBindingSource.DataSource = obj;
                 db.City.Attach(cityBindingSource.Current as City);
             }
-        }
-
-        private void Save_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
@@ -53,9 +48,8 @@ namespace diagram
             e.Cancel = false;
         }
 
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Save_Click_1(object sender, EventArgs e)
         {
-            textBox1.Text = comboBox1.Text + "//" + comboBox1.SelectedValue;
 
         }
     }
