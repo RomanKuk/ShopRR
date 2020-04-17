@@ -112,6 +112,126 @@
     <Compile Include="Forms\InsernEdit\BreakageIEF.Designer.cs">
       <DependentUpon>BreakageIEF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InsernEdit\CategoriesIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\CategoriesIEF.Designer.cs">
+      <DependentUpon>CategoriesIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\CustomersIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\CustomersIEF.Designer.cs">
+      <DependentUpon>CustomersIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\DeliveryIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\DeliveryIEF.Designer.cs">
+      <DependentUpon>DeliveryIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\EmployeeAccountIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\EmployeeAccountIEF.Designer.cs">
+      <DependentUpon>EmployeeAccountIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\EmployeeIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\EmployeeIEF.Designer.cs">
+      <DependentUpon>EmployeeIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\GoodsIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\GoodsIEF.Designer.cs">
+      <DependentUpon>GoodsIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\GoodsShopsIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\GoodsShopsIEF.Designer.cs">
+      <DependentUpon>GoodsShopsIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\MakersIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\MakersIEF.Designer.cs">
+      <DependentUpon>MakersIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ProfessionIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ProfessionIEF.Designer.cs">
+      <DependentUpon>ProfessionIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ProvideIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ProvideIEF.Designer.cs">
+      <DependentUpon>ProvideIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ProvideOrderIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ProvideOrderIEF.Designer.cs">
+      <DependentUpon>ProvideOrderIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\RepairIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\RepairIEF.Designer.cs">
+      <DependentUpon>RepairIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\SalesIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\SalesIEF.Designer.cs">
+      <DependentUpon>SalesIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ServiceCenterIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ServiceCenterIEF.Designer.cs">
+      <DependentUpon>ServiceCenterIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ServiceIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ServiceIEF.Designer.cs">
+      <DependentUpon>ServiceIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ServiceTransportationIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ServiceTransportationIEF.Designer.cs">
+      <DependentUpon>ServiceTransportationIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ShipmentIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ShipmentIEF.Designer.cs">
+      <DependentUpon>ShipmentIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ShopIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\ShopIEF.Designer.cs">
+      <DependentUpon>ShopIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\StatusIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\StatusIEF.Designer.cs">
+      <DependentUpon>StatusIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\TransportationIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\TransportationIEF.Designer.cs">
+      <DependentUpon>TransportationIEF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Table\AddressForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +357,66 @@
     <EmbeddedResource Include="Forms\InsernEdit\BreakageIEF.resx">
       <DependentUpon>BreakageIEF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\CategoriesIEF.resx">
+      <DependentUpon>CategoriesIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\CustomersIEF.resx">
+      <DependentUpon>CustomersIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\DeliveryIEF.resx">
+      <DependentUpon>DeliveryIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\EmployeeAccountIEF.resx">
+      <DependentUpon>EmployeeAccountIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\EmployeeIEF.resx">
+      <DependentUpon>EmployeeIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\GoodsIEF.resx">
+      <DependentUpon>GoodsIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\GoodsShopsIEF.resx">
+      <DependentUpon>GoodsShopsIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\MakersIEF.resx">
+      <DependentUpon>MakersIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ProfessionIEF.resx">
+      <DependentUpon>ProfessionIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ProvideIEF.resx">
+      <DependentUpon>ProvideIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ProvideOrderIEF.resx">
+      <DependentUpon>ProvideOrderIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\RepairIEF.resx">
+      <DependentUpon>RepairIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\SalesIEF.resx">
+      <DependentUpon>SalesIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ServiceCenterIEF.resx">
+      <DependentUpon>ServiceCenterIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ServiceIEF.resx">
+      <DependentUpon>ServiceIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ServiceTransportationIEF.resx">
+      <DependentUpon>ServiceTransportationIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ShipmentIEF.resx">
+      <DependentUpon>ShipmentIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\ShopIEF.resx">
+      <DependentUpon>ShopIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\StatusIEF.resx">
+      <DependentUpon>StatusIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\TransportationIEF.resx">
+      <DependentUpon>TransportationIEF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\AddressForm.resx">
       <DependentUpon>AddressForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,10 +462,28 @@
     <None Include="Properties\DataSources\Basket.datasource" />
     <None Include="Properties\DataSources\Brand.datasource" />
     <None Include="Properties\DataSources\Breakage.datasource" />
+    <None Include="Properties\DataSources\Categories.datasource" />
     <None Include="Properties\DataSources\City.datasource" />
     <None Include="Properties\DataSources\Countries.datasource" />
+    <None Include="Properties\DataSources\Customers.datasource" />
+    <None Include="Properties\DataSources\Delivery.datasource" />
+    <None Include="Properties\DataSources\Employee.datasource" />
+    <None Include="Properties\DataSources\EmployeeAccount.datasource" />
+    <None Include="Properties\DataSources\Goods.datasource" />
     <None Include="Properties\DataSources\GoodsShops.datasource" />
+    <None Include="Properties\DataSources\Makers.datasource" />
+    <None Include="Properties\DataSources\Profession.datasource" />
+    <None Include="Properties\DataSources\Provide.datasource" />
+    <None Include="Properties\DataSources\ProvideOrder.datasource" />
+    <None Include="Properties\DataSources\Repair.datasource" />
     <None Include="Properties\DataSources\Sales.datasource" />
+    <None Include="Properties\DataSources\Service.datasource" />
+    <None Include="Properties\DataSources\ServiceCenter.datasource" />
+    <None Include="Properties\DataSources\ServiceTransportation.datasource" />
+    <None Include="Properties\DataSources\Shipment.datasource" />
+    <None Include="Properties\DataSources\Shops.datasource" />
+    <None Include="Properties\DataSources\Status.datasource" />
+    <None Include="Properties\DataSources\Transportation.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
