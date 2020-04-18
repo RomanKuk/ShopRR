@@ -11,6 +11,7 @@ namespace diagram.Forms.InsernEdit
             InitializeComponent();
             db = _db;
             goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
+            goodsShopsBindingSource1.DataSource = db.GoodsShops.ToList();
             employeeBindingSource.DataSource = db.Employee.ToList();
             transportationBindingSource.DataSource = db.Transportation.ToList();
             if (obj == null)

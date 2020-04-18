@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.save = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.provideBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,10 +58,19 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(118, 20);
             this.dateTimePicker1.TabIndex = 1;
             // 
+            // provideOrderBindingSource
+            // 
+            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.provideOrderBindingSource, "TotalCost", true));
             this.numericUpDown1.Location = new System.Drawing.Point(329, 188);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(118, 20);
             this.numericUpDown1.TabIndex = 2;
@@ -77,10 +86,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.ValueMember = "Provide_ID";
-            // 
-            // provideOrderBindingSource
-            // 
-            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
             // 
             // provideBindingSource
             // 
@@ -100,8 +105,8 @@
             this.Name = "ProvideOrderIEF";
             this.Text = "ProvideOrderIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProvideOrderIEF_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).EndInit();
             this.ResumeLayout(false);
 

@@ -29,7 +29,12 @@ namespace diagram.Forms.InsernEdit
 
         private void ServiceIEF_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (DialogResult == DialogResult.OK)
+            {
+                db.SaveChanges();
+                e.Cancel = false;
+            }
+            e.Cancel = false;
         }
     }
 }

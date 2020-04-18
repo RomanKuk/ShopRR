@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.save = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // save
@@ -55,17 +55,22 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             // 
+            // professionBindingSource
+            // 
+            this.professionBindingSource.DataSource = typeof(diagram.Profession);
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.professionBindingSource, "Salary", true));
             this.numericUpDown1.Location = new System.Drawing.Point(361, 226);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 2;
-            // 
-            // professionBindingSource
-            // 
-            this.professionBindingSource.DataSource = typeof(diagram.Profession);
             // 
             // ProfessionIEF
             // 
@@ -80,8 +85,8 @@
             this.Name = "ProfessionIEF";
             this.Text = "ProfessionIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProfessionIEF_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.save = new System.Windows.Forms.Button();
-            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -44,6 +46,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
+            // 
+            // categoriesBindingSource
+            // 
+            this.categoriesBindingSource.DataSource = typeof(diagram.Categories);
             // 
             // textBox2
             // 
@@ -56,7 +62,7 @@
             // comboBox1
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.categoriesBindingSource, "Category_ID", true));
-            this.comboBox1.DataSource = this.categoriesBindingSource;
+            this.comboBox1.DataSource = this.categoriesBindingSource1;
             this.comboBox1.DisplayMember = "Name";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(164, 184);
@@ -75,9 +81,9 @@
             this.save.Text = "save";
             this.save.UseVisualStyleBackColor = true;
             // 
-            // categoriesBindingSource
+            // categoriesBindingSource1
             // 
-            this.categoriesBindingSource.DataSource = typeof(diagram.Categories);
+            this.categoriesBindingSource1.DataSource = typeof(diagram.Categories);
             // 
             // CategoriesIEF
             // 
@@ -94,6 +100,7 @@
             this.Text = "CategoriesIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CategoriesIEF_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +113,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button save;
+        private System.Windows.Forms.BindingSource categoriesBindingSource1;
     }
 }

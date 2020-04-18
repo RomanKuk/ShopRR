@@ -41,7 +41,7 @@ namespace diagram.Forms.Table
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    repairBindingSource.DataSource = db.City.ToList();
+                    repairBindingSource.DataSource = db.Repair.ToList();
                 }
             }
         }

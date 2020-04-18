@@ -31,7 +31,7 @@ namespace diagram.Forms.InsernEdit
             }
         }
 
-        private void StatusIEF_FormClosed(object sender, FormClosedEventArgs e)
+        private void StatusIEF_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult == DialogResult.OK)
             {

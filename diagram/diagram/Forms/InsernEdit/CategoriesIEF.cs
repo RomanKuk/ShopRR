@@ -10,6 +10,7 @@ namespace diagram.Forms.InsernEdit
         {
             InitializeComponent();
             db = _db;
+            categoriesBindingSource1.DataSource = db.Categories.ToList();
             categoriesBindingSource.DataSource = db.Categories.ToList();
             if (obj == null)
             {

@@ -388,7 +388,6 @@
     <Compile Include="Forms\Table\ShopsForm.Designer.cs">
       <DependentUpon>ShopsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Table\ShopsIEF.cs" />
     <Compile Include="Forms\Table\StatusForm.cs">
       <SubType>Form</SubType>
     </Compile>

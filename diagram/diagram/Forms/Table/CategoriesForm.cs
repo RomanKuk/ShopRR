@@ -16,6 +16,7 @@ namespace diagram.Forms.Table
 
         private void CategoriesForm_Load(object sender, EventArgs e)
         {
+            categoriesBindingSource1.DataSource = db.Categories.ToList();
             categoriesBindingSource.DataSource = db.Categories.ToList();
         }
 

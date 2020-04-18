@@ -33,12 +33,14 @@
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
+            this.categoriesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seniorCategoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +92,10 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // categoriesBindingSource1
+            // 
+            this.categoriesBindingSource1.DataSource = typeof(diagram.Categories);
+            // 
             // categoriesBindingSource
             // 
             this.categoriesBindingSource.DataSource = typeof(diagram.Categories);
@@ -119,7 +125,7 @@
             // seniorCategoryIDDataGridViewTextBoxColumn
             // 
             this.seniorCategoryIDDataGridViewTextBoxColumn.DataPropertyName = "SeniorCategory_ID";
-            this.seniorCategoryIDDataGridViewTextBoxColumn.DataSource = this.categoriesBindingSource;
+            this.seniorCategoryIDDataGridViewTextBoxColumn.DataSource = this.categoriesBindingSource1;
             this.seniorCategoryIDDataGridViewTextBoxColumn.DisplayMember = "Name";
             this.seniorCategoryIDDataGridViewTextBoxColumn.HeaderText = "SeniorCategory_ID";
             this.seniorCategoryIDDataGridViewTextBoxColumn.Name = "seniorCategoryIDDataGridViewTextBoxColumn";
@@ -141,6 +147,7 @@
             this.Text = "CategoriesForm";
             this.Load += new System.EventHandler(this.CategoriesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -153,6 +160,7 @@
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.BindingSource categoriesBindingSource;
+        private System.Windows.Forms.BindingSource categoriesBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;

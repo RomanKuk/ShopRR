@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.save = new System.Windows.Forms.Button();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -55,6 +55,14 @@
             this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "Good_ID";
             // 
+            // deliveryBindingSource
+            // 
+            this.deliveryBindingSource.DataSource = typeof(diagram.Delivery);
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.deliveryBindingSource, "ProvideOrder_ID", true));
@@ -67,9 +75,13 @@
             this.comboBox2.TabIndex = 1;
             this.comboBox2.ValueMember = "ProvideOrder_ID";
             // 
+            // provideOrderBindingSource
+            // 
+            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
+            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.provideOrderBindingSource, "Date", true));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.deliveryBindingSource, "Date", true));
             this.dateTimePicker1.Location = new System.Drawing.Point(290, 176);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
@@ -79,6 +91,11 @@
             // 
             this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.deliveryBindingSource, "Count", true));
             this.numericUpDown1.Location = new System.Drawing.Point(291, 202);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 3;
@@ -92,18 +109,6 @@
             this.save.TabIndex = 4;
             this.save.Text = "save";
             this.save.UseVisualStyleBackColor = true;
-            // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
-            // 
-            // deliveryBindingSource
-            // 
-            this.deliveryBindingSource.DataSource = typeof(diagram.Delivery);
-            // 
-            // provideOrderBindingSource
-            // 
-            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
             // 
             // DeliveryIEF
             // 
@@ -120,10 +125,10 @@
             this.Name = "DeliveryIEF";
             this.Text = "DeliveryIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeliveryIEF_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }

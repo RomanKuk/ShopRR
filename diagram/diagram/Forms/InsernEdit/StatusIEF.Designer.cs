@@ -68,7 +68,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "StatusIEF";
             this.Text = "StatusIEF";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StatusIEF_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StatusIEF_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

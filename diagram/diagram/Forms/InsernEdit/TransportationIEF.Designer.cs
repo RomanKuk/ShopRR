@@ -31,17 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.save = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.goodsShopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // save
@@ -66,10 +68,18 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "GoodsShops_ID";
             // 
+            // transportationBindingSource
+            // 
+            this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "GS_in_ID", true));
-            this.comboBox2.DataSource = this.goodsShopsBindingSource;
+            this.comboBox2.DataSource = this.goodsShopsBindingSource1;
             this.comboBox2.DisplayMember = "GoodsShops_ID";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(346, 195);
@@ -90,6 +100,10 @@
             this.comboBox3.TabIndex = 3;
             this.comboBox3.ValueMember = "Employee_ID";
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.transportationBindingSource, "Date", true));
@@ -106,17 +120,9 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 5;
             // 
-            // transportationBindingSource
+            // goodsShopsBindingSource1
             // 
-            this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
-            // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            this.goodsShopsBindingSource1.DataSource = typeof(diagram.GoodsShops);
             // 
             // TransportationIEF
             // 
@@ -132,10 +138,11 @@
             this.Name = "TransportationIEF";
             this.Text = "TransportationIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransportationIEF_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,5 +158,6 @@
         private System.Windows.Forms.BindingSource transportationBindingSource;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource;
+        private System.Windows.Forms.BindingSource goodsShopsBindingSource1;
     }
 }
