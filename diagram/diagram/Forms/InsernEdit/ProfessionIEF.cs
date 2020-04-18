@@ -6,7 +6,7 @@ namespace diagram.Forms.InsernEdit
     public partial class ProfessionIEF : Form
     {
         my_db_for_db_2Entities db;
-        public ProfessionIEF(City obj, my_db_for_db_2Entities _db)
+        public ProfessionIEF(Profession obj, my_db_for_db_2Entities _db)
         {
             InitializeComponent();
             db = _db;

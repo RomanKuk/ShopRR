@@ -256,6 +256,12 @@
     <Compile Include="Forms\Table\BreakageForm.Designer.cs">
       <DependentUpon>BreakageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Table\CategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\CategoriesForm.Designer.cs">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Table\CountriesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,121 @@
     </Compile>
     <Compile Include="Forms\InsernEdit\CityIEF.Designer.cs">
       <DependentUpon>CityIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\CustomersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\CustomersForm.Designer.cs">
+      <DependentUpon>CustomersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\DeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\DeliveryForm.Designer.cs">
+      <DependentUpon>DeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\EmployeeAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\EmployeeAccountForm.Designer.cs">
+      <DependentUpon>EmployeeAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\GoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\GoodsForm.Designer.cs">
+      <DependentUpon>GoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\GoodsShopsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\GoodsShopsForm.Designer.cs">
+      <DependentUpon>GoodsShopsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\MakersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\MakersForm.Designer.cs">
+      <DependentUpon>MakersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ProfessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ProfessionForm.Designer.cs">
+      <DependentUpon>ProfessionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ProvideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ProvideForm.Designer.cs">
+      <DependentUpon>ProvideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ProvideOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ProvideOrderForm.Designer.cs">
+      <DependentUpon>ProvideOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\RepairForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\RepairForm.Designer.cs">
+      <DependentUpon>RepairForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ServiceCenterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ServiceCenterForm.Designer.cs">
+      <DependentUpon>ServiceCenterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ServiceTransportationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ServiceTransportationForm.Designer.cs">
+      <DependentUpon>ServiceTransportationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ShipmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ShipmentForm.Designer.cs">
+      <DependentUpon>ShipmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ShopsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\ShopsForm.Designer.cs">
+      <DependentUpon>ShopsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\ShopsIEF.cs" />
+    <Compile Include="Forms\Table\StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\StatusForm.Designer.cs">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\TransportationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\TransportationForm.Designer.cs">
+      <DependentUpon>TransportationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Goods.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -429,6 +550,9 @@
     <EmbeddedResource Include="Forms\Table\BreakageForm.resx">
       <DependentUpon>BreakageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\CategoriesForm.resx">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\CountriesForm.resx">
       <DependentUpon>CountriesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,6 +564,63 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsernEdit\CityIEF.resx">
       <DependentUpon>CityIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\CustomersForm.resx">
+      <DependentUpon>CustomersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\DeliveryForm.resx">
+      <DependentUpon>DeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\EmployeeAccountForm.resx">
+      <DependentUpon>EmployeeAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\GoodsForm.resx">
+      <DependentUpon>GoodsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\GoodsShopsForm.resx">
+      <DependentUpon>GoodsShopsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\MakersForm.resx">
+      <DependentUpon>MakersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ProfessionForm.resx">
+      <DependentUpon>ProfessionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ProvideForm.resx">
+      <DependentUpon>ProvideForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ProvideOrderForm.resx">
+      <DependentUpon>ProvideOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\RepairForm.resx">
+      <DependentUpon>RepairForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ServiceCenterForm.resx">
+      <DependentUpon>ServiceCenterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ServiceTransportationForm.resx">
+      <DependentUpon>ServiceTransportationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ShipmentForm.resx">
+      <DependentUpon>ShipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\ShopsForm.resx">
+      <DependentUpon>ShopsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\StatusForm.resx">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\TransportationForm.resx">
+      <DependentUpon>TransportationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

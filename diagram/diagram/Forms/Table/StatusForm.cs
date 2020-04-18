@@ -1,58 +1,58 @@
-﻿using System;
+﻿using diagram.Forms.InsernEdit;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram
+namespace diagram.Forms.Table
 {
-    public partial class CityForm : Form
+    public partial class StatusForm : Form
     {
         my_db_for_db_2Entities db;
-        public CityForm(my_db_for_db_2Entities _db)
+        public StatusForm(my_db_for_db_2Entities _db)
         {
             InitializeComponent();
             db = _db;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void StatusForm_Load(object sender, EventArgs e)
         {
-            countriesBindingSource.DataSource = db.Countries.ToList();
-            cityBindingSource.DataSource = db.City.ToList();
+            statusBindingSource.DataSource = db.Status.ToList();
         }
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            using (CityIEF frm = new CityIEF(null, db))
+            using (StatusIEF frm = new StatusIEF(null, db))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    cityBindingSource.DataSource = db.City.ToList();
+                    statusBindingSource.DataSource = db.Status.ToList();
                 }
             }
         }
 
-        private void Update_Click(object sender, EventArgs e)
+        private void Edit_Click(object sender, EventArgs e)
         {
-            if (cityBindingSource.Current == null)
+            if (statusBindingSource.Current == null)
             {
                 return;
             }
-            using (CityIEF frm = new CityIEF(cityBindingSource.Current as City, db))
+            using (StatusIEF frm = new StatusIEF(statusBindingSource.Current as Status, db))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    cityBindingSource.DataSource = db.City.ToList();
+                    statusBindingSource.DataSource = db.Status.ToList();
                 }
             }
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            if (cityBindingSource.Current != null)
+            if (statusBindingSource.Current != null)
             {
                 if (MessageBox.Show("Are you sure", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.City.Remove(cityBindingSource.Current as City);
-                    cityBindingSource.RemoveCurrent();
+                    db.Status.Remove(statusBindingSource.Current as Status);
+                    statusBindingSource.RemoveCurrent();
                     db.SaveChanges();
                 }
             }

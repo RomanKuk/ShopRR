@@ -6,7 +6,7 @@ namespace diagram.Forms.InsernEdit
     public partial class ProvideOrderIEF : Form
     {
         my_db_for_db_2Entities db;
-        public ProvideOrderIEF(City obj, my_db_for_db_2Entities _db)
+        public ProvideOrderIEF(ProvideOrder obj, my_db_for_db_2Entities _db)
         {
             InitializeComponent();
             db = _db;

@@ -13,7 +13,7 @@ namespace diagram.Forms.InsernEdit
     public partial class MakersIEF : Form
     {
         my_db_for_db_2Entities db;
-        public MakersIEF(City obj, my_db_for_db_2Entities _db)
+        public MakersIEF(Makers obj, my_db_for_db_2Entities _db)
         {
             InitializeComponent();
             db = _db;
