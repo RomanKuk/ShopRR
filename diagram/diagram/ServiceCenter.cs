@@ -23,6 +23,7 @@ namespace diagram
         }
     
         public int SC_ID { get; set; }
+        public string Code { get; set; }
         public int Address { get; set; }
     
         public virtual Address Address1 { get; set; }

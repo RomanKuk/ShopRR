@@ -21,6 +21,7 @@ namespace diagram
         }
     
         public int Service_ID { get; set; }
+        public string Code { get; set; }
         public int Breakage_ID { get; set; }
         public int Status_ID { get; set; }
         public int Basket_ID { get; set; }

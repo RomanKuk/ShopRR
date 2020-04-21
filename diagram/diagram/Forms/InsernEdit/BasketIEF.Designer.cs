@@ -36,6 +36,7 @@
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.save = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
@@ -46,7 +47,7 @@
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.basketBindingSource, "GoodsShops_ID", true));
             this.comboBox1.DataSource = this.goodsShopsBindingSource;
-            this.comboBox1.DisplayMember = "GoodsShops_ID";
+            this.comboBox1.DisplayMember = "Code";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(349, 92);
             this.comboBox1.Name = "comboBox1";
@@ -101,12 +102,21 @@
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.basketBindingSource, "Code", true));
+            this.textBox1.Location = new System.Drawing.Point(349, 65);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 20);
+            this.textBox1.TabIndex = 4;
+            // 
             // BasketIEF
             // 
             this.AcceptButton = this.save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.save);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox2);
@@ -120,6 +130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +143,6 @@
         private System.Windows.Forms.BindingSource basketBindingSource;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.BindingSource salesBindingSource;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

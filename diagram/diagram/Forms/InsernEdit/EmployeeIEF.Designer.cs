@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.save = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
@@ -64,6 +64,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
             // 
             // textBox2
             // 
@@ -93,6 +97,10 @@
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "Address_ID";
             // 
+            // addressBindingSource
+            // 
+            this.addressBindingSource.DataSource = typeof(diagram.Address);
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "Profession_ID", true));
@@ -105,17 +113,25 @@
             this.comboBox2.TabIndex = 5;
             this.comboBox2.ValueMember = "Profession_ID";
             // 
+            // professionBindingSource
+            // 
+            this.professionBindingSource.DataSource = typeof(diagram.Profession);
+            // 
             // comboBox3
             // 
             this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "Shop_ID", true));
             this.comboBox3.DataSource = this.shopsBindingSource;
-            this.comboBox3.DisplayMember = "Address";
+            this.comboBox3.DisplayMember = "Code";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(327, 315);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 6;
             this.comboBox3.ValueMember = "Shop_ID";
+            // 
+            // shopsBindingSource
+            // 
+            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
             // dateTimePicker1
             // 
@@ -124,22 +140,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 7;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
-            // addressBindingSource
-            // 
-            this.addressBindingSource.DataSource = typeof(diagram.Address);
-            // 
-            // professionBindingSource
-            // 
-            this.professionBindingSource.DataSource = typeof(diagram.Profession);
-            // 
-            // shopsBindingSource
-            // 
-            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
             // EmployeeIEF
             // 

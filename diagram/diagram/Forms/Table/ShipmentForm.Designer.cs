@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.insert = new System.Windows.Forms.Button();
-            this.edit = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
-            this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insert = new System.Windows.Forms.Button();
+            this.edit = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.shipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deliverIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Delivery = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,9 +57,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.shipmentIDDataGridViewTextBoxColumn,
-            this.deliverIDDataGridViewTextBoxColumn,
-            this.goodsShopsIDDataGridViewTextBoxColumn,
-            this.employeeIDDataGridViewTextBoxColumn,
+            this.Delivery,
+            this.Employee,
+            this.GoodsShops,
             this.dateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.shipmentBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -67,6 +67,22 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // deliveryBindingSource
+            // 
+            this.deliveryBindingSource.DataSource = typeof(diagram.Delivery);
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
+            // shipmentBindingSource
+            // 
+            this.shipmentBindingSource.DataSource = typeof(diagram.Shipment);
             // 
             // insert
             // 
@@ -98,22 +114,6 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // shipmentBindingSource
-            // 
-            this.shipmentBindingSource.DataSource = typeof(diagram.Shipment);
-            // 
-            // deliveryBindingSource
-            // 
-            this.deliveryBindingSource.DataSource = typeof(diagram.Delivery);
-            // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
             // shipmentIDDataGridViewTextBoxColumn
             // 
             this.shipmentIDDataGridViewTextBoxColumn.DataPropertyName = "Shipment_ID";
@@ -122,41 +122,41 @@
             this.shipmentIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.shipmentIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // deliverIDDataGridViewTextBoxColumn
+            // Delivery
             // 
-            this.deliverIDDataGridViewTextBoxColumn.DataPropertyName = "Deliver_ID";
-            this.deliverIDDataGridViewTextBoxColumn.DataSource = this.deliveryBindingSource;
-            this.deliverIDDataGridViewTextBoxColumn.DisplayMember = "Deliver_ID";
-            this.deliverIDDataGridViewTextBoxColumn.HeaderText = "Deliver_ID";
-            this.deliverIDDataGridViewTextBoxColumn.Name = "deliverIDDataGridViewTextBoxColumn";
-            this.deliverIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deliverIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.deliverIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.deliverIDDataGridViewTextBoxColumn.ValueMember = "Deliver_ID";
+            this.Delivery.DataPropertyName = "Delivery";
+            this.Delivery.DataSource = this.deliveryBindingSource;
+            this.Delivery.DisplayMember = "Code";
+            this.Delivery.HeaderText = "Delivery";
+            this.Delivery.Name = "Delivery";
+            this.Delivery.ReadOnly = true;
+            this.Delivery.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delivery.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delivery.ValueMember = "Deliver_ID";
             // 
-            // goodsShopsIDDataGridViewTextBoxColumn
+            // Employee
             // 
-            this.goodsShopsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
-            this.goodsShopsIDDataGridViewTextBoxColumn.DisplayMember = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.HeaderText = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.Name = "goodsShopsIDDataGridViewTextBoxColumn";
-            this.goodsShopsIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodsShopsIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.goodsShopsIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.goodsShopsIDDataGridViewTextBoxColumn.ValueMember = "GoodsShops_ID";
+            this.Employee.DataPropertyName = "Employee";
+            this.Employee.DataSource = this.employeeBindingSource;
+            this.Employee.DisplayMember = "LastName";
+            this.Employee.HeaderText = "Employee";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Employee.ValueMember = "Employee_ID";
             // 
-            // employeeIDDataGridViewTextBoxColumn
+            // GoodsShops
             // 
-            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.DataSource = this.employeeBindingSource;
-            this.employeeIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
-            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeeIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.employeeIDDataGridViewTextBoxColumn.ValueMember = "Employee_ID";
+            this.GoodsShops.DataPropertyName = "GoodsShops";
+            this.GoodsShops.DataSource = this.goodsShopsBindingSource;
+            this.GoodsShops.DisplayMember = "Code";
+            this.GoodsShops.HeaderText = "GoodsShops";
+            this.GoodsShops.Name = "GoodsShops";
+            this.GoodsShops.ReadOnly = true;
+            this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GoodsShops.ValueMember = "GoodsShops_ID";
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -178,10 +178,10 @@
             this.Text = "ShipmentForm";
             this.Load += new System.EventHandler(this.ShipmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,10 +196,13 @@
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.BindingSource shipmentBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shipmentIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn deliverIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shipmentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Delivery;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
+        private System.Windows.Forms.DataGridViewComboBoxColumn GoodsShops;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
     }
 }

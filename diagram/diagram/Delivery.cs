@@ -21,6 +21,7 @@ namespace diagram
         }
     
         public int Deliver_ID { get; set; }
+        public string Code { get; set; }
         public int Good_ID { get; set; }
         public int ProvideOrder_ID { get; set; }
         public System.DateTime Date { get; set; }

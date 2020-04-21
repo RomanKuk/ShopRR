@@ -30,26 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.insert = new System.Windows.Forms.Button();
-            this.edit = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insert = new System.Windows.Forms.Button();
+            this.edit = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.professionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.hiringDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Profession = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Shops = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.LoginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,15 +66,33 @@
             this.lastNameDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
             this.phoneDataGridViewTextBoxColumn,
-            this.professionIDDataGridViewTextBoxColumn,
             this.hiringDateDataGridViewTextBoxColumn,
-            this.shopIDDataGridViewTextBoxColumn});
+            this.Profession,
+            this.Shops,
+            this.LoginName,
+            this.Password});
             this.dataGridView1.DataSource = this.employeeBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // addressBindingSource
+            // 
+            this.addressBindingSource.DataSource = typeof(diagram.Address);
+            // 
+            // professionBindingSource
+            // 
+            this.professionBindingSource.DataSource = typeof(diagram.Profession);
+            // 
+            // shopsBindingSource
+            // 
+            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
             // 
             // insert
             // 
@@ -103,22 +123,6 @@
             this.delete.Text = "delete";
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
-            // addressBindingSource
-            // 
-            this.addressBindingSource.DataSource = typeof(diagram.Address);
-            // 
-            // professionBindingSource
-            // 
-            this.professionBindingSource.DataSource = typeof(diagram.Profession);
-            // 
-            // shopsBindingSource
-            // 
-            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
@@ -161,18 +165,6 @@
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
             this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // professionIDDataGridViewTextBoxColumn
-            // 
-            this.professionIDDataGridViewTextBoxColumn.DataPropertyName = "Profession_ID";
-            this.professionIDDataGridViewTextBoxColumn.DataSource = this.professionBindingSource;
-            this.professionIDDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.professionIDDataGridViewTextBoxColumn.HeaderText = "Profession_ID";
-            this.professionIDDataGridViewTextBoxColumn.Name = "professionIDDataGridViewTextBoxColumn";
-            this.professionIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.professionIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.professionIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.professionIDDataGridViewTextBoxColumn.ValueMember = "Profession_ID";
-            // 
             // hiringDateDataGridViewTextBoxColumn
             // 
             this.hiringDateDataGridViewTextBoxColumn.DataPropertyName = "HiringDate";
@@ -180,17 +172,43 @@
             this.hiringDateDataGridViewTextBoxColumn.Name = "hiringDateDataGridViewTextBoxColumn";
             this.hiringDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // shopIDDataGridViewTextBoxColumn
+            // Profession
             // 
-            this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.DataSource = this.shopsBindingSource;
-            this.shopIDDataGridViewTextBoxColumn.DisplayMember = "Address";
-            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
-            this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shopIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.shopIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.shopIDDataGridViewTextBoxColumn.ValueMember = "Shop_ID";
+            this.Profession.DataPropertyName = "Profession";
+            this.Profession.DataSource = this.professionBindingSource;
+            this.Profession.DisplayMember = "Name";
+            this.Profession.HeaderText = "Profession";
+            this.Profession.Name = "Profession";
+            this.Profession.ReadOnly = true;
+            this.Profession.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Profession.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Profession.ValueMember = "Profession_ID";
+            // 
+            // Shops
+            // 
+            this.Shops.DataPropertyName = "Shops";
+            this.Shops.DataSource = this.shopsBindingSource;
+            this.Shops.DisplayMember = "Code";
+            this.Shops.HeaderText = "Shops";
+            this.Shops.Name = "Shops";
+            this.Shops.ReadOnly = true;
+            this.Shops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Shops.ValueMember = "Shop_ID";
+            // 
+            // LoginName
+            // 
+            this.LoginName.DataPropertyName = "LoginName";
+            this.LoginName.HeaderText = "LoginName";
+            this.LoginName.Name = "LoginName";
+            this.LoginName.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
             // 
             // EmployeeForm
             // 
@@ -205,10 +223,10 @@
             this.Text = "EmployeeForm";
             this.Load += new System.EventHandler(this.EmployeeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,17 +237,21 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.BindingSource addressBindingSource;
+        private System.Windows.Forms.DataGridViewComboBoxColumn professionIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource professionBindingSource;
+        private System.Windows.Forms.DataGridViewComboBoxColumn shopIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource shopsBindingSource;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource addressBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn professionIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource professionBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn hiringDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn shopIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource shopsBindingSource;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Profession;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Shops;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoginName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }

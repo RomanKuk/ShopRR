@@ -31,15 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.save = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // save
@@ -64,17 +65,29 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "Good_ID";
             // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.goodsShopsBindingSource, "Shop_ID", true));
             this.comboBox2.DataSource = this.shopsBindingSource;
-            this.comboBox2.DisplayMember = "Shop_ID";
+            this.comboBox2.DisplayMember = "Code";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(327, 229);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 2;
             this.comboBox2.ValueMember = "Shop_ID";
+            // 
+            // shopsBindingSource
+            // 
+            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
             // numericUpDown1
             // 
@@ -84,17 +97,13 @@
             this.numericUpDown1.Size = new System.Drawing.Size(121, 20);
             this.numericUpDown1.TabIndex = 3;
             // 
-            // goodsBindingSource
+            // textBox1
             // 
-            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
-            // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
-            // shopsBindingSource
-            // 
-            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.goodsShopsBindingSource, "Code", true));
+            this.textBox1.Location = new System.Drawing.Point(337, 152);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // GoodsShopsIEF
             // 
@@ -102,6 +111,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -110,11 +120,12 @@
             this.Name = "GoodsShopsIEF";
             this.Text = "GoodsShopsIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GoodsShopsIEF_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -127,5 +138,6 @@
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.BindingSource shopsBindingSource;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

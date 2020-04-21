@@ -21,6 +21,7 @@ namespace diagram
         }
     
         public int ServiceTransportation_ID { get; set; }
+        public string Code { get; set; }
         public int Service_ID { get; set; }
         public int SC_ID { get; set; }
         public System.DateTime Date { get; set; }

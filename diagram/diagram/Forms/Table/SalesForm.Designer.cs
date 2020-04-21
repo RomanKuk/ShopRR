@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Customers = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,9 +56,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.salesIDDataGridViewTextBoxColumn,
+            this.Employee,
+            this.Customers,
             this.salesCodeDataGridViewTextBoxColumn,
-            this.employeeIDDataGridViewTextBoxColumn,
-            this.customerIDDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.salesBindingSource;
@@ -67,6 +67,18 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataSource = typeof(diagram.Customers);
+            // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(diagram.Sales);
             // 
             // insert
             // 
@@ -98,18 +110,6 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataSource = typeof(diagram.Sales);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataSource = typeof(diagram.Customers);
-            // 
             // salesIDDataGridViewTextBoxColumn
             // 
             this.salesIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_ID";
@@ -118,36 +118,36 @@
             this.salesIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.salesIDDataGridViewTextBoxColumn.Visible = false;
             // 
+            // Employee
+            // 
+            this.Employee.DataPropertyName = "Employee";
+            this.Employee.DataSource = this.employeeBindingSource;
+            this.Employee.DisplayMember = "LastName";
+            this.Employee.HeaderText = "Employee";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Employee.ValueMember = "Employee_ID";
+            // 
+            // Customers
+            // 
+            this.Customers.DataPropertyName = "Customers";
+            this.Customers.DataSource = this.customersBindingSource;
+            this.Customers.DisplayMember = "LastName";
+            this.Customers.HeaderText = "Customers";
+            this.Customers.Name = "Customers";
+            this.Customers.ReadOnly = true;
+            this.Customers.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Customers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Customers.ValueMember = "Customer_ID";
+            // 
             // salesCodeDataGridViewTextBoxColumn
             // 
             this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
             this.salesCodeDataGridViewTextBoxColumn.HeaderText = "SalesCode";
             this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
             this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIDDataGridViewTextBoxColumn
-            // 
-            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.DataSource = this.employeeBindingSource;
-            this.employeeIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
-            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeeIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.employeeIDDataGridViewTextBoxColumn.ValueMember = "Employee_ID";
-            // 
-            // customerIDDataGridViewTextBoxColumn
-            // 
-            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "Customer_ID";
-            this.customerIDDataGridViewTextBoxColumn.DataSource = this.customersBindingSource;
-            this.customerIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
-            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Customer_ID";
-            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
-            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.customerIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.customerIDDataGridViewTextBoxColumn.ValueMember = "Customer_ID";
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -176,9 +176,9 @@
             this.Text = "SalesForm";
             this.Load += new System.EventHandler(this.SalesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,14 +189,16 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salesIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salesCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn customerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource customersBindingSource;
+        private System.Windows.Forms.BindingSource salesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Customers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource salesBindingSource;
     }
 }

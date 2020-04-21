@@ -23,7 +23,9 @@ namespace diagram
         public int Maker_ID { get; set; }
         public string Name { get; set; }
         public int Country_ID { get; set; }
+        public int Brand_ID { get; set; }
     
+        public virtual Brand Brand { get; set; }
         public virtual Countries Countries { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Goods> Goods { get; set; }

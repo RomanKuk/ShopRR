@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
-            this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -50,6 +51,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sCIDDataGridViewTextBoxColumn,
+            this.Code,
             this.addressDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.serviceCenterBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -57,6 +59,14 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // addressBindingSource
+            // 
+            this.addressBindingSource.DataSource = typeof(diagram.Address);
+            // 
+            // serviceCenterBindingSource
+            // 
+            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
             // 
             // insert
             // 
@@ -88,14 +98,6 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // serviceCenterBindingSource
-            // 
-            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
-            // 
-            // addressBindingSource
-            // 
-            this.addressBindingSource.DataSource = typeof(diagram.Address);
-            // 
             // sCIDDataGridViewTextBoxColumn
             // 
             this.sCIDDataGridViewTextBoxColumn.DataPropertyName = "SC_ID";
@@ -103,6 +105,13 @@
             this.sCIDDataGridViewTextBoxColumn.Name = "sCIDDataGridViewTextBoxColumn";
             this.sCIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.sCIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
@@ -129,8 +138,8 @@
             this.Text = "ServiceCenterForm";
             this.Load += new System.EventHandler(this.ServiceCenterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,9 +150,10 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sCIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource addressBindingSource;
         private System.Windows.Forms.BindingSource serviceCenterBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sCIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewComboBoxColumn addressDataGridViewTextBoxColumn;
     }
 }

@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.save = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.basketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
@@ -66,6 +67,14 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "Breakage_ID";
             // 
+            // serviceBindingSource
+            // 
+            this.serviceBindingSource.DataSource = typeof(diagram.Service);
+            // 
+            // breakageBindingSource
+            // 
+            this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.serviceBindingSource, "Status_ID", true));
@@ -78,17 +87,25 @@
             this.comboBox2.TabIndex = 2;
             this.comboBox2.ValueMember = "Status_ID";
             // 
+            // statusBindingSource
+            // 
+            this.statusBindingSource.DataSource = typeof(diagram.Status);
+            // 
             // comboBox3
             // 
             this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.serviceBindingSource, "Basket_ID", true));
             this.comboBox3.DataSource = this.basketBindingSource;
-            this.comboBox3.DisplayMember = "Basket_ID";
+            this.comboBox3.DisplayMember = "Code";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(283, 199);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 3;
             this.comboBox3.ValueMember = "Basket_ID";
+            // 
+            // basketBindingSource
+            // 
+            this.basketBindingSource.DataSource = typeof(diagram.Basket);
             // 
             // dateTimePicker1
             // 
@@ -98,21 +115,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
-            // serviceBindingSource
+            // textBox1
             // 
-            this.serviceBindingSource.DataSource = typeof(diagram.Service);
-            // 
-            // breakageBindingSource
-            // 
-            this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
-            // 
-            // statusBindingSource
-            // 
-            this.statusBindingSource.DataSource = typeof(diagram.Status);
-            // 
-            // basketBindingSource
-            // 
-            this.basketBindingSource.DataSource = typeof(diagram.Basket);
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Code", true));
+            this.textBox1.Location = new System.Drawing.Point(304, 84);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
             // 
             // ServiceIEF
             // 
@@ -120,6 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
@@ -134,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -148,5 +159,6 @@
         private System.Windows.Forms.BindingSource breakageBindingSource;
         private System.Windows.Forms.BindingSource statusBindingSource;
         private System.Windows.Forms.BindingSource basketBindingSource;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -21,6 +21,7 @@ namespace diagram
         }
     
         public int ProvideOrder_ID { get; set; }
+        public string Code { get; set; }
         public System.DateTime Date { get; set; }
         public int TotalCost { get; set; }
         public int Provide_ID { get; set; }
