@@ -3,8 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-diagram/App.config
-diagram/Properties/Settings.Designer.cs
+/App.config
+/Properties/Settings.Designer.cs
 
 # User-specific files
 *.rsuser
