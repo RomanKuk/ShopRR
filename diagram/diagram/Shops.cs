@@ -22,6 +22,7 @@ namespace diagram
         }
     
         public int Shop_ID { get; set; }
+        public string Code { get; set; }
         public int Address { get; set; }
         public string Phone { get; set; }
     

@@ -30,20 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
-            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Goods = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Shops = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,8 +55,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.goodsShopsIDDataGridViewTextBoxColumn,
-            this.goodIDDataGridViewTextBoxColumn,
-            this.shopIDDataGridViewTextBoxColumn,
+            this.Code,
+            this.Goods,
+            this.Shops,
             this.countDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.goodsShopsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
@@ -63,6 +65,18 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
+            // 
+            // shopsBindingSource
+            // 
+            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
             // insert
             // 
@@ -94,18 +108,6 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
-            // 
-            // shopsBindingSource
-            // 
-            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
-            // 
             // goodsShopsIDDataGridViewTextBoxColumn
             // 
             this.goodsShopsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsShops_ID";
@@ -114,29 +116,36 @@
             this.goodsShopsIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.goodsShopsIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // goodIDDataGridViewTextBoxColumn
+            // Code
             // 
-            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.DataSource = this.goodsBindingSource;
-            this.goodIDDataGridViewTextBoxColumn.DisplayMember = "Model";
-            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
-            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.goodIDDataGridViewTextBoxColumn.ValueMember = "Good_ID";
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
             // 
-            // shopIDDataGridViewTextBoxColumn
+            // Goods
             // 
-            this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.DataSource = this.shopsBindingSource;
-            this.shopIDDataGridViewTextBoxColumn.DisplayMember = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
-            this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shopIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.shopIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.shopIDDataGridViewTextBoxColumn.ValueMember = "Shop_ID";
+            this.Goods.DataPropertyName = "Goods";
+            this.Goods.DataSource = this.goodsBindingSource;
+            this.Goods.DisplayMember = "Model";
+            this.Goods.HeaderText = "Goods";
+            this.Goods.Name = "Goods";
+            this.Goods.ReadOnly = true;
+            this.Goods.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Goods.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Goods.ValueMember = "Good_ID";
+            // 
+            // Shops
+            // 
+            this.Shops.DataPropertyName = "Shops";
+            this.Shops.DataSource = this.shopsBindingSource;
+            this.Shops.DisplayMember = "Code";
+            this.Shops.HeaderText = "Shops";
+            this.Shops.Name = "Shops";
+            this.Shops.ReadOnly = true;
+            this.Shops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Shops.ValueMember = "Shop_ID";
             // 
             // countDataGridViewTextBoxColumn
             // 
@@ -158,9 +167,9 @@
             this.Text = "GoodsShopsForm";
             this.Load += new System.EventHandler(this.GoodsShopsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,12 +180,15 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn goodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn shopIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource shopsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Goods;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Shops;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
     }
 }

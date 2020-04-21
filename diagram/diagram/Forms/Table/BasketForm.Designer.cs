@@ -30,20 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.basketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
-            this.basketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.basketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Sales = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,8 +55,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.basketIDDataGridViewTextBoxColumn,
-            this.goodsShopsIDDataGridViewTextBoxColumn,
-            this.salesIDDataGridViewTextBoxColumn,
+            this.Code,
+            this.GoodsShops,
+            this.Sales,
             this.countDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.basketBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(28, 12);
@@ -63,6 +65,18 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(diagram.Sales);
+            // 
+            // basketBindingSource
+            // 
+            this.basketBindingSource.DataSource = typeof(diagram.Basket);
             // 
             // insert
             // 
@@ -94,18 +108,6 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // basketBindingSource
-            // 
-            this.basketBindingSource.DataSource = typeof(diagram.Basket);
-            // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataSource = typeof(diagram.Sales);
-            // 
             // basketIDDataGridViewTextBoxColumn
             // 
             this.basketIDDataGridViewTextBoxColumn.DataPropertyName = "Basket_ID";
@@ -114,29 +116,36 @@
             this.basketIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.basketIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // goodsShopsIDDataGridViewTextBoxColumn
+            // Code
             // 
-            this.goodsShopsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
-            this.goodsShopsIDDataGridViewTextBoxColumn.DisplayMember = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.HeaderText = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.Name = "goodsShopsIDDataGridViewTextBoxColumn";
-            this.goodsShopsIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodsShopsIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.goodsShopsIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.goodsShopsIDDataGridViewTextBoxColumn.ValueMember = "GoodsShops_ID";
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
             // 
-            // salesIDDataGridViewTextBoxColumn
+            // GoodsShops
             // 
-            this.salesIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_ID";
-            this.salesIDDataGridViewTextBoxColumn.DataSource = this.salesBindingSource;
-            this.salesIDDataGridViewTextBoxColumn.DisplayMember = "SalesCode";
-            this.salesIDDataGridViewTextBoxColumn.HeaderText = "Sales_ID";
-            this.salesIDDataGridViewTextBoxColumn.Name = "salesIDDataGridViewTextBoxColumn";
-            this.salesIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.salesIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.salesIDDataGridViewTextBoxColumn.ValueMember = "Sales_ID";
+            this.GoodsShops.DataPropertyName = "GoodsShops";
+            this.GoodsShops.DataSource = this.goodsShopsBindingSource;
+            this.GoodsShops.DisplayMember = "Code";
+            this.GoodsShops.HeaderText = "GoodsShops";
+            this.GoodsShops.Name = "GoodsShops";
+            this.GoodsShops.ReadOnly = true;
+            this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GoodsShops.ValueMember = "GoodsShops_ID";
+            // 
+            // Sales
+            // 
+            this.Sales.DataPropertyName = "Sales";
+            this.Sales.DataSource = this.salesBindingSource;
+            this.Sales.DisplayMember = "SalesCode";
+            this.Sales.HeaderText = "Sales";
+            this.Sales.Name = "Sales";
+            this.Sales.ReadOnly = true;
+            this.Sales.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sales.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Sales.ValueMember = "Sales_ID";
             // 
             // countDataGridViewTextBoxColumn
             // 
@@ -158,9 +167,9 @@
             this.Text = "BasketForm";
             this.Load += new System.EventHandler(this.BasketForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,12 +180,15 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn basketIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn salesIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource salesBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource basketBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn basketIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewComboBoxColumn GoodsShops;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Sales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
     }
 }

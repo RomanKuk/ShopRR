@@ -37,6 +37,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.save = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).BeginInit();
@@ -67,7 +68,7 @@
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.deliveryBindingSource, "ProvideOrder_ID", true));
             this.comboBox2.DataSource = this.provideOrderBindingSource;
-            this.comboBox2.DisplayMember = "ProvideOrder_ID";
+            this.comboBox2.DisplayMember = "Code";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(290, 106);
             this.comboBox2.Name = "comboBox2";
@@ -110,12 +111,21 @@
             this.save.Text = "save";
             this.save.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.deliveryBindingSource, "Code", true));
+            this.textBox1.Location = new System.Drawing.Point(311, 44);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
             // DeliveryIEF
             // 
             this.AcceptButton = this.save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.save);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.dateTimePicker1);
@@ -130,6 +140,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -143,5 +154,6 @@
         private System.Windows.Forms.BindingSource deliveryBindingSource;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.BindingSource provideOrderBindingSource;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

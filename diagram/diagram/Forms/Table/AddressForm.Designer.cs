@@ -36,8 +36,8 @@
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.addressIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
@@ -51,8 +51,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.addressIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.cityIDDataGridViewTextBoxColumn});
+            this.City,
+            this.nameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.addressBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(26, 21);
             this.dataGridView1.Name = "dataGridView1";
@@ -106,24 +106,24 @@
             this.addressIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressIDDataGridViewTextBoxColumn.Visible = false;
             // 
+            // City
+            // 
+            this.City.DataPropertyName = "City";
+            this.City.DataSource = this.cityBindingSource;
+            this.City.DisplayMember = "Name";
+            this.City.HeaderText = "City";
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
+            this.City.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.City.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.City.ValueMember = "City_ID";
+            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cityIDDataGridViewTextBoxColumn
-            // 
-            this.cityIDDataGridViewTextBoxColumn.DataPropertyName = "City_ID";
-            this.cityIDDataGridViewTextBoxColumn.DataSource = this.cityBindingSource;
-            this.cityIDDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.cityIDDataGridViewTextBoxColumn.HeaderText = "City_ID";
-            this.cityIDDataGridViewTextBoxColumn.Name = "cityIDDataGridViewTextBoxColumn";
-            this.cityIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cityIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cityIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cityIDDataGridViewTextBoxColumn.ValueMember = "City_ID";
             // 
             // AddressForm
             // 
@@ -152,8 +152,9 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn cityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn City;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

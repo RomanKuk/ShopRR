@@ -24,6 +24,7 @@ namespace diagram
         }
     
         public int GoodsShops_ID { get; set; }
+        public string Code { get; set; }
         public int Good_ID { get; set; }
         public int Shop_ID { get; set; }
         public int Count { get; set; }

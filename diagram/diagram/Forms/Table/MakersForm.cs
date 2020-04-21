@@ -1,12 +1,6 @@
 ﻿using diagram.Forms.InsernEdit;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram.Forms.Table
@@ -23,6 +17,7 @@ namespace diagram.Forms.Table
         private void MakersForm_Load(object sender, EventArgs e)
         {
             countriesBindingSource.DataSource = db.Countries.ToList();
+            brandBindingSource.DataSource = db.Brand.ToList();
             makersBindingSource.DataSource = db.Makers.ToList();
         }
 

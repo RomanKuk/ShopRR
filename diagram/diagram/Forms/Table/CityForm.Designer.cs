@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.cityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Countries = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
@@ -52,13 +52,21 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cityIDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
-            this.countryIDDataGridViewTextBoxColumn});
+            this.Countries});
             this.dataGridView1.DataSource = this.cityBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(408, 123);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // countriesBindingSource
+            // 
+            this.countriesBindingSource.DataSource = typeof(diagram.Countries);
+            // 
+            // cityBindingSource
+            // 
+            this.cityBindingSource.DataSource = typeof(diagram.City);
             // 
             // insert
             // 
@@ -105,27 +113,19 @@
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // countryIDDataGridViewTextBoxColumn
+            // Countries
             // 
-            this.countryIDDataGridViewTextBoxColumn.DataPropertyName = "Country_ID";
-            this.countryIDDataGridViewTextBoxColumn.DataSource = this.countriesBindingSource;
-            this.countryIDDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.countryIDDataGridViewTextBoxColumn.HeaderText = "Country_ID";
-            this.countryIDDataGridViewTextBoxColumn.Name = "countryIDDataGridViewTextBoxColumn";
-            this.countryIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.countryIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.countryIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.countryIDDataGridViewTextBoxColumn.ValueMember = "Country_ID";
+            this.Countries.DataPropertyName = "Countries";
+            this.Countries.DataSource = this.countriesBindingSource;
+            this.Countries.DisplayMember = "Name";
+            this.Countries.HeaderText = "Countries";
+            this.Countries.Name = "Countries";
+            this.Countries.ReadOnly = true;
+            this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Countries.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Countries.ValueMember = "Country_ID";
             // 
-            // countriesBindingSource
-            // 
-            this.countriesBindingSource.DataSource = typeof(diagram.Countries);
-            // 
-            // cityBindingSource
-            // 
-            this.cityBindingSource.DataSource = typeof(diagram.City);
-            // 
-            // Form3
+            // CityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@
             this.Controls.Add(this.update);
             this.Controls.Add(this.insert);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form3";
+            this.Name = "CityForm";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -147,13 +147,14 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn countryIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource countriesBindingSource;
         private System.Windows.Forms.BindingSource cityBindingSource;
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Countries;
     }
 }

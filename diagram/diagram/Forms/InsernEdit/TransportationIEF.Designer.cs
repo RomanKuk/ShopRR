@@ -34,16 +34,16 @@
             this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.goodsShopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.goodsShopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // save
@@ -60,7 +60,7 @@
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "GS_from_ID", true));
             this.comboBox1.DataSource = this.goodsShopsBindingSource;
-            this.comboBox1.DisplayMember = "GoodsShops_ID";
+            this.comboBox1.DisplayMember = "Code";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(346, 168);
             this.comboBox1.Name = "comboBox1";
@@ -80,13 +80,17 @@
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "GS_in_ID", true));
             this.comboBox2.DataSource = this.goodsShopsBindingSource1;
-            this.comboBox2.DisplayMember = "GoodsShops_ID";
+            this.comboBox2.DisplayMember = "Code";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(346, 195);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 2;
             this.comboBox2.ValueMember = "GoodsShops_ID";
+            // 
+            // goodsShopsBindingSource1
+            // 
+            this.goodsShopsBindingSource1.DataSource = typeof(diagram.GoodsShops);
             // 
             // comboBox3
             // 
@@ -120,10 +124,6 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 5;
             // 
-            // goodsShopsBindingSource1
-            // 
-            this.goodsShopsBindingSource1.DataSource = typeof(diagram.GoodsShops);
-            // 
             // TransportationIEF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,9 +140,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransportationIEF_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -18,6 +18,7 @@ namespace diagram.Forms.InsernEdit
             InitializeComponent();
             db = _db;
             countriesBindingSource.DataSource = db.Countries.ToList();
+            brandBindingSource.DataSource = db.Brand.ToList();
             makersBindingSource.DataSource = db.Makers.ToList();
             if (obj == null)
             {

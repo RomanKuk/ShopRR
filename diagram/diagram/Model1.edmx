@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="my_db_for_db_2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Address">
           <Key>
             <PropertyRef Name="Address_ID" />
@@ -18,6 +18,7 @@
             <PropertyRef Name="Basket_ID" />
           </Key>
           <Property Name="Basket_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="GoodsShops_ID" Type="int" Nullable="false" />
           <Property Name="Sales_ID" Type="int" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
@@ -93,6 +94,7 @@
             <PropertyRef Name="Deliver_ID" />
           </Key>
           <Property Name="Deliver_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Good_ID" Type="int" Nullable="false" />
           <Property Name="ProvideOrder_ID" Type="int" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
@@ -110,15 +112,8 @@
           <Property Name="Profession_ID" Type="int" Nullable="false" />
           <Property Name="HiringDate" Type="date" Nullable="false" />
           <Property Name="Shop_ID" Type="int" />
-        </EntityType>
-        <EntityType Name="EmployeeAccount">
-          <Key>
-            <PropertyRef Name="EmployeeAccount_ID" />
-          </Key>
-          <Property Name="EmployeeAccount_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LoginName" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="Password" Type="varchar" MaxLength="25" Nullable="false" />
-          <Property Name="Employee_ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Goods">
           <Key>
@@ -139,6 +134,7 @@
             <PropertyRef Name="GoodsShops_ID" />
           </Key>
           <Property Name="GoodsShops_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Good_ID" Type="int" Nullable="false" />
           <Property Name="Shop_ID" Type="int" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
@@ -150,6 +146,7 @@
           <Property Name="Maker_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="Country_ID" Type="int" Nullable="false" />
+          <Property Name="Brand_ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Profession">
           <Key>
@@ -174,6 +171,7 @@
             <PropertyRef Name="ProvideOrder_ID" />
           </Key>
           <Property Name="ProvideOrder_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="TotalCost" Type="int" Nullable="false" />
           <Property Name="Provide_ID" Type="int" Nullable="false" />
@@ -203,6 +201,7 @@
             <PropertyRef Name="Service_ID" />
           </Key>
           <Property Name="Service_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Breakage_ID" Type="int" Nullable="false" />
           <Property Name="Status_ID" Type="int" Nullable="false" />
           <Property Name="Basket_ID" Type="int" Nullable="false" />
@@ -213,6 +212,7 @@
             <PropertyRef Name="SC_ID" />
           </Key>
           <Property Name="SC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Address" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ServiceTransportation">
@@ -220,6 +220,7 @@
             <PropertyRef Name="ServiceTransportation_ID" />
           </Key>
           <Property Name="ServiceTransportation_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Service_ID" Type="int" Nullable="false" />
           <Property Name="SC_ID" Type="int" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
@@ -239,6 +240,7 @@
             <PropertyRef Name="Shop_ID" />
           </Key>
           <Property Name="Shop_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Address" Type="int" Nullable="false" />
           <Property Name="Phone" Type="char" MaxLength="10" />
         </EntityType>
@@ -248,16 +250,6 @@
           </Key>
           <Property Name="Status_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="25" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Transportation">
           <Key>
@@ -462,18 +454,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_EmployeeAccount_Employee_Employee_ID">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
-          <End Role="EmployeeAccount" Type="Self.EmployeeAccount" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Employee">
-              <PropertyRef Name="Employee_ID" />
-            </Principal>
-            <Dependent Role="EmployeeAccount">
-              <PropertyRef Name="Employee_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="fk_Goods_Categories_Category_ID">
           <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
           <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
@@ -519,6 +499,18 @@
             </Principal>
             <Dependent Role="GoodsShops">
               <PropertyRef Name="Shop_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Makers_Brand_Brand_ID">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="1" />
+          <End Role="Makers" Type="Self.Makers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="Brand_ID" />
+            </Principal>
+            <Dependent Role="Makers">
+              <PropertyRef Name="Brand_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -750,7 +742,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DBModelStoreContainer">
+        <EntityContainer Name="my_db_for_db_2ModelStoreContainer">
           <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Basket" EntityType="Self.Basket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
@@ -763,7 +755,6 @@
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="EmployeeAccount" EntityType="Self.EmployeeAccount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Goods" EntityType="Self.Goods" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GoodsShops" EntityType="Self.GoodsShops" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Makers" EntityType="Self.Makers" Schema="dbo" store:Type="Tables" />
@@ -778,7 +769,6 @@
           <EntitySet Name="Shipment" EntityType="Self.Shipment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transportation" EntityType="Self.Transportation" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="fk_Address_City_City_ID" Association="Self.fk_Address_City_City_ID">
             <End Role="City" EntitySet="City" />
@@ -844,10 +834,6 @@
             <End Role="Shops" EntitySet="Shops" />
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
-          <AssociationSet Name="fk_EmployeeAccount_Employee_Employee_ID" Association="Self.fk_EmployeeAccount_Employee_Employee_ID">
-            <End Role="Employee" EntitySet="Employee" />
-            <End Role="EmployeeAccount" EntitySet="EmployeeAccount" />
-          </AssociationSet>
           <AssociationSet Name="fk_Goods_Categories_Category_ID" Association="Self.fk_Goods_Categories_Category_ID">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Goods" EntitySet="Goods" />
@@ -863,6 +849,10 @@
           <AssociationSet Name="fk_GoodsShops_Shops_Shop_ID" Association="Self.fk_GoodsShops_Shops_Shop_ID">
             <End Role="Shops" EntitySet="Shops" />
             <End Role="GoodsShops" EntitySet="GoodsShops" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Makers_Brand_Brand_ID" Association="Self.fk_Makers_Brand_Brand_ID">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="Makers" EntitySet="Makers" />
           </AssociationSet>
           <AssociationSet Name="fk_Makers_Countries_Country_ID" Association="Self.fk_Makers_Countries_Country_ID">
             <End Role="Countries" EntitySet="Countries" />
@@ -945,7 +935,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="my_db_for_db_2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Address">
           <Key>
             <PropertyRef Name="Address_ID" />
@@ -965,6 +955,7 @@
             <PropertyRef Name="Basket_ID" />
           </Key>
           <Property Name="Basket_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="GoodsShops_ID" Type="Int32" Nullable="false" />
           <Property Name="Sales_ID" Type="Int32" Nullable="false" />
           <Property Name="Count" Type="Int32" Nullable="false" />
@@ -980,6 +971,7 @@
           <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Country_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Countries" Relationship="Self.fk_Brand_Countries_Country_ID" FromRole="Brand" ToRole="Countries" />
+          <NavigationProperty Name="Makers" Relationship="Self.fk_Makers_Brand_Brand_ID" FromRole="Brand" ToRole="Makers" />
           <NavigationProperty Name="ServiceCenter" Relationship="Self.BrandSC" FromRole="Brand" ToRole="ServiceCenter" />
         </EntityType>
         <EntityType Name="Breakage">
@@ -1041,6 +1033,7 @@
             <PropertyRef Name="Deliver_ID" />
           </Key>
           <Property Name="Deliver_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Good_ID" Type="Int32" Nullable="false" />
           <Property Name="ProvideOrder_ID" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
@@ -1061,23 +1054,14 @@
           <Property Name="Profession_ID" Type="Int32" Nullable="false" />
           <Property Name="HiringDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Shop_ID" Type="Int32" />
+          <Property Name="LoginName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Address1" Relationship="Self.fk_Employee_Address_Address" FromRole="Employee" ToRole="Address" />
           <NavigationProperty Name="Profession" Relationship="Self.fk_Employee_Profession_Profession_ID" FromRole="Employee" ToRole="Profession" />
           <NavigationProperty Name="Shops" Relationship="Self.fk_Employee_Shops_Shop_ID" FromRole="Employee" ToRole="Shops" />
-          <NavigationProperty Name="EmployeeAccount" Relationship="Self.fk_EmployeeAccount_Employee_Employee_ID" FromRole="Employee" ToRole="EmployeeAccount" />
           <NavigationProperty Name="Sales" Relationship="Self.fk_Sales_Employee_Employee_ID" FromRole="Employee" ToRole="Sales" />
           <NavigationProperty Name="Shipment" Relationship="Self.fk_Shipment_Employee_Employee_ID" FromRole="Employee" ToRole="Shipment" />
           <NavigationProperty Name="Transportation" Relationship="Self.fk_Transportation_Employee_Employee_ID" FromRole="Employee" ToRole="Transportation" />
-        </EntityType>
-        <EntityType Name="EmployeeAccount">
-          <Key>
-            <PropertyRef Name="EmployeeAccount_ID" />
-          </Key>
-          <Property Name="EmployeeAccount_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LoginName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Employee_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Employee" Relationship="Self.fk_EmployeeAccount_Employee_Employee_ID" FromRole="EmployeeAccount" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Goods">
           <Key>
@@ -1102,6 +1086,7 @@
             <PropertyRef Name="GoodsShops_ID" />
           </Key>
           <Property Name="GoodsShops_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Good_ID" Type="Int32" Nullable="false" />
           <Property Name="Shop_ID" Type="Int32" Nullable="false" />
           <Property Name="Count" Type="Int32" Nullable="false" />
@@ -1119,6 +1104,8 @@
           <Property Name="Maker_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Country_ID" Type="Int32" Nullable="false" />
+          <Property Name="Brand_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Brand" Relationship="Self.fk_Makers_Brand_Brand_ID" FromRole="Makers" ToRole="Brand" />
           <NavigationProperty Name="Countries" Relationship="Self.fk_Makers_Countries_Country_ID" FromRole="Makers" ToRole="Countries" />
           <NavigationProperty Name="Goods" Relationship="Self.fk_Goods_Makers_Maker_ID" FromRole="Makers" ToRole="Goods" />
         </EntityType>
@@ -1148,6 +1135,7 @@
             <PropertyRef Name="ProvideOrder_ID" />
           </Key>
           <Property Name="ProvideOrder_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TotalCost" Type="Int32" Nullable="false" />
           <Property Name="Provide_ID" Type="Int32" Nullable="false" />
@@ -1183,6 +1171,7 @@
             <PropertyRef Name="Service_ID" />
           </Key>
           <Property Name="Service_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Breakage_ID" Type="Int32" Nullable="false" />
           <Property Name="Status_ID" Type="Int32" Nullable="false" />
           <Property Name="Basket_ID" Type="Int32" Nullable="false" />
@@ -1197,6 +1186,7 @@
             <PropertyRef Name="SC_ID" />
           </Key>
           <Property Name="SC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Address" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Address1" Relationship="Self.fk_ServiceCenter_Address_Address" FromRole="ServiceCenter" ToRole="Address" />
           <NavigationProperty Name="ServiceTransportation" Relationship="Self.fk_ServiceTransportation_ServiceCenter_SC_ID" FromRole="ServiceCenter" ToRole="ServiceTransportation" />
@@ -1208,6 +1198,7 @@
             <PropertyRef Name="ServiceTransportation_ID" />
           </Key>
           <Property Name="ServiceTransportation_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Service_ID" Type="Int32" Nullable="false" />
           <Property Name="SC_ID" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
@@ -1233,6 +1224,7 @@
             <PropertyRef Name="Shop_ID" />
           </Key>
           <Property Name="Shop_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Address" Type="Int32" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="Address1" Relationship="Self.fk_Shops_Address_Address" FromRole="Shops" ToRole="Address" />
@@ -1246,16 +1238,6 @@
           <Property Name="Status_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Status1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Service" Relationship="Self.fk_Service_Status_Status_ID" FromRole="Status" ToRole="Service" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Transportation">
           <Key>
@@ -1391,6 +1373,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_Makers_Brand_Brand_ID">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="1" />
+          <End Role="Makers" Type="Self.Makers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="Brand_ID" />
+            </Principal>
+            <Dependent Role="Makers">
+              <PropertyRef Name="Brand_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_Service_Breakage_Breakage_ID">
           <End Role="Breakage" Type="Self.Breakage" Multiplicity="1" />
           <End Role="Service" Type="Self.Service" Multiplicity="*" />
@@ -1520,18 +1514,6 @@
             </Principal>
             <Dependent Role="Employee">
               <PropertyRef Name="Shop_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_EmployeeAccount_Employee_Employee_ID">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
-          <End Role="EmployeeAccount" Type="Self.EmployeeAccount" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Employee">
-              <PropertyRef Name="Employee_ID" />
-            </Principal>
-            <Dependent Role="EmployeeAccount">
-              <PropertyRef Name="Employee_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1722,7 +1704,6 @@
           <EntitySet Name="Customers" EntityType="Self.Customers" />
           <EntitySet Name="Delivery" EntityType="Self.Delivery" />
           <EntitySet Name="Employee" EntityType="Self.Employee" />
-          <EntitySet Name="EmployeeAccount" EntityType="Self.EmployeeAccount" />
           <EntitySet Name="Goods" EntityType="Self.Goods" />
           <EntitySet Name="GoodsShops" EntityType="Self.GoodsShops" />
           <EntitySet Name="Makers" EntityType="Self.Makers" />
@@ -1737,7 +1718,6 @@
           <EntitySet Name="Shipment" EntityType="Self.Shipment" />
           <EntitySet Name="Shops" EntityType="Self.Shops" />
           <EntitySet Name="Status" EntityType="Self.Status" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Transportation" EntityType="Self.Transportation" />
           <AssociationSet Name="fk_Address_City_City_ID" Association="Self.fk_Address_City_City_ID">
             <End Role="City" EntitySet="City" />
@@ -1778,6 +1758,10 @@
           <AssociationSet Name="fk_Brand_Countries_Country_ID" Association="Self.fk_Brand_Countries_Country_ID">
             <End Role="Countries" EntitySet="Countries" />
             <End Role="Brand" EntitySet="Brand" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Makers_Brand_Brand_ID" Association="Self.fk_Makers_Brand_Brand_ID">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="Makers" EntitySet="Makers" />
           </AssociationSet>
           <AssociationSet Name="fk_Service_Breakage_Breakage_ID" Association="Self.fk_Service_Breakage_Breakage_ID">
             <End Role="Breakage" EntitySet="Breakage" />
@@ -1822,10 +1806,6 @@
           <AssociationSet Name="fk_Employee_Shops_Shop_ID" Association="Self.fk_Employee_Shops_Shop_ID">
             <End Role="Shops" EntitySet="Shops" />
             <End Role="Employee" EntitySet="Employee" />
-          </AssociationSet>
-          <AssociationSet Name="fk_EmployeeAccount_Employee_Employee_ID" Association="Self.fk_EmployeeAccount_Employee_Employee_ID">
-            <End Role="Employee" EntitySet="Employee" />
-            <End Role="EmployeeAccount" EntitySet="EmployeeAccount" />
           </AssociationSet>
           <AssociationSet Name="fk_Sales_Employee_Employee_ID" Association="Self.fk_Sales_Employee_Employee_ID">
             <End Role="Employee" EntitySet="Employee" />
@@ -1897,9 +1877,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="my_db_for_db_2Entities">
+        <EntityContainerMapping StorageEntityContainer="my_db_for_db_2ModelStoreContainer" CdmEntityContainer="my_db_for_db_2Entities">
           <EntitySetMapping Name="Address">
-            <EntityTypeMapping TypeName="DBModel.Address">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Address">
               <MappingFragment StoreEntitySet="Address">
                 <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1908,9 +1888,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Basket">
-            <EntityTypeMapping TypeName="DBModel.Basket">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Basket">
               <MappingFragment StoreEntitySet="Basket">
                 <ScalarProperty Name="Basket_ID" ColumnName="Basket_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="GoodsShops_ID" ColumnName="GoodsShops_ID" />
                 <ScalarProperty Name="Sales_ID" ColumnName="Sales_ID" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
@@ -1918,7 +1899,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Brand">
-            <EntityTypeMapping TypeName="DBModel.Brand">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Brand">
               <MappingFragment StoreEntitySet="Brand">
                 <ScalarProperty Name="Brand_ID" ColumnName="Brand_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1927,7 +1908,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Breakage">
-            <EntityTypeMapping TypeName="DBModel.Breakage">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Breakage">
               <MappingFragment StoreEntitySet="Breakage">
                 <ScalarProperty Name="Breakage_ID" ColumnName="Breakage_ID" />
                 <ScalarProperty Name="Breakege" ColumnName="Breakege" />
@@ -1935,7 +1916,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="DBModel.Categories">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Categories">
               <MappingFragment StoreEntitySet="Categories">
                 <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1945,7 +1926,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="City">
-            <EntityTypeMapping TypeName="DBModel.City">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.City">
               <MappingFragment StoreEntitySet="City">
                 <ScalarProperty Name="City_ID" ColumnName="City_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1954,7 +1935,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Countries">
-            <EntityTypeMapping TypeName="DBModel.Countries">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Countries">
               <MappingFragment StoreEntitySet="Countries">
                 <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1962,7 +1943,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="DBModel.Customers">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Customers">
               <MappingFragment StoreEntitySet="Customers">
                 <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1974,9 +1955,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Delivery">
-            <EntityTypeMapping TypeName="DBModel.Delivery">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Delivery">
               <MappingFragment StoreEntitySet="Delivery">
                 <ScalarProperty Name="Deliver_ID" ColumnName="Deliver_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Good_ID" ColumnName="Good_ID" />
                 <ScalarProperty Name="ProvideOrder_ID" ColumnName="ProvideOrder_ID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -1985,7 +1967,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employee">
-            <EntityTypeMapping TypeName="DBModel.Employee">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Employee">
               <MappingFragment StoreEntitySet="Employee">
                 <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1995,21 +1977,13 @@
                 <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
                 <ScalarProperty Name="HiringDate" ColumnName="HiringDate" />
                 <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EmployeeAccount">
-            <EntityTypeMapping TypeName="DBModel.EmployeeAccount">
-              <MappingFragment StoreEntitySet="EmployeeAccount">
-                <ScalarProperty Name="EmployeeAccount_ID" ColumnName="EmployeeAccount_ID" />
                 <ScalarProperty Name="LoginName" ColumnName="LoginName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Goods">
-            <EntityTypeMapping TypeName="DBModel.Goods">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Goods">
               <MappingFragment StoreEntitySet="Goods">
                 <ScalarProperty Name="Good_ID" ColumnName="Good_ID" />
                 <ScalarProperty Name="Model" ColumnName="Model" />
@@ -2024,9 +1998,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GoodsShops">
-            <EntityTypeMapping TypeName="DBModel.GoodsShops">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.GoodsShops">
               <MappingFragment StoreEntitySet="GoodsShops">
                 <ScalarProperty Name="GoodsShops_ID" ColumnName="GoodsShops_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Good_ID" ColumnName="Good_ID" />
                 <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
@@ -2034,16 +2009,17 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Makers">
-            <EntityTypeMapping TypeName="DBModel.Makers">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Makers">
               <MappingFragment StoreEntitySet="Makers">
                 <ScalarProperty Name="Maker_ID" ColumnName="Maker_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+                <ScalarProperty Name="Brand_ID" ColumnName="Brand_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Profession">
-            <EntityTypeMapping TypeName="DBModel.Profession">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Profession">
               <MappingFragment StoreEntitySet="Profession">
                 <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -2052,7 +2028,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Provide">
-            <EntityTypeMapping TypeName="DBModel.Provide">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Provide">
               <MappingFragment StoreEntitySet="Provide">
                 <ScalarProperty Name="Provide_ID" ColumnName="Provide_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -2063,9 +2039,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProvideOrder">
-            <EntityTypeMapping TypeName="DBModel.ProvideOrder">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.ProvideOrder">
               <MappingFragment StoreEntitySet="ProvideOrder">
                 <ScalarProperty Name="ProvideOrder_ID" ColumnName="ProvideOrder_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
                 <ScalarProperty Name="Provide_ID" ColumnName="Provide_ID" />
@@ -2073,7 +2050,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Repair">
-            <EntityTypeMapping TypeName="DBModel.Repair">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Repair">
               <MappingFragment StoreEntitySet="Repair">
                 <ScalarProperty Name="Repair_ID" ColumnName="Repair_ID" />
                 <ScalarProperty Name="ServiceTransportation_ID" ColumnName="ServiceTransportation_ID" />
@@ -2083,7 +2060,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sales">
-            <EntityTypeMapping TypeName="DBModel.Sales">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Sales">
               <MappingFragment StoreEntitySet="Sales">
                 <ScalarProperty Name="Sales_ID" ColumnName="Sales_ID" />
                 <ScalarProperty Name="SalesCode" ColumnName="SalesCode" />
@@ -2095,9 +2072,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Service">
-            <EntityTypeMapping TypeName="DBModel.Service">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Service">
               <MappingFragment StoreEntitySet="Service">
                 <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Breakage_ID" ColumnName="Breakage_ID" />
                 <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
                 <ScalarProperty Name="Basket_ID" ColumnName="Basket_ID" />
@@ -2106,17 +2084,19 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ServiceCenter">
-            <EntityTypeMapping TypeName="DBModel.ServiceCenter">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.ServiceCenter">
               <MappingFragment StoreEntitySet="ServiceCenter">
                 <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ServiceTransportation">
-            <EntityTypeMapping TypeName="DBModel.ServiceTransportation">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.ServiceTransportation">
               <MappingFragment StoreEntitySet="ServiceTransportation">
                 <ScalarProperty Name="ServiceTransportation_ID" ColumnName="ServiceTransportation_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
                 <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -2124,7 +2104,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shipment">
-            <EntityTypeMapping TypeName="DBModel.Shipment">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Shipment">
               <MappingFragment StoreEntitySet="Shipment">
                 <ScalarProperty Name="Shipment_ID" ColumnName="Shipment_ID" />
                 <ScalarProperty Name="Deliver_ID" ColumnName="Deliver_ID" />
@@ -2135,35 +2115,25 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shops">
-            <EntityTypeMapping TypeName="DBModel.Shops">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Shops">
               <MappingFragment StoreEntitySet="Shops">
                 <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Status">
-            <EntityTypeMapping TypeName="DBModel.Status">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Status">
               <MappingFragment StoreEntitySet="Status">
                 <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
                 <ScalarProperty Name="Status1" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DBModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Transportation">
-            <EntityTypeMapping TypeName="DBModel.Transportation">
+            <EntityTypeMapping TypeName="my_db_for_db_2Model.Transportation">
               <MappingFragment StoreEntitySet="Transportation">
                 <ScalarProperty Name="Transportation_ID" ColumnName="Transportation_ID" />
                 <ScalarProperty Name="GS_from_ID" ColumnName="GS_from_ID" />
@@ -2174,7 +2144,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="BrandSC" TypeName="DBModel.BrandSC" StoreEntitySet="BrandSC">
+          <AssociationSetMapping Name="BrandSC" TypeName="my_db_for_db_2Model.BrandSC" StoreEntitySet="BrandSC">
             <EndProperty Name="Brand">
               <ScalarProperty Name="Brand_ID" ColumnName="Brand_ID" />
             </EndProperty>
@@ -2182,7 +2152,7 @@
               <ScalarProperty Name="SC_ID" ColumnName="SC_ID" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="CategoriesSC" TypeName="DBModel.CategoriesSC" StoreEntitySet="CategoriesSC">
+          <AssociationSetMapping Name="CategoriesSC" TypeName="my_db_for_db_2Model.CategoriesSC" StoreEntitySet="CategoriesSC">
             <EndProperty Name="Categories">
               <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
             </EndProperty>

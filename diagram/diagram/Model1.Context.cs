@@ -35,7 +35,6 @@ namespace diagram
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Delivery> Delivery { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
-        public virtual DbSet<EmployeeAccount> EmployeeAccount { get; set; }
         public virtual DbSet<Goods> Goods { get; set; }
         public virtual DbSet<GoodsShops> GoodsShops { get; set; }
         public virtual DbSet<Makers> Makers { get; set; }
@@ -50,7 +49,6 @@ namespace diagram
         public virtual DbSet<Shipment> Shipment { get; set; }
         public virtual DbSet<Shops> Shops { get; set; }
         public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Transportation> Transportation { get; set; }
     }
 }
