@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+diagram/diagram/App.config
+diagram/diagram/Properties/Settings.Designer.cs
+
 # User-specific files
 *.rsuser
 *.suo
@@ -338,5 +341,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-/diagram/diagram/Properties/
-/diagram/diagram/App.config
+/diagram/diagram/Properties/Settings.settings
