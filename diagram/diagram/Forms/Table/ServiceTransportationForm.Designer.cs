@@ -125,7 +125,7 @@
             // 
             // Service
             // 
-            this.Service.DataPropertyName = "Service";
+            this.Service.DataPropertyName = "Service_ID";
             this.Service.DataSource = this.serviceBindingSource;
             this.Service.DisplayMember = "Code";
             this.Service.HeaderText = "Service";
@@ -137,7 +137,7 @@
             // 
             // ServiceCenter
             // 
-            this.ServiceCenter.DataPropertyName = "ServiceCenter";
+            this.ServiceCenter.DataPropertyName = "SC_ID";
             this.ServiceCenter.DataSource = this.serviceCenterBindingSource;
             this.ServiceCenter.DisplayMember = "Code";
             this.ServiceCenter.HeaderText = "ServiceCenter";

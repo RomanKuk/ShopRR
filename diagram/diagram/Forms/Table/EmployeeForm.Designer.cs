@@ -174,7 +174,7 @@
             // 
             // Profession
             // 
-            this.Profession.DataPropertyName = "Profession";
+            this.Profession.DataPropertyName = "Profession_ID";
             this.Profession.DataSource = this.professionBindingSource;
             this.Profession.DisplayMember = "Name";
             this.Profession.HeaderText = "Profession";
@@ -186,7 +186,7 @@
             // 
             // Shops
             // 
-            this.Shops.DataPropertyName = "Shops";
+            this.Shops.DataPropertyName = "Shop_ID";
             this.Shops.DataSource = this.shopsBindingSource;
             this.Shops.DisplayMember = "Code";
             this.Shops.HeaderText = "Shops";

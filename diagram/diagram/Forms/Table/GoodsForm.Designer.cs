@@ -140,7 +140,7 @@
             // 
             // Makers
             // 
-            this.Makers.DataPropertyName = "Makers";
+            this.Makers.DataPropertyName = "Maker_ID";
             this.Makers.DataSource = this.makersBindingSource;
             this.Makers.DisplayMember = "Name";
             this.Makers.HeaderText = "Makers";
@@ -152,7 +152,7 @@
             // 
             // Categories
             // 
-            this.Categories.DataPropertyName = "Categories";
+            this.Categories.DataPropertyName = "Category_ID";
             this.Categories.DataSource = this.categoriesBindingSource;
             this.Categories.DisplayMember = "Name";
             this.Categories.HeaderText = "Categories";
