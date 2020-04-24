@@ -92,11 +92,11 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 2;
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(369, 231);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 3;
             this.save.Text = "Save";

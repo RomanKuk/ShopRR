@@ -48,5 +48,14 @@ namespace diagram.Forms.InsernEdit
             e.Cancel = false;
         }
 
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

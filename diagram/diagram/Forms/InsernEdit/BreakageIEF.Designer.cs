@@ -43,11 +43,11 @@
             this.textBox1.Size = new System.Drawing.Size(177, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(264, 195);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 1;
             this.save.Text = "Save";

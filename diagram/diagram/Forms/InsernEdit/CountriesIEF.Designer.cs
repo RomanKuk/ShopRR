@@ -36,11 +36,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(318, 206);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 0;
             this.save.Text = "&Save";

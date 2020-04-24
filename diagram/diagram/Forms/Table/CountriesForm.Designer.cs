@@ -124,11 +124,11 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
             this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // countriesBindingSource

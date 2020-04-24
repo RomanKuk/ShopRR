@@ -625,7 +625,6 @@
     <None Include="Properties\DataSources\Customers.datasource" />
     <None Include="Properties\DataSources\Delivery.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
-    <None Include="Properties\DataSources\EmployeeAccount.datasource" />
     <None Include="Properties\DataSources\Goods.datasource" />
     <None Include="Properties\DataSources\GoodsShops.datasource" />
     <None Include="Properties\DataSources\Makers.datasource" />
@@ -671,6 +670,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\save_icon.png" />
+    <None Include="Resources\home_icon.png" />
     <None Include="Resources\minimize_icon.png" />
     <None Include="Resources\close_icon.png" />
     <None Include="Resources\delete.png" />

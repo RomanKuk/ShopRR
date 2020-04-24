@@ -101,14 +101,14 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 3;
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(291, 257);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(120, 27);
             this.save.TabIndex = 4;
-            this.save.Text = "save";
+            this.save.Text = "saveBtn";
             this.save.UseVisualStyleBackColor = true;
             // 
             // textBox1

@@ -99,14 +99,14 @@
             this.textBox3.Size = new System.Drawing.Size(123, 20);
             this.textBox3.TabIndex = 4;
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(449, 262);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 5;
-            this.save.Text = "save";
+            this.save.Text = "saveBtn";
             this.save.UseVisualStyleBackColor = true;
             // 
             // CustomersIEF

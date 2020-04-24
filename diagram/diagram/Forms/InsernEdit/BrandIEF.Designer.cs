@@ -58,11 +58,11 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "Country_ID";
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(331, 182);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 2;
             this.save.Text = "Save";
