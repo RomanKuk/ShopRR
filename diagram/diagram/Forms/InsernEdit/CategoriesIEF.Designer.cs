@@ -71,14 +71,14 @@
             this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "Category_ID";
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(164, 237);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 3;
-            this.save.Text = "save";
+            this.save.Text = "saveBtn";
             this.save.UseVisualStyleBackColor = true;
             // 
             // categoriesBindingSource1

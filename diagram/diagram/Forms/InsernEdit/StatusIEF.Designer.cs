@@ -35,14 +35,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(354, 341);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 0;
-            this.save.Text = "save";
+            this.save.Text = "saveBtn";
             this.save.UseVisualStyleBackColor = true;
             // 
             // textBox1

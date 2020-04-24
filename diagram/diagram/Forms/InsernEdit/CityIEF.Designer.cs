@@ -66,11 +66,11 @@
             // 
             this.countriesBindingSource.DataSource = typeof(diagram.Countries);
             // 
-            // save
+            // saveBtn
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(163, 230);
-            this.save.Name = "save";
+            this.save.Name = "saveBtn";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 2;
             this.save.Text = "&Save";

@@ -605,6 +605,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -624,7 +625,6 @@
     <None Include="Properties\DataSources\Customers.datasource" />
     <None Include="Properties\DataSources\Delivery.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
-    <None Include="Properties\DataSources\EmployeeAccount.datasource" />
     <None Include="Properties\DataSources\Goods.datasource" />
     <None Include="Properties\DataSources\GoodsShops.datasource" />
     <None Include="Properties\DataSources\Makers.datasource" />
@@ -670,6 +670,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\save_icon.png" />
+    <None Include="Resources\home_icon.png" />
+    <None Include="Resources\minimize_icon.png" />
+    <None Include="Resources\close_icon.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
