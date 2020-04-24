@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.basketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.basketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
             // 
+            // basketBindingSource
+            // 
+            this.basketBindingSource.DataSource = typeof(diagram.Basket);
+            // 
             // breakageBindingSource
             // 
             this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
@@ -77,10 +81,6 @@
             // statusBindingSource
             // 
             this.statusBindingSource.DataSource = typeof(diagram.Status);
-            // 
-            // basketBindingSource
-            // 
-            this.basketBindingSource.DataSource = typeof(diagram.Basket);
             // 
             // serviceBindingSource
             // 
@@ -133,7 +133,7 @@
             // 
             // Basket
             // 
-            this.Basket.DataPropertyName = "Basket";
+            this.Basket.DataPropertyName = "Basket_ID";
             this.Basket.DataSource = this.basketBindingSource;
             this.Basket.DisplayMember = "Code";
             this.Basket.HeaderText = "Basket";
@@ -145,7 +145,7 @@
             // 
             // Breakage
             // 
-            this.Breakage.DataPropertyName = "Breakage";
+            this.Breakage.DataPropertyName = "Breakage_ID";
             this.Breakage.DataSource = this.breakageBindingSource;
             this.Breakage.DisplayMember = "Breakege";
             this.Breakage.HeaderText = "Breakage";
@@ -157,7 +157,7 @@
             // 
             // Status
             // 
-            this.Status.DataPropertyName = "Status";
+            this.Status.DataPropertyName = "Status_ID";
             this.Status.DataSource = this.statusBindingSource;
             this.Status.DisplayMember = "Status1";
             this.Status.HeaderText = "Status";
@@ -187,9 +187,9 @@
             this.Text = "ServiceForm";
             this.Load += new System.EventHandler(this.ServiceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
             this.ResumeLayout(false);
 

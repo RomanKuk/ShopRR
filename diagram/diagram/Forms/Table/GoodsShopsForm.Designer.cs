@@ -125,7 +125,7 @@
             // 
             // Goods
             // 
-            this.Goods.DataPropertyName = "Goods";
+            this.Goods.DataPropertyName = "Good_ID";
             this.Goods.DataSource = this.goodsBindingSource;
             this.Goods.DisplayMember = "Model";
             this.Goods.HeaderText = "Goods";
@@ -137,7 +137,7 @@
             // 
             // Shops
             // 
-            this.Shops.DataPropertyName = "Shops";
+            this.Shops.DataPropertyName = "Shop_ID";
             this.Shops.DataSource = this.shopsBindingSource;
             this.Shops.DisplayMember = "Code";
             this.Shops.HeaderText = "Shops";

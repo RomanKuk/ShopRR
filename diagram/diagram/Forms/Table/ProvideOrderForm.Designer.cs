@@ -110,7 +110,7 @@
             // 
             // Provide
             // 
-            this.Provide.DataPropertyName = "Provide";
+            this.Provide.DataPropertyName = "Provide_ID";
             this.Provide.DataSource = this.provideBindingSource;
             this.Provide.DisplayMember = "Name";
             this.Provide.HeaderText = "Provide";

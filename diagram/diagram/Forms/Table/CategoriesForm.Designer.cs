@@ -124,7 +124,7 @@
             // 
             // SeniorCategories
             // 
-            this.SeniorCategories.DataPropertyName = "Categories1";
+            this.SeniorCategories.DataPropertyName = "SeniorCategory_ID";
             this.SeniorCategories.DataSource = this.categoriesBindingSource1;
             this.SeniorCategories.DisplayMember = "Name";
             this.SeniorCategories.HeaderText = "Senior";

@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
@@ -44,8 +44,8 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,13 +72,13 @@
             // 
             this.deliveryBindingSource.DataSource = typeof(diagram.Delivery);
             // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
             // shipmentBindingSource
             // 
@@ -124,7 +124,7 @@
             // 
             // Delivery
             // 
-            this.Delivery.DataPropertyName = "Delivery";
+            this.Delivery.DataPropertyName = "Deliver_ID";
             this.Delivery.DataSource = this.deliveryBindingSource;
             this.Delivery.DisplayMember = "Code";
             this.Delivery.HeaderText = "Delivery";
@@ -136,7 +136,7 @@
             // 
             // Employee
             // 
-            this.Employee.DataPropertyName = "Employee";
+            this.Employee.DataPropertyName = "Employee_ID";
             this.Employee.DataSource = this.employeeBindingSource;
             this.Employee.DisplayMember = "LastName";
             this.Employee.HeaderText = "Employee";
@@ -148,7 +148,7 @@
             // 
             // GoodsShops
             // 
-            this.GoodsShops.DataPropertyName = "GoodsShops";
+            this.GoodsShops.DataPropertyName = "GoodsShops_ID";
             this.GoodsShops.DataSource = this.goodsShopsBindingSource;
             this.GoodsShops.DisplayMember = "Code";
             this.GoodsShops.HeaderText = "GoodsShops";
@@ -179,8 +179,8 @@
             this.Load += new System.EventHandler(this.ShipmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).EndInit();
             this.ResumeLayout(false);
 

@@ -120,7 +120,7 @@
             // 
             // Employee
             // 
-            this.Employee.DataPropertyName = "Employee";
+            this.Employee.DataPropertyName = "Employee_ID";
             this.Employee.DataSource = this.employeeBindingSource;
             this.Employee.DisplayMember = "LastName";
             this.Employee.HeaderText = "Employee";
@@ -132,7 +132,7 @@
             // 
             // Customers
             // 
-            this.Customers.DataPropertyName = "Customers";
+            this.Customers.DataPropertyName = "Customer_ID";
             this.Customers.DataSource = this.customersBindingSource;
             this.Customers.DisplayMember = "LastName";
             this.Customers.HeaderText = "Customers";
