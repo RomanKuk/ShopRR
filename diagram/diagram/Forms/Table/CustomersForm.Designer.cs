@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +42,8 @@
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -65,6 +65,14 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(288, 153);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // addressBindingSource
+            // 
+            this.addressBindingSource.DataSource = typeof(diagram.Address);
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataSource = typeof(diagram.Customers);
             // 
             // insert
             // 
@@ -95,14 +103,6 @@
             this.delete.Text = "delete";
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataSource = typeof(diagram.Customers);
-            // 
-            // addressBindingSource
-            // 
-            this.addressBindingSource.DataSource = typeof(diagram.Address);
             // 
             // customerIDDataGridViewTextBoxColumn
             // 
@@ -165,8 +165,8 @@
             this.Text = "CustomersForm";
             this.Load += new System.EventHandler(this.CustomersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,13 +177,13 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.BindingSource addressBindingSource;
+        private System.Windows.Forms.BindingSource customersBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bonusesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource addressBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource customersBindingSource;
     }
 }

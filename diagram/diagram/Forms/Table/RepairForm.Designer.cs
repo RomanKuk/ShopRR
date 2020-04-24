@@ -110,7 +110,7 @@
             // 
             // ServiceTransportation
             // 
-            this.ServiceTransportation.DataPropertyName = "ServiceTransportation";
+            this.ServiceTransportation.DataPropertyName = "ServiceTransportation_ID";
             this.ServiceTransportation.DataSource = this.serviceTransportationBindingSource;
             this.ServiceTransportation.DisplayMember = "Code";
             this.ServiceTransportation.HeaderText = "ServiceTransportation";

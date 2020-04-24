@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
-            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,6 +55,10 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // statusBindingSource
+            // 
+            this.statusBindingSource.DataSource = typeof(diagram.Status);
             // 
             // insert
             // 
@@ -86,10 +90,6 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // statusBindingSource
-            // 
-            this.statusBindingSource.DataSource = typeof(diagram.Status);
-            // 
             // statusIDDataGridViewTextBoxColumn
             // 
             this.statusIDDataGridViewTextBoxColumn.DataPropertyName = "Status_ID";
@@ -101,7 +101,7 @@
             // status1DataGridViewTextBoxColumn
             // 
             this.status1DataGridViewTextBoxColumn.DataPropertyName = "Status1";
-            this.status1DataGridViewTextBoxColumn.HeaderText = "Status1";
+            this.status1DataGridViewTextBoxColumn.HeaderText = "Status";
             this.status1DataGridViewTextBoxColumn.Name = "status1DataGridViewTextBoxColumn";
             this.status1DataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -129,8 +129,8 @@
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.BindingSource statusBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn status1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource statusBindingSource;
     }
 }

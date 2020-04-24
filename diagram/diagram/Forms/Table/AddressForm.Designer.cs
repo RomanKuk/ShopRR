@@ -195,7 +195,7 @@
             // 
             // City
             // 
-            this.City.DataPropertyName = "City";
+            this.City.DataPropertyName = "City_ID";
             this.City.DataSource = this.cityBindingSource;
             this.City.DisplayMember = "Name";
             this.City.HeaderText = "City";

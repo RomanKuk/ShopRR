@@ -115,7 +115,7 @@
             // 
             // Countries
             // 
-            this.Countries.DataPropertyName = "Countries";
+            this.Countries.DataPropertyName = "Country_ID";
             this.Countries.DataSource = this.countriesBindingSource;
             this.Countries.DisplayMember = "Name";
             this.Countries.HeaderText = "Countries";

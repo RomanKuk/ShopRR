@@ -30,21 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insert = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.transportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.GS_in_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,6 +57,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.transportationIDDataGridViewTextBoxColumn,
             this.GoodsShops,
+            this.GS_in_ID,
             this.Employee,
             this.dateDataGridViewTextBoxColumn,
             this.countDataGridViewTextBoxColumn});
@@ -66,10 +68,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataSource = typeof(diagram.Employee);
@@ -77,6 +75,10 @@
             // transportationBindingSource
             // 
             this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
             // insert
             // 
@@ -118,19 +120,31 @@
             // 
             // GoodsShops
             // 
-            this.GoodsShops.DataPropertyName = "GoodsShops";
+            this.GoodsShops.DataPropertyName = "GS_from_ID";
             this.GoodsShops.DataSource = this.employeeBindingSource;
             this.GoodsShops.DisplayMember = "LastName";
-            this.GoodsShops.HeaderText = "GoodsShops";
+            this.GoodsShops.HeaderText = "From";
             this.GoodsShops.Name = "GoodsShops";
             this.GoodsShops.ReadOnly = true;
             this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.GoodsShops.ValueMember = "Employee_ID";
             // 
+            // GS_in_ID
+            // 
+            this.GS_in_ID.DataPropertyName = "GS_in_ID";
+            this.GS_in_ID.DataSource = this.goodsShopsBindingSource;
+            this.GS_in_ID.DisplayMember = "Code";
+            this.GS_in_ID.HeaderText = "In";
+            this.GS_in_ID.Name = "GS_in_ID";
+            this.GS_in_ID.ReadOnly = true;
+            this.GS_in_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GS_in_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GS_in_ID.ValueMember = "GoodsShops_ID";
+            // 
             // Employee
             // 
-            this.Employee.DataPropertyName = "Employee";
+            this.Employee.DataPropertyName = "Employee_ID";
             this.Employee.DataSource = this.employeeBindingSource;
             this.Employee.DisplayMember = "LastName";
             this.Employee.HeaderText = "Employee";
@@ -167,9 +181,9 @@
             this.Text = "TransportationForm";
             this.Load += new System.EventHandler(this.TransportationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,6 +202,7 @@
         private System.Windows.Forms.BindingSource transportationBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn transportationIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn GoodsShops;
+        private System.Windows.Forms.DataGridViewComboBoxColumn GS_in_ID;
         private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
