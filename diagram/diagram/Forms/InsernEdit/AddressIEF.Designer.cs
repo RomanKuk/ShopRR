@@ -125,7 +125,7 @@
             this.panel3.Size = new System.Drawing.Size(400, 45);
             this.panel3.TabIndex = 1;
             // 
-            // label1
+            // formTitle
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -133,7 +133,7 @@
             this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
-            this.label1.Name = "label1";
+            this.label1.Name = "formTitle";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
             this.label1.Size = new System.Drawing.Size(103, 42);
             this.label1.TabIndex = 4;
