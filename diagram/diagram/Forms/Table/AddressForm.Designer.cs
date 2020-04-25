@@ -151,9 +151,9 @@
             this.panel5.Controls.Add(this.editBtn);
             this.panel5.Controls.Add(this.deleteBtn);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(500, 0);
+            this.panel5.Location = new System.Drawing.Point(360, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(182, 45);
+            this.panel5.Size = new System.Drawing.Size(322, 45);
             this.panel5.TabIndex = 1;
             // 
             // insertBtn
@@ -255,7 +255,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(500, 45);
+            this.panel3.Size = new System.Drawing.Size(360, 45);
             this.panel3.TabIndex = 1;
             // 
             // label1
@@ -308,7 +308,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "AddressForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddressForm";
             this.Load += new System.EventHandler(this.AddressForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -329,6 +328,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource cityBindingSource;
         private System.Windows.Forms.BindingSource addressBindingSource;
+
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
@@ -341,6 +341,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

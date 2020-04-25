@@ -226,6 +226,7 @@
         private System.Windows.Forms.ComboBox cityCB;
         private System.Windows.Forms.BindingSource addressBindingSource;
         private System.Windows.Forms.BindingSource cityBindingSource;
+   
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button closeBtn;
