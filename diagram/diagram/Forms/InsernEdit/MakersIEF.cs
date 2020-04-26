@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram.Forms.InsernEdit
@@ -37,10 +31,10 @@ namespace diagram.Forms.InsernEdit
         {
             if (DialogResult == DialogResult.OK)
             {
-                if (string.IsNullOrEmpty(textBox1.Text))
+                if (string.IsNullOrEmpty(codeTB.Text))
                 {
                     MessageBox.Show("Please ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox1.Focus();
+                    codeTB.Focus();
                     e.Cancel = true;
                     return;
                 }
@@ -48,6 +42,16 @@ namespace diagram.Forms.InsernEdit
                 e.Cancel = false;
             }
             e.Cancel = false;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

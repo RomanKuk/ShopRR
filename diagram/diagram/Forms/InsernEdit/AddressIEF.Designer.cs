@@ -53,8 +53,9 @@
             // addressNameTB
             // 
             this.addressNameTB.BackColor = System.Drawing.Color.Cornsilk;
-            this.addressNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.addressBindingSource, "Name", true));
             this.addressNameTB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.addressNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.addressBindingSource, "Name", true));
             this.addressNameTB.Location = new System.Drawing.Point(185, 121);
             this.addressNameTB.Name = "addressNameTB";
             this.addressNameTB.Size = new System.Drawing.Size(170, 27);
@@ -204,8 +205,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddressIEF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+
+            this.Name = "AddressIEF";
             this.Text = "AddressEIF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddressEIF_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
