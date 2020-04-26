@@ -290,7 +290,7 @@
             this.SeniorCategories.DataSource = this.categoriesBindingSource1;
             this.SeniorCategories.DisplayMember = "Name";
             this.SeniorCategories.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.SeniorCategories.HeaderText = "Senior";
+            this.SeniorCategories.HeaderText = "Senior Category";
             this.SeniorCategories.Name = "SeniorCategories";
             this.SeniorCategories.ReadOnly = true;
             this.SeniorCategories.ValueMember = "Category_ID";

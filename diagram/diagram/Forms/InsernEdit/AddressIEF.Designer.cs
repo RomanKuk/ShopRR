@@ -55,7 +55,7 @@
             this.addressNameTB.BackColor = System.Drawing.Color.Cornsilk;
             this.addressNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.addressBindingSource, "Name", true));
             this.addressNameTB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressNameTB.Location = new System.Drawing.Point(185, 127);
+            this.addressNameTB.Location = new System.Drawing.Point(185, 121);
             this.addressNameTB.Name = "addressNameTB";
             this.addressNameTB.Size = new System.Drawing.Size(170, 27);
             this.addressNameTB.TabIndex = 0;
@@ -67,12 +67,12 @@
             // cityCB
             // 
             this.cityCB.BackColor = System.Drawing.Color.Cornsilk;
-            this.cityCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.addressBindingSource, "City_ID", true));
             this.cityCB.DataSource = this.cityBindingSource;
             this.cityCB.DisplayMember = "Name";
+            this.cityCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityCB.FormattingEnabled = true;
-            this.cityCB.Location = new System.Drawing.Point(185, 208);
+            this.cityCB.Location = new System.Drawing.Point(185, 176);
             this.cityCB.Name = "cityCB";
             this.cityCB.Size = new System.Drawing.Size(170, 28);
             this.cityCB.TabIndex = 1;
@@ -158,7 +158,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(97, 210);
+            this.label3.Location = new System.Drawing.Point(103, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 21);
             this.label3.TabIndex = 16;
@@ -169,7 +169,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(67, 129);
+            this.label2.Location = new System.Drawing.Point(73, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 21);
             this.label2.TabIndex = 15;
@@ -204,8 +204,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Name = "AddressIEF";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddressEIF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddressEIF_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
