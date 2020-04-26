@@ -13,10 +13,16 @@ namespace diagram
             db = _db;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void CityForm_Load(object sender, EventArgs e)
         {
             countriesBindingSource.DataSource = db.Countries.ToList();
             cityBindingSource.DataSource = db.City.ToList();
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
 
         private void Insert_Click(object sender, EventArgs e)
@@ -30,7 +36,7 @@ namespace diagram
             }
         }
 
-        private void Update_Click(object sender, EventArgs e)
+        private void Edit_Click(object sender, EventArgs e)
         {
             if (cityBindingSource.Current == null)
             {
@@ -56,6 +62,22 @@ namespace diagram
                     db.SaveChanges();
                 }
             }
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void backToHomeBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
