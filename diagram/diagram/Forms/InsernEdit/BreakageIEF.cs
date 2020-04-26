@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace diagram.Forms.InsernEdit
 {
@@ -26,10 +27,10 @@ namespace diagram.Forms.InsernEdit
         {
             if (DialogResult == DialogResult.OK)
             {
-                if (string.IsNullOrEmpty(textBox1.Text))
+                if (string.IsNullOrEmpty(breakageNameTB.Text))
                 {
                     MessageBox.Show("Please ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox1.Focus();
+                    breakageNameTB.Focus();
                     e.Cancel = true;
                     return;
                 }
@@ -39,5 +40,14 @@ namespace diagram.Forms.InsernEdit
             e.Cancel = false;
         }
 
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -33,8 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deliverIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Goods = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProvideOrder = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,11 +54,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.deliverIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Goods = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ProvideOrder = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).BeginInit();
@@ -83,6 +84,7 @@
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deliverIDDataGridViewTextBoxColumn,
+            this.codeDataGridViewTextBoxColumn,
             this.Goods,
             this.ProvideOrder,
             this.dateDataGridViewTextBoxColumn,
@@ -108,13 +110,68 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // deliverIDDataGridViewTextBoxColumn
+            // 
+            this.deliverIDDataGridViewTextBoxColumn.DataPropertyName = "Deliver_ID";
+            this.deliverIDDataGridViewTextBoxColumn.HeaderText = "Deliver_ID";
+            this.deliverIDDataGridViewTextBoxColumn.Name = "deliverIDDataGridViewTextBoxColumn";
+            this.deliverIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deliverIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Goods
+            // 
+            this.Goods.DataPropertyName = "Good_ID";
+            this.Goods.DataSource = this.goodsBindingSource;
+            this.Goods.DisplayMember = "Model";
+            this.Goods.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Goods.HeaderText = "Goods";
+            this.Goods.Name = "Goods";
+            this.Goods.ReadOnly = true;
+            this.Goods.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Goods.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Goods.ValueMember = "Good_ID";
+            // 
             // goodsBindingSource
             // 
             this.goodsBindingSource.DataSource = typeof(diagram.Goods);
             // 
+            // ProvideOrder
+            // 
+            this.ProvideOrder.DataPropertyName = "ProvideOrder_ID";
+            this.ProvideOrder.DataSource = this.provideOrderBindingSource;
+            this.ProvideOrder.DisplayMember = "Code";
+            this.ProvideOrder.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.ProvideOrder.HeaderText = "ProvideOrder";
+            this.ProvideOrder.Name = "ProvideOrder";
+            this.ProvideOrder.ReadOnly = true;
+            this.ProvideOrder.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProvideOrder.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ProvideOrder.ValueMember = "Code";
+            // 
             // provideOrderBindingSource
             // 
             this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // countDataGridViewTextBoxColumn
+            // 
+            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
+            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
+            this.countDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deliveryBindingSource
             // 
@@ -270,54 +327,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
             // 
-            // deliverIDDataGridViewTextBoxColumn
-            // 
-            this.deliverIDDataGridViewTextBoxColumn.DataPropertyName = "Deliver_ID";
-            this.deliverIDDataGridViewTextBoxColumn.HeaderText = "Deliver_ID";
-            this.deliverIDDataGridViewTextBoxColumn.Name = "deliverIDDataGridViewTextBoxColumn";
-            this.deliverIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deliverIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Goods
-            // 
-            this.Goods.DataPropertyName = "Good_ID";
-            this.Goods.DataSource = this.goodsBindingSource;
-            this.Goods.DisplayMember = "Model";
-            this.Goods.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Goods.HeaderText = "Goods";
-            this.Goods.Name = "Goods";
-            this.Goods.ReadOnly = true;
-            this.Goods.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Goods.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Goods.ValueMember = "Good_ID";
-            // 
-            // ProvideOrder
-            // 
-            this.ProvideOrder.DataPropertyName = "ProvideOrder_ID";
-            this.ProvideOrder.DataSource = this.provideOrderBindingSource;
-            this.ProvideOrder.DisplayMember = "Code";
-            this.ProvideOrder.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ProvideOrder.HeaderText = "ProvideOrder";
-            this.ProvideOrder.Name = "ProvideOrder";
-            this.ProvideOrder.ReadOnly = true;
-            this.ProvideOrder.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProvideOrder.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ProvideOrder.ValueMember = "Code";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            this.countDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // DeliveryForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -368,5 +377,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn ProvideOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
     }
 }

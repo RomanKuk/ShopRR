@@ -18,9 +18,9 @@ namespace diagram
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var db = new my_db_for_db_2Entities();
-            //Application.Run(new CategoriesForm(db));
+            Application.Run(new DeliveryForm(db));
 
-            Application.Run(new BreakageForm(db));
+            ///Application.Run(new BrandForm(db));
         }
     }
 }
