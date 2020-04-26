@@ -33,5 +33,16 @@ namespace diagram.Properties {
                 return ((string)(this["my_db_for_dbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-V5NE9IV\\MSSQLSERVER01;Initial Catalog=my_db_for_db_2;Integrat" +
+            "ed Security=True")]
+        public string my_db_for_db_2ConnectionString {
+            get {
+                return ((string)(this["my_db_for_db_2ConnectionString"]));
+            }
+        }
     }
 }

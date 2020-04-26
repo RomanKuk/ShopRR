@@ -64,10 +64,16 @@
     <Compile Include="Brand.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BrandSC.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Breakage.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Categories.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriesSC.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="City.cs">
@@ -103,6 +109,12 @@
     <Compile Include="Forms\InsernEdit\BrandIEF.Designer.cs">
       <DependentUpon>BrandIEF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InsernEdit\BrandSCIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\BrandSCIEF.Designer.cs">
+      <DependentUpon>BrandSCIEF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InsernEdit\BreakageIEF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="Forms\InsernEdit\CategoriesIEF.Designer.cs">
       <DependentUpon>CategoriesIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\CategoriesSCIEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsernEdit\CategoriesSCIEF.Designer.cs">
+      <DependentUpon>CategoriesSCIEF.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\InsernEdit\CustomersIEF.cs">
       <SubType>Form</SubType>
@@ -241,6 +259,12 @@
     <Compile Include="Forms\Table\BrandForm.Designer.cs">
       <DependentUpon>BrandForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Table\BrandSCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\BrandSCForm.Designer.cs">
+      <DependentUpon>BrandSCForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Table\BreakageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +276,12 @@
     </Compile>
     <Compile Include="Forms\Table\CategoriesForm.Designer.cs">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Table\CategoriesSCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Table\CategoriesSCForm.Designer.cs">
+      <DependentUpon>CategoriesSCForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Table\CountriesForm.cs">
       <SubType>Form</SubType>
@@ -444,6 +474,9 @@
     <Compile Include="Status.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Transportation.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -456,11 +489,17 @@
     <EmbeddedResource Include="Forms\InsernEdit\BrandIEF.resx">
       <DependentUpon>BrandIEF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\BrandSCIEF.resx">
+      <DependentUpon>BrandSCIEF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsernEdit\BreakageIEF.resx">
       <DependentUpon>BreakageIEF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsernEdit\CategoriesIEF.resx">
       <DependentUpon>CategoriesIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsernEdit\CategoriesSCIEF.resx">
+      <DependentUpon>CategoriesSCIEF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsernEdit\CustomersIEF.resx">
       <DependentUpon>CustomersIEF.cs</DependentUpon>
@@ -525,11 +564,17 @@
     <EmbeddedResource Include="Forms\Table\BrandForm.resx">
       <DependentUpon>BrandForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\BrandSCForm.resx">
+      <DependentUpon>BrandSCForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\BreakageForm.resx">
       <DependentUpon>BreakageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\CategoriesForm.resx">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Table\CategoriesSCForm.resx">
+      <DependentUpon>CategoriesSCForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\CountriesForm.resx">
       <DependentUpon>CountriesForm.cs</DependentUpon>
@@ -618,8 +663,10 @@
     <None Include="Properties\DataSources\Address.datasource" />
     <None Include="Properties\DataSources\Basket.datasource" />
     <None Include="Properties\DataSources\Brand.datasource" />
+    <None Include="Properties\DataSources\BrandSC.datasource" />
     <None Include="Properties\DataSources\Breakage.datasource" />
     <None Include="Properties\DataSources\Categories.datasource" />
+    <None Include="Properties\DataSources\CategoriesSC.datasource" />
     <None Include="Properties\DataSources\City.datasource" />
     <None Include="Properties\DataSources\Countries.datasource" />
     <None Include="Properties\DataSources\Customers.datasource" />
@@ -660,6 +707,15 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\save_icon.png" />
+    <None Include="Resources\home_icon.png" />
+    <None Include="Resources\minimize_icon.png" />
+    <None Include="Resources\close_icon.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -670,13 +726,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\save_icon.png" />
-    <None Include="Resources\home_icon.png" />
-    <None Include="Resources\minimize_icon.png" />
-    <None Include="Resources\close_icon.png" />
-    <None Include="Resources\delete.png" />
-    <None Include="Resources\edit.png" />
-    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

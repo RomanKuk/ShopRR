@@ -49,6 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +58,7 @@
             this.hiringDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profession = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Shops = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.SC_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.LoginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,6 +71,7 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -97,6 +100,7 @@
             this.hiringDateDataGridViewTextBoxColumn,
             this.Profession,
             this.Shops,
+            this.SC_ID,
             this.LoginName,
             this.Password});
             this.dataGridView1.DataSource = this.employeeBindingSource;
@@ -286,6 +290,10 @@
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
             // 
+            // serviceCenterBindingSource
+            // 
+            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
+            // 
             // employeeIDDataGridViewTextBoxColumn
             // 
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
@@ -361,6 +369,18 @@
             this.Shops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Shops.ValueMember = "Shop_ID";
             // 
+            // SC_ID
+            // 
+            this.SC_ID.DataPropertyName = "SC_ID";
+            this.SC_ID.DataSource = this.serviceCenterBindingSource;
+            this.SC_ID.DisplayMember = "Code";
+            this.SC_ID.HeaderText = "ServiceCenter";
+            this.SC_ID.Name = "SC_ID";
+            this.SC_ID.ReadOnly = true;
+            this.SC_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SC_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SC_ID.ValueMember = "SC_ID";
+            // 
             // LoginName
             // 
             this.LoginName.DataPropertyName = "LoginName";
@@ -397,6 +417,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,6 +451,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hiringDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn Profession;
         private System.Windows.Forms.DataGridViewComboBoxColumn Shops;
+        private System.Windows.Forms.DataGridViewComboBoxColumn SC_ID;
+        private System.Windows.Forms.BindingSource serviceCenterBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoginName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }

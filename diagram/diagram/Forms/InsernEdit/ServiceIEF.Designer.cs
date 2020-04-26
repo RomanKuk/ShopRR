@@ -45,11 +45,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // saveBtn
+            // save
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(305, 312);
-            this.save.Name = "saveBtn";
+            this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 0;
             this.save.Text = "saveBtn";
@@ -59,7 +59,7 @@
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.serviceBindingSource, "Breakage_ID", true));
             this.comboBox1.DataSource = this.breakageBindingSource;
-            this.comboBox1.DisplayMember = "Breakege";
+            this.comboBox1.DisplayMember = "Breakage1";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(283, 123);
             this.comboBox1.Name = "comboBox1";

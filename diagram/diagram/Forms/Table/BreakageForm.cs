@@ -16,13 +16,7 @@ namespace diagram.Forms.Table
 
         private void BreakageForm_Load(object sender, EventArgs e)
         {
-            breakageBindingSource.DataSource = db.Brand.ToList();
-
-            Left = Top = 0;
-            Width = Screen.PrimaryScreen.WorkingArea.Width;
-            Height = Screen.PrimaryScreen.WorkingArea.Height;
-            int barWidth = Width - panel4.Width;
-            panel3.Width = panel5.Width = barWidth / 2;
+            breakageBindingSource.DataSource = db.Breakage.ToList();
         }
 
         private void Insert_Click(object sender, EventArgs e)

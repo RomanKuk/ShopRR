@@ -30,11 +30,13 @@ namespace diagram
         public int Profession_ID { get; set; }
         public System.DateTime HiringDate { get; set; }
         public Nullable<int> Shop_ID { get; set; }
+        public Nullable<int> SC_ID { get; set; }
         public string LoginName { get; set; }
         public string Password { get; set; }
     
         public virtual Address Address1 { get; set; }
         public virtual Profession Profession { get; set; }
+        public virtual ServiceCenter ServiceCenter { get; set; }
         public virtual Shops Shops { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Sales> Sales { get; set; }

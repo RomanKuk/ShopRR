@@ -30,32 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.save = new System.Windows.Forms.Button();
             this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.breakageBindingSource, "Breakege", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.breakageBindingSource, "Breakage1", true));
             this.textBox1.Location = new System.Drawing.Point(139, 136);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(177, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // saveBtn
+            // breakageBindingSource
+            // 
+            this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
+            // 
+            // save
             // 
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(264, 195);
-            this.save.Name = "saveBtn";
+            this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 1;
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = true;
-            // 
-            // breakageBindingSource
-            // 
-            this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
             // 
             // BreakageIEF
             // 

@@ -28,8 +28,10 @@ namespace diagram
         public virtual DbSet<Address> Address { get; set; }
         public virtual DbSet<Basket> Basket { get; set; }
         public virtual DbSet<Brand> Brand { get; set; }
+        public virtual DbSet<BrandSC> BrandSC { get; set; }
         public virtual DbSet<Breakage> Breakage { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
+        public virtual DbSet<CategoriesSC> CategoriesSC { get; set; }
         public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Countries> Countries { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
@@ -49,6 +51,7 @@ namespace diagram
         public virtual DbSet<Shipment> Shipment { get; set; }
         public virtual DbSet<Shops> Shops { get; set; }
         public virtual DbSet<Status> Status { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Transportation> Transportation { get; set; }
     }
 }

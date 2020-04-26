@@ -310,7 +310,7 @@
             // 
             this.Breakage.DataPropertyName = "Breakage_ID";
             this.Breakage.DataSource = this.breakageBindingSource;
-            this.Breakage.DisplayMember = "Breakege";
+            this.Breakage.DisplayMember = "Breakage1";
             this.Breakage.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.Breakage.HeaderText = "Breakage";
             this.Breakage.Name = "Breakage";
