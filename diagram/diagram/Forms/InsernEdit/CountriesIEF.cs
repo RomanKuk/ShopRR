@@ -50,10 +50,5 @@ namespace diagram
         {
             this.Close();
         }
-
-        private void saveBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

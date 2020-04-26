@@ -61,10 +61,5 @@ namespace diagram.Forms.InsernEdit
         {
             this.Close();
         }
-
-        private void saveBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
