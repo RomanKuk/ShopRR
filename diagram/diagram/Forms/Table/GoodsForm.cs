@@ -19,6 +19,12 @@ namespace diagram.Forms.Table
             makersBindingSource.DataSource = db.Makers.ToList();
             categoriesBindingSource.DataSource = db.Categories.ToList();
             goodsBindingSource.DataSource = db.Goods.ToList();
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
 
         private void Insert_Click(object sender, EventArgs e)
@@ -58,6 +64,22 @@ namespace diagram.Forms.Table
                     db.SaveChanges();
                 }
             }
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void backToHomeBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
