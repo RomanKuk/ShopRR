@@ -17,8 +17,8 @@ namespace diagram
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Brand()
         {
+            this.BrandSC = new HashSet<BrandSC>();
             this.Makers = new HashSet<Makers>();
-            this.ServiceCenter = new HashSet<ServiceCenter>();
         }
     
         public int Brand_ID { get; set; }
@@ -27,8 +27,8 @@ namespace diagram
     
         public virtual Countries Countries { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Makers> Makers { get; set; }
+        public virtual ICollection<BrandSC> BrandSC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ServiceCenter> ServiceCenter { get; set; }
+        public virtual ICollection<Makers> Makers { get; set; }
     }
 }

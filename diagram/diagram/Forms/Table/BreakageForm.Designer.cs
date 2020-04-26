@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.insertBtn = new System.Windows.Forms.Button();
@@ -45,16 +46,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.breakageIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.breakegeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Breakage1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -76,7 +76,7 @@
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.breakageIDDataGridViewTextBoxColumn,
-            this.breakegeDataGridViewTextBoxColumn});
+            this.Breakage1});
             this.dataGridView1.DataSource = this.breakageBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
@@ -97,6 +97,10 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // breakageBindingSource
+            // 
+            this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
             // 
             // panel2
             // 
@@ -248,10 +252,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
             // 
-            // breakageBindingSource
-            // 
-            this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
-            // 
             // breakageIDDataGridViewTextBoxColumn
             // 
             this.breakageIDDataGridViewTextBoxColumn.DataPropertyName = "Breakage_ID";
@@ -260,12 +260,12 @@
             this.breakageIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.breakageIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // breakegeDataGridViewTextBoxColumn
+            // Breakage1
             // 
-            this.breakegeDataGridViewTextBoxColumn.DataPropertyName = "Breakege";
-            this.breakegeDataGridViewTextBoxColumn.HeaderText = "Breakage";
-            this.breakegeDataGridViewTextBoxColumn.Name = "breakegeDataGridViewTextBoxColumn";
-            this.breakegeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Breakage1.DataPropertyName = "Breakage1";
+            this.Breakage1.HeaderText = "Breakage";
+            this.Breakage1.Name = "Breakage1";
+            this.Breakage1.ReadOnly = true;
             // 
             // BreakageForm
             // 
@@ -279,13 +279,13 @@
             this.Text = "BreakageForm";
             this.Load += new System.EventHandler(this.BreakageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,7 +307,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.BindingSource breakageBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn breakageIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn breakegeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakageIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Breakage1;
     }
 }

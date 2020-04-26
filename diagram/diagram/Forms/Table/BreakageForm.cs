@@ -16,7 +16,7 @@ namespace diagram.Forms.Table
 
         private void BreakageForm_Load(object sender, EventArgs e)
         {
-            breakageBindingSource.DataSource = db.Brand.ToList();
+            breakageBindingSource.DataSource = db.Breakage.ToList();
         }
 
         private void Insert_Click(object sender, EventArgs e)

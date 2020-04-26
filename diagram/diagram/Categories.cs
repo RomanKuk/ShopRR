@@ -18,8 +18,8 @@ namespace diagram
         public Categories()
         {
             this.Categories1 = new HashSet<Categories>();
+            this.CategoriesSC = new HashSet<CategoriesSC>();
             this.Goods = new HashSet<Goods>();
-            this.ServiceCenter = new HashSet<ServiceCenter>();
         }
     
         public int Category_ID { get; set; }
@@ -31,8 +31,8 @@ namespace diagram
         public virtual ICollection<Categories> Categories1 { get; set; }
         public virtual Categories Categories2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Goods> Goods { get; set; }
+        public virtual ICollection<CategoriesSC> CategoriesSC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ServiceCenter> ServiceCenter { get; set; }
+        public virtual ICollection<Goods> Goods { get; set; }
     }
 }

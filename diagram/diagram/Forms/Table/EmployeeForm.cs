@@ -19,6 +19,7 @@ namespace diagram.Forms.Table
             addressBindingSource.DataSource = db.Address.ToList();
             professionBindingSource.DataSource = db.Profession.ToList();
             shopsBindingSource.DataSource = db.Shops.ToList();
+            serviceCenterBindingSource.DataSource = db.ServiceCenter.ToList();
             employeeBindingSource.DataSource = db.Employee.ToList();
 
             Left = Top = 0;

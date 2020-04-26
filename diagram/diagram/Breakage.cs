@@ -21,7 +21,7 @@ namespace diagram
         }
     
         public int Breakage_ID { get; set; }
-        public string Breakege { get; set; }
+        public string Breakage1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Service> Service { get; set; }

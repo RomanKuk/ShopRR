@@ -20,7 +20,7 @@ namespace diagram
             var db = new my_db_for_db_2Entities();
             //Application.Run(new CategoriesForm(db));
 
-            Application.Run(new BreakageForm(db));
+            Application.Run(new EmployeeForm(db));
         }
     }
 }
