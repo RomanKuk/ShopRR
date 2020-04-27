@@ -49,6 +49,7 @@
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.deliverIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Goods = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ProvideOrder = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +84,7 @@
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deliverIDDataGridViewTextBoxColumn,
+            this.codeDataGridViewTextBoxColumn,
             this.Goods,
             this.ProvideOrder,
             this.dateDataGridViewTextBoxColumn,
@@ -278,6 +280,13 @@
             this.deliverIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.deliverIDDataGridViewTextBoxColumn.Visible = false;
             // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Goods
             // 
             this.Goods.DataPropertyName = "Good_ID";
@@ -297,7 +306,7 @@
             this.ProvideOrder.DataSource = this.provideOrderBindingSource;
             this.ProvideOrder.DisplayMember = "Code";
             this.ProvideOrder.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ProvideOrder.HeaderText = "ProvideOrder";
+            this.ProvideOrder.HeaderText = "Provide Order Code";
             this.ProvideOrder.Name = "ProvideOrder";
             this.ProvideOrder.ReadOnly = true;
             this.ProvideOrder.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -364,6 +373,7 @@
         private System.Windows.Forms.BindingSource provideOrderBindingSource;
         private System.Windows.Forms.BindingSource deliveryBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliverIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn Goods;
         private System.Windows.Forms.DataGridViewComboBoxColumn ProvideOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;

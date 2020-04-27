@@ -291,7 +291,7 @@
             this.Goods.DataSource = this.goodsBindingSource;
             this.Goods.DisplayMember = "Model";
             this.Goods.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Goods.HeaderText = "Goods";
+            this.Goods.HeaderText = "Good Code";
             this.Goods.Name = "Goods";
             this.Goods.ReadOnly = true;
             this.Goods.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -304,7 +304,7 @@
             this.Shops.DataSource = this.shopsBindingSource;
             this.Shops.DisplayMember = "Code";
             this.Shops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Shops.HeaderText = "Shops";
+            this.Shops.HeaderText = "Shop Code";
             this.Shops.Name = "Shops";
             this.Shops.ReadOnly = true;
             this.Shops.Resizable = System.Windows.Forms.DataGridViewTriState.True;

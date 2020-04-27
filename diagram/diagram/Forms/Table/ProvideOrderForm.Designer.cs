@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.provideBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.insertBtn = new System.Windows.Forms.Button();
@@ -47,18 +45,21 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.provideOrderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Provide = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.provideOrderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provideBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -80,6 +81,7 @@
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.provideOrderIDDataGridViewTextBoxColumn,
+            this.Code,
             this.Provide,
             this.dateDataGridViewTextBoxColumn,
             this.totalCostDataGridViewTextBoxColumn});
@@ -103,14 +105,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // provideBindingSource
-            // 
-            this.provideBindingSource.DataSource = typeof(diagram.Provide);
-            // 
-            // provideOrderBindingSource
-            // 
-            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
             // 
             // panel2
             // 
@@ -248,9 +242,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(162, 42);
+            this.formTitle.Size = new System.Drawing.Size(171, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Provide Order";
+            this.formTitle.Text = "Provide Orders";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -262,6 +256,26 @@
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
             // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            // 
+            // Provide
+            // 
+            this.Provide.DataPropertyName = "Provide_ID";
+            this.Provide.DataSource = this.provideBindingSource;
+            this.Provide.DisplayMember = "Name";
+            this.Provide.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Provide.HeaderText = "Provider";
+            this.Provide.Name = "Provide";
+            this.Provide.ReadOnly = true;
+            this.Provide.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Provide.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Provide.ValueMember = "Provide_ID";
+            // 
             // provideOrderIDDataGridViewTextBoxColumn
             // 
             this.provideOrderIDDataGridViewTextBoxColumn.DataPropertyName = "ProvideOrder_ID";
@@ -270,18 +284,9 @@
             this.provideOrderIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.provideOrderIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // Provide
+            // provideBindingSource
             // 
-            this.Provide.DataPropertyName = "Provide_ID";
-            this.Provide.DataSource = this.provideBindingSource;
-            this.Provide.DisplayMember = "Name";
-            this.Provide.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Provide.HeaderText = "Provide";
-            this.Provide.Name = "Provide";
-            this.Provide.ReadOnly = true;
-            this.Provide.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Provide.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Provide.ValueMember = "Provide_ID";
+            this.provideBindingSource.DataSource = typeof(diagram.Provide);
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -293,9 +298,13 @@
             // totalCostDataGridViewTextBoxColumn
             // 
             this.totalCostDataGridViewTextBoxColumn.DataPropertyName = "TotalCost";
-            this.totalCostDataGridViewTextBoxColumn.HeaderText = "TotalCost";
+            this.totalCostDataGridViewTextBoxColumn.HeaderText = "Total Cost";
             this.totalCostDataGridViewTextBoxColumn.Name = "totalCostDataGridViewTextBoxColumn";
             this.totalCostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // provideOrderBindingSource
+            // 
+            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
             // 
             // ProvideOrderForm
             // 
@@ -309,14 +318,14 @@
             this.Text = "ProvideOrderForm";
             this.Load += new System.EventHandler(this.ProvideOrderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,6 +350,7 @@
         private System.Windows.Forms.BindingSource provideBindingSource;
         private System.Windows.Forms.BindingSource provideOrderBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn provideOrderIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewComboBoxColumn Provide;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalCostDataGridViewTextBoxColumn;

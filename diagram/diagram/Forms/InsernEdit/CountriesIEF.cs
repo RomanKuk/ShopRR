@@ -29,19 +29,14 @@ namespace diagram
             }
         }
 
-        private void Save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        private void CountriesIEF_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult == DialogResult.OK)
             {
-                if (string.IsNullOrEmpty(textBox1.Text))
+                if (string.IsNullOrEmpty(countryNameTB.Text))
                 {
                     MessageBox.Show("Please ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox1.Focus();
+                    countryNameTB.Focus();
                     e.Cancel = true;
                     return;
                 }
@@ -49,6 +44,11 @@ namespace diagram
                 e.Cancel = false;
             }
             e.Cancel = false;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

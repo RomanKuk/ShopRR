@@ -49,11 +49,11 @@
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Customers = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customers = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
@@ -84,11 +84,11 @@
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.salesIDDataGridViewTextBoxColumn,
-            this.Employee,
-            this.Customers,
             this.salesCodeDataGridViewTextBoxColumn,
+            this.Customers,
             this.dateDataGridViewTextBoxColumn,
-            this.totalDataGridViewTextBoxColumn});
+            this.totalDataGridViewTextBoxColumn,
+            this.Employee});
             this.dataGridView1.DataSource = this.salesBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
@@ -280,18 +280,12 @@
             this.salesIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.salesIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // Employee
+            // salesCodeDataGridViewTextBoxColumn
             // 
-            this.Employee.DataPropertyName = "Employee_ID";
-            this.Employee.DataSource = this.employeeBindingSource;
-            this.Employee.DisplayMember = "LastName";
-            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Employee.HeaderText = "Employee";
-            this.Employee.Name = "Employee";
-            this.Employee.ReadOnly = true;
-            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Employee.ValueMember = "Employee_ID";
+            this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
+            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "Sale Code";
+            this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
+            this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Customers
             // 
@@ -299,19 +293,12 @@
             this.Customers.DataSource = this.customersBindingSource;
             this.Customers.DisplayMember = "LastName";
             this.Customers.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Customers.HeaderText = "Customers";
+            this.Customers.HeaderText = "Customer Last Name";
             this.Customers.Name = "Customers";
             this.Customers.ReadOnly = true;
             this.Customers.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Customers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Customers.ValueMember = "Customer_ID";
-            // 
-            // salesCodeDataGridViewTextBoxColumn
-            // 
-            this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
-            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "SalesCode";
-            this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
-            this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -326,6 +313,19 @@
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Employee
+            // 
+            this.Employee.DataPropertyName = "Employee_ID";
+            this.Employee.DataSource = this.employeeBindingSource;
+            this.Employee.DisplayMember = "LastName";
+            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Employee.HeaderText = "Employee Last Name";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Employee.ValueMember = "Employee_ID";
             // 
             // SalesForm
             // 
@@ -373,10 +373,10 @@
         private System.Windows.Forms.BindingSource customersBindingSource;
         private System.Windows.Forms.BindingSource salesBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Customers;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Customers;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
     }
 }

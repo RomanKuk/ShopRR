@@ -29,41 +29,164 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.save = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.closeBtn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.goodCB = new System.Windows.Forms.ComboBox();
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.shopCB = new System.Windows.Forms.ComboBox();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.codeTB = new System.Windows.Forms.TextBox();
+            this.countNUD = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Orange;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(400, 45);
+            this.panel2.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.closeBtn);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(355, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(45, 45);
+            this.panel4.TabIndex = 1;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackgroundImage = global::diagram.Properties.Resources.close_icon;
+            this.closeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Location = new System.Drawing.Point(3, 4);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(38, 38);
+            this.closeBtn.TabIndex = 11;
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(400, 45);
+            this.panel3.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Purple;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(3);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(6);
+            this.label1.Size = new System.Drawing.Size(197, 42);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Goods and Shops";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.saveBtn);
+            this.panel1.Controls.Add(this.goodCB);
+            this.panel1.Controls.Add(this.shopCB);
+            this.panel1.Controls.Add(this.codeTB);
+            this.panel1.Controls.Add(this.countNUD);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 420);
+            this.panel1.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(49, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 21);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Good Code:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(94, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Code:";
             // 
             // saveBtn
             // 
-            this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.save.Location = new System.Drawing.Point(354, 343);
-            this.save.Name = "saveBtn";
-            this.save.Size = new System.Drawing.Size(75, 23);
-            this.save.TabIndex = 0;
-            this.save.Text = "saveBtn";
-            this.save.UseVisualStyleBackColor = true;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.saveBtn.FlatAppearance.BorderSize = 0;
+            this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.saveBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
+            this.saveBtn.Location = new System.Drawing.Point(174, 295);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.TabIndex = 14;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.saveBtn.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // goodCB
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.goodsShopsBindingSource, "Good_ID", true));
-            this.comboBox1.DataSource = this.goodsBindingSource;
-            this.comboBox1.DisplayMember = "Model";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(327, 191);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.ValueMember = "Good_ID";
+            this.goodCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.goodCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.goodsShopsBindingSource, "Good_ID", true));
+            this.goodCB.DataSource = this.goodsBindingSource;
+            this.goodCB.DisplayMember = "Code";
+            this.goodCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goodCB.FormattingEnabled = true;
+            this.goodCB.Location = new System.Drawing.Point(187, 118);
+            this.goodCB.Name = "goodCB";
+            this.goodCB.Size = new System.Drawing.Size(170, 28);
+            this.goodCB.TabIndex = 1;
+            this.goodCB.ValueMember = "Good_ID";
             // 
             // goodsShopsBindingSource
             // 
@@ -73,71 +196,113 @@
             // 
             this.goodsBindingSource.DataSource = typeof(diagram.Goods);
             // 
-            // comboBox2
+            // shopCB
             // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.goodsShopsBindingSource, "Shop_ID", true));
-            this.comboBox2.DataSource = this.shopsBindingSource;
-            this.comboBox2.DisplayMember = "Code";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(327, 229);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 2;
-            this.comboBox2.ValueMember = "Shop_ID";
+            this.shopCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.shopCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.goodsShopsBindingSource, "Shop_ID", true));
+            this.shopCB.DataSource = this.shopsBindingSource;
+            this.shopCB.DisplayMember = "Code";
+            this.shopCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shopCB.FormattingEnabled = true;
+            this.shopCB.Location = new System.Drawing.Point(187, 166);
+            this.shopCB.Name = "shopCB";
+            this.shopCB.Size = new System.Drawing.Size(170, 28);
+            this.shopCB.TabIndex = 2;
+            this.shopCB.ValueMember = "Shop_ID";
             // 
             // shopsBindingSource
             // 
             this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
-            // numericUpDown1
+            // codeTB
             // 
-            this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.goodsShopsBindingSource, "Count", true));
-            this.numericUpDown1.Location = new System.Drawing.Point(327, 266);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(121, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.codeTB.BackColor = System.Drawing.Color.Cornsilk;
+            this.codeTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.goodsShopsBindingSource, "Code", true));
+            this.codeTB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeTB.Location = new System.Drawing.Point(187, 73);
+            this.codeTB.Name = "codeTB";
+            this.codeTB.Size = new System.Drawing.Size(170, 27);
+            this.codeTB.TabIndex = 4;
             // 
-            // textBox1
+            // countNUD
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.goodsShopsBindingSource, "Code", true));
-            this.textBox1.Location = new System.Drawing.Point(337, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.countNUD.BackColor = System.Drawing.Color.Cornsilk;
+            this.countNUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.goodsShopsBindingSource, "Count", true));
+            this.countNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countNUD.Location = new System.Drawing.Point(187, 214);
+            this.countNUD.Name = "countNUD";
+            this.countNUD.Size = new System.Drawing.Size(170, 27);
+            this.countNUD.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(51, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 21);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Shop Code:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(87, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 21);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Count:";
             // 
             // GoodsShopsIEF
             // 
-            this.AcceptButton = this.save;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.save);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.AcceptButton = this.saveBtn;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.ClientSize = new System.Drawing.Size(400, 420);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GoodsShopsIEF";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoodsShopsIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GoodsShopsIEF_FormClosing);
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button save;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox goodCB;
+        private System.Windows.Forms.ComboBox shopCB;
+        private System.Windows.Forms.NumericUpDown countNUD;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.BindingSource shopsBindingSource;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox codeTB;
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

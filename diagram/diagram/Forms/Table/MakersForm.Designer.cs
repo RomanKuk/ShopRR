@@ -51,8 +51,8 @@
             this.makersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.makerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Countries = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Brand = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -84,8 +84,8 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.makerIDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
-            this.Brand,
-            this.Countries});
+            this.Countries,
+            this.Brand});
             this.dataGridView1.DataSource = this.makersBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
@@ -290,9 +290,22 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Code";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Countries
+            // 
+            this.Countries.DataPropertyName = "Country_ID";
+            this.Countries.DataSource = this.countriesBindingSource;
+            this.Countries.DisplayMember = "Name";
+            this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Countries.HeaderText = "Country";
+            this.Countries.Name = "Countries";
+            this.Countries.ReadOnly = true;
+            this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Countries.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Countries.ValueMember = "Country_ID";
             // 
             // Brand
             // 
@@ -306,19 +319,6 @@
             this.Brand.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Brand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Brand.ValueMember = "Brand_ID";
-            // 
-            // Countries
-            // 
-            this.Countries.DataPropertyName = "Country_ID";
-            this.Countries.DataSource = this.countriesBindingSource;
-            this.Countries.DisplayMember = "Name";
-            this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Countries.HeaderText = "Countries";
-            this.Countries.Name = "Countries";
-            this.Countries.ReadOnly = true;
-            this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Countries.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Countries.ValueMember = "Country_ID";
             // 
             // MakersForm
             // 
@@ -365,10 +365,10 @@
         private System.Windows.Forms.BindingSource countriesBindingSource;
         private System.Windows.Forms.BindingSource makersBindingSource;
         private System.Windows.Forms.BindingSource brandBindingSource;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn makerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Brand;
         private System.Windows.Forms.DataGridViewComboBoxColumn Countries;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Brand;
     }
 }

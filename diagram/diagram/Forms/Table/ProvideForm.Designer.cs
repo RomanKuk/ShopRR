@@ -282,7 +282,7 @@
             // contactPersonDataGridViewTextBoxColumn
             // 
             this.contactPersonDataGridViewTextBoxColumn.DataPropertyName = "ContactPerson";
-            this.contactPersonDataGridViewTextBoxColumn.HeaderText = "ContactPerson";
+            this.contactPersonDataGridViewTextBoxColumn.HeaderText = "Contact Person";
             this.contactPersonDataGridViewTextBoxColumn.Name = "contactPersonDataGridViewTextBoxColumn";
             this.contactPersonDataGridViewTextBoxColumn.ReadOnly = true;
             // 

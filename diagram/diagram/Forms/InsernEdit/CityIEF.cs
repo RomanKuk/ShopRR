@@ -31,14 +31,14 @@ namespace diagram
             }
         }
 
-        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
+        private void CityIEF_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult == DialogResult.OK)
             {
-                if (string.IsNullOrEmpty(textBox1.Text))
+                if (string.IsNullOrEmpty(cityNameTB.Text))
                 {
                     MessageBox.Show("Please ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox1.Focus();
+                    cityNameTB.Focus();
                     e.Cancel = true;
                     return;
                 }
@@ -48,9 +48,9 @@ namespace diagram
             e.Cancel = false;
         }
 
-        private void Save_Click_1(object sender, EventArgs e)
+        private void closeBtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
