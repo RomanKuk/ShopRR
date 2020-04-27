@@ -35,6 +35,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +56,8 @@
             this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shopsCB = new System.Windows.Forms.ComboBox();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceCenterCB = new System.Windows.Forms.ComboBox();
+            this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginTB = new System.Windows.Forms.TextBox();
             this.passwordTB = new System.Windows.Forms.TextBox();
             this.hiringDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -129,6 +132,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -145,21 +149,33 @@
             this.panel1.Controls.Add(this.addressCB);
             this.panel1.Controls.Add(this.professionCB);
             this.panel1.Controls.Add(this.shopsCB);
+            this.panel1.Controls.Add(this.serviceCenterCB);
             this.panel1.Controls.Add(this.loginTB);
             this.panel1.Controls.Add(this.passwordTB);
             this.panel1.Controls.Add(this.hiringDatePicker);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 420);
+            this.panel1.Size = new System.Drawing.Size(400, 455);
             this.panel1.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(-3, 283);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(166, 21);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Service Center Code:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(81, 316);
+            this.label10.Location = new System.Drawing.Point(77, 350);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 21);
             this.label10.TabIndex = 23;
@@ -170,7 +186,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(110, 283);
+            this.label9.Location = new System.Drawing.Point(106, 317);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 21);
             this.label9.TabIndex = 22;
@@ -255,8 +271,8 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -265,7 +281,7 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(159, 340);
+            this.saveBtn.Location = new System.Drawing.Point(153, 381);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(66, 77);
             this.saveBtn.TabIndex = 14;
@@ -361,12 +377,30 @@
             // 
             this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
+            // serviceCenterCB
+            // 
+            this.serviceCenterCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.serviceCenterCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "SC_ID", true));
+            this.serviceCenterCB.DataSource = this.serviceCenterBindingSource;
+            this.serviceCenterCB.DisplayMember = "Code";
+            this.serviceCenterCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serviceCenterCB.FormattingEnabled = true;
+            this.serviceCenterCB.Location = new System.Drawing.Point(187, 281);
+            this.serviceCenterCB.Name = "serviceCenterCB";
+            this.serviceCenterCB.Size = new System.Drawing.Size(170, 28);
+            this.serviceCenterCB.TabIndex = 8;
+            this.serviceCenterCB.ValueMember = "SC_ID";
+            // 
+            // serviceCenterBindingSource
+            // 
+            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
+            // 
             // loginTB
             // 
             this.loginTB.BackColor = System.Drawing.Color.Cornsilk;
             this.loginTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "LoginName", true));
             this.loginTB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTB.Location = new System.Drawing.Point(187, 281);
+            this.loginTB.Location = new System.Drawing.Point(187, 315);
             this.loginTB.Name = "loginTB";
             this.loginTB.Size = new System.Drawing.Size(170, 27);
             this.loginTB.TabIndex = 8;
@@ -376,7 +410,7 @@
             this.passwordTB.BackColor = System.Drawing.Color.Cornsilk;
             this.passwordTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Password", true));
             this.passwordTB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTB.Location = new System.Drawing.Point(187, 314);
+            this.passwordTB.Location = new System.Drawing.Point(187, 348);
             this.passwordTB.Name = "passwordTB";
             this.passwordTB.PasswordChar = '*';
             this.passwordTB.Size = new System.Drawing.Size(170, 27);
@@ -394,28 +428,12 @@
             this.hiringDatePicker.Size = new System.Drawing.Size(170, 27);
             this.hiringDatePicker.TabIndex = 7;
             // 
-            // comboBox4
-            // 
-            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.employeeBindingSource, "SC_ID", true));
-            this.comboBox4.DataSource = this.serviceCenterBindingSource;
-            this.comboBox4.DisplayMember = "Code";
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(327, 294);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 8;
-            this.comboBox4.ValueMember = "SC_ID";
-            // 
-            // serviceCenterBindingSource
-            // 
-            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
-            // 
             // EmployeeIEF
             // 
             this.AcceptButton = this.saveBtn;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(400, 420);
+            this.ClientSize = new System.Drawing.Size(400, 455);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -446,6 +464,7 @@
         private System.Windows.Forms.ComboBox addressCB;
         private System.Windows.Forms.ComboBox professionCB;
         private System.Windows.Forms.ComboBox shopsCB;
+        private System.Windows.Forms.ComboBox serviceCenterCB;
         private System.Windows.Forms.DateTimePicker hiringDatePicker;
         private System.Windows.Forms.TextBox loginTB;
         private System.Windows.Forms.TextBox passwordTB;
@@ -453,6 +472,7 @@
         private System.Windows.Forms.BindingSource addressBindingSource;
         private System.Windows.Forms.BindingSource professionBindingSource;
         private System.Windows.Forms.BindingSource shopsBindingSource;
+        private System.Windows.Forms.BindingSource serviceCenterBindingSource;
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
@@ -470,5 +490,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
     }
 }
