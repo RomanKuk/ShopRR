@@ -283,15 +283,15 @@
             // GoodsShops
             // 
             this.GoodsShops.DataPropertyName = "GS_from_ID";
-            this.GoodsShops.DataSource = this.employeeBindingSource;
-            this.GoodsShops.DisplayMember = "LastName";
+            this.GoodsShops.DataSource = this.goodsShopsBindingSource;
+            this.GoodsShops.DisplayMember = "Code";
             this.GoodsShops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.GoodsShops.HeaderText = "From";
             this.GoodsShops.Name = "GoodsShops";
             this.GoodsShops.ReadOnly = true;
             this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.GoodsShops.ValueMember = "Employee_ID";
+            this.GoodsShops.ValueMember = "GoodsShops_ID";
             // 
             // GS_in_ID
             // 
