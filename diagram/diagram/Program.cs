@@ -1,8 +1,5 @@
 ﻿using diagram.Forms.Table;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram
@@ -18,7 +15,7 @@ namespace diagram
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var db = new my_db_for_db_2Entities();
-            Application.Run(new EmployeeForm(db));
+            Application.Run(new BasketForm(db));
 
             ///Application.Run(new BrandForm(db));
         }
