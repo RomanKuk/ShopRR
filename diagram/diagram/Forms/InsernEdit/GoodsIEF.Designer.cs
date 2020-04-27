@@ -240,8 +240,8 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -322,7 +322,13 @@
             // 
             this.priceNUD.BackColor = System.Drawing.Color.Cornsilk;
             this.priceNUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.goodsBindingSource, "Price", true));
+            this.priceNUD.DecimalPlaces = 2;
             this.priceNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceNUD.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.priceNUD.Location = new System.Drawing.Point(186, 185);
             this.priceNUD.Maximum = new decimal(new int[] {
             100000,
@@ -337,7 +343,13 @@
             // 
             this.revenuePriceNUD.BackColor = System.Drawing.Color.Cornsilk;
             this.revenuePriceNUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.goodsBindingSource, "RevenuePrice", true));
+            this.revenuePriceNUD.DecimalPlaces = 2;
             this.revenuePriceNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revenuePriceNUD.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.revenuePriceNUD.Location = new System.Drawing.Point(186, 218);
             this.revenuePriceNUD.Maximum = new decimal(new int[] {
             100000,

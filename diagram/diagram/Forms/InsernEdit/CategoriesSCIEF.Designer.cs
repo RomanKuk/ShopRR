@@ -60,7 +60,7 @@
             this.categoryCB.DisplayMember = "Code";
             this.categoryCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryCB.FormattingEnabled = true;
-            this.categoryCB.Location = new System.Drawing.Point(185, 103);
+            this.categoryCB.Location = new System.Drawing.Point(185, 136);
             this.categoryCB.Name = "categoryCB";
             this.categoryCB.Size = new System.Drawing.Size(170, 28);
             this.categoryCB.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.serviceCenterCB.DisplayMember = "Name";
             this.serviceCenterCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceCenterCB.FormattingEnabled = true;
-            this.serviceCenterCB.Location = new System.Drawing.Point(185, 148);
+            this.serviceCenterCB.Location = new System.Drawing.Point(185, 92);
             this.serviceCenterCB.Name = "serviceCenterCB";
             this.serviceCenterCB.Size = new System.Drawing.Size(170, 28);
             this.serviceCenterCB.TabIndex = 1;
@@ -168,7 +168,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(13, 150);
+            this.label3.Location = new System.Drawing.Point(13, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 21);
             this.label3.TabIndex = 16;
@@ -179,11 +179,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(53, 105);
+            this.label2.Location = new System.Drawing.Point(96, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 21);
+            this.label2.Size = new System.Drawing.Size(83, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Category Code:";
+            this.label2.Text = "Category:";
             // 
             // saveBtn
             // 
