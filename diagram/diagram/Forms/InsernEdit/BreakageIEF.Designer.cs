@@ -49,7 +49,7 @@
             // breakageNameTB
             // 
             this.breakageNameTB.BackColor = System.Drawing.Color.Cornsilk;
-            this.breakageNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.breakageBindingSource, "Breakege", true));
+            this.breakageNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.breakageBindingSource, "Breakage1", true));
             this.breakageNameTB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breakageNameTB.Location = new System.Drawing.Point(174, 127);
             this.breakageNameTB.Name = "breakageNameTB";
@@ -142,8 +142,8 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

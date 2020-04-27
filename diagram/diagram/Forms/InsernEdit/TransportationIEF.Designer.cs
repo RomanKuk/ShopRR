@@ -29,44 +29,168 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.save = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.closeBtn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.gsFromCB = new System.Windows.Forms.ComboBox();
             this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.gsInCB = new System.Windows.Forms.ComboBox();
             this.goodsShopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.employeeCB = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.countNUD = new System.Windows.Forms.NumericUpDown();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Orange;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(400, 45);
+            this.panel2.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.closeBtn);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(355, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(45, 45);
+            this.panel4.TabIndex = 1;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackgroundImage = global::diagram.Properties.Resources.close_icon;
+            this.closeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Location = new System.Drawing.Point(3, 4);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(38, 38);
+            this.closeBtn.TabIndex = 11;
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(400, 45);
+            this.panel3.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Purple;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(3);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(6);
+            this.label1.Size = new System.Drawing.Size(180, 42);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Transportations";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.saveBtn);
+            this.panel1.Controls.Add(this.gsFromCB);
+            this.panel1.Controls.Add(this.gsInCB);
+            this.panel1.Controls.Add(this.employeeCB);
+            this.panel1.Controls.Add(this.countNUD);
+            this.panel1.Controls.Add(this.datePicker);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 420);
+            this.panel1.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(38, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Employee:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(38, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 42);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Goods and Shops \r\nFrom Code:";
             // 
             // saveBtn
             // 
-            this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.save.Location = new System.Drawing.Point(346, 332);
-            this.save.Name = "saveBtn";
-            this.save.Size = new System.Drawing.Size(75, 23);
-            this.save.TabIndex = 0;
-            this.save.Text = "saveBtn";
-            this.save.UseVisualStyleBackColor = true;
+            this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.saveBtn.FlatAppearance.BorderSize = 0;
+            this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.saveBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
+            this.saveBtn.Location = new System.Drawing.Point(174, 295);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.TabIndex = 14;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.saveBtn.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // gsFromCB
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "GS_from_ID", true));
-            this.comboBox1.DataSource = this.goodsShopsBindingSource;
-            this.comboBox1.DisplayMember = "Code";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(346, 168);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.ValueMember = "GoodsShops_ID";
+            this.gsFromCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.gsFromCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "GS_from_ID", true));
+            this.gsFromCB.DataSource = this.goodsShopsBindingSource;
+            this.gsFromCB.DisplayMember = "Code";
+            this.gsFromCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gsFromCB.FormattingEnabled = true;
+            this.gsFromCB.Location = new System.Drawing.Point(199, 94);
+            this.gsFromCB.Name = "gsFromCB";
+            this.gsFromCB.Size = new System.Drawing.Size(170, 28);
+            this.gsFromCB.TabIndex = 1;
+            this.gsFromCB.ValueMember = "GoodsShops_ID";
             // 
             // transportationBindingSource
             // 
@@ -76,88 +200,135 @@
             // 
             this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
-            // comboBox2
+            // gsInCB
             // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "GS_in_ID", true));
-            this.comboBox2.DataSource = this.goodsShopsBindingSource1;
-            this.comboBox2.DisplayMember = "Code";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(346, 195);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 2;
-            this.comboBox2.ValueMember = "GoodsShops_ID";
+            this.gsInCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.gsInCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "GS_in_ID", true));
+            this.gsInCB.DataSource = this.goodsShopsBindingSource1;
+            this.gsInCB.DisplayMember = "Code";
+            this.gsInCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gsInCB.FormattingEnabled = true;
+            this.gsInCB.Location = new System.Drawing.Point(199, 136);
+            this.gsInCB.Name = "gsInCB";
+            this.gsInCB.Size = new System.Drawing.Size(170, 28);
+            this.gsInCB.TabIndex = 2;
+            this.gsInCB.ValueMember = "GoodsShops_ID";
             // 
             // goodsShopsBindingSource1
             // 
             this.goodsShopsBindingSource1.DataSource = typeof(diagram.GoodsShops);
             // 
-            // comboBox3
+            // employeeCB
             // 
-            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "Employee_ID", true));
-            this.comboBox3.DataSource = this.employeeBindingSource;
-            this.comboBox3.DisplayMember = "LastName";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(345, 222);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 3;
-            this.comboBox3.ValueMember = "Employee_ID";
+            this.employeeCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.employeeCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.transportationBindingSource, "Employee_ID", true));
+            this.employeeCB.DataSource = this.employeeBindingSource;
+            this.employeeCB.DisplayMember = "LastName";
+            this.employeeCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeCB.FormattingEnabled = true;
+            this.employeeCB.Location = new System.Drawing.Point(199, 178);
+            this.employeeCB.Name = "employeeCB";
+            this.employeeCB.Size = new System.Drawing.Size(170, 28);
+            this.employeeCB.TabIndex = 3;
+            this.employeeCB.ValueMember = "Employee_ID";
             // 
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataSource = typeof(diagram.Employee);
             // 
-            // dateTimePicker1
+            // countNUD
             // 
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.transportationBindingSource, "Date", true));
-            this.dateTimePicker1.Location = new System.Drawing.Point(346, 261);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.countNUD.BackColor = System.Drawing.Color.Cornsilk;
+            this.countNUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.transportationBindingSource, "Count", true));
+            this.countNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countNUD.Location = new System.Drawing.Point(346, 297);
+            this.countNUD.Name = "countNUD";
+            this.countNUD.Size = new System.Drawing.Size(170, 27);
+            this.countNUD.TabIndex = 5;
             // 
-            // numericUpDown1
+            // datePicker
             // 
-            this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.transportationBindingSource, "Count", true));
-            this.numericUpDown1.Location = new System.Drawing.Point(346, 297);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.datePicker.BackColor = System.Drawing.Color.Cornsilk;
+            this.datePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.transportationBindingSource, "Date", true));
+            this.datePicker.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datePicker.Location = new System.Drawing.Point(199, 222);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(170, 27);
+            this.datePicker.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(38, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 42);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Goods and Shops \r\nIn Code:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(78, 226);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 21);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Date:";
             // 
             // TransportationIEF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.save);
+            this.AcceptButton = this.saveBtn;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.ClientSize = new System.Drawing.Size(400, 420);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TransportationIEF";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransportationIEF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransportationIEF_FormClosing);
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button save;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox gsFromCB;
+        private System.Windows.Forms.ComboBox gsInCB;
+        private System.Windows.Forms.ComboBox employeeCB;
+        private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.NumericUpDown countNUD;
         private System.Windows.Forms.BindingSource transportationBindingSource;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource1;
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

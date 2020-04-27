@@ -64,5 +64,6 @@ namespace diagram.Forms.InsernEdit
         {
             this.Close();
         }
+
     }
 }

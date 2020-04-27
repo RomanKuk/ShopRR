@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.insertBtn = new System.Windows.Forms.Button();
@@ -45,10 +50,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.professionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,15 +62,16 @@
             this.LoginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -121,6 +123,26 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // addressBindingSource
+            // 
+            this.addressBindingSource.DataSource = typeof(diagram.Address);
+            // 
+            // professionBindingSource
+            // 
+            this.professionBindingSource.DataSource = typeof(diagram.Profession);
+            // 
+            // shopsBindingSource
+            // 
+            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
+            // 
+            // serviceCenterBindingSource
+            // 
+            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
             // 
             // panel2
             // 
@@ -272,22 +294,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
             // 
-            // addressBindingSource
-            // 
-            this.addressBindingSource.DataSource = typeof(diagram.Address);
-            // 
-            // professionBindingSource
-            // 
-            this.professionBindingSource.DataSource = typeof(diagram.Profession);
-            // 
-            // shopsBindingSource
-            // 
-            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
             // employeeIDDataGridViewTextBoxColumn
             // 
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
@@ -368,7 +374,8 @@
             this.SC_ID.DataPropertyName = "SC_ID";
             this.SC_ID.DataSource = this.serviceCenterBindingSource;
             this.SC_ID.DisplayMember = "Code";
-            this.SC_ID.HeaderText = "ServiceCenter";
+            this.SC_ID.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.SC_ID.HeaderText = "Service Center Code";
             this.SC_ID.Name = "SC_ID";
             this.SC_ID.ReadOnly = true;
             this.SC_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -401,16 +408,17 @@
             this.Text = "EmployeeForm";
             this.Load += new System.EventHandler(this.EmployeeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +444,7 @@
         private System.Windows.Forms.BindingSource professionBindingSource;
         private System.Windows.Forms.BindingSource shopsBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource;
+        private System.Windows.Forms.BindingSource serviceCenterBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
@@ -445,7 +454,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Profession;
         private System.Windows.Forms.DataGridViewComboBoxColumn Shops;
         private System.Windows.Forms.DataGridViewComboBoxColumn SC_ID;
-        private System.Windows.Forms.BindingSource serviceCenterBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoginName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }

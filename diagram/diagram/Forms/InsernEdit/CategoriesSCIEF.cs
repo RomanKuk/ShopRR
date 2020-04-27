@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace diagram.Forms.InsernEdit
@@ -34,6 +35,11 @@ namespace diagram.Forms.InsernEdit
                 e.Cancel = false;
             }
             e.Cancel = false;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
