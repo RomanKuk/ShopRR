@@ -15,6 +15,7 @@ namespace diagram
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var db = new my_db_for_db_2Entities();
+            Application.Run(new EmployeeForm(db));
 
             //Application.Run(new AddressForm(db));
             //Application.Run(new BasketForm(db));
