@@ -293,7 +293,7 @@
             this.Goods.DataSource = this.goodsBindingSource;
             this.Goods.DisplayMember = "Model";
             this.Goods.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Goods.HeaderText = "Goods";
+            this.Goods.HeaderText = "Good";
             this.Goods.Name = "Goods";
             this.Goods.ReadOnly = true;
             this.Goods.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -311,7 +311,7 @@
             this.ProvideOrder.ReadOnly = true;
             this.ProvideOrder.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ProvideOrder.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ProvideOrder.ValueMember = "Code";
+            this.ProvideOrder.ValueMember = "ProvideOrder_ID";
             // 
             // dateDataGridViewTextBoxColumn
             // 

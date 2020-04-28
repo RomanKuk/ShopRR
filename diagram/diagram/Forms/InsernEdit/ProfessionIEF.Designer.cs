@@ -144,8 +144,8 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -180,7 +180,13 @@
             // 
             this.salaryNUD.BackColor = System.Drawing.Color.Cornsilk;
             this.salaryNUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.professionBindingSource, "Salary", true));
+            this.salaryNUD.DecimalPlaces = 2;
             this.salaryNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaryNUD.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.salaryNUD.Location = new System.Drawing.Point(184, 160);
             this.salaryNUD.Maximum = new decimal(new int[] {
             100000,

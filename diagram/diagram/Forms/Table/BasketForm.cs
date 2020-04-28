@@ -24,6 +24,7 @@ namespace diagram.Forms.Table
         {
             goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
             salesBindingSource.DataSource = db.Sales.ToList();
+            basketBindingSource.DataSource = db.Basket.ToList();
 
             Left = Top = 0;
             Width = Screen.PrimaryScreen.WorkingArea.Width;

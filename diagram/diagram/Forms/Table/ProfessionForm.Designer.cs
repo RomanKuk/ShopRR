@@ -262,9 +262,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(136, 42);
+            this.formTitle.Size = new System.Drawing.Size(128, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Proffession";
+            this.formTitle.Text = "Profession";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1

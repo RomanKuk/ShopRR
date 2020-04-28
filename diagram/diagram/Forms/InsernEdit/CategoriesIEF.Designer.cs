@@ -147,9 +147,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(103, 42);
+            this.label1.Size = new System.Drawing.Size(128, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Address";
+            this.label1.Text = "Categories";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -202,8 +202,8 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
