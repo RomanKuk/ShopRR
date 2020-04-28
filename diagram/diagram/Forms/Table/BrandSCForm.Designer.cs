@@ -33,7 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.brandSCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brandIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brandSCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,9 +51,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.brandSCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.brandIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
@@ -104,9 +104,43 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // brandSCIDDataGridViewTextBoxColumn
+            // 
+            this.brandSCIDDataGridViewTextBoxColumn.DataPropertyName = "BrandSC_ID";
+            this.brandSCIDDataGridViewTextBoxColumn.HeaderText = "BrandSC_ID";
+            this.brandSCIDDataGridViewTextBoxColumn.Name = "brandSCIDDataGridViewTextBoxColumn";
+            this.brandSCIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.brandSCIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sCIDDataGridViewTextBoxColumn
+            // 
+            this.sCIDDataGridViewTextBoxColumn.DataPropertyName = "SC_ID";
+            this.sCIDDataGridViewTextBoxColumn.DataSource = this.serviceCenterBindingSource;
+            this.sCIDDataGridViewTextBoxColumn.DisplayMember = "Code";
+            this.sCIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.sCIDDataGridViewTextBoxColumn.HeaderText = "Service Center Code";
+            this.sCIDDataGridViewTextBoxColumn.Name = "sCIDDataGridViewTextBoxColumn";
+            this.sCIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sCIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.sCIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.sCIDDataGridViewTextBoxColumn.ValueMember = "SC_ID";
+            // 
             // serviceCenterBindingSource
             // 
             this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
+            // 
+            // brandIDDataGridViewTextBoxColumn
+            // 
+            this.brandIDDataGridViewTextBoxColumn.DataPropertyName = "Brand_ID";
+            this.brandIDDataGridViewTextBoxColumn.DataSource = this.brandBindingSource;
+            this.brandIDDataGridViewTextBoxColumn.DisplayMember = "Name";
+            this.brandIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.brandIDDataGridViewTextBoxColumn.HeaderText = "Brand Code";
+            this.brandIDDataGridViewTextBoxColumn.Name = "brandIDDataGridViewTextBoxColumn";
+            this.brandIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.brandIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.brandIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.brandIDDataGridViewTextBoxColumn.ValueMember = "Brand_ID";
             // 
             // brandBindingSource
             // 
@@ -265,40 +299,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // brandSCIDDataGridViewTextBoxColumn
-            // 
-            this.brandSCIDDataGridViewTextBoxColumn.DataPropertyName = "BrandSC_ID";
-            this.brandSCIDDataGridViewTextBoxColumn.HeaderText = "BrandSC_ID";
-            this.brandSCIDDataGridViewTextBoxColumn.Name = "brandSCIDDataGridViewTextBoxColumn";
-            this.brandSCIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.brandSCIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sCIDDataGridViewTextBoxColumn
-            // 
-            this.sCIDDataGridViewTextBoxColumn.DataPropertyName = "SC_ID";
-            this.sCIDDataGridViewTextBoxColumn.DataSource = this.serviceCenterBindingSource;
-            this.sCIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.sCIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.sCIDDataGridViewTextBoxColumn.HeaderText = "Service Center Code";
-            this.sCIDDataGridViewTextBoxColumn.Name = "sCIDDataGridViewTextBoxColumn";
-            this.sCIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sCIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.sCIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.sCIDDataGridViewTextBoxColumn.ValueMember = "SC_ID";
-            // 
-            // brandIDDataGridViewTextBoxColumn
-            // 
-            this.brandIDDataGridViewTextBoxColumn.DataPropertyName = "Brand_ID";
-            this.brandIDDataGridViewTextBoxColumn.DataSource = this.brandBindingSource;
-            this.brandIDDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.brandIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.brandIDDataGridViewTextBoxColumn.HeaderText = "Brand Code";
-            this.brandIDDataGridViewTextBoxColumn.Name = "brandIDDataGridViewTextBoxColumn";
-            this.brandIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.brandIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.brandIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.brandIDDataGridViewTextBoxColumn.ValueMember = "Brand_ID";
             // 
             // BrandSCForm
             // 

@@ -289,7 +289,7 @@
             // 
             this.Goods.DataPropertyName = "Good_ID";
             this.Goods.DataSource = this.goodsBindingSource;
-            this.Goods.DisplayMember = "Model";
+            this.Goods.DisplayMember = "Code";
             this.Goods.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.Goods.HeaderText = "Good Code";
             this.Goods.Name = "Goods";
