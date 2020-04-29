@@ -275,7 +275,7 @@
             this.ServiceTransportation.DataPropertyName = "ServiceTransportation_ID";
             this.ServiceTransportation.DataSource = this.serviceTransportationBindingSource;
             this.ServiceTransportation.DisplayMember = "Code";
-            this.ServiceTransportation.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ServiceTransportation.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.ServiceTransportation.HeaderText = "ServiceTransportation Code";
             this.ServiceTransportation.Name = "ServiceTransportation";
             this.ServiceTransportation.ReadOnly = true;
