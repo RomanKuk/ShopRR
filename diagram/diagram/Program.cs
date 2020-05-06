@@ -1,5 +1,7 @@
-﻿using diagram.Forms.Table;
+﻿using diagram.Forms.seller;
+using diagram.Forms.Table;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace diagram
@@ -15,8 +17,15 @@ namespace diagram
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var db = new my_db_for_db_2Entities();
+            var employee =
+                db.Employee
+                .Where(e => e.Employee_ID.Equals(4))
+                .First();
+            Application.Run(new SellerForm(db,employee));
+            //Application.Run(new NewSalesForm(db,employee));
 
-            Application.Run(new AddressForm(db));
+            //Application.Run(new EmployeeForm(db));
+            //Application.Run(new AddressForm(db));
             //Application.Run(new BasketForm(db));
             //Application.Run(new BrandForm(db));
             //Application.Run(new BrandSCForm(db));
@@ -34,15 +43,6 @@ namespace diagram
             //Application.Run(new ProfessionForm(db));
             //Application.Run(new ProvideForm(db));
             //Application.Run(new ProvideOrderForm(db));
-            //Application.Run(new RepairForm(db));
-            //Application.Run(new SalesForm(db));
-            //Application.Run(new ServiceCenterForm(db));
-            //Application.Run(new ServiceForm(db));
-            //Application.Run(new ServiceTransportationForm(db));
-            //Application.Run(new ShipmentForm(db));
-            //Application.Run(new ShopsForm(db));
-            //Application.Run(new StatusForm(db));
-            //Application.Run(new TransportationForm(db));
         }
     }
 }
