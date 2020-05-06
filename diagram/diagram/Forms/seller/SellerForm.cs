@@ -42,6 +42,12 @@ namespace diagram.Forms.seller
                 (db.Sales as IEnumerable<Sales>)
                 .Where(x => x.Employee_ID.Equals(employee.Employee_ID))
                 .ToList();
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
 
         private void OnlyThisShopCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -49,11 +55,27 @@ namespace diagram.Forms.seller
             UpdateGSTable();
         }
 
-        private void NewSalesbutton_Click(object sender, EventArgs e)
+        private void newSalesBtn_Click(object sender, EventArgs e)
         {
             NewSalesForm form = new NewSalesForm(db, employee);
             form.Show();
             UpdateGSTable();
+
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void backToHomeBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

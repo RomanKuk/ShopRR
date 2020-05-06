@@ -36,6 +36,12 @@ namespace diagram.Forms.seller
                 .Where(g => goods.Contains(g.Good_ID))
                 .ToList();
             //TODO при запуску форми обирати значення в комбобокс
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -43,22 +49,22 @@ namespace diagram.Forms.seller
             int count = (int)goodCount.Value;
             if (count > 0)
             {
-                if (!basketsContain.ContainsKey(goodsComboBox.Text))
+                if (!basketsContain.ContainsKey(goodsCB.Text))
                 {
-                    int goodID = (int)goodsComboBox.SelectedValue;
+                    int goodID = (int)goodsCB.SelectedValue;
                     int GS_ID = (db.GoodsShops as IEnumerable<GoodsShops>)
                             .Where(x => x.Shop_ID.Equals(employee.Shop_ID) && x.Good_ID.Equals(goodID))
                             .First().GoodsShops_ID;
 
                     string basketCode = CodeGenerator.GenerateCode("Basket","bs");
-                    basketsContain.Add(goodsComboBox.Text, new Basket()
+                    basketsContain.Add(goodsCB.Text, new Basket()
                     {
                         Code = basketCode,
                         GoodsShops_ID = GS_ID,
                         Count = count
                     });
                     //Відобразити в таблиці
-                    dataGridView1.Rows.Add(goodsComboBox.Text, count);
+                    dataGridView1.Rows.Add(goodsCB.Text, count);
                     TotalPrice();
                 }
                 else
@@ -78,7 +84,7 @@ namespace diagram.Forms.seller
         {
             //обмежую кількість товарів до наявної в магазині
             int maxCount = (db.GoodsShops as IEnumerable<GoodsShops>)
-                .Where(x => x.Good_ID.Equals((int)(goodsComboBox.SelectedValue != null ? goodsComboBox.SelectedValue:0)))
+                .Where(x => x.Good_ID.Equals((int)(goodsCB.SelectedValue != null ? goodsCB.SelectedValue:0)))
                 .Select(x => x.Count)
                 .FirstOrDefault();
             goodCount.Maximum = maxCount;
@@ -159,6 +165,16 @@ namespace diagram.Forms.seller
             }
             totalPriceLabel.Text = "Загальна сума : " + totalPrice;
             return totalPrice;
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
