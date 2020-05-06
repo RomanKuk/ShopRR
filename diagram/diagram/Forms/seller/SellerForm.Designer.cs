@@ -34,24 +34,24 @@
             this.GStabPage = new System.Windows.Forms.TabPage();
             this.OnlyThisShopCheckBox = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SalestabPage = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.GStabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -125,55 +125,9 @@
             this.dataGridView1.Size = new System.Drawing.Size(743, 266);
             this.dataGridView1.TabIndex = 0;
             // 
-            // goodsShopsIDDataGridViewTextBoxColumn
-            // 
-            this.goodsShopsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.HeaderText = "GoodsShops_ID";
-            this.goodsShopsIDDataGridViewTextBoxColumn.Name = "goodsShopsIDDataGridViewTextBoxColumn";
-            this.goodsShopsIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodsShopsIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // goodIDDataGridViewTextBoxColumn
-            // 
-            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.DataSource = this.goodsBindingSource;
-            this.goodIDDataGridViewTextBoxColumn.DisplayMember = "Model";
-            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
-            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.goodIDDataGridViewTextBoxColumn.ValueMember = "Good_ID";
-            // 
             // goodsBindingSource
             // 
             this.goodsBindingSource.DataSource = typeof(diagram.Goods);
-            // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            this.countDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // shopIDDataGridViewTextBoxColumn
-            // 
-            this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.DataSource = this.shopsBindingSource;
-            this.shopIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
-            this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shopIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.shopIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.shopIDDataGridViewTextBoxColumn.ValueMember = "Shop_ID";
             // 
             // shopsBindingSource
             // 
@@ -213,6 +167,62 @@
             this.dataGridView2.Size = new System.Drawing.Size(737, 304);
             this.dataGridView2.TabIndex = 0;
             // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataSource = typeof(diagram.Customers);
+            // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(diagram.Sales);
+            // 
+            // goodsShopsIDDataGridViewTextBoxColumn
+            // 
+            this.goodsShopsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsShops_ID";
+            this.goodsShopsIDDataGridViewTextBoxColumn.HeaderText = "GoodsShops_ID";
+            this.goodsShopsIDDataGridViewTextBoxColumn.Name = "goodsShopsIDDataGridViewTextBoxColumn";
+            this.goodsShopsIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodsShopsIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // goodIDDataGridViewTextBoxColumn
+            // 
+            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
+            this.goodIDDataGridViewTextBoxColumn.DataSource = this.goodsBindingSource;
+            this.goodIDDataGridViewTextBoxColumn.DisplayMember = "Model";
+            this.goodIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good Model";
+            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
+            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.goodIDDataGridViewTextBoxColumn.ValueMember = "Good_ID";
+            // 
+            // countDataGridViewTextBoxColumn
+            // 
+            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
+            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
+            this.countDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // shopIDDataGridViewTextBoxColumn
+            // 
+            this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
+            this.shopIDDataGridViewTextBoxColumn.DataSource = this.shopsBindingSource;
+            this.shopIDDataGridViewTextBoxColumn.DisplayMember = "Code";
+            this.shopIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop Code";
+            this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
+            this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.shopIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.shopIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.shopIDDataGridViewTextBoxColumn.ValueMember = "Shop_ID";
+            // 
             // salesIDDataGridViewTextBoxColumn
             // 
             this.salesIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_ID";
@@ -241,16 +251,13 @@
             this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "Customer_ID";
             this.customerIDDataGridViewTextBoxColumn.DataSource = this.customersBindingSource;
             this.customerIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
+            this.customerIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.customerIDDataGridViewTextBoxColumn.HeaderText = "Customer_ID";
             this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
             this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.customerIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.customerIDDataGridViewTextBoxColumn.ValueMember = "Customer_ID";
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataSource = typeof(diagram.Customers);
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -265,10 +272,6 @@
             this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataSource = typeof(diagram.Sales);
             // 
             // SellerForm
             // 
@@ -301,18 +304,18 @@
         private System.Windows.Forms.TabPage GStabPage;
         private System.Windows.Forms.CheckBox OnlyThisShopCheckBox;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn goodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource goodsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn shopIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource shopsBindingSource;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.TabPage SalestabPage;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private System.Windows.Forms.BindingSource salesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn goodIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn shopIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
