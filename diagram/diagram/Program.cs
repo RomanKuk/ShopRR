@@ -21,8 +21,8 @@ namespace diagram
                 db.Employee
                 .Where(e => e.Employee_ID.Equals(4))
                 .First();
-            //Application.Run(new SellerForm(db,employee));
-            Application.Run(new NewSalesForm(db,employee));
+            Application.Run(new SellerForm(db,employee));
+            //Application.Run(new NewSalesForm(db,employee));
 
             //Application.Run(new EmployeeForm(db));
             //Application.Run(new AddressForm(db));

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram.Forms.seller
@@ -51,6 +47,14 @@ namespace diagram.Forms.seller
         private void OnlyThisShopCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             UpdateGSTable();
+        }
+
+        private void NewSalesbutton_Click(object sender, EventArgs e)
+        {
+            NewSalesForm form = new NewSalesForm(db, employee);
+            form.Show();
+            UpdateGSTable();
+
         }
     }
 }

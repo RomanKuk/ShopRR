@@ -1,11 +1,8 @@
-﻿using System;
+﻿using diagram.Classes;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram.Forms.seller
@@ -53,26 +50,27 @@ namespace diagram.Forms.seller
                             .Where(x => x.Shop_ID.Equals(employee.Shop_ID) && x.Good_ID.Equals(goodID))
                             .First().GoodsShops_ID;
 
-                    string basketCode = "t0001";//TODO генераток кодів
-
+                    string basketCode = CodeGenerator.GenerateCode("Basket","bs");
                     basketsContain.Add(goodsComboBox.Text, new Basket()
                     {
                         Code = basketCode,
                         GoodsShops_ID = GS_ID,
-                        //Sales_ID = salesID,
                         Count = count
                     });
                     //Відобразити в таблиці
                     dataGridView1.Rows.Add(goodsComboBox.Text, count);
+                    TotalPrice();
                 }
                 else
                 {
                     //повідомлення що товар уже є в списку
+                    MessageBox.Show("Current goods, presence in basket ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
                 // повідомлення що потрібно обрати кількість
+                MessageBox.Show("Please select count", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -92,6 +90,7 @@ namespace diagram.Forms.seller
             {
                 basketsContain.Remove(dataGridView1.CurrentRow.Cells["Goods"].Value.ToString());
                 dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                TotalPrice();
             }
         }
 
@@ -99,30 +98,15 @@ namespace diagram.Forms.seller
         {
             //TODO провірки
 
-            int goodID;
-            decimal price = 0;
-            decimal totalPrice = 0;
-            //ціна 
-            foreach (Basket basket in basketsContain.Values)
-            {
-                goodID = db.GoodsShops
-                    .Where(x => x.GoodsShops_ID.Equals(basket.GoodsShops_ID))
-                    .Select(x => x.Good_ID)
-                    .First();
-                price = db.Goods
-                    .Where(x => x.Good_ID.Equals(goodID))
-                    .Select(x => x.Price)
-                    .First();
-                totalPrice += price * basket.Count;
-            }
+
             //генеруємо продажу
             Sales sales = new Sales()
             {
-                SalesCode = "test01",//TODO generate
+                SalesCode = CodeGenerator.GenerateCode("Sales","sl"),
                 Employee_ID = employee.Employee_ID,
                 Customer_ID = (int)customerComboBox.SelectedValue,
                 Date = DateTime.Now,
-                Total = totalPrice
+                Total = TotalPrice()
             };
 
             db.Sales.Add(sales);
@@ -146,7 +130,35 @@ namespace diagram.Forms.seller
                 db.SaveChanges();
             }
             //db.SaveChanges();
-            //TODO закриття форми і вивести загальну суму
+            MessageBox.Show(totalPriceLabel.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private decimal TotalPrice()
+        {
+            int goodID;
+            decimal price = 0;
+            decimal totalPrice = 0;
+            //ціна 
+            foreach (Basket basket in basketsContain.Values)
+            {
+                goodID = db.GoodsShops
+                    .Where(x => x.GoodsShops_ID.Equals(basket.GoodsShops_ID))
+                    .Select(x => x.Good_ID)
+                    .First();
+                price = db.Goods
+                    .Where(x => x.Good_ID.Equals(goodID))
+                    .Select(x => x.Price)
+                    .First();
+                totalPrice += price * basket.Count;
+            }
+            totalPriceLabel.Text = "Загальна сума : " + totalPrice;
+            return totalPrice;
         }
     }
 }

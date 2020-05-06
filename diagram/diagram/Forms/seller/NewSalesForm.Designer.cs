@@ -39,9 +39,10 @@
             this.add = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.customerComboBox = new System.Windows.Forms.ComboBox();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.totalPriceLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
@@ -132,14 +133,15 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // button4
+            // cancel
             // 
-            this.button4.Location = new System.Drawing.Point(388, 289);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Відміна Продажу";
-            this.button4.UseVisualStyleBackColor = true;
+            this.cancel.Location = new System.Drawing.Point(388, 289);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(200, 23);
+            this.cancel.TabIndex = 6;
+            this.cancel.Text = "Відміна Продажу";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // customerComboBox
             // 
@@ -156,13 +158,23 @@
             // 
             this.customersBindingSource.DataSource = typeof(diagram.Customers);
             // 
+            // totalPriceLabel
+            // 
+            this.totalPriceLabel.AutoSize = true;
+            this.totalPriceLabel.Location = new System.Drawing.Point(12, 360);
+            this.totalPriceLabel.Name = "totalPriceLabel";
+            this.totalPriceLabel.Size = new System.Drawing.Size(92, 13);
+            this.totalPriceLabel.TabIndex = 8;
+            this.totalPriceLabel.Text = "Загальна сума : ";
+            // 
             // NewSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 450);
+            this.Controls.Add(this.totalPriceLabel);
             this.Controls.Add(this.customerComboBox);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.cancel);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.add);
@@ -178,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,11 +203,12 @@
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Goods;
         private System.Windows.Forms.DataGridViewTextBoxColumn Count;
         private System.Windows.Forms.ComboBox customerComboBox;
         private System.Windows.Forms.BindingSource customersBindingSource;
+        private System.Windows.Forms.Label totalPriceLabel;
     }
 }

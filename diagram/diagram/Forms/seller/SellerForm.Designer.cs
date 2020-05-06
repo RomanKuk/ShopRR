@@ -32,10 +32,8 @@
             this.NewSalesbutton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.GStabPage = new System.Windows.Forms.TabPage();
-            this.SalestabPage = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.OnlyThisShopCheckBox = new System.Windows.Forms.CheckBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -44,22 +42,24 @@
             this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SalestabPage = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.GStabPage.SuspendLayout();
-            this.SalestabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
+            this.SalestabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,7 @@
             this.NewSalesbutton.TabIndex = 2;
             this.NewSalesbutton.Text = "Нове замовлення";
             this.NewSalesbutton.UseVisualStyleBackColor = true;
+            this.NewSalesbutton.Click += new System.EventHandler(this.NewSalesbutton_Click);
             // 
             // tabControl1
             // 
@@ -94,15 +95,16 @@
             this.GStabPage.Text = "усі товари";
             this.GStabPage.UseVisualStyleBackColor = true;
             // 
-            // SalestabPage
+            // OnlyThisShopCheckBox
             // 
-            this.SalestabPage.Controls.Add(this.dataGridView2);
-            this.SalestabPage.Location = new System.Drawing.Point(4, 22);
-            this.SalestabPage.Name = "SalestabPage";
-            this.SalestabPage.Size = new System.Drawing.Size(768, 371);
-            this.SalestabPage.TabIndex = 1;
-            this.SalestabPage.Text = "Продажі";
-            this.SalestabPage.UseVisualStyleBackColor = true;
+            this.OnlyThisShopCheckBox.AutoSize = true;
+            this.OnlyThisShopCheckBox.Location = new System.Drawing.Point(627, 299);
+            this.OnlyThisShopCheckBox.Name = "OnlyThisShopCheckBox";
+            this.OnlyThisShopCheckBox.Size = new System.Drawing.Size(128, 17);
+            this.OnlyThisShopCheckBox.TabIndex = 1;
+            this.OnlyThisShopCheckBox.Text = "Тільки свій магазин";
+            this.OnlyThisShopCheckBox.UseVisualStyleBackColor = true;
+            this.OnlyThisShopCheckBox.CheckedChanged += new System.EventHandler(this.OnlyThisShopCheckBox_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -122,37 +124,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(743, 266);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // OnlyThisShopCheckBox
-            // 
-            this.OnlyThisShopCheckBox.AutoSize = true;
-            this.OnlyThisShopCheckBox.Location = new System.Drawing.Point(627, 299);
-            this.OnlyThisShopCheckBox.Name = "OnlyThisShopCheckBox";
-            this.OnlyThisShopCheckBox.Size = new System.Drawing.Size(128, 17);
-            this.OnlyThisShopCheckBox.TabIndex = 1;
-            this.OnlyThisShopCheckBox.Text = "Тільки свій магазин";
-            this.OnlyThisShopCheckBox.UseVisualStyleBackColor = true;
-            this.OnlyThisShopCheckBox.CheckedChanged += new System.EventHandler(this.OnlyThisShopCheckBox_CheckedChanged);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.salesIDDataGridViewTextBoxColumn,
-            this.salesCodeDataGridViewTextBoxColumn,
-            this.employeeIDDataGridViewTextBoxColumn,
-            this.customerIDDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.totalDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.salesBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(14, 14);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(737, 304);
-            this.dataGridView2.TabIndex = 0;
             // 
             // goodsShopsIDDataGridViewTextBoxColumn
             // 
@@ -212,13 +183,35 @@
             // 
             this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
-            // customersBindingSource
+            // SalestabPage
             // 
-            this.customersBindingSource.DataSource = typeof(diagram.Customers);
+            this.SalestabPage.Controls.Add(this.dataGridView2);
+            this.SalestabPage.Location = new System.Drawing.Point(4, 22);
+            this.SalestabPage.Name = "SalestabPage";
+            this.SalestabPage.Size = new System.Drawing.Size(768, 371);
+            this.SalestabPage.TabIndex = 1;
+            this.SalestabPage.Text = "Продажі";
+            this.SalestabPage.UseVisualStyleBackColor = true;
             // 
-            // salesBindingSource
+            // dataGridView2
             // 
-            this.salesBindingSource.DataSource = typeof(diagram.Sales);
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.salesIDDataGridViewTextBoxColumn,
+            this.salesCodeDataGridViewTextBoxColumn,
+            this.employeeIDDataGridViewTextBoxColumn,
+            this.customerIDDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.salesBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(14, 14);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(737, 304);
+            this.dataGridView2.TabIndex = 0;
             // 
             // salesIDDataGridViewTextBoxColumn
             // 
@@ -255,6 +248,10 @@
             this.customerIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.customerIDDataGridViewTextBoxColumn.ValueMember = "Customer_ID";
             // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataSource = typeof(diagram.Customers);
+            // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
@@ -269,6 +266,10 @@
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(diagram.Sales);
+            // 
             // SellerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,12 +283,12 @@
             this.tabControl1.ResumeLayout(false);
             this.GStabPage.ResumeLayout(false);
             this.GStabPage.PerformLayout();
-            this.SalestabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
+            this.SalestabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             this.ResumeLayout(false);
