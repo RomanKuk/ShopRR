@@ -51,8 +51,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.shipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delivery = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
@@ -86,8 +86,8 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.shipmentIDDataGridViewTextBoxColumn,
             this.Delivery,
-            this.Employee,
             this.GoodsShops,
+            this.Employee,
             this.dateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.shipmentBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -297,19 +297,6 @@
             this.Delivery.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Delivery.ValueMember = "Deliver_ID";
             // 
-            // Employee
-            // 
-            this.Employee.DataPropertyName = "Employee_ID";
-            this.Employee.DataSource = this.employeeBindingSource;
-            this.Employee.DisplayMember = "LastName";
-            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Employee.HeaderText = "Employee";
-            this.Employee.Name = "Employee";
-            this.Employee.ReadOnly = true;
-            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Employee.ValueMember = "Employee_ID";
-            // 
             // GoodsShops
             // 
             this.GoodsShops.DataPropertyName = "GoodsShops_ID";
@@ -322,6 +309,19 @@
             this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.GoodsShops.ValueMember = "GoodsShops_ID";
+            // 
+            // Employee
+            // 
+            this.Employee.DataPropertyName = "Employee_ID";
+            this.Employee.DataSource = this.employeeBindingSource;
+            this.Employee.DisplayMember = "LastName";
+            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Employee.HeaderText = "Employee";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Employee.ValueMember = "Employee_ID";
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -379,8 +379,8 @@
         private System.Windows.Forms.BindingSource shipmentBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn shipmentIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn Delivery;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
         private System.Windows.Forms.DataGridViewComboBoxColumn GoodsShops;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
     }
 }
