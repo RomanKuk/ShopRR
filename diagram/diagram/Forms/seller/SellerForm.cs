@@ -78,5 +78,15 @@ namespace diagram.Forms.seller
         {
 
         }
+
+        private void SalestabPage_Click(object sender, EventArgs e)
+        {
+            OnlyThisShopCheckBox.Visible = false;
+        }
+
+        private void GStabPage_Click(object sender, EventArgs e)
+        {
+            OnlyThisShopCheckBox.Visible = true;
+        }
     }
 }
