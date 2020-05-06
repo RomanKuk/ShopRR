@@ -10,7 +10,8 @@ namespace diagram.Forms.InsernEdit
         public AddressIEF(Address obj, my_db_for_db_2Entities _db)
         {
             InitializeComponent();
-            db = _db;
+            //db = _db;
+            db = new my_db_for_db_2Entities();
             cityBindingSource.DataSource = db.City.ToList();
             if (obj == null)
             {
