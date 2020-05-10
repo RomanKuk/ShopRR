@@ -1,5 +1,6 @@
 ﻿using diagram.Forms.expeditor;
 using diagram.Forms.seller;
+using diagram.Forms.service;
 using diagram.Forms.Table;
 using diagram.Forms.transportation;
 using System;
@@ -23,7 +24,10 @@ namespace diagram
                 db.Employee
                 .Where(e => e.Employee_ID.Equals(4))
                 .First();
-            Application.Run(new ExpeditorForm(db,employee));
+            Application.Run(new Forms.service.ServiceCenterForm(db, employee));
+            //Application.Run(new NewRepairForm(db));
+            //Application.Run(new NewServiceTransportationForm(db));
+            //Application.Run(new ExpeditorForm(db,employee));
             //Application.Run(new NewServiceForm(db));
             //Application.Run(new NewShipmentForm(db));
             //Application.Run(new NewDeliveryForm(db,employee));

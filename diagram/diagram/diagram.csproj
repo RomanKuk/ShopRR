@@ -281,6 +281,24 @@
     <Compile Include="Forms\seller\SellerForm.Designer.cs">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\service\NewRepairForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\service\NewRepairForm.Designer.cs">
+      <DependentUpon>NewRepairForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\service\NewServiceTransportationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\service\NewServiceTransportationForm.Designer.cs">
+      <DependentUpon>NewServiceTransportationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\service\ServiceCenterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\service\ServiceCenterForm.Designer.cs">
+      <DependentUpon>ServiceCenterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Table\AddressForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -624,6 +642,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\seller\SellerForm.resx">
       <DependentUpon>SellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\service\NewRepairForm.resx">
+      <DependentUpon>NewRepairForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\service\NewServiceTransportationForm.resx">
+      <DependentUpon>NewServiceTransportationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\service\ServiceCenterForm.resx">
+      <DependentUpon>ServiceCenterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\AddressForm.resx">
       <DependentUpon>AddressForm.cs</DependentUpon>
