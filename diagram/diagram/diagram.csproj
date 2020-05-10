@@ -245,16 +245,16 @@
     <Compile Include="Forms\InsernEdit\TransportationIEF.Designer.cs">
       <DependentUpon>TransportationIEF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\seller\NewSalesForm.cs">
+    <Compile Include="Forms\Users\Seller\NewSalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\seller\NewSalesForm.Designer.cs">
+    <Compile Include="Forms\Users\Seller\NewSalesForm.Designer.cs">
       <DependentUpon>NewSalesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\seller\SellerForm.cs">
+    <Compile Include="Forms\Users\Seller\SellerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\seller\SellerForm.Designer.cs">
+    <Compile Include="Forms\Users\Seller\SellerForm.Designer.cs">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Table\AddressForm.cs">
@@ -571,10 +571,10 @@
     <EmbeddedResource Include="Forms\InsernEdit\TransportationIEF.resx">
       <DependentUpon>TransportationIEF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\seller\NewSalesForm.resx">
+    <EmbeddedResource Include="Forms\Users\Seller\NewSalesForm.resx">
       <DependentUpon>NewSalesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\seller\SellerForm.resx">
+    <EmbeddedResource Include="Forms\Users\Seller\SellerForm.resx">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\AddressForm.resx">
@@ -752,7 +752,9 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Forms\Users\SCEmployee\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
