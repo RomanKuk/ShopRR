@@ -95,6 +95,24 @@
     <Compile Include="Employee.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\expeditor\ExpeditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\expeditor\ExpeditorForm.Designer.cs">
+      <DependentUpon>ExpeditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\expeditor\NewDeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\expeditor\NewDeliveryForm.Designer.cs">
+      <DependentUpon>NewDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\expeditor\NewShipmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\expeditor\NewShipmentForm.Designer.cs">
+      <DependentUpon>NewShipmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InsernEdit\AddressIEF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +449,18 @@
     <Compile Include="Forms\Table\TransportationForm.Designer.cs">
       <DependentUpon>TransportationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\transportation\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\transportation\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\transportation\NewTransportationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\transportation\NewTransportationForm.Designer.cs">
+      <DependentUpon>NewTransportationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Goods.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -496,6 +526,15 @@
     <Compile Include="Transportation.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\expeditor\ExpeditorForm.resx">
+      <DependentUpon>ExpeditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\expeditor\NewDeliveryForm.resx">
+      <DependentUpon>NewDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\expeditor\NewShipmentForm.resx">
+      <DependentUpon>NewShipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsernEdit\AddressIEF.resx">
       <DependentUpon>AddressIEF.cs</DependentUpon>
     </EmbeddedResource>
@@ -663,6 +702,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\TransportationForm.resx">
       <DependentUpon>TransportationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\transportation\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\transportation\NewTransportationForm.resx">
+      <DependentUpon>NewTransportationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
