@@ -24,7 +24,8 @@ namespace diagram
                 db.Employee
                 .Where(e => e.Employee_ID.Equals(4))
                 .First();
-            Application.Run(new Forms.service.ServiceCenterForm(db, employee));
+            Application.Run(new ManagerForm(db, employee));
+            //Application.Run(new Forms.service.ServiceCenterForm(db, employee));
             //Application.Run(new NewRepairForm(db));
             //Application.Run(new NewServiceTransportationForm(db));
             //Application.Run(new ExpeditorForm(db,employee));
