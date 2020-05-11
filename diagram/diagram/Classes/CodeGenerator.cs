@@ -14,10 +14,10 @@ namespace diagram.Classes
             {
                 SqlCommand comand = new SqlCommand("SELECT IDENT_CURRENT('"+tabName+"')", connection);
                 connection.Open();
-                number = (decimal)comand.ExecuteScalar();
+                number = (decimal)comand.ExecuteScalar() + 1;
                 connection.Close();
             }
-            int zeroCount = 10 - (number + 1).ToString().Length - cdStart.Length;
+            int zeroCount = 10 - (number).ToString().Length - cdStart.Length;
             String zero = "";
             for (int i = 0; i < zeroCount; i++)
             {
