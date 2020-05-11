@@ -1,4 +1,5 @@
 ﻿using diagram.Forms.expeditor;
+using diagram.Forms.login;
 using diagram.Forms.seller;
 using diagram.Forms.service;
 using diagram.Forms.Table;
@@ -19,12 +20,13 @@ namespace diagram
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+
             var db = new my_db_for_db_2Entities();
-            var employee =
-                db.Employee
-                .Where(e => e.Employee_ID.Equals(4))
-                .First();
-            Application.Run(new ManagerForm(db, employee));
+            Application.Run(new LoginForm(db));
+            //var employee =db.Employee.Where(e => e.Employee_ID.Equals(4)).First();
+            //Application.Run(new ManagerForm(db, employee));
+
             //Application.Run(new Forms.service.ServiceCenterForm(db, employee));
             //Application.Run(new NewRepairForm(db));
             //Application.Run(new NewServiceTransportationForm(db));
