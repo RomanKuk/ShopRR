@@ -307,7 +307,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.BindingSource breakageBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn breakegeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn breakageIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Breakage1;
     }

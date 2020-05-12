@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.seller
+﻿namespace diagram.Forms.Users.Seller
 {
     partial class SellerForm
     {
@@ -86,7 +86,6 @@
             this.tabControl1.Controls.Add(this.GStabPage);
             this.tabControl1.Controls.Add(this.SalestabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(10, 10);
@@ -100,16 +99,17 @@
             this.GStabPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GStabPage.Controls.Add(this.OnlyThisShopCheckBox);
             this.GStabPage.Controls.Add(this.dataGridView1);
-            this.GStabPage.Location = new System.Drawing.Point(4, 44);
+            this.GStabPage.Location = new System.Drawing.Point(4, 36);
             this.GStabPage.Name = "GStabPage";
-            this.GStabPage.Size = new System.Drawing.Size(792, 327);
+            this.GStabPage.Size = new System.Drawing.Size(792, 335);
             this.GStabPage.TabIndex = 0;
             this.GStabPage.Text = "All Goods";
             // 
             // OnlyThisShopCheckBox
             // 
             this.OnlyThisShopCheckBox.BackColor = System.Drawing.Color.HotPink;
-            this.OnlyThisShopCheckBox.Location = new System.Drawing.Point(509, -1);
+            this.OnlyThisShopCheckBox.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OnlyThisShopCheckBox.Location = new System.Drawing.Point(501, 0);
             this.OnlyThisShopCheckBox.Name = "OnlyThisShopCheckBox";
             this.OnlyThisShopCheckBox.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.OnlyThisShopCheckBox.Size = new System.Drawing.Size(155, 30);
@@ -146,14 +146,13 @@
             this.dataGridView1.DataSource = this.goodsShopsBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -162,7 +161,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(790, 325);
+            this.dataGridView1.Size = new System.Drawing.Size(790, 333);
             this.dataGridView1.TabIndex = 0;
             // 
             // goodsShopsIDDataGridViewTextBoxColumn
@@ -228,9 +227,9 @@
             // SalestabPage
             // 
             this.SalestabPage.Controls.Add(this.dataGridView2);
-            this.SalestabPage.Location = new System.Drawing.Point(4, 44);
+            this.SalestabPage.Location = new System.Drawing.Point(4, 36);
             this.SalestabPage.Name = "SalestabPage";
-            this.SalestabPage.Size = new System.Drawing.Size(792, 327);
+            this.SalestabPage.Size = new System.Drawing.Size(792, 335);
             this.SalestabPage.TabIndex = 1;
             this.SalestabPage.Text = "Sales";
             this.SalestabPage.UseVisualStyleBackColor = true;
@@ -256,7 +255,6 @@
             this.dataGridView2.DataSource = this.salesBindingSource;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView2.GridColor = System.Drawing.Color.LightSkyBlue;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
@@ -264,7 +262,7 @@
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(792, 327);
+            this.dataGridView2.Size = new System.Drawing.Size(792, 335);
             this.dataGridView2.TabIndex = 0;
             // 
             // salesIDDataGridViewTextBoxColumn

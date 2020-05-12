@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.seller
+namespace diagram.Forms.Users.Seller
 {
     public partial class NewSalesForm : Form
     {
@@ -84,7 +84,7 @@ namespace diagram.Forms.seller
         {
             //обмежую кількість товарів до наявної в магазині
             int maxCount = (db.GoodsShops as IEnumerable<GoodsShops>)
-                .Where(x => x.Good_ID.Equals((int)(goodsCB.SelectedValue != null ? goodsCB.SelectedValue:0)))
+                .Where(x => x.Good_ID.Equals((int)(goodsCB.SelectedValue ?? 0)))
                 .Select(x => x.Count)
                 .FirstOrDefault();
             goodCount.Maximum = maxCount;
