@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace diagram.Forms.Users.Seller.Transportations
+namespace diagram.Forms.transportation
 {
     public partial class ManagerForm : Form
     {

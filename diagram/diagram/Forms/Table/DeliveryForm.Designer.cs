@@ -258,9 +258,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(143, 42);
+            this.formTitle.Size = new System.Drawing.Size(119, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Поставка";
+            this.formTitle.Text = "Deliveries";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -283,7 +283,7 @@
             // codeDataGridViewTextBoxColumn
             // 
             this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
             this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
             this.codeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -293,7 +293,7 @@
             this.Goods.DataSource = this.goodsBindingSource;
             this.Goods.DisplayMember = "Model";
             this.Goods.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Goods.HeaderText = "Товар";
+            this.Goods.HeaderText = "Good";
             this.Goods.Name = "Goods";
             this.Goods.ReadOnly = true;
             this.Goods.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -306,7 +306,7 @@
             this.ProvideOrder.DataSource = this.provideOrderBindingSource;
             this.ProvideOrder.DisplayMember = "Code";
             this.ProvideOrder.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ProvideOrder.HeaderText = "Код партії";
+            this.ProvideOrder.HeaderText = "Provide Order Code";
             this.ProvideOrder.Name = "ProvideOrder";
             this.ProvideOrder.ReadOnly = true;
             this.ProvideOrder.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -316,14 +316,14 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // countDataGridViewTextBoxColumn
             // 
             this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
             this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
             this.countDataGridViewTextBoxColumn.ReadOnly = true;
             // 

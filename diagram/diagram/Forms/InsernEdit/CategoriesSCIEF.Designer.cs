@@ -60,7 +60,7 @@
             this.categoryCB.DisplayMember = "Code";
             this.categoryCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryCB.FormattingEnabled = true;
-            this.categoryCB.Location = new System.Drawing.Point(218, 136);
+            this.categoryCB.Location = new System.Drawing.Point(185, 136);
             this.categoryCB.Name = "categoryCB";
             this.categoryCB.Size = new System.Drawing.Size(170, 28);
             this.categoryCB.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.serviceCenterCB.DisplayMember = "Name";
             this.serviceCenterCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceCenterCB.FormattingEnabled = true;
-            this.serviceCenterCB.Location = new System.Drawing.Point(218, 92);
+            this.serviceCenterCB.Location = new System.Drawing.Point(185, 92);
             this.serviceCenterCB.Name = "serviceCenterCB";
             this.serviceCenterCB.Size = new System.Drawing.Size(170, 28);
             this.serviceCenterCB.TabIndex = 1;
@@ -101,14 +101,14 @@
             this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 45);
+            this.panel2.Size = new System.Drawing.Size(400, 45);
             this.panel2.TabIndex = 10;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.closeBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(365, 0);
+            this.panel4.Location = new System.Drawing.Point(355, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(45, 45);
             this.panel4.TabIndex = 1;
@@ -132,7 +132,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(410, 45);
+            this.panel3.Size = new System.Drawing.Size(400, 45);
             this.panel3.TabIndex = 1;
             // 
             // label1
@@ -145,9 +145,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(376, 42);
+            this.label1.Size = new System.Drawing.Size(325, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Категорія / Сервісний центр";
+            this.label1.Text = "Categories and Service Centers";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -160,7 +160,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 420);
+            this.panel1.Size = new System.Drawing.Size(400, 420);
             this.panel1.TabIndex = 11;
             // 
             // label3
@@ -168,22 +168,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 94);
+            this.label3.Location = new System.Drawing.Point(13, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 21);
+            this.label3.Size = new System.Drawing.Size(166, 21);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Код сервісного центру:";
+            this.label3.Text = "Service Center Code:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(109, 138);
+            this.label2.Location = new System.Drawing.Point(96, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 21);
+            this.label2.Size = new System.Drawing.Size(83, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Категорія:";
+            this.label2.Text = "Category:";
             // 
             // saveBtn
             // 
@@ -197,11 +197,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(144, 295);
+            this.saveBtn.Location = new System.Drawing.Point(174, 295);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(96, 77);
+            this.saveBtn.Size = new System.Drawing.Size(66, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Зберегти";
+            this.saveBtn.Text = "Save";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 
@@ -210,7 +210,7 @@
             this.AcceptButton = this.saveBtn;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(410, 420);
+            this.ClientSize = new System.Drawing.Size(400, 420);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -264,9 +264,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(346, 42);
+            this.formTitle.Size = new System.Drawing.Size(94, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Сервісне обслуговування";
+            this.formTitle.Text = "Service";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -289,7 +289,7 @@
             // Code
             // 
             this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Код";
+            this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             // 
@@ -299,7 +299,7 @@
             this.Basket.DataSource = this.basketBindingSource;
             this.Basket.DisplayMember = "Code";
             this.Basket.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Basket.HeaderText = "Код кошику";
+            this.Basket.HeaderText = "Basket";
             this.Basket.Name = "Basket";
             this.Basket.ReadOnly = true;
             this.Basket.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -312,7 +312,7 @@
             this.Breakage.DataSource = this.breakageBindingSource;
             this.Breakage.DisplayMember = "Breakage1";
             this.Breakage.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Breakage.HeaderText = "Тип поломки";
+            this.Breakage.HeaderText = "Breakage";
             this.Breakage.Name = "Breakage";
             this.Breakage.ReadOnly = true;
             this.Breakage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -325,7 +325,7 @@
             this.Status.DataSource = this.statusBindingSource;
             this.Status.DisplayMember = "Status1";
             this.Status.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Status.HeaderText = "Статус";
+            this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -335,7 +335,7 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 

@@ -102,9 +102,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(147, 42);
+            this.label1.Size = new System.Drawing.Size(137, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Професія";
+            this.label1.Text = "Professions";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -125,22 +125,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(66, 161);
+            this.label3.Location = new System.Drawing.Point(88, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 21);
+            this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Зарплата:";
+            this.label3.Text = "Salary:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(67, 109);
+            this.label2.Location = new System.Drawing.Point(88, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 21);
+            this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Професія:";
+            this.label2.Text = "Name:";
             // 
             // saveBtn
             // 

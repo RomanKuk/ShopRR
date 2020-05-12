@@ -35,12 +35,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.commentTB = new System.Windows.Forms.RichTextBox();
+            this.repairBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.commentTB = new System.Windows.Forms.RichTextBox();
-            this.repairBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.serviceTranspCodeCB = new System.Windows.Forms.ComboBox();
             this.serviceTransportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -105,9 +105,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(119, 42);
+            this.label1.Size = new System.Drawing.Size(88, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Ремонт";
+            this.label1.Text = "Repair";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -125,59 +125,6 @@
             this.panel1.Size = new System.Drawing.Size(400, 420);
             this.panel1.TabIndex = 11;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(91, 241);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 21);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Дата:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(52, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 21);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Коментар:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(43, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 42);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Код сервісного \r\nперевезення:";
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
-            this.saveBtn.FlatAppearance.BorderSize = 0;
-            this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.saveBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(138, 295);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(102, 77);
-            this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Зберегти";
-            this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.saveBtn.UseVisualStyleBackColor = true;
-            // 
             // commentTB
             // 
             this.commentTB.BackColor = System.Drawing.Color.Cornsilk;
@@ -192,6 +139,59 @@
             // repairBindingSource
             // 
             this.repairBindingSource.DataSource = typeof(diagram.Repair);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(91, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 21);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Date:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(52, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 21);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Comment:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(52, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 63);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Service \r\nTransportation \r\nCode:";
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.saveBtn.FlatAppearance.BorderSize = 0;
+            this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.saveBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
+            this.saveBtn.Location = new System.Drawing.Point(174, 295);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.TabIndex = 14;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.saveBtn.UseVisualStyleBackColor = true;
             // 
             // datePicker
             // 

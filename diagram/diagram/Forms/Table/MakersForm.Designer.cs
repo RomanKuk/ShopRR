@@ -33,9 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.makersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.insertBtn = new System.Windows.Forms.Button();
@@ -49,19 +46,22 @@
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.makersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.makerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Countries = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Brand = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makersBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -106,18 +106,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // countriesBindingSource
-            // 
-            this.countriesBindingSource.DataSource = typeof(diagram.Countries);
-            // 
-            // brandBindingSource
-            // 
-            this.brandBindingSource.DataSource = typeof(diagram.Brand);
-            // 
-            // makersBindingSource
-            // 
-            this.makersBindingSource.DataSource = typeof(diagram.Makers);
             // 
             // panel2
             // 
@@ -255,9 +243,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(147, 42);
+            this.formTitle.Size = new System.Drawing.Size(96, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Виробник";
+            this.formTitle.Text = "Makers";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -279,6 +267,18 @@
             this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewComboBoxColumn1.Width = 398;
             // 
+            // brandBindingSource
+            // 
+            this.brandBindingSource.DataSource = typeof(diagram.Brand);
+            // 
+            // countriesBindingSource
+            // 
+            this.countriesBindingSource.DataSource = typeof(diagram.Countries);
+            // 
+            // makersBindingSource
+            // 
+            this.makersBindingSource.DataSource = typeof(diagram.Makers);
+            // 
             // makerIDDataGridViewTextBoxColumn
             // 
             this.makerIDDataGridViewTextBoxColumn.DataPropertyName = "Maker_ID";
@@ -290,7 +290,7 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Code";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -300,7 +300,7 @@
             this.Countries.DataSource = this.countriesBindingSource;
             this.Countries.DisplayMember = "Name";
             this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Countries.HeaderText = "Країна";
+            this.Countries.HeaderText = "Country";
             this.Countries.Name = "Countries";
             this.Countries.ReadOnly = true;
             this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -313,7 +313,7 @@
             this.Brand.DataSource = this.brandBindingSource;
             this.Brand.DisplayMember = "Name";
             this.Brand.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Brand.HeaderText = "Бренд";
+            this.Brand.HeaderText = "Brand";
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
             this.Brand.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -332,15 +332,15 @@
             this.Text = "MakersForm";
             this.Load += new System.EventHandler(this.MakersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.makersBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.makersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
