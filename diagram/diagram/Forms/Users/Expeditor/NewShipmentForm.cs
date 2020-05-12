@@ -30,50 +30,59 @@ namespace diagram.Forms.Users.Expeditor
 
         private void Confirm_Click(object sender, EventArgs e)
         {
-            Delivery delivery = (db.Delivery as IEnumerable<Delivery>)
-                .Where(x => x.Deliver_ID.Equals(DeliveryComboBox.SelectedValue))
-                .FirstOrDefault();
-            GoodsShops gs = (db.GoodsShops as IEnumerable<GoodsShops>)
-                .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue != null ? ShopComboBox.SelectedValue : 0 ) &&
-                x.Good_ID.Equals(delivery.Good_ID))
-                .FirstOrDefault();
-            if (gs != null)
-            {
-                db.GoodsShops.Attach(gs);
-                gs.Count += delivery.Count;
-            }
-            else
-            {
-                gs = new GoodsShops()
-                {
-                    Code = CodeGenerator.GenerateCode("GoodsShops", "gs"),
-                    Good_ID = delivery.Good_ID,
-                    Shop_ID = (int)ShopComboBox.SelectedValue,
-                    Count = delivery.Count
-                };
-                db.GoodsShops.Add(gs);
-                db.SaveChanges();
-                gs = (db.GoodsShops as IEnumerable<GoodsShops>)
-                .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue != null ? ShopComboBox.SelectedValue : 0) &&
-                x.Good_ID.Equals(delivery.Good_ID))
-                .FirstOrDefault();
-            }
 
-            Shipment shipment = new Shipment()
-            {
-                Deliver_ID = delivery.Deliver_ID,
-                GoodsShops_ID = gs.GoodsShops_ID,
-                Employee_ID = (int)EmployeeComboBox.SelectedValue,
-                Date = DateTime.Now
-            };
-            db.Shipment.Add(shipment);
-            db.SaveChanges();
             this.Close();
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void NewShipmentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult == DialogResult.OK)
+            {
+                Delivery delivery = (db.Delivery as IEnumerable<Delivery>)
+                    .Where(x => x.Deliver_ID.Equals(DeliveryComboBox.SelectedValue))
+                    .FirstOrDefault();
+                GoodsShops gs = (db.GoodsShops as IEnumerable<GoodsShops>)
+                                    .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue != null ? ShopComboBox.SelectedValue : 0) &&
+                                    x.Good_ID.Equals(delivery.Good_ID))
+                                    .FirstOrDefault();
+                if (gs != null)
+                {
+                    db.GoodsShops.Attach(gs);
+                    gs.Count += delivery.Count;
+                }
+                else
+                {
+                    gs = new GoodsShops()
+                    {
+                        Code = CodeGenerator.GenerateCode("GoodsShops", "gs"),
+                        Good_ID = delivery.Good_ID,
+                        Shop_ID = (int)ShopComboBox.SelectedValue,
+                        Count = delivery.Count
+                    };
+                    db.GoodsShops.Add(gs);
+                    db.SaveChanges();
+                    gs = (db.GoodsShops as IEnumerable<GoodsShops>)
+                    .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue != null ? ShopComboBox.SelectedValue : 0) &&
+                    x.Good_ID.Equals(delivery.Good_ID))
+                    .FirstOrDefault();
+                }
+
+                Shipment shipment = new Shipment()
+                {
+                    Deliver_ID = delivery.Deliver_ID,
+                    GoodsShops_ID = gs.GoodsShops_ID,
+                    Employee_ID = (int)EmployeeComboBox.SelectedValue,
+                    Date = DateTime.Now
+                };
+                db.Shipment.Add(shipment);
+                db.SaveChanges();
+            }
+            e.Cancel = false;
         }
     }
 }

@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -349,8 +348,6 @@
             this.ShipmentDataGridView.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.ShipmentDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ShipmentDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.ShipmentDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.ShipmentDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.ShipmentDataGridView.ColumnHeadersHeight = 30;
             this.ShipmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.shipmentIDDataGridViewTextBoxColumn,
@@ -359,12 +356,14 @@
             this.employeeIDDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn1});
             this.ShipmentDataGridView.DataSource = this.shipmentBindingSource;
+            this.ShipmentDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.ShipmentDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ShipmentDataGridView.GridColor = System.Drawing.Color.LightSkyBlue;
             this.ShipmentDataGridView.Location = new System.Drawing.Point(0, 0);
             this.ShipmentDataGridView.Name = "ShipmentDataGridView";
             this.ShipmentDataGridView.ReadOnly = true;
             this.ShipmentDataGridView.RowHeadersVisible = false;
+            this.ShipmentDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.ShipmentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ShipmentDataGridView.Size = new System.Drawing.Size(990, 412);
             this.ShipmentDataGridView.TabIndex = 0;

@@ -33,20 +33,38 @@ namespace diagram.Forms.Users.Expeditor
 
         private void NewProvideOrder_Click(object sender, EventArgs e)
         {
-            NewDeliveryForm form = new NewDeliveryForm(db, employee);
-            form.Show();
+            using (NewDeliveryForm form = new NewDeliveryForm(db, employee))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    provideOrderBindingSource.DataSource = db.ProvideOrder.ToList();
+                    deliveryBindingSource.DataSource = db.Delivery.ToList();
+                }
+            }
+
         }
 
         private void NewShipment_Click(object sender, EventArgs e)
         {
-            NewShipmentForm form = new NewShipmentForm(db);
-            form.Show();
+            using (NewShipmentForm form = new NewShipmentForm(db))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
+                    shipmentBindingSource.DataSource = db.Shipment.ToList();
+                }
+            }
+
         }
 
         private void NewService_Click(object sender, EventArgs e)
         {
-            NewServiceForm form = new NewServiceForm(db);
-            form.Show();
+            using (NewServiceForm form = new NewServiceForm(db))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                }
+            }
         }
 
         private void minimizeBtn_Click(object sender, EventArgs e)

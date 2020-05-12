@@ -246,6 +246,7 @@
             this.Name = "NewServiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewServiceForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewServiceForm_FormClosing);
             this.Load += new System.EventHandler(this.NewServiceForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

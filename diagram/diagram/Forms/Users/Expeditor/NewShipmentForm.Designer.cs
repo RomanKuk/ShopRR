@@ -253,6 +253,7 @@
             this.Name = "NewShipmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewShipmentForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewShipmentForm_FormClosing);
             this.Load += new System.EventHandler(this.NewShipmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();

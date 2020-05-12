@@ -212,6 +212,7 @@
             this.Name = "NewServiceTransportationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewServiceTransportationForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewServiceTransportationForm_FormClosing);
             this.Load += new System.EventHandler(this.NewServiceTransportationForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
