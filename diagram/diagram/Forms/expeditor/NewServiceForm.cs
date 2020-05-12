@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.Users.Expeditor
+namespace diagram.Forms.expeditor
 {
     public partial class NewServiceForm : Form
     {
@@ -60,11 +60,6 @@ namespace diagram.Forms.Users.Expeditor
             goodsBindingSource.DataSource = (db.Goods as IEnumerable<Goods>)
                 .Where(x => goods.Contains(x.Good_ID))
                 .ToList();
-        }
-
-        private void closeBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

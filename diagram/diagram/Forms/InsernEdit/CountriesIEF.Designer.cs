@@ -99,9 +99,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(110, 42);
+            this.label1.Size = new System.Drawing.Size(119, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Країна";
+            this.label1.Text = "Countries";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -122,14 +122,14 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(77, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 21);
+            this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Країна:";
+            this.label2.Text = "Country:";
             // 
             // saveBtn
             // 
-            this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -138,11 +138,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(140, 295);
+            this.saveBtn.Location = new System.Drawing.Point(174, 295);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(100, 77);
+            this.saveBtn.Size = new System.Drawing.Size(66, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Зберегти";
+            this.saveBtn.Text = "Save";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 

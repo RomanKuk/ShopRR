@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesSCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -52,8 +52,8 @@
             this.sCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesSCBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -104,13 +104,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
-            // serviceCenterBindingSource
-            // 
-            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
-            // 
             // categoriesBindingSource
             // 
             this.categoriesBindingSource.DataSource = typeof(diagram.Categories);
+            // 
+            // serviceCenterBindingSource
+            // 
+            this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
             // 
             // categoriesSCBindingSource
             // 
@@ -252,9 +252,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(376, 42);
+            this.formTitle.Size = new System.Drawing.Size(325, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Категорія / Сервісний центр";
+            this.formTitle.Text = "Categories and Service Centers";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -280,7 +280,7 @@
             this.sCIDDataGridViewTextBoxColumn.DataSource = this.serviceCenterBindingSource;
             this.sCIDDataGridViewTextBoxColumn.DisplayMember = "Code";
             this.sCIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.sCIDDataGridViewTextBoxColumn.HeaderText = "Код сервісного центру";
+            this.sCIDDataGridViewTextBoxColumn.HeaderText = "Service Center Code";
             this.sCIDDataGridViewTextBoxColumn.Name = "sCIDDataGridViewTextBoxColumn";
             this.sCIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.sCIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -293,7 +293,7 @@
             this.categoryIDDataGridViewTextBoxColumn.DataSource = this.categoriesBindingSource;
             this.categoryIDDataGridViewTextBoxColumn.DisplayMember = "Name";
             this.categoryIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "Категорія";
+            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
             this.categoryIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.categoryIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -312,8 +312,8 @@
             this.Text = "CategoriesSCForm";
             this.Load += new System.EventHandler(this.CategoriesSCForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesSCBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

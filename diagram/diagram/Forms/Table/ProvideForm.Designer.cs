@@ -250,9 +250,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(202, 42);
+            this.formTitle.Size = new System.Drawing.Size(117, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Постачальник";
+            this.formTitle.Text = "Providers";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -275,14 +275,14 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Назва";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // contactPersonDataGridViewTextBoxColumn
             // 
             this.contactPersonDataGridViewTextBoxColumn.DataPropertyName = "ContactPerson";
-            this.contactPersonDataGridViewTextBoxColumn.HeaderText = "Контактна особа";
+            this.contactPersonDataGridViewTextBoxColumn.HeaderText = "Contact Person";
             this.contactPersonDataGridViewTextBoxColumn.Name = "contactPersonDataGridViewTextBoxColumn";
             this.contactPersonDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -292,7 +292,7 @@
             this.addressDataGridViewTextBoxColumn.DataSource = this.addressBindingSource;
             this.addressDataGridViewTextBoxColumn.DisplayMember = "Name";
             this.addressDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -302,7 +302,7 @@
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
             this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.Users.Seller.Transportations
+namespace diagram.Forms.transportation
 {
     public partial class NewTransportationForm : Form
     {

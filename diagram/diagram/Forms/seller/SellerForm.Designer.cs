@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.Users.Seller
+﻿namespace diagram.Forms.seller
 {
     partial class SellerForm
     {
@@ -86,11 +86,12 @@
             this.tabControl1.Controls.Add(this.GStabPage);
             this.tabControl1.Controls.Add(this.SalestabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(10, 10);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1000, 375);
+            this.tabControl1.Size = new System.Drawing.Size(800, 375);
             this.tabControl1.TabIndex = 3;
             // 
             // GStabPage
@@ -99,22 +100,21 @@
             this.GStabPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GStabPage.Controls.Add(this.OnlyThisShopCheckBox);
             this.GStabPage.Controls.Add(this.dataGridView1);
-            this.GStabPage.Location = new System.Drawing.Point(4, 36);
+            this.GStabPage.Location = new System.Drawing.Point(4, 44);
             this.GStabPage.Name = "GStabPage";
-            this.GStabPage.Size = new System.Drawing.Size(992, 335);
+            this.GStabPage.Size = new System.Drawing.Size(792, 327);
             this.GStabPage.TabIndex = 0;
-            this.GStabPage.Text = "Всі товари";
+            this.GStabPage.Text = "All Goods";
             // 
             // OnlyThisShopCheckBox
             // 
             this.OnlyThisShopCheckBox.BackColor = System.Drawing.Color.HotPink;
-            this.OnlyThisShopCheckBox.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OnlyThisShopCheckBox.Location = new System.Drawing.Point(771, 0);
+            this.OnlyThisShopCheckBox.Location = new System.Drawing.Point(509, -1);
             this.OnlyThisShopCheckBox.Name = "OnlyThisShopCheckBox";
             this.OnlyThisShopCheckBox.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.OnlyThisShopCheckBox.Size = new System.Drawing.Size(224, 30);
+            this.OnlyThisShopCheckBox.Size = new System.Drawing.Size(155, 30);
             this.OnlyThisShopCheckBox.TabIndex = 1;
-            this.OnlyThisShopCheckBox.Text = "Лише в цьому магазині";
+            this.OnlyThisShopCheckBox.Text = "Only This Shop";
             this.OnlyThisShopCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OnlyThisShopCheckBox.UseVisualStyleBackColor = false;
             this.OnlyThisShopCheckBox.CheckedChanged += new System.EventHandler(this.OnlyThisShopCheckBox_CheckedChanged);
@@ -125,6 +125,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -145,13 +146,14 @@
             this.dataGridView1.DataSource = this.goodsShopsBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -160,7 +162,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 333);
+            this.dataGridView1.Size = new System.Drawing.Size(790, 325);
             this.dataGridView1.TabIndex = 0;
             // 
             // goodsShopsIDDataGridViewTextBoxColumn
@@ -174,7 +176,7 @@
             // codeDataGridViewTextBoxColumn
             // 
             this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
             this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
             this.codeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -184,7 +186,7 @@
             this.goodIDDataGridViewTextBoxColumn.DataSource = this.goodsBindingSource;
             this.goodIDDataGridViewTextBoxColumn.DisplayMember = "Model";
             this.goodIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Модель товару";
+            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good Model";
             this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
             this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.goodIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -198,7 +200,7 @@
             // countDataGridViewTextBoxColumn
             // 
             this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
             this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
             this.countDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -208,7 +210,7 @@
             this.shopIDDataGridViewTextBoxColumn.DataSource = this.shopsBindingSource;
             this.shopIDDataGridViewTextBoxColumn.DisplayMember = "Code";
             this.shopIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Код магазину";
+            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop Code";
             this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
             this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.shopIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -226,11 +228,11 @@
             // SalestabPage
             // 
             this.SalestabPage.Controls.Add(this.dataGridView2);
-            this.SalestabPage.Location = new System.Drawing.Point(4, 36);
+            this.SalestabPage.Location = new System.Drawing.Point(4, 44);
             this.SalestabPage.Name = "SalestabPage";
-            this.SalestabPage.Size = new System.Drawing.Size(992, 335);
+            this.SalestabPage.Size = new System.Drawing.Size(792, 327);
             this.SalestabPage.TabIndex = 1;
-            this.SalestabPage.Text = "Продажі";
+            this.SalestabPage.Text = "Sales";
             this.SalestabPage.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
@@ -239,6 +241,7 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -253,6 +256,7 @@
             this.dataGridView2.DataSource = this.salesBindingSource;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView2.GridColor = System.Drawing.Color.LightSkyBlue;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
@@ -260,7 +264,7 @@
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(992, 335);
+            this.dataGridView2.Size = new System.Drawing.Size(792, 327);
             this.dataGridView2.TabIndex = 0;
             // 
             // salesIDDataGridViewTextBoxColumn
@@ -274,7 +278,7 @@
             // salesCodeDataGridViewTextBoxColumn
             // 
             this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
-            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "Код продажу";
+            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "SalesCode";
             this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
             this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -292,7 +296,7 @@
             this.customerIDDataGridViewTextBoxColumn.DataSource = this.customersBindingSource;
             this.customerIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
             this.customerIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Покупець";
+            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Customer_ID";
             this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
             this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -306,14 +310,14 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // totalDataGridViewTextBoxColumn
             // 
             this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Загальна вартість";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -331,7 +335,7 @@
             this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 45);
+            this.panel2.Size = new System.Drawing.Size(800, 45);
             this.panel2.TabIndex = 10;
             // 
             // panel5
@@ -340,7 +344,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(360, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(522, 45);
+            this.panel5.Size = new System.Drawing.Size(322, 45);
             this.panel5.TabIndex = 1;
             // 
             // newSalesBtn
@@ -353,14 +357,13 @@
             this.newSalesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.newSalesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.newSalesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newSalesBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newSalesBtn.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newSalesBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.newSalesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newSalesBtn.Location = new System.Drawing.Point(0, 0);
             this.newSalesBtn.Name = "newSalesBtn";
-            this.newSalesBtn.Size = new System.Drawing.Size(233, 45);
+            this.newSalesBtn.Size = new System.Drawing.Size(171, 45);
             this.newSalesBtn.TabIndex = 8;
-            this.newSalesBtn.Text = "Нове замовлення";
+            this.newSalesBtn.Text = "New Order";
             this.newSalesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.newSalesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.newSalesBtn.UseVisualStyleBackColor = true;
@@ -372,7 +375,7 @@
             this.panel4.Controls.Add(this.minimizeBtn);
             this.panel4.Controls.Add(this.backToHomeBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(882, 0);
+            this.panel4.Location = new System.Drawing.Point(682, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(118, 45);
             this.panel4.TabIndex = 1;
@@ -436,9 +439,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(163, 42);
+            this.formTitle.Size = new System.Drawing.Size(79, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Продавець";
+            this.formTitle.Text = "Seller";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -447,14 +450,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 375);
+            this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
             // 
             // SellerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1000, 420);
+            this.ClientSize = new System.Drawing.Size(800, 420);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -493,17 +496,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private System.Windows.Forms.BindingSource salesBindingSource;
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label formTitle;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button newSalesBtn;
-        private System.Windows.Forms.Button minimizeBtn;
-        private System.Windows.Forms.Button closeBtn;
-        private System.Windows.Forms.Button backToHomeBtn;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn goodIDDataGridViewTextBoxColumn;
@@ -515,5 +507,16 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn customerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label formTitle;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button newSalesBtn;
+        private System.Windows.Forms.Button minimizeBtn;
+        private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.Button backToHomeBtn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
     }
 }

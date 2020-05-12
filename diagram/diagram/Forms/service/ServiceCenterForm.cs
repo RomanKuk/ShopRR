@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace diagram.Forms.Users.SCEmployee
+namespace diagram.Forms.service
 {
-    public partial class ServiceCenterEmployeeForm : Form
+    public partial class ServiceCenterForm : Form
     {
         my_db_for_db_2Entities db;
         Employee employee;
-        public ServiceCenterEmployeeForm(my_db_for_db_2Entities _db, Employee _employee)
+        public ServiceCenterForm(my_db_for_db_2Entities _db, Employee _employee)
         {
             db = _db;
             employee = _employee;
@@ -33,15 +33,9 @@ namespace diagram.Forms.Users.SCEmployee
             repairBindingSource.DataSource = db.Repair.ToList();
             serviceTransportationBindingSource1.DataSource = db.ServiceTransportation.ToList();
 
-            Left = Top = 0;
-            Width = Screen.PrimaryScreen.WorkingArea.Width;
-            Height = Screen.PrimaryScreen.WorkingArea.Height;
-            int barWidth = Width - panel4.Width;
-            panel3.Width = panel5.Width = barWidth / 2;
-
         }
 
-        private void NewServiceBtn_Click(object sender, EventArgs e)
+        private void NewSTButton_Click(object sender, EventArgs e)
         {
             NewServiceTransportationForm form = new NewServiceTransportationForm(db);
             form.Show();
@@ -51,22 +45,6 @@ namespace diagram.Forms.Users.SCEmployee
         {
             NewRepairForm form = new NewRepairForm(db);
             form.Show();
-        }
-
-        private void minimizeBtn_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void closeBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Application.Exit();
-        }
-
-        private void backToHomeBtn_Click(object sender, EventArgs e)
-        {
-
         }
 
     }

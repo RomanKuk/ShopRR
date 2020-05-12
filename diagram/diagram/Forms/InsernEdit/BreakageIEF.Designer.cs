@@ -113,9 +113,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(137, 42);
+            this.label1.Size = new System.Drawing.Size(115, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Поломка";
+            this.label1.Text = "Breakage";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -134,11 +134,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(93, 129);
+            this.label2.Location = new System.Drawing.Point(67, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 21);
+            this.label2.Size = new System.Drawing.Size(85, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Тип:";
+            this.label2.Text = "Breakage:";
             // 
             // saveBtn
             // 
@@ -152,11 +152,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(146, 294);
+            this.saveBtn.Location = new System.Drawing.Point(174, 295);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(92, 77);
+            this.saveBtn.Size = new System.Drawing.Size(66, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Зберегти";
+            this.saveBtn.Text = "Save";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 

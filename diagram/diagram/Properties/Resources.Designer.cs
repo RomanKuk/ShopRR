@@ -73,16 +73,6 @@ namespace diagram.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap check {
-            get {
-                object obj = ResourceManager.GetObject("check", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap close_icon {
             get {
                 object obj = ResourceManager.GetObject("close_icon", resourceCulture);
@@ -126,16 +116,6 @@ namespace diagram.Properties {
         internal static System.Drawing.Bitmap minimize_icon {
             get {
                 object obj = ResourceManager.GetObject("minimize_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap repair {
-            get {
-                object obj = ResourceManager.GetObject("repair", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

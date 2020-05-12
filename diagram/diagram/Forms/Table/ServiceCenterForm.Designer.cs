@@ -246,9 +246,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(232, 42);
+            this.formTitle.Size = new System.Drawing.Size(173, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Сервісний центр";
+            this.formTitle.Text = "Service Centers";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -271,7 +271,7 @@
             // Code
             // 
             this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Код";
+            this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             // 
@@ -281,7 +281,7 @@
             this.addressDataGridViewTextBoxColumn.DataSource = this.addressBindingSource;
             this.addressDataGridViewTextBoxColumn.DisplayMember = "Name";
             this.addressDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -297,7 +297,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ServiceCenterForm";
-            this.Text = "ServiceCenterEmployeeForm";
+            this.Text = "ServiceCenterForm";
             this.Load += new System.EventHandler(this.ServiceCenterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
