@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.seller
+﻿namespace diagram.Forms.Users.Seller
 {
     partial class NewSalesForm
     {
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSalesForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,6 +47,9 @@
             this.cancelBtn = new System.Windows.Forms.Button();
             this.soldBtn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.customerComboBox = new System.Windows.Forms.ComboBox();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsCB = new System.Windows.Forms.ComboBox();
@@ -150,9 +152,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(132, 42);
+            this.formTitle.Size = new System.Drawing.Size(246, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "New Order";
+            this.formTitle.Text = "Нове замовлення";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -183,9 +185,9 @@
             this.panel9.Controls.Add(this.cancelBtn);
             this.panel9.Controls.Add(this.soldBtn);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(241, 0);
+            this.panel9.Location = new System.Drawing.Point(478, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(469, 181);
+            this.panel9.Size = new System.Drawing.Size(422, 181);
             this.panel9.TabIndex = 10;
             // 
             // addBtn
@@ -196,13 +198,13 @@
             this.addBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.addBtn.FlatAppearance.BorderSize = 0;
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addBtn.Location = new System.Drawing.Point(87, 29);
+            this.addBtn.Location = new System.Drawing.Point(41, 29);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(107, 46);
+            this.addBtn.Size = new System.Drawing.Size(133, 46);
             this.addBtn.TabIndex = 3;
-            this.addBtn.Text = "Add";
+            this.addBtn.Text = "Додати";
             this.addBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addBtn.UseVisualStyleBackColor = false;
@@ -215,12 +217,12 @@
             this.deleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.deleteBtn.FlatAppearance.BorderSize = 0;
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteBtn.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.Location = new System.Drawing.Point(275, 29);
+            this.deleteBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Location = new System.Drawing.Point(230, 30);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(126, 46);
+            this.deleteBtn.Size = new System.Drawing.Size(156, 46);
             this.deleteBtn.TabIndex = 4;
-            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.Text = "Видалити";
             this.deleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.Delete_Click);
@@ -232,12 +234,12 @@
             this.cancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(275, 104);
+            this.cancelBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Location = new System.Drawing.Point(230, 99);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(123, 46);
+            this.cancelBtn.Size = new System.Drawing.Size(152, 46);
             this.cancelBtn.TabIndex = 6;
-            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.Text = "Відмінити";
             this.cancelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.Cancel_Click);
@@ -245,30 +247,63 @@
             // soldBtn
             // 
             this.soldBtn.BackColor = System.Drawing.Color.Transparent;
-            this.soldBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("soldBtn.BackgroundImage")));
+            this.soldBtn.BackgroundImage = global::diagram.Properties.Resources.check;
             this.soldBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.soldBtn.FlatAppearance.BorderSize = 0;
             this.soldBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.soldBtn.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soldBtn.Location = new System.Drawing.Point(87, 104);
+            this.soldBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soldBtn.Location = new System.Drawing.Point(41, 99);
             this.soldBtn.Name = "soldBtn";
-            this.soldBtn.Size = new System.Drawing.Size(112, 46);
+            this.soldBtn.Size = new System.Drawing.Size(185, 46);
             this.soldBtn.TabIndex = 5;
-            this.soldBtn.Text = "Sold";
+            this.soldBtn.Text = "Підтвердити";
             this.soldBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.soldBtn.UseVisualStyleBackColor = false;
             this.soldBtn.Click += new System.EventHandler(this.Button3_Click);
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Controls.Add(this.label1);
             this.panel8.Controls.Add(this.customerComboBox);
             this.panel8.Controls.Add(this.goodsCB);
             this.panel8.Controls.Add(this.goodCount);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(241, 181);
+            this.panel8.Size = new System.Drawing.Size(478, 181);
             this.panel8.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(109, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Покупець: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(113, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Кількість: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(143, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Товар: ";
             // 
             // customerComboBox
             // 
@@ -277,7 +312,7 @@
             this.customerComboBox.DisplayMember = "LastName";
             this.customerComboBox.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerComboBox.FormattingEnabled = true;
-            this.customerComboBox.Location = new System.Drawing.Point(35, 122);
+            this.customerComboBox.Location = new System.Drawing.Point(256, 111);
             this.customerComboBox.Name = "customerComboBox";
             this.customerComboBox.Size = new System.Drawing.Size(170, 28);
             this.customerComboBox.TabIndex = 7;
@@ -294,7 +329,7 @@
             this.goodsCB.DisplayMember = "Model";
             this.goodsCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goodsCB.FormattingEnabled = true;
-            this.goodsCB.Location = new System.Drawing.Point(35, 29);
+            this.goodsCB.Location = new System.Drawing.Point(256, 30);
             this.goodsCB.Name = "goodsCB";
             this.goodsCB.Size = new System.Drawing.Size(170, 28);
             this.goodsCB.TabIndex = 1;
@@ -309,7 +344,7 @@
             // 
             this.goodCount.BackColor = System.Drawing.Color.Cornsilk;
             this.goodCount.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goodCount.Location = new System.Drawing.Point(35, 75);
+            this.goodCount.Location = new System.Drawing.Point(256, 73);
             this.goodCount.Name = "goodCount";
             this.goodCount.Size = new System.Drawing.Size(170, 27);
             this.goodCount.TabIndex = 2;
@@ -318,11 +353,11 @@
             // 
             this.totalPriceLabel.AutoSize = true;
             this.totalPriceLabel.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLabel.Location = new System.Drawing.Point(738, 75);
+            this.totalPriceLabel.Location = new System.Drawing.Point(913, 77);
             this.totalPriceLabel.Name = "totalPriceLabel";
-            this.totalPriceLabel.Size = new System.Drawing.Size(75, 30);
+            this.totalPriceLabel.Size = new System.Drawing.Size(251, 30);
             this.totalPriceLabel.TabIndex = 8;
-            this.totalPriceLabel.Text = "Total: ";
+            this.totalPriceLabel.Text = "Загальна вартість: ";
             // 
             // panel6
             // 
@@ -374,13 +409,13 @@
             // 
             // Goods
             // 
-            this.Goods.HeaderText = "Goods";
+            this.Goods.HeaderText = "Товар";
             this.Goods.Name = "Goods";
             this.Goods.ReadOnly = true;
             // 
             // Count
             // 
-            this.Count.HeaderText = "Count";
+            this.Count.HeaderText = "Кількість";
             this.Count.Name = "Count";
             this.Count.ReadOnly = true;
             // 
@@ -408,6 +443,7 @@
             this.panel7.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodCount)).EndInit();
@@ -429,8 +465,6 @@
         private System.Windows.Forms.Button soldBtn;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.BindingSource goodsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Goods;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
         private System.Windows.Forms.ComboBox customerComboBox;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private System.Windows.Forms.Label totalPriceLabel;
@@ -447,5 +481,10 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Goods;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
     }
 }

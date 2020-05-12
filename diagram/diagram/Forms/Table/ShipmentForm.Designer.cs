@@ -34,8 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -56,8 +56,8 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -114,13 +114,13 @@
             // 
             this.deliveryBindingSource.DataSource = typeof(diagram.Delivery);
             // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
             // goodsShopsBindingSource
             // 
             this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
             // 
             // shipmentBindingSource
             // 
@@ -262,9 +262,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(129, 42);
+            this.formTitle.Size = new System.Drawing.Size(216, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Shipments";
+            this.formTitle.Text = "Відвантаження";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -290,7 +290,7 @@
             this.Delivery.DataSource = this.deliveryBindingSource;
             this.Delivery.DisplayMember = "Code";
             this.Delivery.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Delivery.HeaderText = "Delivery";
+            this.Delivery.HeaderText = "Код поставки";
             this.Delivery.Name = "Delivery";
             this.Delivery.ReadOnly = true;
             this.Delivery.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -303,7 +303,7 @@
             this.GoodsShops.DataSource = this.goodsShopsBindingSource;
             this.GoodsShops.DisplayMember = "Code";
             this.GoodsShops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.GoodsShops.HeaderText = "GoodsShops";
+            this.GoodsShops.HeaderText = "Код товар/магазин";
             this.GoodsShops.Name = "GoodsShops";
             this.GoodsShops.ReadOnly = true;
             this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -316,7 +316,7 @@
             this.Employee.DataSource = this.employeeBindingSource;
             this.Employee.DisplayMember = "LastName";
             this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Employee.HeaderText = "Employee";
+            this.Employee.HeaderText = "Працівник";
             this.Employee.Name = "Employee";
             this.Employee.ReadOnly = true;
             this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -326,7 +326,7 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -343,8 +343,8 @@
             this.Load += new System.EventHandler(this.ShipmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

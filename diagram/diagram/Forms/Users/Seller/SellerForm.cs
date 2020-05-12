@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.seller
+namespace diagram.Forms.Users.Seller
 {
     public partial class SellerForm : Form
     {

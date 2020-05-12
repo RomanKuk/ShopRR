@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.transportation
+﻿namespace diagram.Forms.Users.Seller.Transportations
 {
     partial class NewTransportationForm
     {
