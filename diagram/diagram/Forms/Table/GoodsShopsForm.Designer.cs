@@ -256,9 +256,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(197, 42);
+            this.formTitle.Size = new System.Drawing.Size(228, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Goods and Shops";
+            this.formTitle.Text = "Товар / Магазин";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -281,7 +281,7 @@
             // Code
             // 
             this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
+            this.Code.HeaderText = "Код";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             // 
@@ -291,7 +291,7 @@
             this.Goods.DataSource = this.goodsBindingSource;
             this.Goods.DisplayMember = "Code";
             this.Goods.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Goods.HeaderText = "Good Code";
+            this.Goods.HeaderText = "Код товару";
             this.Goods.Name = "Goods";
             this.Goods.ReadOnly = true;
             this.Goods.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -304,7 +304,7 @@
             this.Shops.DataSource = this.shopsBindingSource;
             this.Shops.DisplayMember = "Code";
             this.Shops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Shops.HeaderText = "Shop Code";
+            this.Shops.HeaderText = "Код магазину";
             this.Shops.Name = "Shops";
             this.Shops.ReadOnly = true;
             this.Shops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -314,7 +314,7 @@
             // countDataGridViewTextBoxColumn
             // 
             this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
             this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
             this.countDataGridViewTextBoxColumn.ReadOnly = true;
             // 

@@ -120,9 +120,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(88, 42);
+            this.label1.Size = new System.Drawing.Size(100, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Goods";
+            this.label1.Text = "Товар";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -155,44 +155,44 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(12, 285);
+            this.label9.Location = new System.Drawing.Point(34, 285);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 21);
+            this.label9.Size = new System.Drawing.Size(143, 21);
             this.label9.TabIndex = 22;
-            this.label9.Text = "Guarantee Period:";
+            this.label9.Text = "Період гарантії:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(57, 253);
+            this.label8.Location = new System.Drawing.Point(117, 253);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 21);
+            this.label8.Size = new System.Drawing.Size(56, 21);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Description:";
+            this.label8.Text = "Опис:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(37, 219);
+            this.label7.Location = new System.Drawing.Point(112, 219);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 21);
+            this.label7.Size = new System.Drawing.Size(61, 21);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Revenue Price:";
+            this.label7.Text = "Дохід:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(107, 186);
+            this.label6.Location = new System.Drawing.Point(122, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 21);
+            this.label6.Size = new System.Drawing.Size(51, 21);
             this.label6.TabIndex = 19;
-            this.label6.Text = "Price:";
+            this.label6.Text = "Ціна:";
             // 
             // label5
             // 
@@ -201,42 +201,42 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(76, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 21);
+            this.label5.Size = new System.Drawing.Size(97, 21);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Category:";
+            this.label5.Text = "Категорія:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(54, 119);
+            this.label4.Location = new System.Drawing.Point(37, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 21);
+            this.label4.Size = new System.Drawing.Size(140, 21);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Maker Code:";
+            this.label4.Text = "Код виробника:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(107, 86);
+            this.label3.Location = new System.Drawing.Point(130, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 21);
+            this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Code:";
+            this.label3.Text = "Код:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(97, 53);
+            this.label2.Location = new System.Drawing.Point(99, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 21);
+            this.label2.Size = new System.Drawing.Size(81, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Model:";
+            this.label2.Text = "Модель:";
             // 
             // saveBtn
             // 
@@ -250,11 +250,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(172, 331);
+            this.saveBtn.Location = new System.Drawing.Point(147, 331);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.Size = new System.Drawing.Size(97, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Зберегти";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 
