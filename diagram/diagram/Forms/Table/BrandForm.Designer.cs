@@ -33,9 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.brandIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Countries = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,6 +47,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.brandIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Countries = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
@@ -101,34 +101,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // brandIDDataGridViewTextBoxColumn
-            // 
-            this.brandIDDataGridViewTextBoxColumn.DataPropertyName = "Brand_ID";
-            this.brandIDDataGridViewTextBoxColumn.HeaderText = "Brand_ID";
-            this.brandIDDataGridViewTextBoxColumn.Name = "brandIDDataGridViewTextBoxColumn";
-            this.brandIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.brandIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Countries
-            // 
-            this.Countries.DataPropertyName = "Country_ID";
-            this.Countries.DataSource = this.countriesBindingSource;
-            this.Countries.DisplayMember = "Name";
-            this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Countries.HeaderText = "Countries";
-            this.Countries.Name = "Countries";
-            this.Countries.ReadOnly = true;
-            this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Countries.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Countries.ValueMember = "Country_ID";
             // 
             // countriesBindingSource
             // 
@@ -274,9 +246,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(92, 42);
+            this.formTitle.Size = new System.Drawing.Size(103, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Brands";
+            this.formTitle.Text = "Бренд";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -287,6 +259,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
+            // 
+            // brandIDDataGridViewTextBoxColumn
+            // 
+            this.brandIDDataGridViewTextBoxColumn.DataPropertyName = "Brand_ID";
+            this.brandIDDataGridViewTextBoxColumn.HeaderText = "Brand_ID";
+            this.brandIDDataGridViewTextBoxColumn.Name = "brandIDDataGridViewTextBoxColumn";
+            this.brandIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.brandIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Бренд";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Countries
+            // 
+            this.Countries.DataPropertyName = "Country_ID";
+            this.Countries.DataSource = this.countriesBindingSource;
+            this.Countries.DisplayMember = "Name";
+            this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Countries.HeaderText = "Країна";
+            this.Countries.Name = "Countries";
+            this.Countries.ReadOnly = true;
+            this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Countries.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Countries.ValueMember = "Country_ID";
             // 
             // BrandForm
             // 

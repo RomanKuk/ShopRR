@@ -256,9 +256,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(255, 42);
+            this.formTitle.Size = new System.Drawing.Size(308, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Service Transportations";
+            this.formTitle.Text = "Сервісне перевезення";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -281,7 +281,7 @@
             // Code
             // 
             this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
+            this.Code.HeaderText = "Код";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             // 
@@ -291,7 +291,7 @@
             this.Service.DataSource = this.serviceBindingSource;
             this.Service.DisplayMember = "Code";
             this.Service.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Service.HeaderText = "Service";
+            this.Service.HeaderText = "Код сервісного обслуговування";
             this.Service.Name = "Service";
             this.Service.ReadOnly = true;
             this.Service.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -304,7 +304,7 @@
             this.ServiceCenter.DataSource = this.serviceCenterBindingSource;
             this.ServiceCenter.DisplayMember = "Code";
             this.ServiceCenter.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ServiceCenter.HeaderText = "ServiceCenter";
+            this.ServiceCenter.HeaderText = "Код сервісного центру";
             this.ServiceCenter.Name = "ServiceCenter";
             this.ServiceCenter.ReadOnly = true;
             this.ServiceCenter.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -314,7 +314,7 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 

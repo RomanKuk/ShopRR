@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 using diagram.Forms.Users.SCEmployee;
+using diagram.Forms.Users.Seller;
 
 namespace diagram
 {
@@ -18,11 +19,11 @@ namespace diagram
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var db = new my_db_for_db_2Entities();
-            var employee =
-                db.Employee
-                .Where(e => e.Employee_ID.Equals(4))
-                .First();
-            Application.Run(new ServiceCenterEmployeeForm(db, employee));
+            //var employee =
+            //    db.Employee
+            //    .Where(e => e.Employee_ID.Equals(4))
+            //    .First();
+            //Application.Run(new /*ServiceCenterEmployeeForm*/SellerForm(db, employee));
             //Application.Run(new NewRepairForm(db));
             //Application.Run(new NewServiceTransportationForm(db));
             //Application.Run(new ExpeditorForm(db,employee));
@@ -51,6 +52,16 @@ namespace diagram
             //Application.Run(new ProfessionForm(db));
             //Application.Run(new ProvideForm(db));
             //Application.Run(new ProvideOrderForm(db));
+            //Application.Run(new RepairForm(db));
+            //Application.Run(new SalesForm(db));
+            //Application.Run(new ServiceCenterForm(db));
+            //Application.Run(new ServiceForm(db));
+            //Application.Run(new ServiceTransportationForm(db));
+            //Application.Run(new ShipmentForm(db));
+            //Application.Run(new ShopsForm(db));
+            //Application.Run(new StatusForm(db));
+            Application.Run(new TransportationForm(db));
+
         }
     }
 }

@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.breakageIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Breakage1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,6 +46,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.breakageIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Breakage1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,21 +97,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // breakageIDDataGridViewTextBoxColumn
-            // 
-            this.breakageIDDataGridViewTextBoxColumn.DataPropertyName = "Breakage_ID";
-            this.breakageIDDataGridViewTextBoxColumn.HeaderText = "Breakage_ID";
-            this.breakageIDDataGridViewTextBoxColumn.Name = "breakageIDDataGridViewTextBoxColumn";
-            this.breakageIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.breakageIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Breakage1
-            // 
-            this.Breakage1.DataPropertyName = "Breakage1";
-            this.Breakage1.HeaderText = "Breakage";
-            this.Breakage1.Name = "Breakage1";
-            this.Breakage1.ReadOnly = true;
             // 
             // breakageBindingSource
             // 
@@ -253,9 +238,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(115, 42);
+            this.formTitle.Size = new System.Drawing.Size(137, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Breakage";
+            this.formTitle.Text = "Поломка";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -266,6 +251,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
+            // 
+            // breakageIDDataGridViewTextBoxColumn
+            // 
+            this.breakageIDDataGridViewTextBoxColumn.DataPropertyName = "Breakage_ID";
+            this.breakageIDDataGridViewTextBoxColumn.HeaderText = "Breakage_ID";
+            this.breakageIDDataGridViewTextBoxColumn.Name = "breakageIDDataGridViewTextBoxColumn";
+            this.breakageIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.breakageIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Breakage1
+            // 
+            this.Breakage1.DataPropertyName = "Breakage1";
+            this.Breakage1.HeaderText = "Тип поломки";
+            this.Breakage1.Name = "Breakage1";
+            this.Breakage1.ReadOnly = true;
             // 
             // BreakageForm
             // 

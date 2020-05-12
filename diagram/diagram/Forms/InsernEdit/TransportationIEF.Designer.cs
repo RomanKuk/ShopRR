@@ -114,9 +114,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(180, 42);
+            this.label1.Size = new System.Drawing.Size(192, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Transportations";
+            this.label1.Text = "Перевезення";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -143,55 +143,55 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(94, 263);
+            this.label6.Location = new System.Drawing.Point(59, 278);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 21);
+            this.label6.Size = new System.Drawing.Size(92, 21);
             this.label6.TabIndex = 19;
-            this.label6.Text = "Count:";
+            this.label6.Text = "Кількість:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(94, 226);
+            this.label5.Location = new System.Drawing.Point(94, 242);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 21);
+            this.label5.Size = new System.Drawing.Size(57, 21);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Date:";
+            this.label5.Text = "Дата:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(78, 143);
+            this.label4.Location = new System.Drawing.Point(40, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 21);
+            this.label4.Size = new System.Drawing.Size(128, 42);
             this.label4.TabIndex = 17;
-            this.label4.Text = "In Code:";
+            this.label4.Text = "Код магазину \r\n(куди):\r\n";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(54, 180);
+            this.label3.Location = new System.Drawing.Point(54, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.Size = new System.Drawing.Size(100, 21);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Employee:";
+            this.label3.Text = "Працівник:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(54, 96);
+            this.label2.Location = new System.Drawing.Point(40, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 21);
+            this.label2.Size = new System.Drawing.Size(128, 42);
             this.label2.TabIndex = 15;
-            this.label2.Text = "From Code:";
+            this.label2.Text = "Код магазину \r\n(звідки):";
             // 
             // saveBtn
             // 
@@ -205,11 +205,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(165, 320);
+            this.saveBtn.Location = new System.Drawing.Point(126, 320);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.Size = new System.Drawing.Size(105, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Зберегти";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 
@@ -243,7 +243,7 @@
             this.gsInCB.DisplayMember = "Code";
             this.gsInCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gsInCB.FormattingEnabled = true;
-            this.gsInCB.Location = new System.Drawing.Point(199, 136);
+            this.gsInCB.Location = new System.Drawing.Point(199, 150);
             this.gsInCB.Name = "gsInCB";
             this.gsInCB.Size = new System.Drawing.Size(170, 28);
             this.gsInCB.TabIndex = 2;
@@ -261,7 +261,7 @@
             this.employeeCB.DisplayMember = "LastName";
             this.employeeCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeCB.FormattingEnabled = true;
-            this.employeeCB.Location = new System.Drawing.Point(199, 178);
+            this.employeeCB.Location = new System.Drawing.Point(199, 194);
             this.employeeCB.Name = "employeeCB";
             this.employeeCB.Size = new System.Drawing.Size(170, 28);
             this.employeeCB.TabIndex = 3;
@@ -276,7 +276,7 @@
             this.countNUD.BackColor = System.Drawing.Color.Cornsilk;
             this.countNUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.transportationBindingSource, "Count", true));
             this.countNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countNUD.Location = new System.Drawing.Point(199, 262);
+            this.countNUD.Location = new System.Drawing.Point(199, 278);
             this.countNUD.Name = "countNUD";
             this.countNUD.Size = new System.Drawing.Size(170, 27);
             this.countNUD.TabIndex = 5;
@@ -287,7 +287,7 @@
             this.datePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.transportationBindingSource, "Date", true));
             this.datePicker.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePicker.Location = new System.Drawing.Point(199, 222);
+            this.datePicker.Location = new System.Drawing.Point(199, 238);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(170, 27);
             this.datePicker.TabIndex = 4;

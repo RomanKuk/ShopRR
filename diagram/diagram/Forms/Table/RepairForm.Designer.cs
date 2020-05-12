@@ -248,9 +248,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(88, 42);
+            this.formTitle.Size = new System.Drawing.Size(119, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Repair";
+            this.formTitle.Text = "Ремонт";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -276,7 +276,7 @@
             this.ServiceTransportation.DataSource = this.serviceTransportationBindingSource;
             this.ServiceTransportation.DisplayMember = "Code";
             this.ServiceTransportation.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ServiceTransportation.HeaderText = "ServiceTransportation Code";
+            this.ServiceTransportation.HeaderText = "Код сервісного перевезення";
             this.ServiceTransportation.Name = "ServiceTransportation";
             this.ServiceTransportation.ReadOnly = true;
             this.ServiceTransportation.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -286,14 +286,14 @@
             // commentDataGridViewTextBoxColumn
             // 
             this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "Comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Коментар";
             this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
             this.commentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 

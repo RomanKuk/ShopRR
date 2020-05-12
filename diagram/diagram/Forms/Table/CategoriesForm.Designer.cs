@@ -248,9 +248,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(128, 42);
+            this.formTitle.Size = new System.Drawing.Size(148, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Categories";
+            this.formTitle.Text = "Категорія";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -273,14 +273,14 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Назва";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Опис";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -290,7 +290,7 @@
             this.SeniorCategories.DataSource = this.categoriesBindingSource1;
             this.SeniorCategories.DisplayMember = "Name";
             this.SeniorCategories.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.SeniorCategories.HeaderText = "Senior Category";
+            this.SeniorCategories.HeaderText = "Старша категорія";
             this.SeniorCategories.Name = "SeniorCategories";
             this.SeniorCategories.ReadOnly = true;
             this.SeniorCategories.ValueMember = "Category_ID";
