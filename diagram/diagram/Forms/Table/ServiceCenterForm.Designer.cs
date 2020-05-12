@@ -288,7 +288,7 @@
             this.addressDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.addressDataGridViewTextBoxColumn.ValueMember = "Address_ID";
             // 
-            // ServiceCenterForm
+            // ServiceCenterEmployeeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
@@ -296,8 +296,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ServiceCenterForm";
-            this.Text = "ServiceCenterForm";
+            this.Name = "ServiceCenterEmployeeForm";
+            this.Text = "ServiceCenterEmployeeForm";
             this.Load += new System.EventHandler(this.ServiceCenterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();

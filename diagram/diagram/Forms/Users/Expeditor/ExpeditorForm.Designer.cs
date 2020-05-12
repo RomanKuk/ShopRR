@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.expeditor
+﻿namespace diagram.Forms.Users.Expeditor
 {
     partial class ExpeditorForm
     {

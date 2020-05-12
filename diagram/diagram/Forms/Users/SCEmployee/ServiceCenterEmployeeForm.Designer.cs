@@ -1,6 +1,6 @@
-﻿namespace diagram.Forms.service
+﻿namespace diagram.Forms.Users.SCEmployee
 {
-    partial class ServiceCenterForm
+    partial class ServiceCenterEmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -374,7 +374,7 @@
             // 
             this.repairBindingSource.DataSource = typeof(diagram.Repair);
             // 
-            // ServiceCenterForm
+            // ServiceCenterEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -382,8 +382,8 @@
             this.Controls.Add(this.newSTButton);
             this.Controls.Add(this.repairButton);
             this.Controls.Add(this.tabControl1);
-            this.Name = "ServiceCenterForm";
-            this.Text = "ServiceCenterForm";
+            this.Name = "ServiceCenterEmployeeForm";
+            this.Text = "ServiceCenterEmployeeForm";
             this.Load += new System.EventHandler(this.ServiceCenterForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.ServiceTabPage.ResumeLayout(false);

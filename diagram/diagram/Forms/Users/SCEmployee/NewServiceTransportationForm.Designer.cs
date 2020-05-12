@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.service
+﻿namespace diagram.Forms.Users.SCEmployee
 {
     partial class NewServiceTransportationForm
     {

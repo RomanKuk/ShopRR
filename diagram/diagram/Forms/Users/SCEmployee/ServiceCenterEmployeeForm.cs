@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace diagram.Forms.service
+namespace diagram.Forms.Users.SCEmployee
 {
-    public partial class ServiceCenterForm : Form
+    public partial class ServiceCenterEmployeeForm : Form
     {
         my_db_for_db_2Entities db;
         Employee employee;
-        public ServiceCenterForm(my_db_for_db_2Entities _db, Employee _employee)
+        public ServiceCenterEmployeeForm(my_db_for_db_2Entities _db, Employee _employee)
         {
             db = _db;
             employee = _employee;

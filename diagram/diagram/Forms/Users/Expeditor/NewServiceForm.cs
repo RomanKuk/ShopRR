@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.expeditor
+namespace diagram.Forms.Users.Expeditor
 {
     public partial class NewServiceForm : Form
     {

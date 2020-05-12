@@ -95,28 +95,28 @@
     <Compile Include="Employee.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\expeditor\ExpeditorForm.cs">
+    <Compile Include="Forms\Users\Expeditor\ExpeditorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\expeditor\ExpeditorForm.Designer.cs">
+    <Compile Include="Forms\Users\Expeditor\ExpeditorForm.Designer.cs">
       <DependentUpon>ExpeditorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\expeditor\NewDeliveryForm.cs">
+    <Compile Include="Forms\Users\Expeditor\NewDeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\expeditor\NewDeliveryForm.Designer.cs">
+    <Compile Include="Forms\Users\Expeditor\NewDeliveryForm.Designer.cs">
       <DependentUpon>NewDeliveryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\expeditor\NewServiceForm.cs">
+    <Compile Include="Forms\Users\Expeditor\NewServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\expeditor\NewServiceForm.Designer.cs">
+    <Compile Include="Forms\Users\Expeditor\NewServiceForm.Designer.cs">
       <DependentUpon>NewServiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\expeditor\NewShipmentForm.cs">
+    <Compile Include="Forms\Users\Expeditor\NewShipmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\expeditor\NewShipmentForm.Designer.cs">
+    <Compile Include="Forms\Users\Expeditor\NewShipmentForm.Designer.cs">
       <DependentUpon>NewShipmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\InsernEdit\AddressIEF.cs">
@@ -281,23 +281,23 @@
     <Compile Include="Forms\Users\Seller\SellerForm.Designer.cs">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\service\NewRepairForm.cs">
+    <Compile Include="Forms\Users\SCEmployee\NewRepairForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\service\NewRepairForm.Designer.cs">
+    <Compile Include="Forms\Users\SCEmployee\NewRepairForm.Designer.cs">
       <DependentUpon>NewRepairForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\service\NewServiceTransportationForm.cs">
+    <Compile Include="Forms\Users\SCEmployee\NewServiceTransportationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\service\NewServiceTransportationForm.Designer.cs">
+    <Compile Include="Forms\Users\SCEmployee\NewServiceTransportationForm.Designer.cs">
       <DependentUpon>NewServiceTransportationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\service\ServiceCenterForm.cs">
+    <Compile Include="Forms\Users\SCEmployee\ServiceCenterEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\service\ServiceCenterForm.Designer.cs">
-      <DependentUpon>ServiceCenterForm.cs</DependentUpon>
+    <Compile Include="Forms\Users\SCEmployee\ServiceCenterEmployeeForm.Designer.cs">
+      <DependentUpon>ServiceCenterEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Table\AddressForm.cs">
       <SubType>Form</SubType>
@@ -473,16 +473,16 @@
     <Compile Include="Forms\Table\TransportationForm.Designer.cs">
       <DependentUpon>TransportationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\transportation\ManagerForm.cs">
+    <Compile Include="Forms\Users\Seller\Transportations\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\transportation\ManagerForm.Designer.cs">
+    <Compile Include="Forms\Users\Seller\Transportations\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\transportation\NewTransportationForm.cs">
+    <Compile Include="Forms\Users\Seller\Transportations\NewTransportationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\transportation\NewTransportationForm.Designer.cs">
+    <Compile Include="Forms\Users\Seller\Transportations\NewTransportationForm.Designer.cs">
       <DependentUpon>NewTransportationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Goods.cs">
@@ -550,16 +550,16 @@
     <Compile Include="Transportation.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\expeditor\ExpeditorForm.resx">
+    <EmbeddedResource Include="Forms\Users\Expeditor\ExpeditorForm.resx">
       <DependentUpon>ExpeditorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\expeditor\NewDeliveryForm.resx">
+    <EmbeddedResource Include="Forms\Users\Expeditor\NewDeliveryForm.resx">
       <DependentUpon>NewDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\expeditor\NewServiceForm.resx">
+    <EmbeddedResource Include="Forms\Users\Expeditor\NewServiceForm.resx">
       <DependentUpon>NewServiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\expeditor\NewShipmentForm.resx">
+    <EmbeddedResource Include="Forms\Users\Expeditor\NewShipmentForm.resx">
       <DependentUpon>NewShipmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsernEdit\AddressIEF.resx">
@@ -643,14 +643,14 @@
     <EmbeddedResource Include="Forms\Users\Seller\SellerForm.resx">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\service\NewRepairForm.resx">
+    <EmbeddedResource Include="Forms\Users\SCEmployee\NewRepairForm.resx">
       <DependentUpon>NewRepairForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\service\NewServiceTransportationForm.resx">
+    <EmbeddedResource Include="Forms\Users\SCEmployee\NewServiceTransportationForm.resx">
       <DependentUpon>NewServiceTransportationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\service\ServiceCenterForm.resx">
-      <DependentUpon>ServiceCenterForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Users\SCEmployee\ServiceCenterEmployeeForm.resx">
+      <DependentUpon>ServiceCenterEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Table\AddressForm.resx">
       <DependentUpon>AddressForm.cs</DependentUpon>
@@ -739,10 +739,10 @@
     <EmbeddedResource Include="Forms\Table\TransportationForm.resx">
       <DependentUpon>TransportationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\transportation\ManagerForm.resx">
+    <EmbeddedResource Include="Forms\Users\Seller\Transportations\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\transportation\NewTransportationForm.resx">
+    <EmbeddedResource Include="Forms\Users\Seller\Transportations\NewTransportationForm.resx">
       <DependentUpon>NewTransportationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -804,7 +804,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -833,9 +835,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Users\SCEmployee\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

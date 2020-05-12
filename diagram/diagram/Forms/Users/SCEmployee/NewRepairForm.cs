@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.service
+namespace diagram.Forms.Users.SCEmployee
 {
     public partial class NewRepairForm : Form
     {
