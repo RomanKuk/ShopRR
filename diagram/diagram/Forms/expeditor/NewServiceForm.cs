@@ -24,26 +24,7 @@ namespace diagram.Forms.expeditor
 
         private void Confirm_Click(object sender, EventArgs e)
         {
-            List<int> goodsShop = (db.GoodsShops as IEnumerable<GoodsShops>)
-                .Where(x => x.Good_ID.Equals(GoodsComboBox.SelectedValue))
-                .Select(x => x.GoodsShops_ID)
-                .ToList();
-            int basket = (db.Basket as IEnumerable<Basket>)
-                .Where(x => x.Sales_ID.Equals(SalesComboBox.SelectedValue) && goodsShop.Contains(x.GoodsShops_ID))
-                .Select(x => x.Basket_ID)
-                .FirstOrDefault();
-            //TODO
-            Service service = new Service()
-            {
-                Code = CodeGenerator.GenerateCode("Service", "se"),
-                Breakage_ID = (int)BreakageComboBox.SelectedValue,
-                Status_ID = 5,// Очікує перевезення 
-                Basket_ID = basket,
-                Date = DateTime.Now
-            };
-            db.Service.Add(service);
-            db.SaveChanges();
-            MessageBox.Show(service.Code, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             this.Close();
         }
 
@@ -60,6 +41,34 @@ namespace diagram.Forms.expeditor
             goodsBindingSource.DataSource = (db.Goods as IEnumerable<Goods>)
                 .Where(x => goods.Contains(x.Good_ID))
                 .ToList();
+        }
+
+        private void NewServiceForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult == DialogResult.OK)
+            {
+                List<int> goodsShop = (db.GoodsShops as IEnumerable<GoodsShops>)
+                    .Where(x => x.Good_ID.Equals(GoodsComboBox.SelectedValue))
+                    .Select(x => x.GoodsShops_ID)
+                    .ToList();
+                int basket = (db.Basket as IEnumerable<Basket>)
+                    .Where(x => x.Sales_ID.Equals(SalesComboBox.SelectedValue) && goodsShop.Contains(x.GoodsShops_ID))
+                    .Select(x => x.Basket_ID)
+                    .FirstOrDefault();
+                //TODO
+                Service service = new Service()
+                {
+                    Code = CodeGenerator.GenerateCode("Service", "se"),
+                    Breakage_ID = (int)BreakageComboBox.SelectedValue,
+                    Status_ID = 5,// Очікує перевезення 
+                    Basket_ID = basket,
+                    Date = DateTime.Now
+                };
+                db.Service.Add(service);
+                db.SaveChanges();
+                MessageBox.Show(service.Code, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            e.Cancel = false;
         }
     }
 }

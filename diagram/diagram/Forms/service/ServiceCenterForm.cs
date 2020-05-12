@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram.Forms.service
@@ -37,14 +31,24 @@ namespace diagram.Forms.service
 
         private void NewSTButton_Click(object sender, EventArgs e)
         {
-            NewServiceTransportationForm form = new NewServiceTransportationForm(db);
-            form.Show();
+            using (NewServiceTransportationForm form = new NewServiceTransportationForm(db))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    serviceTransportationBindingSource.DataSource = db.ServiceTransportation.ToList();
+                }
+            }
         }
 
         private void RepairButton_Click(object sender, EventArgs e)
         {
-            NewRepairForm form = new NewRepairForm(db);
-            form.Show();
+            using (NewRepairForm form = new NewRepairForm(db))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                }
+                repairBindingSource.DataSource = db.Repair.ToList();
+            }
         }
 
     }

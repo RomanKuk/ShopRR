@@ -125,6 +125,7 @@
             // 
             // button3
             // 
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button3.Location = new System.Drawing.Point(259, 289);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 23);
@@ -135,6 +136,7 @@
             // 
             // cancel
             // 
+            this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancel.Location = new System.Drawing.Point(388, 289);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(200, 23);
@@ -169,6 +171,7 @@
             // 
             // NewSalesForm
             // 
+            this.AcceptButton = this.button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 450);
@@ -181,8 +184,10 @@
             this.Controls.Add(this.goodCount);
             this.Controls.Add(this.goodsComboBox);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NewSalesForm";
             this.Text = "NewSalesForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewSalesForm_FormClosing);
             this.Load += new System.EventHandler(this.NewSalesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();

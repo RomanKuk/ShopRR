@@ -91,6 +91,7 @@
             // 
             // confirm
             // 
+            this.confirm.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.confirm.Location = new System.Drawing.Point(220, 207);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(75, 23);
@@ -101,6 +102,7 @@
             // 
             // NewServiceTransportationForm
             // 
+            this.AcceptButton = this.confirm;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -109,8 +111,10 @@
             this.Controls.Add(this.ServiceComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NewServiceTransportationForm";
             this.Text = "NewServiceTransportationForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewServiceTransportationForm_FormClosing);
             this.Load += new System.EventHandler(this.NewServiceTransportationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();

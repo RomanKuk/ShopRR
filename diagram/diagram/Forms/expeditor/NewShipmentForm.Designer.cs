@@ -34,10 +34,10 @@
             this.ShopComboBox = new System.Windows.Forms.ComboBox();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.EmployeeComboBox = new System.Windows.Forms.ComboBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.confirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
@@ -85,6 +85,10 @@
             this.EmployeeComboBox.TabIndex = 2;
             this.EmployeeComboBox.ValueMember = "Employee_ID";
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -112,12 +116,9 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "водій";
             // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
             // confirm
             // 
+            this.confirm.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.confirm.Location = new System.Drawing.Point(337, 189);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(75, 23);
@@ -128,6 +129,7 @@
             // 
             // NewShipmentForm
             // 
+            this.AcceptButton = this.confirm;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -138,8 +140,10 @@
             this.Controls.Add(this.EmployeeComboBox);
             this.Controls.Add(this.ShopComboBox);
             this.Controls.Add(this.DeliveryComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NewShipmentForm";
             this.Text = "NewShipmentForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewShipmentForm_FormClosing);
             this.Load += new System.EventHandler(this.NewShipmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();

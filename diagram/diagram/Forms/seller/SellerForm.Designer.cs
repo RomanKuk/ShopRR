@@ -52,6 +52,7 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.newConsumer = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.GStabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -270,11 +271,22 @@
             // 
             this.salesBindingSource.DataSource = typeof(diagram.Sales);
             // 
+            // newConsumer
+            // 
+            this.newConsumer.Location = new System.Drawing.Point(440, 415);
+            this.newConsumer.Name = "newConsumer";
+            this.newConsumer.Size = new System.Drawing.Size(137, 23);
+            this.newConsumer.TabIndex = 4;
+            this.newConsumer.Text = "Новий покупець";
+            this.newConsumer.UseVisualStyleBackColor = true;
+            this.newConsumer.Click += new System.EventHandler(this.NewConsumer_Click);
+            // 
             // SellerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.newConsumer);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.NewSalesbutton);
             this.Name = "SellerForm";
@@ -319,5 +331,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn customerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button newConsumer;
     }
 }

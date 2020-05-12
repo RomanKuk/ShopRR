@@ -1,4 +1,5 @@
-﻿using System;
+﻿using diagram.Forms.InsernEdit;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -51,10 +52,26 @@ namespace diagram.Forms.seller
 
         private void NewSalesbutton_Click(object sender, EventArgs e)
         {
-            NewSalesForm form = new NewSalesForm(db, employee);
-            form.Show();
+            using (NewSalesForm form = new NewSalesForm(db,employee))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    salesBindingSource.DataSource = db.Sales.ToList();
+                }
+            }
             UpdateGSTable();
 
+        }
+
+        private void NewConsumer_Click(object sender, EventArgs e)
+        {
+            using (CustomersIEF frm = new CustomersIEF(null, db))
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    customersBindingSource.DataSource = db.Customers.ToList();
+                }
+            }
         }
     }
 }

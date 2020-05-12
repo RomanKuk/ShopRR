@@ -86,8 +86,14 @@ namespace diagram.Forms.transportation
 
         private void NewTransportation_Click(object sender, EventArgs e)
         {
-            NewTransportationForm form = new NewTransportationForm(db, employee);
-            form.Show();
+            using (NewTransportationForm form = new NewTransportationForm(db, employee))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
+                    transportationBindingSource.DataSource = db.Transportation.ToList();
+                }
+            }
         }
     }
 }

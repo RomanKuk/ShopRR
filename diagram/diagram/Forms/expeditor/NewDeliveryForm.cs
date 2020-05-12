@@ -68,32 +68,6 @@ namespace diagram.Forms.expeditor
 
         private void Confirm_Click(object sender, EventArgs e)
         {
-            //TODO провірки
-            ProvideOrder provideOrder = new ProvideOrder()
-            {
-                Code = CodeGenerator.GenerateCode("ProvideOrder", "po"),
-                Date = DateTime.Now,
-                TotalCost = (int) TotalPrice(),
-                Provide_ID = (int) ProviderComboBox.SelectedValue
-            };
-
-            db.ProvideOrder.Add(provideOrder);
-            db.SaveChanges();
-            provideOrder = (db.ProvideOrder as IEnumerable<ProvideOrder>)
-                .Where(x => x.Code.Equals(provideOrder.Code))
-                .First();
-
-            foreach (Delivery delivery in deliveryContain.Values)
-            {
-                // записуємо вмістиме корзини в бд
-                delivery.Code = CodeGenerator.GenerateCode("Delivery", "d");
-                delivery.ProvideOrder_ID = provideOrder.ProvideOrder_ID;
-                delivery.Date = DateTime.Now;
-                db.Delivery.Add(delivery);
-                db.SaveChanges();
-            }
-            //db.SaveChanges();
-            MessageBox.Show(totalPriceLabel.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 
@@ -119,6 +93,38 @@ namespace diagram.Forms.expeditor
             return totalPrice;
         }
 
+        private void NewDeliveryForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult == DialogResult.OK)
+            {
+                //TODO провірки
+                ProvideOrder provideOrder = new ProvideOrder()
+                {
+                    Code = CodeGenerator.GenerateCode("ProvideOrder", "po"),
+                    Date = DateTime.Now,
+                    TotalCost = (int)TotalPrice(),
+                    Provide_ID = (int)ProviderComboBox.SelectedValue
+                };
 
+                db.ProvideOrder.Add(provideOrder);
+                db.SaveChanges();
+                provideOrder = (db.ProvideOrder as IEnumerable<ProvideOrder>)
+                    .Where(x => x.Code.Equals(provideOrder.Code))
+                    .First();
+
+                foreach (Delivery delivery in deliveryContain.Values)
+                {
+                    // записуємо вмістиме корзини в бд
+                    delivery.Code = CodeGenerator.GenerateCode("Delivery", "d");
+                    delivery.ProvideOrder_ID = provideOrder.ProvideOrder_ID;
+                    delivery.Date = DateTime.Now;
+                    db.Delivery.Add(delivery);
+                    db.SaveChanges();
+                }
+                //db.SaveChanges();
+                MessageBox.Show(totalPriceLabel.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            e.Cancel = false;
+        }
     }
 }

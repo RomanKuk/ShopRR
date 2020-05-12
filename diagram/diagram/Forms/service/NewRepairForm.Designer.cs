@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.STComboBox = new System.Windows.Forms.ComboBox();
+            this.serviceTransportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
             this.CommentTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.serviceTransportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
@@ -62,6 +62,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
             // 
+            // Comment
+            // 
+            this.Comment.HeaderText = "Коментар";
+            this.Comment.Name = "Comment";
+            this.Comment.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Дата";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataSource = this.statusBindingSource;
+            this.Status.DisplayMember = "Status1";
+            this.Status.HeaderText = "Статус";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.ValueMember = "Status_ID";
+            // 
+            // statusBindingSource
+            // 
+            this.statusBindingSource.DataSource = typeof(diagram.Status);
+            // 
             // STComboBox
             // 
             this.STComboBox.DataSource = this.serviceTransportationBindingSource;
@@ -73,6 +98,10 @@
             this.STComboBox.TabIndex = 1;
             this.STComboBox.ValueMember = "ServiceTransportation_ID";
             this.STComboBox.SelectedIndexChanged += new System.EventHandler(this.STComboBox_SelectedIndexChanged);
+            // 
+            // serviceTransportationBindingSource
+            // 
+            this.serviceTransportationBindingSource.DataSource = typeof(diagram.ServiceTransportation);
             // 
             // StatusComboBox
             // 
@@ -119,35 +148,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Status";
             // 
-            // statusBindingSource
-            // 
-            this.statusBindingSource.DataSource = typeof(diagram.Status);
-            // 
-            // Comment
-            // 
-            this.Comment.HeaderText = "Коментар";
-            this.Comment.Name = "Comment";
-            this.Comment.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Дата";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataSource = this.statusBindingSource;
-            this.Status.DisplayMember = "Status1";
-            this.Status.HeaderText = "Статус";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.ValueMember = "Status_ID";
-            // 
-            // serviceTransportationBindingSource
-            // 
-            this.serviceTransportationBindingSource.DataSource = typeof(diagram.ServiceTransportation);
-            // 
             // add
             // 
             this.add.Location = new System.Drawing.Point(281, 177);
@@ -171,6 +171,7 @@
             this.Controls.Add(this.StatusComboBox);
             this.Controls.Add(this.STComboBox);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NewRepairForm";
             this.Text = "NewRepairForm";
             this.Load += new System.EventHandler(this.NewRepairForm_Load);

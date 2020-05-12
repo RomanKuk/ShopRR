@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ProviderComboBox = new System.Windows.Forms.ComboBox();
+            this.provideBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsComboBox = new System.Windows.Forms.ComboBox();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countNUD = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Goods = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.add = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.provideBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.delete = new System.Windows.Forms.Button();
             this.totalPriceLabel = new System.Windows.Forms.Label();
-            this.Goods = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ProviderComboBox
@@ -62,6 +62,10 @@
             this.ProviderComboBox.TabIndex = 0;
             this.ProviderComboBox.ValueMember = "Provide_ID";
             // 
+            // provideBindingSource
+            // 
+            this.provideBindingSource.DataSource = typeof(diagram.Provide);
+            // 
             // goodsComboBox
             // 
             this.goodsComboBox.DataSource = this.goodsBindingSource;
@@ -72,6 +76,10 @@
             this.goodsComboBox.Size = new System.Drawing.Size(121, 21);
             this.goodsComboBox.TabIndex = 1;
             this.goodsComboBox.ValueMember = "Good_ID";
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
             // 
             // countNUD
             // 
@@ -103,6 +111,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(355, 150);
             this.dataGridView1.TabIndex = 5;
             // 
+            // Goods
+            // 
+            this.Goods.HeaderText = "Товар";
+            this.Goods.Name = "Goods";
+            this.Goods.ReadOnly = true;
+            // 
+            // Count
+            // 
+            this.Count.HeaderText = "Кількість";
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -133,6 +153,7 @@
             // 
             // confirm
             // 
+            this.confirm.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.confirm.Location = new System.Drawing.Point(15, 290);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(75, 23);
@@ -150,14 +171,6 @@
             this.cancel.Text = "Відміна";
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // provideBindingSource
-            // 
-            this.provideBindingSource.DataSource = typeof(diagram.Provide);
-            // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
             // 
             // delete
             // 
@@ -178,20 +191,9 @@
             this.totalPriceLabel.TabIndex = 13;
             this.totalPriceLabel.Text = "Загальна сума : 0";
             // 
-            // Goods
-            // 
-            this.Goods.HeaderText = "Товар";
-            this.Goods.Name = "Goods";
-            this.Goods.ReadOnly = true;
-            // 
-            // Count
-            // 
-            this.Count.HeaderText = "Кількість";
-            this.Count.Name = "Count";
-            this.Count.ReadOnly = true;
-            // 
             // NewDeliveryForm
             // 
+            this.AcceptButton = this.confirm;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -207,13 +209,15 @@
             this.Controls.Add(this.countNUD);
             this.Controls.Add(this.goodsComboBox);
             this.Controls.Add(this.ProviderComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NewDeliveryForm";
             this.Text = "NewDeliveryForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewDeliveryForm_FormClosing);
             this.Load += new System.EventHandler(this.NewDeliveryForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

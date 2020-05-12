@@ -96,41 +96,6 @@ namespace diagram.Forms.seller
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            //TODO провірки
-
-
-            //генеруємо продажу
-            Sales sales = new Sales()
-            {
-                SalesCode = CodeGenerator.GenerateCode("Sales","sl"),
-                Employee_ID = employee.Employee_ID,
-                Customer_ID = (int)customerComboBox.SelectedValue,
-                Date = DateTime.Now,
-                Total = TotalPrice()
-            };
-
-            db.Sales.Add(sales);
-            db.SaveChanges();
-            sales = (db.Sales as IEnumerable<Sales>)
-                .Where(x => x.SalesCode.Equals(sales.SalesCode))
-                .First();
-
-            GoodsShops gs;
-            foreach (Basket basket in basketsContain.Values)
-            {
-                // записуємо вмістиме корзини в бд
-                basket.Sales_ID = sales.Sales_ID;
-                db.Basket.Add(basket);
-                    gs = db.GoodsShops
-                    .Where(x => x.GoodsShops_ID.Equals(basket.GoodsShops_ID))
-                    .First();
-                // зменшити кількість товарів
-                db.GoodsShops.Attach(gs);
-                gs.Count -= basket.Count;
-                db.SaveChanges();
-            }
-            //db.SaveChanges();
-            MessageBox.Show(totalPriceLabel.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 
@@ -159,6 +124,47 @@ namespace diagram.Forms.seller
             }
             totalPriceLabel.Text = "Загальна сума : " + totalPrice;
             return totalPrice;
+        }
+
+        private void NewSalesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult == DialogResult.OK)
+            {
+                //TODO провірки
+                //генеруємо продажу
+                Sales sales = new Sales()
+                {
+                    SalesCode = CodeGenerator.GenerateCode("Sales", "sl"),
+                    Employee_ID = employee.Employee_ID,
+                    Customer_ID = (int)customerComboBox.SelectedValue,
+                    Date = DateTime.Now,
+                    Total = TotalPrice()
+                };
+
+                db.Sales.Add(sales);
+                db.SaveChanges();
+                sales = (db.Sales as IEnumerable<Sales>)
+                    .Where(x => x.SalesCode.Equals(sales.SalesCode))
+                    .First();
+
+                GoodsShops gs;
+                foreach (Basket basket in basketsContain.Values)
+                {
+                    // записуємо вмістиме корзини в бд
+                    basket.Sales_ID = sales.Sales_ID;
+                    db.Basket.Add(basket);
+                    gs = db.GoodsShops
+                    .Where(x => x.GoodsShops_ID.Equals(basket.GoodsShops_ID))
+                    .First();
+                    // зменшити кількість товарів
+                    db.GoodsShops.Attach(gs);
+                    gs.Count -= basket.Count;
+                    db.SaveChanges();
+                }
+                //db.SaveChanges();
+                MessageBox.Show(totalPriceLabel.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            e.Cancel = false;
         }
     }
 }
