@@ -1,5 +1,5 @@
-﻿using diagram.Forms.seller;
-using diagram.Forms.Table;
+﻿using diagram.Forms.Table;
+using diagram.Forms.Users.Seller;
 using System;
 using System.Linq;
 using System.Windows.Forms;

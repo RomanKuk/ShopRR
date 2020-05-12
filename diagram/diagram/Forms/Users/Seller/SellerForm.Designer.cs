@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.seller
+﻿namespace diagram.Forms.Users.Seller
 {
     partial class SellerForm
     {
