@@ -249,6 +249,7 @@
             this.soldBtn.BackColor = System.Drawing.Color.Transparent;
             this.soldBtn.BackgroundImage = global::diagram.Properties.Resources.check;
             this.soldBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.soldBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.soldBtn.FlatAppearance.BorderSize = 0;
             this.soldBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.soldBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -425,6 +426,7 @@
             // 
             // NewSalesForm
             // 
+            this.AcceptButton = this.soldBtn;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
@@ -433,6 +435,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewSalesForm";
             this.Text = "NewSalesForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewSalesForm_FormClosing);
             this.Load += new System.EventHandler(this.NewSalesForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

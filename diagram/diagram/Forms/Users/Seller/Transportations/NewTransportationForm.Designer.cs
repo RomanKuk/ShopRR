@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.Users.Seller.Transportations
+﻿namespace diagram.Forms.transportation
 {
     partial class NewTransportationForm
     {
@@ -34,6 +34,7 @@
             this.ShopToComboBox = new System.Windows.Forms.ComboBox();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ShopFromComboBox = new System.Windows.Forms.ComboBox();
+            this.shopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.countNUD = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,11 +43,10 @@
             this.save = new System.Windows.Forms.Button();
             this.toLabel = new System.Windows.Forms.Label();
             this.fromLabel = new System.Windows.Forms.Label();
-            this.shopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsComboBox
@@ -93,6 +93,10 @@
             this.ShopFromComboBox.ValueMember = "Shop_ID";
             this.ShopFromComboBox.SelectedIndexChanged += new System.EventHandler(this.ShopFromComboBox_SelectedIndexChanged);
             // 
+            // shopsBindingSource1
+            // 
+            this.shopsBindingSource1.DataSource = typeof(diagram.Shops);
+            // 
             // countNUD
             // 
             this.countNUD.Location = new System.Drawing.Point(181, 291);
@@ -138,6 +142,7 @@
             // 
             // save
             // 
+            this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.save.Location = new System.Drawing.Point(127, 342);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
@@ -164,12 +169,9 @@
             this.fromLabel.TabIndex = 10;
             this.fromLabel.Text = "Кількість";
             // 
-            // shopsBindingSource1
-            // 
-            this.shopsBindingSource1.DataSource = typeof(diagram.Shops);
-            // 
             // NewTransportationForm
             // 
+            this.AcceptButton = this.save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -184,13 +186,15 @@
             this.Controls.Add(this.ShopFromComboBox);
             this.Controls.Add(this.ShopToComboBox);
             this.Controls.Add(this.goodsComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NewTransportationForm";
             this.Text = "NewTransportationForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewTransportationForm_FormClosing);
             this.Load += new System.EventHandler(this.NewTransportationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

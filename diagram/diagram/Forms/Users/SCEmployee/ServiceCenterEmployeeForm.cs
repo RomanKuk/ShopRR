@@ -43,14 +43,25 @@ namespace diagram.Forms.Users.SCEmployee
 
         private void NewServiceBtn_Click(object sender, EventArgs e)
         {
-            NewServiceTransportationForm form = new NewServiceTransportationForm(db);
-            form.Show();
+            using (NewServiceTransportationForm form = new NewServiceTransportationForm(db))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    serviceTransportationBindingSource.DataSource = db.ServiceTransportation.ToList();
+                }
+            }
+
         }
 
         private void RepairButton_Click(object sender, EventArgs e)
         {
-            NewRepairForm form = new NewRepairForm(db);
-            form.Show();
+            using (NewRepairForm form = new NewRepairForm(db))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                }
+                repairBindingSource.DataSource = db.Repair.ToList();
+            }
         }
 
         private void minimizeBtn_Click(object sender, EventArgs e)

@@ -542,7 +542,7 @@
             this.panel7.Size = new System.Drawing.Size(1000, 59);
             this.panel7.TabIndex = 13;
             // 
-            // newShipment
+            // repairBtn
             // 
             this.repairBtn.BackColor = System.Drawing.Color.Transparent;
             this.repairBtn.BackgroundImage = global::diagram.Properties.Resources.repair;
@@ -551,7 +551,7 @@
             this.repairBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.repairBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repairBtn.Location = new System.Drawing.Point(709, 6);
-            this.repairBtn.Name = "newShipment";
+            this.repairBtn.Name = "repairBtn";
             this.repairBtn.Size = new System.Drawing.Size(226, 46);
             this.repairBtn.TabIndex = 7;
             this.repairBtn.Text = "Процес ремонту";
