@@ -23,6 +23,12 @@ namespace diagram.Forms.Users.Expeditor
             shipmentBindingSource.DataSource = db.Shipment.ToList();
             goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
             employeeBindingSource.DataSource = db.Employee.ToList();
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
 
         private void NewProvideOrder_Click(object sender, EventArgs e)
@@ -41,6 +47,22 @@ namespace diagram.Forms.Users.Expeditor
         {
             NewServiceForm form = new NewServiceForm(db);
             form.Show();
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void backToHomeBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

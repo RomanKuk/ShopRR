@@ -70,5 +70,10 @@ namespace diagram.Forms.Users.Expeditor
             db.SaveChanges();
             this.Close();
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

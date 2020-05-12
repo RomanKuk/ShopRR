@@ -67,6 +67,7 @@
             // cityCB
             // 
             this.cityCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.cityCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.addressBindingSource, "City_ID", true));
             this.cityCB.DataSource = this.cityBindingSource;
             this.cityCB.DisplayMember = "Name";

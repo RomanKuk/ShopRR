@@ -61,5 +61,10 @@ namespace diagram.Forms.Users.Expeditor
                 .Where(x => goods.Contains(x.Good_ID))
                 .ToList();
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

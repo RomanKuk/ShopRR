@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSalesForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -248,7 +247,7 @@
             // soldBtn
             // 
             this.soldBtn.BackColor = System.Drawing.Color.Transparent;
-            this.soldBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("soldBtn.BackgroundImage")));
+            this.soldBtn.BackgroundImage = global::diagram.Properties.Resources.check;
             this.soldBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.soldBtn.FlatAppearance.BorderSize = 0;
             this.soldBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -356,9 +355,9 @@
             this.totalPriceLabel.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPriceLabel.Location = new System.Drawing.Point(913, 77);
             this.totalPriceLabel.Name = "totalPriceLabel";
-            this.totalPriceLabel.Size = new System.Drawing.Size(75, 30);
+            this.totalPriceLabel.Size = new System.Drawing.Size(251, 30);
             this.totalPriceLabel.TabIndex = 8;
-            this.totalPriceLabel.Text = "Total: ";
+            this.totalPriceLabel.Text = "Загальна вартість: ";
             // 
             // panel6
             // 

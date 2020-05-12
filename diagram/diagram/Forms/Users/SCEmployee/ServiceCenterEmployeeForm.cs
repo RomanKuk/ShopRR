@@ -33,9 +33,15 @@ namespace diagram.Forms.Users.SCEmployee
             repairBindingSource.DataSource = db.Repair.ToList();
             serviceTransportationBindingSource1.DataSource = db.ServiceTransportation.ToList();
 
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
+
         }
 
-        private void NewSTButton_Click(object sender, EventArgs e)
+        private void NewServiceBtn_Click(object sender, EventArgs e)
         {
             NewServiceTransportationForm form = new NewServiceTransportationForm(db);
             form.Show();
@@ -45,6 +51,22 @@ namespace diagram.Forms.Users.SCEmployee
         {
             NewRepairForm form = new NewRepairForm(db);
             form.Show();
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void backToHomeBtn_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
