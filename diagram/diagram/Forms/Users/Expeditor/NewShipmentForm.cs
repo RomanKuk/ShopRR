@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.expeditor
+namespace diagram.Forms.Users.Expeditor
 {
     public partial class NewShipmentForm : Form
     {
@@ -68,6 +68,11 @@ namespace diagram.Forms.expeditor
             };
             db.Shipment.Add(shipment);
             db.SaveChanges();
+            this.Close();
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

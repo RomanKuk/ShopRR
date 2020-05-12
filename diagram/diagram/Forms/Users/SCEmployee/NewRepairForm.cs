@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.service
+namespace diagram.Forms.Users.SCEmployee
 {
     public partial class NewRepairForm : Form
     {
@@ -29,6 +29,12 @@ namespace diagram.Forms.service
                 .FirstOrDefault();
             statusBindingSource.DataSource = db.Status.ToList();
             updateTableContent();
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -84,6 +90,16 @@ namespace diagram.Forms.service
                 dataGridView1.Rows.Add(repair.Comment, repair.Date, status);
             }
             StatusComboBox.SelectedValue = status;
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

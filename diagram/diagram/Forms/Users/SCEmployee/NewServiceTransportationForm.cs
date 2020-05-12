@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.service
+namespace diagram.Forms.Users.SCEmployee
 {
     public partial class NewServiceTransportationForm : Form
     {
@@ -104,6 +104,11 @@ namespace diagram.Forms.service
                 .Where(x => BSCID.Contains(x.SC_ID) &&
                 CSCID.Contains(x.SC_ID))
                 .ToList();
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

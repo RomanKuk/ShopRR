@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.expeditor
+namespace diagram.Forms.Users.Expeditor
 {
     public partial class NewDeliveryForm : Form
     {
@@ -24,6 +24,12 @@ namespace diagram.Forms.expeditor
         {
             provideBindingSource.DataSource = db.Provide.ToList();
             goodsBindingSource.DataSource = db.Goods.ToList();
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -119,6 +125,14 @@ namespace diagram.Forms.expeditor
             return totalPrice;
         }
 
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

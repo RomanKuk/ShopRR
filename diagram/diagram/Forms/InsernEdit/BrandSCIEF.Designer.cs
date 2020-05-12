@@ -60,7 +60,7 @@
             this.brandCB.DisplayMember = "Code";
             this.brandCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brandCB.FormattingEnabled = true;
-            this.brandCB.Location = new System.Drawing.Point(186, 102);
+            this.brandCB.Location = new System.Drawing.Point(218, 102);
             this.brandCB.Name = "brandCB";
             this.brandCB.Size = new System.Drawing.Size(170, 28);
             this.brandCB.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.serviceCenterCB.DisplayMember = "Name";
             this.serviceCenterCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceCenterCB.FormattingEnabled = true;
-            this.serviceCenterCB.Location = new System.Drawing.Point(186, 156);
+            this.serviceCenterCB.Location = new System.Drawing.Point(218, 156);
             this.serviceCenterCB.Name = "serviceCenterCB";
             this.serviceCenterCB.Size = new System.Drawing.Size(170, 28);
             this.serviceCenterCB.TabIndex = 1;
@@ -145,9 +145,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(289, 42);
+            this.label1.Size = new System.Drawing.Size(331, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Brands and Service Centers";
+            this.label1.Text = "Бренд / Сервісний центр";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -170,20 +170,20 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(9, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 21);
+            this.label3.Size = new System.Drawing.Size(203, 21);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Service Center Code:";
+            this.label3.Text = "Код сервісного центру:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(73, 104);
+            this.label2.Location = new System.Drawing.Point(101, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 21);
+            this.label2.Size = new System.Drawing.Size(111, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Brand Code:";
+            this.label2.Text = "Код бренду:";
             // 
             // saveBtn
             // 
@@ -197,11 +197,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(174, 295);
+            this.saveBtn.Location = new System.Drawing.Point(153, 296);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.Size = new System.Drawing.Size(93, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Зберегти";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 

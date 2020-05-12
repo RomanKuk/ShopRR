@@ -67,6 +67,7 @@
             // cityCB
             // 
             this.cityCB.BackColor = System.Drawing.Color.Cornsilk;
+            this.cityCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.addressBindingSource, "City_ID", true));
             this.cityCB.DataSource = this.cityBindingSource;
             this.cityCB.DisplayMember = "Name";
@@ -136,9 +137,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(103, 42);
+            this.label1.Size = new System.Drawing.Size(118, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Address";
+            this.label1.Text = "Адреса";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -159,11 +160,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(103, 178);
+            this.label3.Location = new System.Drawing.Point(89, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 21);
+            this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 16;
-            this.label3.Text = "City:";
+            this.label3.Text = "Місто:";
             // 
             // label2
             // 
@@ -172,9 +173,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(73, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 21);
+            this.label2.Size = new System.Drawing.Size(77, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Address:";
+            this.label2.Text = "Адреса:";
             // 
             // saveBtn
             // 
@@ -188,11 +189,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(174, 295);
+            this.saveBtn.Location = new System.Drawing.Point(144, 296);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.Size = new System.Drawing.Size(98, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Зберегти";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 

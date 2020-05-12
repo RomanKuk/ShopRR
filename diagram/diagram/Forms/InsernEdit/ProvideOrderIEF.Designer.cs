@@ -64,14 +64,14 @@
             this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 45);
+            this.panel2.Size = new System.Drawing.Size(430, 45);
             this.panel2.TabIndex = 10;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.closeBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(355, 0);
+            this.panel4.Location = new System.Drawing.Point(385, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(45, 45);
             this.panel4.TabIndex = 1;
@@ -95,7 +95,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(400, 45);
+            this.panel3.Size = new System.Drawing.Size(430, 45);
             this.panel3.TabIndex = 1;
             // 
             // label1
@@ -108,9 +108,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(171, 42);
+            this.label1.Size = new System.Drawing.Size(393, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Provide Orders";
+            this.label1.Text = "Загальне замовлення (партії)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -127,7 +127,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 420);
+            this.panel1.Size = new System.Drawing.Size(430, 420);
             this.panel1.TabIndex = 11;
             // 
             // label5
@@ -135,49 +135,49 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(68, 137);
+            this.label5.Location = new System.Drawing.Point(48, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 21);
+            this.label5.Size = new System.Drawing.Size(136, 21);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Provider:";
+            this.label5.Text = "Постачальник:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(57, 223);
+            this.label4.Location = new System.Drawing.Point(12, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 21);
+            this.label4.Size = new System.Drawing.Size(172, 21);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Total Cost:";
+            this.label4.Text = "Загальна вартість:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(94, 183);
+            this.label3.Location = new System.Drawing.Point(127, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 21);
+            this.label3.Size = new System.Drawing.Size(57, 21);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Date:";
+            this.label3.Text = "Дата:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(94, 95);
+            this.label2.Location = new System.Drawing.Point(137, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.Size = new System.Drawing.Size(47, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Code:";
+            this.label2.Text = "Код:";
             // 
             // saveBtn
             // 
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
             this.saveBtn.FlatAppearance.BorderSize = 0;
             this.saveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -186,11 +186,11 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.save_icon;
-            this.saveBtn.Location = new System.Drawing.Point(174, 295);
+            this.saveBtn.Location = new System.Drawing.Point(134, 295);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(66, 77);
+            this.saveBtn.Size = new System.Drawing.Size(106, 77);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Зберегти";
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.saveBtn.UseVisualStyleBackColor = true;
             // 
@@ -202,7 +202,7 @@
             this.providerNameCB.DisplayMember = "Name";
             this.providerNameCB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.providerNameCB.FormattingEnabled = true;
-            this.providerNameCB.Location = new System.Drawing.Point(184, 135);
+            this.providerNameCB.Location = new System.Drawing.Point(213, 130);
             this.providerNameCB.Name = "providerNameCB";
             this.providerNameCB.Size = new System.Drawing.Size(170, 28);
             this.providerNameCB.TabIndex = 3;
@@ -221,7 +221,7 @@
             this.codeTB.BackColor = System.Drawing.Color.Cornsilk;
             this.codeTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.provideOrderBindingSource, "Code", true));
             this.codeTB.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTB.Location = new System.Drawing.Point(184, 93);
+            this.codeTB.Location = new System.Drawing.Point(213, 89);
             this.codeTB.Name = "codeTB";
             this.codeTB.Size = new System.Drawing.Size(170, 27);
             this.codeTB.TabIndex = 4;
@@ -237,7 +237,7 @@
             0,
             0,
             65536});
-            this.totalCostNUD.Location = new System.Drawing.Point(184, 222);
+            this.totalCostNUD.Location = new System.Drawing.Point(213, 222);
             this.totalCostNUD.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -254,7 +254,7 @@
             this.datePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.provideOrderBindingSource, "Date", true));
             this.datePicker.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePicker.Location = new System.Drawing.Point(184, 179);
+            this.datePicker.Location = new System.Drawing.Point(213, 177);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(170, 27);
             this.datePicker.TabIndex = 1;
@@ -264,7 +264,7 @@
             this.AcceptButton = this.saveBtn;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(400, 420);
+            this.ClientSize = new System.Drawing.Size(430, 420);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.insertBtn = new System.Windows.Forms.Button();
@@ -45,9 +48,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.GS_in_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -55,14 +55,14 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -109,6 +109,18 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
+            // transportationBindingSource
+            // 
+            this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
             // 
             // panel2
             // 
@@ -246,9 +258,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(180, 42);
+            this.formTitle.Size = new System.Drawing.Size(192, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Transportations";
+            this.formTitle.Text = "Перевезення";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -259,18 +271,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
-            // 
-            // transportationBindingSource
-            // 
-            this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
             // 
             // transportationIDDataGridViewTextBoxColumn
             // 
@@ -286,7 +286,7 @@
             this.GoodsShops.DataSource = this.goodsShopsBindingSource;
             this.GoodsShops.DisplayMember = "Code";
             this.GoodsShops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.GoodsShops.HeaderText = "From Code";
+            this.GoodsShops.HeaderText = "Код магазину (звідки)";
             this.GoodsShops.Name = "GoodsShops";
             this.GoodsShops.ReadOnly = true;
             this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -299,7 +299,7 @@
             this.GS_in_ID.DataSource = this.goodsShopsBindingSource;
             this.GS_in_ID.DisplayMember = "Code";
             this.GS_in_ID.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.GS_in_ID.HeaderText = "In Code";
+            this.GS_in_ID.HeaderText = "Код магазину (куди)";
             this.GS_in_ID.Name = "GS_in_ID";
             this.GS_in_ID.ReadOnly = true;
             this.GS_in_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -312,7 +312,7 @@
             this.Employee.DataSource = this.employeeBindingSource;
             this.Employee.DisplayMember = "LastName";
             this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Employee.HeaderText = "Employee Last Name";
+            this.Employee.HeaderText = "Працівник";
             this.Employee.Name = "Employee";
             this.Employee.ReadOnly = true;
             this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -322,14 +322,14 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // countDataGridViewTextBoxColumn
             // 
             this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
             this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
             this.countDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -345,15 +345,15 @@
             this.Text = "TransportationForm";
             this.Load += new System.EventHandler(this.TransportationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,11 +1,11 @@
-﻿using diagram.Forms.expeditor;
-using diagram.Forms.seller;
-using diagram.Forms.service;
-using diagram.Forms.Table;
-using diagram.Forms.transportation;
+﻿using diagram.Forms.Table;
+using diagram.Forms.Users.Seller.Transportations;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using diagram.Forms.Users.SCEmployee;
+using diagram.Forms.Users.Seller;
+using diagram.Forms.Users.Expeditor;
 
 namespace diagram
 {
@@ -24,7 +24,7 @@ namespace diagram
                 db.Employee
                 .Where(e => e.Employee_ID.Equals(4))
                 .First();
-            Application.Run(new Forms.service.ServiceCenterForm(db, employee));
+            //Application.Run(new ServiceCenterEmployeeForm(db, employee));
             //Application.Run(new NewRepairForm(db));
             //Application.Run(new NewServiceTransportationForm(db));
             //Application.Run(new ExpeditorForm(db,employee));
@@ -33,6 +33,7 @@ namespace diagram
             //Application.Run(new NewDeliveryForm(db,employee));
             //Application.Run(new NewTransportationForm(db,employee));
             //Application.Run(new NewSalesForm(db,employee));
+            Application.Run(new SellerForm(db, employee));
 
             //Application.Run(new EmployeeForm(db));
             //Application.Run(new AddressForm(db));
@@ -53,6 +54,16 @@ namespace diagram
             //Application.Run(new ProfessionForm(db));
             //Application.Run(new ProvideForm(db));
             //Application.Run(new ProvideOrderForm(db));
+            //Application.Run(new RepairForm(db));
+            //Application.Run(new SalesForm(db));
+            //Application.Run(new ServiceCenterForm(db));
+            //Application.Run(new ServiceForm(db));
+            //Application.Run(new ServiceTransportationForm(db));
+            //Application.Run(new ShipmentForm(db));
+            //Application.Run(new ShopsForm(db));
+            //Application.Run(new StatusForm(db));
+            //Application.Run(new TransportationForm(db));
+
         }
     }
 }

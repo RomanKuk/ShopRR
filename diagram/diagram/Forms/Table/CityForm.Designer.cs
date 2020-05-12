@@ -246,9 +246,9 @@
             this.formTitle.Margin = new System.Windows.Forms.Padding(3);
             this.formTitle.Name = "formTitle";
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
-            this.formTitle.Size = new System.Drawing.Size(78, 42);
+            this.formTitle.Size = new System.Drawing.Size(95, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Cities";
+            this.formTitle.Text = "Місто";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -271,7 +271,7 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Місто";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -281,7 +281,7 @@
             this.Countries.DataSource = this.countriesBindingSource;
             this.Countries.DisplayMember = "Name";
             this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Countries.HeaderText = "Countries";
+            this.Countries.HeaderText = "Країна";
             this.Countries.Name = "Countries";
             this.Countries.ReadOnly = true;
             this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
