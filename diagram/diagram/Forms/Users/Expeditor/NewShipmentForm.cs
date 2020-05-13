@@ -47,7 +47,7 @@ namespace diagram.Forms.Users.Expeditor
                     .Where(x => x.Deliver_ID.Equals(DeliveryComboBox.SelectedValue))
                     .FirstOrDefault();
                 GoodsShops gs = (db.GoodsShops as IEnumerable<GoodsShops>)
-                                    .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue != null ? ShopComboBox.SelectedValue : 0) &&
+                                    .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue ?? 0) &&
                                     x.Good_ID.Equals(delivery.Good_ID))
                                     .FirstOrDefault();
                 if (gs != null)
@@ -67,7 +67,7 @@ namespace diagram.Forms.Users.Expeditor
                     db.GoodsShops.Add(gs);
                     db.SaveChanges();
                     gs = (db.GoodsShops as IEnumerable<GoodsShops>)
-                    .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue != null ? ShopComboBox.SelectedValue : 0) &&
+                    .Where(x => x.Shop_ID.Equals(ShopComboBox.SelectedValue ?? 0) &&
                     x.Good_ID.Equals(delivery.Good_ID))
                     .FirstOrDefault();
                 }

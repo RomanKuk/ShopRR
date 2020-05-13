@@ -1,4 +1,4 @@
-﻿using diagram.Forms.transportation;
+﻿using diagram.Forms.Users.Seller.Transportations;
 using diagram.Forms.Users.Expeditor;
 using diagram.Forms.Users.SCEmployee;
 using diagram.Forms.Users.Seller;
@@ -28,7 +28,7 @@ namespace diagram.Forms.login
                     .Where(x => x.LoginName.Equals(loginTextBox.Text) &&
                     x.Password.Equals(passwordTextBox.Text)).First();
                 login();
-            } catch (InvalidOperationException exc)
+            } catch (InvalidOperationException)
             {
                 MessageBox.Show("Введіть коректні логін та пароль", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 passwordTextBox.Text = "";
@@ -62,6 +62,21 @@ namespace diagram.Forms.login
                     break;
             }
             this.Hide();
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void showPasswordBtn_MouseEnter(object sender, EventArgs e)
+        {
+            passwordTextBox.UseSystemPasswordChar = false;
+        }
+
+        private void showPasswordBtn_MouseLeave(object sender, EventArgs e)
+        {
+            passwordTextBox.UseSystemPasswordChar = true;
         }
     }
 }

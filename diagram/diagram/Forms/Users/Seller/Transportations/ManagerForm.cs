@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.transportation
+namespace diagram.Forms.Users.Seller.Transportations
 {
     public partial class ManagerForm : Form
     {
@@ -28,6 +28,12 @@ namespace diagram.Forms.transportation
                 .ToList();
 
             SalesShopChartUpdate();
+
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            int barWidth = Width - panel4.Width;
+            panel3.Width = panel5.Width = barWidth / 2;
         }
         private void SellerComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -94,6 +100,22 @@ namespace diagram.Forms.transportation
                     transportationBindingSource.DataSource = db.Transportation.ToList();
                 }
             }
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void backToHomeBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -269,7 +269,6 @@
         private System.Windows.Forms.ComboBox SalesComboBox;
         private System.Windows.Forms.ComboBox GoodsComboBox;
         private System.Windows.Forms.ComboBox BreakageComboBox;
-        private System.Windows.Forms.Button confirm;
         private System.Windows.Forms.BindingSource salesBindingSource;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.BindingSource breakageBindingSource;

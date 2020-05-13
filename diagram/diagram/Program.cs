@@ -5,6 +5,7 @@ using diagram.Forms.Users.SCEmployee;
 using diagram.Forms.Users.Seller;
 using diagram.Forms.Users.Expeditor;
 using diagram.Forms.login;
+using diagram.Forms.Users.Seller.Transportations;
 
 namespace diagram
 {
@@ -23,7 +24,7 @@ namespace diagram
                 db.Employee
                 .Where(e => e.Employee_ID.Equals(4))
                 .First();
-            Application.Run(new LoginForm(db));
+            //Application.Run(new LoginForm(db));
             //Application.Run(new ServiceCenterEmployeeForm(db, employee));
             //Application.Run(new NewRepairForm(db));
             //Application.Run(new NewServiceTransportationForm(db));
@@ -34,6 +35,7 @@ namespace diagram
             //Application.Run(new NewTransportationForm(db,employee));
             //Application.Run(new NewSalesForm(db,employee));
             //Application.Run(new SellerForm(db, employee));
+            Application.Run(new ManagerForm(db, employee));
 
             //Application.Run(new EmployeeForm(db));
             //Application.Run(new AddressForm(db));

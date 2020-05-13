@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace diagram.Forms.transportation
+namespace diagram.Forms.Users.Seller.Transportations
 {
     public partial class NewTransportationForm : Form
     {
@@ -23,11 +23,6 @@ namespace diagram.Forms.transportation
             goodsBindingSource.DataSource = db.Goods.ToList();
             shopsBindingSource.DataSource = db.Shops.ToList();
             shopsBindingSource1.DataSource = db.Shops.ToList();
-        }
-
-        private void Save_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void GoodsComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,18 +44,18 @@ namespace diagram.Forms.transportation
         {
             //обмежую кількість товарів до наявної в магазині
             int fromCount = (db.GoodsShops as IEnumerable<GoodsShops>)
-                .Where(x => x.Good_ID.Equals((int)(goodsComboBox.SelectedValue != null ? goodsComboBox.SelectedValue : 0))
-                && x.Shop_ID.Equals(ShopFromComboBox.SelectedValue != null ? ShopFromComboBox.SelectedValue : 0))
+                .Where(x => x.Good_ID.Equals((int)(goodsComboBox.SelectedValue ?? 0))
+                && x.Shop_ID.Equals(ShopFromComboBox.SelectedValue ?? 0))
                 .Select(x => x.Count)
                 .FirstOrDefault();
             int toCount = (db.GoodsShops as IEnumerable<GoodsShops>)
-                .Where(x => x.Good_ID.Equals((int)(goodsComboBox.SelectedValue != null ? goodsComboBox.SelectedValue : 0))
-                && x.Shop_ID.Equals(ShopToComboBox.SelectedValue != null ? ShopToComboBox.SelectedValue : 0))
+                .Where(x => x.Good_ID.Equals((int)(goodsComboBox.SelectedValue ?? 0))
+                && x.Shop_ID.Equals(ShopToComboBox.SelectedValue ?? 0))
                 .Select(x => x.Count)
                 .FirstOrDefault();
             countNUD.Maximum = fromCount;
-            fromLabel.Text = "В наявності:" + fromCount;
-            toLabel.Text = "В наявності:" + toCount; 
+            fromLabel.Text = "В наявності (звідки): " + fromCount;
+            toLabel.Text = "В наявності (куди): " + toCount; 
         }
 
         private void NewTransportationForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -77,8 +72,8 @@ namespace diagram.Forms.transportation
                     }
                     else
                     {
-                        int goodID = (int)(goodsComboBox.SelectedValue != null ? goodsComboBox.SelectedValue : 0);
-                        int shopTo = (int)(ShopToComboBox.SelectedValue != null ? ShopToComboBox.SelectedValue : 0);
+                        int goodID = (int)(goodsComboBox.SelectedValue ?? 0);
+                        int shopTo = (int)(ShopToComboBox.SelectedValue ?? 0);
                         GoodsShops GS_To = (db.GoodsShops as IEnumerable<GoodsShops>)
                             .Where(x => x.Good_ID.Equals(goodID)
                             && x.Shop_ID.Equals(shopTo))
@@ -104,7 +99,7 @@ namespace diagram.Forms.transportation
                         }
                         GoodsShops GS_From = (db.GoodsShops as IEnumerable<GoodsShops>)
                             .Where(x => x.Good_ID.Equals(goodID)
-                            && x.Shop_ID.Equals(ShopFromComboBox.SelectedValue != null ? ShopFromComboBox.SelectedValue : 0))
+                            && x.Shop_ID.Equals(ShopFromComboBox.SelectedValue ?? 0))
                             .Select(x => x)
                             .FirstOrDefault();
                         int count = (int)countNUD.Value;
@@ -134,6 +129,11 @@ namespace diagram.Forms.transportation
                 }
             }
             e.Cancel = false;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

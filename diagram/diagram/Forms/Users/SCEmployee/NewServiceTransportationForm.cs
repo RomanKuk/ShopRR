@@ -76,7 +76,7 @@ namespace diagram.Forms.Users.SCEmployee
                     CSCID.Contains(x.SC_ID))
                     .ToList();
             }
-            catch(Exception exc){ }
+            catch(Exception){ }
             
         }
 

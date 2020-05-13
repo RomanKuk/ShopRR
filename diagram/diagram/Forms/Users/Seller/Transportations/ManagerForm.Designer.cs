@@ -1,4 +1,4 @@
-﻿namespace diagram.Forms.transportation
+﻿namespace diagram.Forms.Users.Seller.Transportations
 {
     partial class ManagerForm
     {
@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -37,7 +40,6 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.transportationTabPage = new System.Windows.Forms.TabPage();
-            this.NewTransportation = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.transportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gSfromIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -48,68 +50,90 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.newTransportationBtn = new System.Windows.Forms.Button();
             this.statisticsTabPage = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.SellerChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SellerComboBox = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.SellerChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.SalesShopChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.StopDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.StartDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.StopDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.SalesShopChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.closeBtn = new System.Windows.Forms.Button();
+            this.minimizeBtn = new System.Windows.Forms.Button();
+            this.backToHomeBtn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.formTitle = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.transportationTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
+            this.panel6.SuspendLayout();
             this.statisticsTabPage.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SellerChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellerChart)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesShopChart)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.transportationTabPage);
             this.tabControl1.Controls.Add(this.statisticsTabPage);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(10, 10);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 426);
+            this.tabControl1.Size = new System.Drawing.Size(1000, 555);
             this.tabControl1.TabIndex = 0;
             // 
             // transportationTabPage
             // 
-            this.transportationTabPage.Controls.Add(this.NewTransportation);
             this.transportationTabPage.Controls.Add(this.dataGridView1);
-            this.transportationTabPage.Location = new System.Drawing.Point(4, 22);
+            this.transportationTabPage.Controls.Add(this.panel6);
+            this.transportationTabPage.Location = new System.Drawing.Point(4, 36);
             this.transportationTabPage.Name = "transportationTabPage";
-            this.transportationTabPage.Size = new System.Drawing.Size(768, 400);
+            this.transportationTabPage.Size = new System.Drawing.Size(992, 515);
             this.transportationTabPage.TabIndex = 0;
             this.transportationTabPage.Text = "Перевезення";
             this.transportationTabPage.UseVisualStyleBackColor = true;
-            // 
-            // NewTransportation
-            // 
-            this.NewTransportation.Location = new System.Drawing.Point(590, 78);
-            this.NewTransportation.Name = "NewTransportation";
-            this.NewTransportation.Size = new System.Drawing.Size(152, 23);
-            this.NewTransportation.TabIndex = 1;
-            this.NewTransportation.Text = "Заявка на перевезення";
-            this.NewTransportation.UseVisualStyleBackColor = true;
-            this.NewTransportation.Click += new System.EventHandler(this.NewTransportation_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.transportationIDDataGridViewTextBoxColumn,
             this.gSfromIDDataGridViewTextBoxColumn,
@@ -118,10 +142,24 @@
             this.dateDataGridViewTextBoxColumn,
             this.countDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.transportationBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 15);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(517, 364);
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(992, 470);
             this.dataGridView1.TabIndex = 0;
             // 
             // transportationIDDataGridViewTextBoxColumn
@@ -137,7 +175,8 @@
             this.gSfromIDDataGridViewTextBoxColumn.DataPropertyName = "GS_from_ID";
             this.gSfromIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
             this.gSfromIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.gSfromIDDataGridViewTextBoxColumn.HeaderText = "GS_from_ID";
+            this.gSfromIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.gSfromIDDataGridViewTextBoxColumn.HeaderText = "Код товар/магазин (звідки)";
             this.gSfromIDDataGridViewTextBoxColumn.Name = "gSfromIDDataGridViewTextBoxColumn";
             this.gSfromIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.gSfromIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -153,7 +192,8 @@
             this.gSinIDDataGridViewTextBoxColumn.DataPropertyName = "GS_in_ID";
             this.gSinIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
             this.gSinIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.gSinIDDataGridViewTextBoxColumn.HeaderText = "GS_in_ID";
+            this.gSinIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.gSinIDDataGridViewTextBoxColumn.HeaderText = "Код товар/магазин (куди)";
             this.gSinIDDataGridViewTextBoxColumn.Name = "gSinIDDataGridViewTextBoxColumn";
             this.gSinIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.gSinIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -165,7 +205,8 @@
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
             this.employeeIDDataGridViewTextBoxColumn.DataSource = this.employeeBindingSource1;
             this.employeeIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
+            this.employeeIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Працівник";
             this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
             this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.employeeIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -179,14 +220,14 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // countDataGridViewTextBoxColumn
             // 
             this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
             this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
             this.countDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -194,12 +235,44 @@
             // 
             this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Orange;
+            this.panel6.Controls.Add(this.newTransportationBtn);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 470);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(992, 45);
+            this.panel6.TabIndex = 1;
+            // 
+            // newTransportationBtn
+            // 
+            this.newTransportationBtn.BackgroundImage = global::diagram.Properties.Resources.add;
+            this.newTransportationBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.newTransportationBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.newTransportationBtn.FlatAppearance.BorderSize = 0;
+            this.newTransportationBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.newTransportationBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.newTransportationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newTransportationBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newTransportationBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.newTransportationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.newTransportationBtn.Location = new System.Drawing.Point(545, 0);
+            this.newTransportationBtn.Name = "newTransportationBtn";
+            this.newTransportationBtn.Size = new System.Drawing.Size(244, 45);
+            this.newTransportationBtn.TabIndex = 8;
+            this.newTransportationBtn.Text = "Нове перевезення";
+            this.newTransportationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.newTransportationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.newTransportationBtn.UseVisualStyleBackColor = true;
+            this.newTransportationBtn.Click += new System.EventHandler(this.NewTransportation_Click);
+            // 
             // statisticsTabPage
             // 
             this.statisticsTabPage.Controls.Add(this.tabControl2);
-            this.statisticsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.statisticsTabPage.Location = new System.Drawing.Point(4, 36);
             this.statisticsTabPage.Name = "statisticsTabPage";
-            this.statisticsTabPage.Size = new System.Drawing.Size(768, 400);
+            this.statisticsTabPage.Size = new System.Drawing.Size(992, 515);
             this.statisticsTabPage.TabIndex = 1;
             this.statisticsTabPage.Text = "Статистика";
             this.statisticsTabPage.UseVisualStyleBackColor = true;
@@ -208,49 +281,37 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Location = new System.Drawing.Point(3, 3);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Name = "tabControl2";
+            this.tabControl2.Padding = new System.Drawing.Point(10, 10);
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(762, 394);
+            this.tabControl2.Size = new System.Drawing.Size(992, 515);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.SellerChart);
             this.tabPage1.Controls.Add(this.SellerComboBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.SellerChart);
+            this.tabPage1.Location = new System.Drawing.Point(4, 36);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(754, 368);
+            this.tabPage1.Size = new System.Drawing.Size(984, 475);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Продаж по продавцям";
+            this.tabPage1.Text = "Продаж за продавцями";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // SellerChart
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.SellerChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.SellerChart.Legends.Add(legend1);
-            this.SellerChart.Location = new System.Drawing.Point(6, 6);
-            this.SellerChart.Name = "SellerChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Продажі";
-            this.SellerChart.Series.Add(series1);
-            this.SellerChart.Size = new System.Drawing.Size(742, 329);
-            this.SellerChart.TabIndex = 1;
-            this.SellerChart.Text = "chart1";
             // 
             // SellerComboBox
             // 
+            this.SellerComboBox.BackColor = System.Drawing.Color.Cornsilk;
             this.SellerComboBox.DataSource = this.employeeBindingSource;
             this.SellerComboBox.DisplayMember = "LastName";
+            this.SellerComboBox.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SellerComboBox.FormattingEnabled = true;
-            this.SellerComboBox.Location = new System.Drawing.Point(6, 341);
+            this.SellerComboBox.Location = new System.Drawing.Point(141, 1);
             this.SellerComboBox.Name = "SellerComboBox";
-            this.SellerComboBox.Size = new System.Drawing.Size(121, 21);
+            this.SellerComboBox.Size = new System.Drawing.Size(170, 28);
             this.SellerComboBox.TabIndex = 0;
             this.SellerComboBox.ValueMember = "Employee_ID";
             this.SellerComboBox.SelectedIndexChanged += new System.EventHandler(this.SellerComboBox_SelectedIndexChanged);
@@ -259,57 +320,222 @@
             // 
             this.employeeBindingSource.DataSource = typeof(diagram.Employee);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Продавець: ";
+            // 
+            // SellerChart
+            // 
+            this.SellerChart.BackColor = System.Drawing.Color.Transparent;
+            this.SellerChart.BorderlineWidth = 0;
+            chartArea1.Name = "ChartArea1";
+            this.SellerChart.ChartAreas.Add(chartArea1);
+            this.SellerChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.SellerChart.Legends.Add(legend1);
+            this.SellerChart.Location = new System.Drawing.Point(3, 3);
+            this.SellerChart.Name = "SellerChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Продажі";
+            this.SellerChart.Series.Add(series1);
+            this.SellerChart.Size = new System.Drawing.Size(978, 469);
+            this.SellerChart.TabIndex = 1;
+            this.SellerChart.Text = "chart1";
+            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.SalesShopChart);
-            this.tabPage2.Controls.Add(this.StopDateTimePicker);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.StartDateTimePicker);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Controls.Add(this.StopDateTimePicker);
+            this.tabPage2.Controls.Add(this.SalesShopChart);
+            this.tabPage2.Location = new System.Drawing.Point(4, 36);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(754, 368);
+            this.tabPage2.Size = new System.Drawing.Size(984, 475);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "продаж по магазинах";
+            this.tabPage2.Text = "Продаж за магазинами";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(304, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Кінець: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Початок: ";
+            // 
+            // StartDateTimePicker
+            // 
+            this.StartDateTimePicker.BackColor = System.Drawing.Color.Cornsilk;
+            this.StartDateTimePicker.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartDateTimePicker.Location = new System.Drawing.Point(97, 0);
+            this.StartDateTimePicker.Name = "StartDateTimePicker";
+            this.StartDateTimePicker.Size = new System.Drawing.Size(170, 27);
+            this.StartDateTimePicker.TabIndex = 1;
+            this.StartDateTimePicker.ValueChanged += new System.EventHandler(this.StartDateTimePicker_ValueChanged);
+            // 
+            // StopDateTimePicker
+            // 
+            this.StopDateTimePicker.BackColor = System.Drawing.Color.Cornsilk;
+            this.StopDateTimePicker.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StopDateTimePicker.Location = new System.Drawing.Point(383, 0);
+            this.StopDateTimePicker.Name = "StopDateTimePicker";
+            this.StopDateTimePicker.Size = new System.Drawing.Size(170, 27);
+            this.StopDateTimePicker.TabIndex = 2;
+            this.StopDateTimePicker.ValueChanged += new System.EventHandler(this.StopDateTimePicker_ValueChanged);
             // 
             // SalesShopChart
             // 
             chartArea2.Name = "ChartArea1";
             this.SalesShopChart.ChartAreas.Add(chartArea2);
+            this.SalesShopChart.Dock = System.Windows.Forms.DockStyle.Fill;
             legend2.Name = "Legend1";
             this.SalesShopChart.Legends.Add(legend2);
-            this.SalesShopChart.Location = new System.Drawing.Point(6, 6);
+            this.SalesShopChart.Location = new System.Drawing.Point(3, 3);
             this.SalesShopChart.Name = "SalesShopChart";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Продаж";
             this.SalesShopChart.Series.Add(series2);
-            this.SalesShopChart.Size = new System.Drawing.Size(742, 330);
+            this.SalesShopChart.Size = new System.Drawing.Size(978, 469);
             this.SalesShopChart.TabIndex = 3;
             this.SalesShopChart.Text = "chart2";
             // 
-            // StopDateTimePicker
+            // panel2
             // 
-            this.StopDateTimePicker.Location = new System.Drawing.Point(402, 342);
-            this.StopDateTimePicker.Name = "StopDateTimePicker";
-            this.StopDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.StopDateTimePicker.TabIndex = 2;
-            this.StopDateTimePicker.ValueChanged += new System.EventHandler(this.StopDateTimePicker_ValueChanged);
+            this.panel2.BackColor = System.Drawing.Color.Orange;
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 45);
+            this.panel2.TabIndex = 10;
             // 
-            // StartDateTimePicker
+            // panel5
             // 
-            this.StartDateTimePicker.Location = new System.Drawing.Point(81, 342);
-            this.StartDateTimePicker.Name = "StartDateTimePicker";
-            this.StartDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.StartDateTimePicker.TabIndex = 1;
-            this.StartDateTimePicker.ValueChanged += new System.EventHandler(this.StartDateTimePicker_ValueChanged);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(360, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(522, 45);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.closeBtn);
+            this.panel4.Controls.Add(this.minimizeBtn);
+            this.panel4.Controls.Add(this.backToHomeBtn);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(882, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(118, 45);
+            this.panel4.TabIndex = 1;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackgroundImage = global::diagram.Properties.Resources.close_icon;
+            this.closeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Location = new System.Drawing.Point(79, 4);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(38, 38);
+            this.closeBtn.TabIndex = 11;
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // minimizeBtn
+            // 
+            this.minimizeBtn.BackgroundImage = global::diagram.Properties.Resources.minimize_icon;
+            this.minimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minimizeBtn.FlatAppearance.BorderSize = 0;
+            this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeBtn.Location = new System.Drawing.Point(40, 4);
+            this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.Size = new System.Drawing.Size(38, 38);
+            this.minimizeBtn.TabIndex = 12;
+            this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
+            // 
+            // backToHomeBtn
+            // 
+            this.backToHomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.backToHomeBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.backToHomeBtn.FlatAppearance.BorderSize = 0;
+            this.backToHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backToHomeBtn.Image = global::diagram.Properties.Resources.home_icon;
+            this.backToHomeBtn.Location = new System.Drawing.Point(1, 4);
+            this.backToHomeBtn.Name = "backToHomeBtn";
+            this.backToHomeBtn.Size = new System.Drawing.Size(38, 38);
+            this.backToHomeBtn.TabIndex = 13;
+            this.backToHomeBtn.UseVisualStyleBackColor = true;
+            this.backToHomeBtn.Click += new System.EventHandler(this.backToHomeBtn_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.formTitle);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(360, 45);
+            this.panel3.TabIndex = 1;
+            // 
+            // formTitle
+            // 
+            this.formTitle.AutoSize = true;
+            this.formTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.formTitle.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formTitle.ForeColor = System.Drawing.Color.Purple;
+            this.formTitle.Location = new System.Drawing.Point(0, 0);
+            this.formTitle.Margin = new System.Windows.Forms.Padding(3);
+            this.formTitle.Name = "formTitle";
+            this.formTitle.Padding = new System.Windows.Forms.Padding(6);
+            this.formTitle.Size = new System.Drawing.Size(485, 42);
+            this.formTitle.TabIndex = 4;
+            this.formTitle.Text = "Менеджер з продажів та перевезень";
+            this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 45);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 555);
+            this.panel1.TabIndex = 11;
             // 
             // ManagerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabControl1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManagerForm";
             this.Text = "ManagerForm";
             this.Load += new System.EventHandler(this.ManagerForm_Load);
@@ -319,13 +545,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.statisticsTabPage.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SellerChart)).EndInit();
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellerChart)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesShopChart)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -342,18 +576,32 @@
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.DateTimePicker StopDateTimePicker;
         private System.Windows.Forms.DateTimePicker StartDateTimePicker;
-        private System.Windows.Forms.Button NewTransportation;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transportationIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn gSfromIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
-        private System.Windows.Forms.DataGridViewComboBoxColumn gSinIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource employeeBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource transportationBindingSource;
         private System.Windows.Forms.DataVisualization.Charting.Chart SellerChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart SalesShopChart;
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label formTitle;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button newTransportationBtn;
+        private System.Windows.Forms.Button minimizeBtn;
+        private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.Button backToHomeBtn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transportationIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn gSfromIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn gSinIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

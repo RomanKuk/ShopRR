@@ -56,6 +56,7 @@
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.NewConsumerBtn = new System.Windows.Forms.Button();
             this.newSalesBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.closeBtn = new System.Windows.Forms.Button();
@@ -64,7 +65,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.NewConsumerBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.GStabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -345,6 +345,29 @@
             this.panel5.Size = new System.Drawing.Size(522, 45);
             this.panel5.TabIndex = 1;
             // 
+            // NewConsumerBtn
+            // 
+            this.NewConsumerBtn.BackgroundImage = global::diagram.Properties.Resources.add;
+            this.NewConsumerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.NewConsumerBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NewConsumerBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.NewConsumerBtn.FlatAppearance.BorderSize = 0;
+            this.NewConsumerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NewConsumerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.NewConsumerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewConsumerBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewConsumerBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.NewConsumerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NewConsumerBtn.Location = new System.Drawing.Point(233, 0);
+            this.NewConsumerBtn.Name = "NewConsumerBtn";
+            this.NewConsumerBtn.Size = new System.Drawing.Size(220, 45);
+            this.NewConsumerBtn.TabIndex = 8;
+            this.NewConsumerBtn.Text = "Новий покупець";
+            this.NewConsumerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NewConsumerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.NewConsumerBtn.UseVisualStyleBackColor = true;
+            this.NewConsumerBtn.Click += new System.EventHandler(this.NewConsumerBtn_Click);
+            // 
             // newSalesBtn
             // 
             this.newSalesBtn.BackgroundImage = global::diagram.Properties.Resources.add;
@@ -451,16 +474,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // NewConsumerBtn
-            // 
-            this.NewConsumerBtn.Location = new System.Drawing.Point(299, 16);
-            this.NewConsumerBtn.Name = "NewConsumerBtn";
-            this.NewConsumerBtn.Size = new System.Drawing.Size(75, 23);
-            this.NewConsumerBtn.TabIndex = 9;
-            this.NewConsumerBtn.Text = "Новий покупуць";
-            this.NewConsumerBtn.UseVisualStyleBackColor = true;
-            this.NewConsumerBtn.Click += new System.EventHandler(this.NewConsumerBtn_Click);
             // 
             // SellerForm
             // 
