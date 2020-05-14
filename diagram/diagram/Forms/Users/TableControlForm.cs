@@ -1,4 +1,5 @@
-﻿using diagram.Forms.Table;
+﻿using diagram.Classes;
+using diagram.Forms.Table;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -19,29 +20,29 @@ namespace diagram.Forms.Users
                 {"Адреси",new AddressForm(db) },
                 {"Кошики покупок",new BasketForm(db) },
                 {"Бренди",new BrandForm(db) },
-                {"Бренди Сервісні Центри",new BrandSCForm(db) },
+                {"Бренди / Сервісні центри",new BrandSCForm(db) },
                 {"Поломки",new BreakageForm(db) },
                 {"Категорії",new CategoriesForm(db) },
-                {"Катеорії Сервісні Центри",new CategoriesSCForm(db) },
+                {"Категорії / Сервісні центри",new CategoriesSCForm(db) },
                 {"Міста",new CityForm(db) },
-                {"Кріїни",new CountriesForm(db) },
+                {"Країни",new CountriesForm(db) },
                 {"Покупці",new CustomersForm(db) },
-                {"Доставка",new DeliveryForm(db) },
+                {"Поставки",new DeliveryForm(db) },
                 {"Працівники",new EmployeeForm(db) },
                 {"Товари",new GoodsForm(db) },
-                {"ТОварив магазинач",new GoodsShopsForm(db) },
+                {"Товари / Магазини",new GoodsShopsForm(db) },
                 {"Виробники",new MakersForm(db) },
                 {"Професії",new ProfessionForm(db) },
-                {"Постачалники",new ProvideForm(db) },
-                {"Поставки",new ProvideOrderForm(db) },
+                {"Постачальники",new ProvideForm(db) },
+                {"Загальне замовлення (партії)",new ProvideOrderForm(db) },
                 {"Ремонт",new RepairForm(db) },
                 {"Продажі",new SalesForm(db) },
-                {"Сервісні Центри",new ServiceCenterForm(db) },
-                {"Сервіси",new ServiceForm(db) },
+                {"Сервісні центри",new ServiceCenterForm(db) },
+                {"Сервісні обслуговування",new ServiceForm(db) },
                 {"Сервісні перевезення",new ServiceTransportationForm(db) },
                 {"Відвантаження",new ShipmentForm(db) },
                 {"Магазини",new ShopsForm(db) },
-                {"Статоси ремонту",new StatusForm(db) },
+                {"Статуси ремонту",new StatusForm(db) },
                 {"Перевезення",new TransportationForm(db) }
             };
             TableComboBox.Items.Clear();
@@ -57,7 +58,14 @@ namespace diagram.Forms.Users
         {
             Form form = tables[TableComboBox.Text];
             form.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormState.PreviousPage.Show();
         }
     }
+
 }
