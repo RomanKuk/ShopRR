@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.statusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -46,8 +48,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,6 +97,21 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // statusIDDataGridViewTextBoxColumn
+            // 
+            this.statusIDDataGridViewTextBoxColumn.DataPropertyName = "Status_ID";
+            this.statusIDDataGridViewTextBoxColumn.HeaderText = "Status_ID";
+            this.statusIDDataGridViewTextBoxColumn.Name = "statusIDDataGridViewTextBoxColumn";
+            this.statusIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // status1DataGridViewTextBoxColumn
+            // 
+            this.status1DataGridViewTextBoxColumn.DataPropertyName = "Status1";
+            this.status1DataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.status1DataGridViewTextBoxColumn.Name = "status1DataGridViewTextBoxColumn";
+            this.status1DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // statusBindingSource
             // 
@@ -251,21 +266,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // statusIDDataGridViewTextBoxColumn
-            // 
-            this.statusIDDataGridViewTextBoxColumn.DataPropertyName = "Status_ID";
-            this.statusIDDataGridViewTextBoxColumn.HeaderText = "Status_ID";
-            this.statusIDDataGridViewTextBoxColumn.Name = "statusIDDataGridViewTextBoxColumn";
-            this.statusIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // status1DataGridViewTextBoxColumn
-            // 
-            this.status1DataGridViewTextBoxColumn.DataPropertyName = "Status1";
-            this.status1DataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.status1DataGridViewTextBoxColumn.Name = "status1DataGridViewTextBoxColumn";
-            this.status1DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // StatusForm
             // 

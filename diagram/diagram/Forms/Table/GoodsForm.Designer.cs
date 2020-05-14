@@ -33,8 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Makers = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.makersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Categories = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.revenuePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guaranteePeriodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,15 +57,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Makers = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Categories = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.revenuePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guaranteePeriodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.makersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
@@ -116,13 +116,89 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // goodIDDataGridViewTextBoxColumn
+            // 
+            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
+            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good_ID";
+            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
+            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Модель";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Makers
+            // 
+            this.Makers.DataPropertyName = "Maker_ID";
+            this.Makers.DataSource = this.makersBindingSource;
+            this.Makers.DisplayMember = "Name";
+            this.Makers.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Makers.HeaderText = "Код виробника";
+            this.Makers.Name = "Makers";
+            this.Makers.ReadOnly = true;
+            this.Makers.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Makers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Makers.ValueMember = "Maker_ID";
+            // 
             // makersBindingSource
             // 
             this.makersBindingSource.DataSource = typeof(diagram.Makers);
             // 
+            // Categories
+            // 
+            this.Categories.DataPropertyName = "Category_ID";
+            this.Categories.DataSource = this.categoriesBindingSource;
+            this.Categories.DisplayMember = "Name";
+            this.Categories.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Categories.HeaderText = "Категорія";
+            this.Categories.Name = "Categories";
+            this.Categories.ReadOnly = true;
+            this.Categories.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Categories.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Categories.ValueMember = "Category_ID";
+            // 
             // categoriesBindingSource
             // 
             this.categoriesBindingSource.DataSource = typeof(diagram.Categories);
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Ціна";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // revenuePriceDataGridViewTextBoxColumn
+            // 
+            this.revenuePriceDataGridViewTextBoxColumn.DataPropertyName = "RevenuePrice";
+            this.revenuePriceDataGridViewTextBoxColumn.HeaderText = "Дохід";
+            this.revenuePriceDataGridViewTextBoxColumn.Name = "revenuePriceDataGridViewTextBoxColumn";
+            this.revenuePriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Опис";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // guaranteePeriodDataGridViewTextBoxColumn
+            // 
+            this.guaranteePeriodDataGridViewTextBoxColumn.DataPropertyName = "GuaranteePeriod";
+            this.guaranteePeriodDataGridViewTextBoxColumn.HeaderText = "Період гарантії";
+            this.guaranteePeriodDataGridViewTextBoxColumn.Name = "guaranteePeriodDataGridViewTextBoxColumn";
+            this.guaranteePeriodDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // goodsBindingSource
             // 
@@ -277,82 +353,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // goodIDDataGridViewTextBoxColumn
-            // 
-            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
-            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Модель";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Makers
-            // 
-            this.Makers.DataPropertyName = "Maker_ID";
-            this.Makers.DataSource = this.makersBindingSource;
-            this.Makers.DisplayMember = "Name";
-            this.Makers.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Makers.HeaderText = "Код виробника";
-            this.Makers.Name = "Makers";
-            this.Makers.ReadOnly = true;
-            this.Makers.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Makers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Makers.ValueMember = "Maker_ID";
-            // 
-            // Categories
-            // 
-            this.Categories.DataPropertyName = "Category_ID";
-            this.Categories.DataSource = this.categoriesBindingSource;
-            this.Categories.DisplayMember = "Name";
-            this.Categories.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Categories.HeaderText = "Категорія";
-            this.Categories.Name = "Categories";
-            this.Categories.ReadOnly = true;
-            this.Categories.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Categories.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Categories.ValueMember = "Category_ID";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Ціна";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // revenuePriceDataGridViewTextBoxColumn
-            // 
-            this.revenuePriceDataGridViewTextBoxColumn.DataPropertyName = "RevenuePrice";
-            this.revenuePriceDataGridViewTextBoxColumn.HeaderText = "Дохід";
-            this.revenuePriceDataGridViewTextBoxColumn.Name = "revenuePriceDataGridViewTextBoxColumn";
-            this.revenuePriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Опис";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // guaranteePeriodDataGridViewTextBoxColumn
-            // 
-            this.guaranteePeriodDataGridViewTextBoxColumn.DataPropertyName = "GuaranteePeriod";
-            this.guaranteePeriodDataGridViewTextBoxColumn.HeaderText = "Період гарантії";
-            this.guaranteePeriodDataGridViewTextBoxColumn.Name = "guaranteePeriodDataGridViewTextBoxColumn";
-            this.guaranteePeriodDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // GoodsForm
             // 

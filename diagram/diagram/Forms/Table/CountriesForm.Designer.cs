@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Country_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Makers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -46,11 +51,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Country_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Makers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,6 +103,45 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Country_ID
+            // 
+            this.Country_ID.DataPropertyName = "Country_ID";
+            this.Country_ID.HeaderText = "Country_ID";
+            this.Country_ID.Name = "Country_ID";
+            this.Country_ID.ReadOnly = true;
+            this.Country_ID.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn
+            // 
+            this.dataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn.HeaderText = "Країна";
+            this.dataGridViewTextBoxColumn.Name = "dataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Brand
+            // 
+            this.Brand.DataPropertyName = "Brand";
+            this.Brand.HeaderText = "Brand";
+            this.Brand.Name = "Brand";
+            this.Brand.ReadOnly = true;
+            this.Brand.Visible = false;
+            // 
+            // City
+            // 
+            this.City.DataPropertyName = "City";
+            this.City.HeaderText = "City";
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
+            this.City.Visible = false;
+            // 
+            // Makers
+            // 
+            this.Makers.DataPropertyName = "Makers";
+            this.Makers.HeaderText = "Makers";
+            this.Makers.Name = "Makers";
+            this.Makers.ReadOnly = true;
+            this.Makers.Visible = false;
             // 
             // countriesBindingSource
             // 
@@ -257,45 +296,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // Country_ID
-            // 
-            this.Country_ID.DataPropertyName = "Country_ID";
-            this.Country_ID.HeaderText = "Country_ID";
-            this.Country_ID.Name = "Country_ID";
-            this.Country_ID.ReadOnly = true;
-            this.Country_ID.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn
-            // 
-            this.dataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn.HeaderText = "Країна";
-            this.dataGridViewTextBoxColumn.Name = "dataGridViewTextBoxColumn";
-            this.dataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Brand
-            // 
-            this.Brand.DataPropertyName = "Brand";
-            this.Brand.HeaderText = "Brand";
-            this.Brand.Name = "Brand";
-            this.Brand.ReadOnly = true;
-            this.Brand.Visible = false;
-            // 
-            // City
-            // 
-            this.City.DataPropertyName = "City";
-            this.City.HeaderText = "City";
-            this.City.Name = "City";
-            this.City.ReadOnly = true;
-            this.City.Visible = false;
-            // 
-            // Makers
-            // 
-            this.Makers.DataPropertyName = "Makers";
-            this.Makers.HeaderText = "Makers";
-            this.Makers.Name = "Makers";
-            this.Makers.ReadOnly = true;
-            this.Makers.Visible = false;
             // 
             // CountriesForm
             // 

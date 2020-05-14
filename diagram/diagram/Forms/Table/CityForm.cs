@@ -1,4 +1,5 @@
-﻿using System;
+﻿using diagram.Forms.Users;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -77,7 +78,8 @@ namespace diagram
 
         private void backToHomeBtn_Click(object sender, EventArgs e)
         {
-
+            new TableControlForm(db).Show();
+            this.Close();
         }
     }
 }

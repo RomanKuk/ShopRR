@@ -1,4 +1,5 @@
 ﻿using diagram.Forms.InsernEdit;
+using diagram.Forms.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,7 +85,8 @@ namespace diagram.Forms.Table
 
         private void backToHomeBtn_Click(object sender, EventArgs e)
         {
-
+            new TableControlForm(db).Show();
+            this.Close();
         }
     }
 }
