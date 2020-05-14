@@ -46,10 +46,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.closeBtn = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
-            this.backToHomeBtn = new System.Windows.Forms.Button();
+            this.changeTableBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.changeUserBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
@@ -206,13 +207,14 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.changeUserBtn);
             this.panel4.Controls.Add(this.closeBtn);
             this.panel4.Controls.Add(this.minimizeBtn);
-            this.panel4.Controls.Add(this.backToHomeBtn);
+            this.panel4.Controls.Add(this.changeTableBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(682, 0);
+            this.panel4.Location = new System.Drawing.Point(628, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(118, 45);
+            this.panel4.Size = new System.Drawing.Size(172, 45);
             this.panel4.TabIndex = 1;
             // 
             // closeBtn
@@ -221,9 +223,9 @@
             this.closeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.closeBtn.FlatAppearance.BorderSize = 0;
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Location = new System.Drawing.Point(79, 4);
+            this.closeBtn.Location = new System.Drawing.Point(134, 0);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(38, 38);
+            this.closeBtn.Size = new System.Drawing.Size(38, 44);
             this.closeBtn.TabIndex = 11;
             this.closeBtn.UseVisualStyleBackColor = true;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
@@ -234,26 +236,26 @@
             this.minimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.minimizeBtn.FlatAppearance.BorderSize = 0;
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeBtn.Location = new System.Drawing.Point(40, 4);
+            this.minimizeBtn.Location = new System.Drawing.Point(95, 0);
             this.minimizeBtn.Name = "minimizeBtn";
-            this.minimizeBtn.Size = new System.Drawing.Size(38, 38);
+            this.minimizeBtn.Size = new System.Drawing.Size(38, 44);
             this.minimizeBtn.TabIndex = 12;
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
-            // backToHomeBtn
+            // changeTableBtn
             // 
-            this.backToHomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.backToHomeBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.backToHomeBtn.FlatAppearance.BorderSize = 0;
-            this.backToHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backToHomeBtn.Image = global::diagram.Properties.Resources.home_icon;
-            this.backToHomeBtn.Location = new System.Drawing.Point(1, 4);
-            this.backToHomeBtn.Name = "backToHomeBtn";
-            this.backToHomeBtn.Size = new System.Drawing.Size(38, 38);
-            this.backToHomeBtn.TabIndex = 13;
-            this.backToHomeBtn.UseVisualStyleBackColor = true;
-            this.backToHomeBtn.Click += new System.EventHandler(this.backToHomeBtn_Click);
+            this.changeTableBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.changeTableBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.changeTableBtn.FlatAppearance.BorderSize = 0;
+            this.changeTableBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeTableBtn.Image = global::diagram.Properties.Resources.table;
+            this.changeTableBtn.Location = new System.Drawing.Point(51, 2);
+            this.changeTableBtn.Name = "changeTableBtn";
+            this.changeTableBtn.Size = new System.Drawing.Size(38, 42);
+            this.changeTableBtn.TabIndex = 13;
+            this.changeTableBtn.UseVisualStyleBackColor = true;
+            this.changeTableBtn.Click += new System.EventHandler(this.backToHomeBtn_Click);
             // 
             // panel3
             // 
@@ -287,6 +289,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
+            // 
+            // changeUserBtn
+            // 
+            this.changeUserBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.changeUserBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.changeUserBtn.FlatAppearance.BorderSize = 0;
+            this.changeUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeUserBtn.Image = global::diagram.Properties.Resources.user;
+            this.changeUserBtn.Location = new System.Drawing.Point(0, 2);
+            this.changeUserBtn.Name = "changeUserBtn";
+            this.changeUserBtn.Size = new System.Drawing.Size(45, 42);
+            this.changeUserBtn.TabIndex = 14;
+            this.changeUserBtn.UseVisualStyleBackColor = true;
             // 
             // ServiceCenterForm
             // 
@@ -324,7 +339,7 @@
         private System.Windows.Forms.Button insertBtn;
         private System.Windows.Forms.Button minimizeBtn;
         private System.Windows.Forms.Button closeBtn;
-        private System.Windows.Forms.Button backToHomeBtn;
+        private System.Windows.Forms.Button changeTableBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
@@ -334,5 +349,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sCIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewComboBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button changeUserBtn;
     }
 }

@@ -45,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.confirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -234,13 +233,6 @@
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.Confirm_Click);
             // 
-            // confirm
-            // 
-            this.confirm.Location = new System.Drawing.Point(0, 0);
-            this.confirm.Name = "confirm";
-            this.confirm.Size = new System.Drawing.Size(75, 23);
-            this.confirm.TabIndex = 0;
-            // 
             // NewShipmentForm
             // 
             this.AcceptButton = this.saveBtn;
@@ -279,7 +271,6 @@
         private System.Windows.Forms.BindingSource deliveryBindingSource;
         private System.Windows.Forms.BindingSource shopsBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private System.Windows.Forms.Button confirm;
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
