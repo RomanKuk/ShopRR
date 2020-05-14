@@ -1,4 +1,5 @@
-﻿using diagram.Forms.InsernEdit;
+﻿using diagram.Classes;
+using diagram.Forms.InsernEdit;
 using diagram.Forms.Users;
 using System;
 using System.Linq;
@@ -79,8 +80,9 @@ namespace diagram.Forms.Table
 
         private void backToHomeBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FormState.PreviousPage = this;
             new TableControlForm(db).Show();
-            this.Close();
         }
     }
 }

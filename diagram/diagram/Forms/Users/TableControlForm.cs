@@ -1,4 +1,5 @@
-﻿using diagram.Forms.Table;
+﻿using diagram.Classes;
+using diagram.Forms.Table;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -57,12 +58,13 @@ namespace diagram.Forms.Users
         {
             Form form = tables[TableComboBox.Text];
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            FormState.PreviousPage.Show();
         }
     }
 

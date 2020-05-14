@@ -78,8 +78,9 @@ namespace diagram
 
         private void backToHomeBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Classes.FormState.PreviousPage = this;
             new TableControlForm(db).Show();
-            this.Close();
         }
     }
 }
