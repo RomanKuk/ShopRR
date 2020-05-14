@@ -33,9 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.serviceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Basket = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.basketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Breakage = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -49,12 +55,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.serviceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Basket = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Breakage = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
@@ -112,17 +112,78 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // serviceIDDataGridViewTextBoxColumn
+            // 
+            this.serviceIDDataGridViewTextBoxColumn.DataPropertyName = "Service_ID";
+            this.serviceIDDataGridViewTextBoxColumn.HeaderText = "Service_ID";
+            this.serviceIDDataGridViewTextBoxColumn.Name = "serviceIDDataGridViewTextBoxColumn";
+            this.serviceIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviceIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Код";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            // 
+            // Basket
+            // 
+            this.Basket.DataPropertyName = "Basket_ID";
+            this.Basket.DataSource = this.basketBindingSource;
+            this.Basket.DisplayMember = "Code";
+            this.Basket.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Basket.HeaderText = "Код кошику";
+            this.Basket.Name = "Basket";
+            this.Basket.ReadOnly = true;
+            this.Basket.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Basket.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Basket.ValueMember = "Basket_ID";
+            // 
             // basketBindingSource
             // 
             this.basketBindingSource.DataSource = typeof(diagram.Basket);
+            // 
+            // Breakage
+            // 
+            this.Breakage.DataPropertyName = "Breakage_ID";
+            this.Breakage.DataSource = this.breakageBindingSource;
+            this.Breakage.DisplayMember = "Breakage1";
+            this.Breakage.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Breakage.HeaderText = "Тип поломки";
+            this.Breakage.Name = "Breakage";
+            this.Breakage.ReadOnly = true;
+            this.Breakage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Breakage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Breakage.ValueMember = "Breakage_ID";
             // 
             // breakageBindingSource
             // 
             this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
             // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status_ID";
+            this.Status.DataSource = this.statusBindingSource;
+            this.Status.DisplayMember = "Status1";
+            this.Status.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Status.HeaderText = "Статус";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Status.ValueMember = "Status_ID";
+            // 
             // statusBindingSource
             // 
             this.statusBindingSource.DataSource = typeof(diagram.Status);
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // serviceBindingSource
             // 
@@ -277,67 +338,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // serviceIDDataGridViewTextBoxColumn
-            // 
-            this.serviceIDDataGridViewTextBoxColumn.DataPropertyName = "Service_ID";
-            this.serviceIDDataGridViewTextBoxColumn.HeaderText = "Service_ID";
-            this.serviceIDDataGridViewTextBoxColumn.Name = "serviceIDDataGridViewTextBoxColumn";
-            this.serviceIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.serviceIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Код";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            // 
-            // Basket
-            // 
-            this.Basket.DataPropertyName = "Basket_ID";
-            this.Basket.DataSource = this.basketBindingSource;
-            this.Basket.DisplayMember = "Code";
-            this.Basket.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Basket.HeaderText = "Код кошику";
-            this.Basket.Name = "Basket";
-            this.Basket.ReadOnly = true;
-            this.Basket.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Basket.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Basket.ValueMember = "Basket_ID";
-            // 
-            // Breakage
-            // 
-            this.Breakage.DataPropertyName = "Breakage_ID";
-            this.Breakage.DataSource = this.breakageBindingSource;
-            this.Breakage.DisplayMember = "Breakage1";
-            this.Breakage.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Breakage.HeaderText = "Тип поломки";
-            this.Breakage.Name = "Breakage";
-            this.Breakage.ReadOnly = true;
-            this.Breakage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Breakage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Breakage.ValueMember = "Breakage_ID";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status_ID";
-            this.Status.DataSource = this.statusBindingSource;
-            this.Status.DisplayMember = "Status1";
-            this.Status.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Status.HeaderText = "Статус";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Status.ValueMember = "Status_ID";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ServiceForm
             // 

@@ -33,9 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.shipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delivery = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -49,11 +54,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.shipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delivery = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
@@ -110,17 +110,71 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // shipmentIDDataGridViewTextBoxColumn
+            // 
+            this.shipmentIDDataGridViewTextBoxColumn.DataPropertyName = "Shipment_ID";
+            this.shipmentIDDataGridViewTextBoxColumn.HeaderText = "Shipment_ID";
+            this.shipmentIDDataGridViewTextBoxColumn.Name = "shipmentIDDataGridViewTextBoxColumn";
+            this.shipmentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.shipmentIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Delivery
+            // 
+            this.Delivery.DataPropertyName = "Deliver_ID";
+            this.Delivery.DataSource = this.deliveryBindingSource;
+            this.Delivery.DisplayMember = "Code";
+            this.Delivery.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Delivery.HeaderText = "Код поставки";
+            this.Delivery.Name = "Delivery";
+            this.Delivery.ReadOnly = true;
+            this.Delivery.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delivery.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delivery.ValueMember = "Deliver_ID";
+            // 
             // deliveryBindingSource
             // 
             this.deliveryBindingSource.DataSource = typeof(diagram.Delivery);
+            // 
+            // GoodsShops
+            // 
+            this.GoodsShops.DataPropertyName = "GoodsShops_ID";
+            this.GoodsShops.DataSource = this.goodsShopsBindingSource;
+            this.GoodsShops.DisplayMember = "Code";
+            this.GoodsShops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.GoodsShops.HeaderText = "Код товар/магазин";
+            this.GoodsShops.Name = "GoodsShops";
+            this.GoodsShops.ReadOnly = true;
+            this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GoodsShops.ValueMember = "GoodsShops_ID";
             // 
             // goodsShopsBindingSource
             // 
             this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
+            // Employee
+            // 
+            this.Employee.DataPropertyName = "Employee_ID";
+            this.Employee.DataSource = this.employeeBindingSource;
+            this.Employee.DisplayMember = "LastName";
+            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Employee.HeaderText = "Працівник";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Employee.ValueMember = "Employee_ID";
+            // 
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // shipmentBindingSource
             // 
@@ -275,60 +329,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // shipmentIDDataGridViewTextBoxColumn
-            // 
-            this.shipmentIDDataGridViewTextBoxColumn.DataPropertyName = "Shipment_ID";
-            this.shipmentIDDataGridViewTextBoxColumn.HeaderText = "Shipment_ID";
-            this.shipmentIDDataGridViewTextBoxColumn.Name = "shipmentIDDataGridViewTextBoxColumn";
-            this.shipmentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shipmentIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Delivery
-            // 
-            this.Delivery.DataPropertyName = "Deliver_ID";
-            this.Delivery.DataSource = this.deliveryBindingSource;
-            this.Delivery.DisplayMember = "Code";
-            this.Delivery.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Delivery.HeaderText = "Код поставки";
-            this.Delivery.Name = "Delivery";
-            this.Delivery.ReadOnly = true;
-            this.Delivery.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delivery.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delivery.ValueMember = "Deliver_ID";
-            // 
-            // GoodsShops
-            // 
-            this.GoodsShops.DataPropertyName = "GoodsShops_ID";
-            this.GoodsShops.DataSource = this.goodsShopsBindingSource;
-            this.GoodsShops.DisplayMember = "Code";
-            this.GoodsShops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.GoodsShops.HeaderText = "Код товар/магазин";
-            this.GoodsShops.Name = "GoodsShops";
-            this.GoodsShops.ReadOnly = true;
-            this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.GoodsShops.ValueMember = "GoodsShops_ID";
-            // 
-            // Employee
-            // 
-            this.Employee.DataPropertyName = "Employee_ID";
-            this.Employee.DataSource = this.employeeBindingSource;
-            this.Employee.DisplayMember = "LastName";
-            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Employee.HeaderText = "Працівник";
-            this.Employee.Name = "Employee";
-            this.Employee.ReadOnly = true;
-            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Employee.ValueMember = "Employee_ID";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ShipmentForm
             // 

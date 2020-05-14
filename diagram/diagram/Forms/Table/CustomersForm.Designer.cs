@@ -33,7 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bonusesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -47,12 +53,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bonusesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
@@ -108,9 +108,58 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // customerIDDataGridViewTextBoxColumn
+            // 
+            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "Customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
+            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bonusesDataGridViewTextBoxColumn
+            // 
+            this.bonusesDataGridViewTextBoxColumn.DataPropertyName = "Bonuses";
+            this.bonusesDataGridViewTextBoxColumn.HeaderText = "Бонуси";
+            this.bonusesDataGridViewTextBoxColumn.Name = "bonusesDataGridViewTextBoxColumn";
+            this.bonusesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.DataSource = this.addressBindingSource;
+            this.addressDataGridViewTextBoxColumn.DisplayMember = "Name";
+            this.addressDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.addressDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.addressDataGridViewTextBoxColumn.ValueMember = "Address_ID";
+            // 
             // addressBindingSource
             // 
             this.addressBindingSource.DataSource = typeof(diagram.Address);
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Номер телефону";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customersBindingSource
             // 
@@ -265,55 +314,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // customerIDDataGridViewTextBoxColumn
-            // 
-            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "Customer_ID";
-            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Customer_ID";
-            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
-            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bonusesDataGridViewTextBoxColumn
-            // 
-            this.bonusesDataGridViewTextBoxColumn.DataPropertyName = "Bonuses";
-            this.bonusesDataGridViewTextBoxColumn.HeaderText = "Бонуси";
-            this.bonusesDataGridViewTextBoxColumn.Name = "bonusesDataGridViewTextBoxColumn";
-            this.bonusesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.DataSource = this.addressBindingSource;
-            this.addressDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.addressDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.addressDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.addressDataGridViewTextBoxColumn.ValueMember = "Address_ID";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Номер телефону";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // CustomersForm
             // 

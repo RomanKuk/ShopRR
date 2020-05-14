@@ -33,8 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.serviceTransportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Service = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ServiceCenter = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviceTransportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,11 +53,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.serviceTransportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Service = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ServiceCenter = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
@@ -108,13 +108,61 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // serviceTransportationIDDataGridViewTextBoxColumn
+            // 
+            this.serviceTransportationIDDataGridViewTextBoxColumn.DataPropertyName = "ServiceTransportation_ID";
+            this.serviceTransportationIDDataGridViewTextBoxColumn.HeaderText = "ServiceTransportation_ID";
+            this.serviceTransportationIDDataGridViewTextBoxColumn.Name = "serviceTransportationIDDataGridViewTextBoxColumn";
+            this.serviceTransportationIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviceTransportationIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Код";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            // 
+            // Service
+            // 
+            this.Service.DataPropertyName = "Service_ID";
+            this.Service.DataSource = this.serviceBindingSource;
+            this.Service.DisplayMember = "Code";
+            this.Service.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Service.HeaderText = "Код сервісного обслуговування";
+            this.Service.Name = "Service";
+            this.Service.ReadOnly = true;
+            this.Service.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Service.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Service.ValueMember = "Service_ID";
+            // 
             // serviceBindingSource
             // 
             this.serviceBindingSource.DataSource = typeof(diagram.Service);
             // 
+            // ServiceCenter
+            // 
+            this.ServiceCenter.DataPropertyName = "SC_ID";
+            this.ServiceCenter.DataSource = this.serviceCenterBindingSource;
+            this.ServiceCenter.DisplayMember = "Code";
+            this.ServiceCenter.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.ServiceCenter.HeaderText = "Код сервісного центру";
+            this.ServiceCenter.Name = "ServiceCenter";
+            this.ServiceCenter.ReadOnly = true;
+            this.ServiceCenter.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ServiceCenter.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ServiceCenter.ValueMember = "SC_ID";
+            // 
             // serviceCenterBindingSource
             // 
             this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // serviceTransportationBindingSource
             // 
@@ -269,54 +317,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // serviceTransportationIDDataGridViewTextBoxColumn
-            // 
-            this.serviceTransportationIDDataGridViewTextBoxColumn.DataPropertyName = "ServiceTransportation_ID";
-            this.serviceTransportationIDDataGridViewTextBoxColumn.HeaderText = "ServiceTransportation_ID";
-            this.serviceTransportationIDDataGridViewTextBoxColumn.Name = "serviceTransportationIDDataGridViewTextBoxColumn";
-            this.serviceTransportationIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.serviceTransportationIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Код";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            // 
-            // Service
-            // 
-            this.Service.DataPropertyName = "Service_ID";
-            this.Service.DataSource = this.serviceBindingSource;
-            this.Service.DisplayMember = "Code";
-            this.Service.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Service.HeaderText = "Код сервісного обслуговування";
-            this.Service.Name = "Service";
-            this.Service.ReadOnly = true;
-            this.Service.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Service.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Service.ValueMember = "Service_ID";
-            // 
-            // ServiceCenter
-            // 
-            this.ServiceCenter.DataPropertyName = "SC_ID";
-            this.ServiceCenter.DataSource = this.serviceCenterBindingSource;
-            this.ServiceCenter.DisplayMember = "Code";
-            this.ServiceCenter.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ServiceCenter.HeaderText = "Код сервісного центру";
-            this.ServiceCenter.Name = "ServiceCenter";
-            this.ServiceCenter.ReadOnly = true;
-            this.ServiceCenter.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ServiceCenter.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ServiceCenter.ValueMember = "SC_ID";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ServiceTransportationForm
             // 

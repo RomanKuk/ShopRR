@@ -492,6 +492,12 @@
     <Compile Include="Forms\Users\Seller\Transportations\NewTransportationForm.designer.cs">
       <DependentUpon>NewTransportationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Users\TableControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\TableControlForm.Designer.cs">
+      <DependentUpon>TableControlForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Goods.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -754,6 +760,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\Seller\Transportations\NewTransportationForm.resx">
       <DependentUpon>NewTransportationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\TableControlForm.resx">
+      <DependentUpon>TableControlForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -33,7 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -47,10 +51,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
@@ -104,9 +104,44 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // shopIDDataGridViewTextBoxColumn
+            // 
+            this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
+            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop_ID";
+            this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
+            this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.shopIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Код";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.DataSource = this.addressBindingSource;
+            this.addressDataGridViewTextBoxColumn.DisplayMember = "Name";
+            this.addressDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.addressDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.addressDataGridViewTextBoxColumn.ValueMember = "Address_ID";
+            // 
             // addressBindingSource
             // 
             this.addressBindingSource.DataSource = typeof(diagram.Address);
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // shopsBindingSource
             // 
@@ -261,41 +296,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // shopIDDataGridViewTextBoxColumn
-            // 
-            this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop_ID";
-            this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
-            this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shopIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Код";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.DataSource = this.addressBindingSource;
-            this.addressDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.addressDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.addressDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.addressDataGridViewTextBoxColumn.ValueMember = "Address_ID";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ShopsForm
             // 

@@ -33,7 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.categoriesSCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesSCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,9 +51,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.categoriesSCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
@@ -104,9 +104,43 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // categoriesSCIDDataGridViewTextBoxColumn
+            // 
+            this.categoriesSCIDDataGridViewTextBoxColumn.DataPropertyName = "CategoriesSC_ID";
+            this.categoriesSCIDDataGridViewTextBoxColumn.HeaderText = "CategoriesSC_ID";
+            this.categoriesSCIDDataGridViewTextBoxColumn.Name = "categoriesSCIDDataGridViewTextBoxColumn";
+            this.categoriesSCIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoriesSCIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sCIDDataGridViewTextBoxColumn
+            // 
+            this.sCIDDataGridViewTextBoxColumn.DataPropertyName = "SC_ID";
+            this.sCIDDataGridViewTextBoxColumn.DataSource = this.serviceCenterBindingSource;
+            this.sCIDDataGridViewTextBoxColumn.DisplayMember = "Code";
+            this.sCIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.sCIDDataGridViewTextBoxColumn.HeaderText = "Код сервісного центру";
+            this.sCIDDataGridViewTextBoxColumn.Name = "sCIDDataGridViewTextBoxColumn";
+            this.sCIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sCIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.sCIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.sCIDDataGridViewTextBoxColumn.ValueMember = "SC_ID";
+            // 
             // serviceCenterBindingSource
             // 
             this.serviceCenterBindingSource.DataSource = typeof(diagram.ServiceCenter);
+            // 
+            // categoryIDDataGridViewTextBoxColumn
+            // 
+            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "Category_ID";
+            this.categoryIDDataGridViewTextBoxColumn.DataSource = this.categoriesBindingSource;
+            this.categoryIDDataGridViewTextBoxColumn.DisplayMember = "Name";
+            this.categoryIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "Категорія";
+            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
+            this.categoryIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.categoryIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.categoryIDDataGridViewTextBoxColumn.ValueMember = "Category_ID";
             // 
             // categoriesBindingSource
             // 
@@ -265,40 +299,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // categoriesSCIDDataGridViewTextBoxColumn
-            // 
-            this.categoriesSCIDDataGridViewTextBoxColumn.DataPropertyName = "CategoriesSC_ID";
-            this.categoriesSCIDDataGridViewTextBoxColumn.HeaderText = "CategoriesSC_ID";
-            this.categoriesSCIDDataGridViewTextBoxColumn.Name = "categoriesSCIDDataGridViewTextBoxColumn";
-            this.categoriesSCIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoriesSCIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sCIDDataGridViewTextBoxColumn
-            // 
-            this.sCIDDataGridViewTextBoxColumn.DataPropertyName = "SC_ID";
-            this.sCIDDataGridViewTextBoxColumn.DataSource = this.serviceCenterBindingSource;
-            this.sCIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.sCIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.sCIDDataGridViewTextBoxColumn.HeaderText = "Код сервісного центру";
-            this.sCIDDataGridViewTextBoxColumn.Name = "sCIDDataGridViewTextBoxColumn";
-            this.sCIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sCIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.sCIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.sCIDDataGridViewTextBoxColumn.ValueMember = "SC_ID";
-            // 
-            // categoryIDDataGridViewTextBoxColumn
-            // 
-            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "Category_ID";
-            this.categoryIDDataGridViewTextBoxColumn.DataSource = this.categoriesBindingSource;
-            this.categoryIDDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.categoryIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "Категорія";
-            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
-            this.categoryIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.categoryIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.categoryIDDataGridViewTextBoxColumn.ValueMember = "Category_ID";
             // 
             // CategoriesSCForm
             // 

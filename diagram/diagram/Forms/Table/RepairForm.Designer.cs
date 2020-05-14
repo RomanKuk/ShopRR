@@ -33,7 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.repairIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceTransportation = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serviceTransportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.repairBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -47,10 +51,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.repairIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ServiceTransportation = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repairBindingSource)).BeginInit();
@@ -104,9 +104,44 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // repairIDDataGridViewTextBoxColumn
+            // 
+            this.repairIDDataGridViewTextBoxColumn.DataPropertyName = "Repair_ID";
+            this.repairIDDataGridViewTextBoxColumn.HeaderText = "Repair_ID";
+            this.repairIDDataGridViewTextBoxColumn.Name = "repairIDDataGridViewTextBoxColumn";
+            this.repairIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.repairIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ServiceTransportation
+            // 
+            this.ServiceTransportation.DataPropertyName = "ServiceTransportation_ID";
+            this.ServiceTransportation.DataSource = this.serviceTransportationBindingSource;
+            this.ServiceTransportation.DisplayMember = "Code";
+            this.ServiceTransportation.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.ServiceTransportation.HeaderText = "Код сервісного перевезення";
+            this.ServiceTransportation.Name = "ServiceTransportation";
+            this.ServiceTransportation.ReadOnly = true;
+            this.ServiceTransportation.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ServiceTransportation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ServiceTransportation.ValueMember = "ServiceTransportation_ID";
+            // 
             // serviceTransportationBindingSource
             // 
             this.serviceTransportationBindingSource.DataSource = typeof(diagram.ServiceTransportation);
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Коментар";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // repairBindingSource
             // 
@@ -261,41 +296,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // repairIDDataGridViewTextBoxColumn
-            // 
-            this.repairIDDataGridViewTextBoxColumn.DataPropertyName = "Repair_ID";
-            this.repairIDDataGridViewTextBoxColumn.HeaderText = "Repair_ID";
-            this.repairIDDataGridViewTextBoxColumn.Name = "repairIDDataGridViewTextBoxColumn";
-            this.repairIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.repairIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // ServiceTransportation
-            // 
-            this.ServiceTransportation.DataPropertyName = "ServiceTransportation_ID";
-            this.ServiceTransportation.DataSource = this.serviceTransportationBindingSource;
-            this.ServiceTransportation.DisplayMember = "Code";
-            this.ServiceTransportation.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ServiceTransportation.HeaderText = "Код сервісного перевезення";
-            this.ServiceTransportation.Name = "ServiceTransportation";
-            this.ServiceTransportation.ReadOnly = true;
-            this.ServiceTransportation.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ServiceTransportation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ServiceTransportation.ValueMember = "ServiceTransportation_ID";
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "Коментар";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // RepairForm
             // 

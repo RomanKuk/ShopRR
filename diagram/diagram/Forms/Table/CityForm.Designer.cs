@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Countries = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,9 +50,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Countries = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
@@ -101,6 +101,34 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // cityIDDataGridViewTextBoxColumn
+            // 
+            this.cityIDDataGridViewTextBoxColumn.DataPropertyName = "City_ID";
+            this.cityIDDataGridViewTextBoxColumn.HeaderText = "City_ID";
+            this.cityIDDataGridViewTextBoxColumn.Name = "cityIDDataGridViewTextBoxColumn";
+            this.cityIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cityIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Місто";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Countries
+            // 
+            this.Countries.DataPropertyName = "Country_ID";
+            this.Countries.DataSource = this.countriesBindingSource;
+            this.Countries.DisplayMember = "Name";
+            this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Countries.HeaderText = "Країна";
+            this.Countries.Name = "Countries";
+            this.Countries.ReadOnly = true;
+            this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Countries.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Countries.ValueMember = "Country_ID";
             // 
             // countriesBindingSource
             // 
@@ -259,34 +287,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // cityIDDataGridViewTextBoxColumn
-            // 
-            this.cityIDDataGridViewTextBoxColumn.DataPropertyName = "City_ID";
-            this.cityIDDataGridViewTextBoxColumn.HeaderText = "City_ID";
-            this.cityIDDataGridViewTextBoxColumn.Name = "cityIDDataGridViewTextBoxColumn";
-            this.cityIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cityIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Місто";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Countries
-            // 
-            this.Countries.DataPropertyName = "Country_ID";
-            this.Countries.DataSource = this.countriesBindingSource;
-            this.Countries.DisplayMember = "Name";
-            this.Countries.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Countries.HeaderText = "Країна";
-            this.Countries.Name = "Countries";
-            this.Countries.ReadOnly = true;
-            this.Countries.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Countries.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Countries.ValueMember = "Country_ID";
             // 
             // CityForm
             // 

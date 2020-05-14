@@ -33,8 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.transportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GS_in_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,12 +54,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.transportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsShops = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.GS_in_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -110,13 +110,74 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
+            // transportationIDDataGridViewTextBoxColumn
+            // 
+            this.transportationIDDataGridViewTextBoxColumn.DataPropertyName = "Transportation_ID";
+            this.transportationIDDataGridViewTextBoxColumn.HeaderText = "Transportation_ID";
+            this.transportationIDDataGridViewTextBoxColumn.Name = "transportationIDDataGridViewTextBoxColumn";
+            this.transportationIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transportationIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // GoodsShops
+            // 
+            this.GoodsShops.DataPropertyName = "GS_from_ID";
+            this.GoodsShops.DataSource = this.goodsShopsBindingSource;
+            this.GoodsShops.DisplayMember = "Code";
+            this.GoodsShops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.GoodsShops.HeaderText = "Код магазину (звідки)";
+            this.GoodsShops.Name = "GoodsShops";
+            this.GoodsShops.ReadOnly = true;
+            this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GoodsShops.ValueMember = "GoodsShops_ID";
+            // 
             // goodsShopsBindingSource
             // 
             this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
+            // GS_in_ID
+            // 
+            this.GS_in_ID.DataPropertyName = "GS_in_ID";
+            this.GS_in_ID.DataSource = this.goodsShopsBindingSource;
+            this.GS_in_ID.DisplayMember = "Code";
+            this.GS_in_ID.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.GS_in_ID.HeaderText = "Код магазину (куди)";
+            this.GS_in_ID.Name = "GS_in_ID";
+            this.GS_in_ID.ReadOnly = true;
+            this.GS_in_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GS_in_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GS_in_ID.ValueMember = "GoodsShops_ID";
+            // 
+            // Employee
+            // 
+            this.Employee.DataPropertyName = "Employee_ID";
+            this.Employee.DataSource = this.employeeBindingSource;
+            this.Employee.DisplayMember = "LastName";
+            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Employee.HeaderText = "Працівник";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Employee.ValueMember = "Employee_ID";
+            // 
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // countDataGridViewTextBoxColumn
+            // 
+            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
+            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
+            this.countDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // transportationBindingSource
             // 
@@ -271,67 +332,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // transportationIDDataGridViewTextBoxColumn
-            // 
-            this.transportationIDDataGridViewTextBoxColumn.DataPropertyName = "Transportation_ID";
-            this.transportationIDDataGridViewTextBoxColumn.HeaderText = "Transportation_ID";
-            this.transportationIDDataGridViewTextBoxColumn.Name = "transportationIDDataGridViewTextBoxColumn";
-            this.transportationIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.transportationIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // GoodsShops
-            // 
-            this.GoodsShops.DataPropertyName = "GS_from_ID";
-            this.GoodsShops.DataSource = this.goodsShopsBindingSource;
-            this.GoodsShops.DisplayMember = "Code";
-            this.GoodsShops.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.GoodsShops.HeaderText = "Код магазину (звідки)";
-            this.GoodsShops.Name = "GoodsShops";
-            this.GoodsShops.ReadOnly = true;
-            this.GoodsShops.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GoodsShops.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.GoodsShops.ValueMember = "GoodsShops_ID";
-            // 
-            // GS_in_ID
-            // 
-            this.GS_in_ID.DataPropertyName = "GS_in_ID";
-            this.GS_in_ID.DataSource = this.goodsShopsBindingSource;
-            this.GS_in_ID.DisplayMember = "Code";
-            this.GS_in_ID.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.GS_in_ID.HeaderText = "Код магазину (куди)";
-            this.GS_in_ID.Name = "GS_in_ID";
-            this.GS_in_ID.ReadOnly = true;
-            this.GS_in_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GS_in_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.GS_in_ID.ValueMember = "GoodsShops_ID";
-            // 
-            // Employee
-            // 
-            this.Employee.DataPropertyName = "Employee_ID";
-            this.Employee.DataSource = this.employeeBindingSource;
-            this.Employee.DisplayMember = "LastName";
-            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Employee.HeaderText = "Працівник";
-            this.Employee.Name = "Employee";
-            this.Employee.ReadOnly = true;
-            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Employee.ValueMember = "Employee_ID";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            this.countDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // TransportationForm
             // 
