@@ -83,6 +83,7 @@
     <Compile Include="City.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\AdminMenu.cs" />
     <Compile Include="Classes\CodeGenerator.cs" />
     <Compile Include="Countries.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -275,6 +276,12 @@
     </Compile>
     <Compile Include="Forms\InsernEdit\TransportationIEF.Designer.cs">
       <DependentUpon>TransportationIEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Users\Seller\NewSalesForm.cs">
       <SubType>Form</SubType>
@@ -646,6 +653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsernEdit\TransportationIEF.resx">
       <DependentUpon>TransportationIEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\Seller\NewSalesForm.resx">
       <DependentUpon>NewSalesForm.cs</DependentUpon>

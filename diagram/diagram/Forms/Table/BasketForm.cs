@@ -1,12 +1,7 @@
-﻿using diagram.Forms.InsernEdit;
+﻿using diagram.Classes;
+using diagram.Forms.InsernEdit;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram.Forms.Table
@@ -14,8 +9,16 @@ namespace diagram.Forms.Table
     public partial class BasketForm : Form
     {
         my_db_for_db_2Entities db;
-        public BasketForm(my_db_for_db_2Entities _db)
+        Employee employee;
+        public BasketForm(my_db_for_db_2Entities _db, Employee _employee)
         {
+            employee = _employee;
+            if (employee.Employee_ID.Equals(4))//якщо адмін
+            {
+                MenuStrip menuStrip = AdminMenu.getMenu(db, employee);
+                this.MainMenuStrip = menuStrip;
+                this.Controls.Add(menuStrip);
+            }
             InitializeComponent();
             db = _db;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using diagram.Classes;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,8 +8,16 @@ namespace diagram
     public partial class CityForm : Form
     {
         my_db_for_db_2Entities db;
-        public CityForm(my_db_for_db_2Entities _db)
+        Employee employee;
+        public CityForm(my_db_for_db_2Entities _db, Employee _employee)
         {
+            employee = _employee;
+            if (employee.Employee_ID.Equals(4))//якщо адмін
+            {
+                MenuStrip menuStrip = AdminMenu.getMenu(db, employee);
+                this.MainMenuStrip = menuStrip;
+                this.Controls.Add(menuStrip);
+            }
             InitializeComponent();
             db = _db;
         }

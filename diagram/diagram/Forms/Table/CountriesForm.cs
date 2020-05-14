@@ -1,4 +1,5 @@
-﻿using System;
+﻿using diagram.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,16 @@ namespace diagram
     public partial class CountriesForm : Form
     {
         my_db_for_db_2Entities db;
-        public CountriesForm(my_db_for_db_2Entities _db)
+        Employee employee;
+        public CountriesForm(my_db_for_db_2Entities _db, Employee _employee)
         {
+            employee = _employee;
+            if (employee.Employee_ID.Equals(4))//якщо адмін
+            {
+                MenuStrip menuStrip = AdminMenu.getMenu(db, employee);
+                this.MainMenuStrip = menuStrip;
+                this.Controls.Add(menuStrip);
+            }
             InitializeComponent();
             db = _db;
         }

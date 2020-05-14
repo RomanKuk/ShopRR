@@ -1,4 +1,5 @@
-﻿using diagram.Forms.InsernEdit;
+﻿using diagram.Classes;
+using diagram.Forms.InsernEdit;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,10 +9,22 @@ namespace diagram.Forms.Table
     public partial class AddressForm : Form
     {
         my_db_for_db_2Entities db;
-        public AddressForm(my_db_for_db_2Entities _db)
+        Employee employee;
+        public AddressForm(my_db_for_db_2Entities _db, Employee _employee)
         {
             InitializeComponent();
+            employee = _employee;
             db = _db;
+            if (employee.Employee_ID.Equals(4))//якщо адмін
+            {
+                MenuStrip menuStrip = AdminMenu.getMenu(db, employee);
+                this.MainMenuStrip = menuStrip;
+                //this.Controls.Add(menuStrip);
+                panel5.Controls.Add(menuStrip);
+                menuStrip.Location = new System.Drawing.Point(79, 4);
+                menuStrip.Name = "menuStrip";
+                menuStrip.Size = new System.Drawing.Size(38, 38);
+            }
         }
 
         private void AddressForm_Load(object sender, EventArgs e)

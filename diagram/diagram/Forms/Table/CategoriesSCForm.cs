@@ -1,4 +1,5 @@
-﻿using diagram.Forms.InsernEdit;
+﻿using diagram.Classes;
+using diagram.Forms.InsernEdit;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,8 +9,16 @@ namespace diagram.Forms.Table
     public partial class CategoriesSCForm : Form
     {
         my_db_for_db_2Entities db;
-        public CategoriesSCForm(my_db_for_db_2Entities _db)
+        Employee employee;
+        public CategoriesSCForm(my_db_for_db_2Entities _db, Employee _employee)
         {
+            employee = _employee;
+            if (employee.Employee_ID.Equals(4))//якщо адмін
+            {
+                MenuStrip menuStrip = AdminMenu.getMenu(db, employee);
+                this.MainMenuStrip = menuStrip;
+                this.Controls.Add(menuStrip);
+            }
             InitializeComponent();
             db = _db;
         }
