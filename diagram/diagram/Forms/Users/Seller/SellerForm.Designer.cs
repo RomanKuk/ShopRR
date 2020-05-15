@@ -29,30 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.GStabPage = new System.Windows.Forms.TabPage();
-            this.OnlyThisShopCheckBox = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
             this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsShopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.advancedDataSet = new diagram.advancedDataSet();
             this.SalestabPage = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.advancedDataGridView2 = new Zuby.ADGV.AdvancedDataGridView();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -65,15 +58,26 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.goodsShopsTableAdapter = new diagram.advancedDataSetTableAdapters.GoodsShopsTableAdapter();
+            this.salesTableAdapter = new diagram.advancedDataSetTableAdapters.SalesTableAdapter();
+            this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.GStabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).BeginInit();
             this.SalestabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -98,135 +102,109 @@
             // 
             this.GStabPage.BackColor = System.Drawing.Color.Transparent;
             this.GStabPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GStabPage.Controls.Add(this.OnlyThisShopCheckBox);
-            this.GStabPage.Controls.Add(this.dataGridView1);
+            this.GStabPage.Controls.Add(this.advancedDataGridView1);
             this.GStabPage.Location = new System.Drawing.Point(4, 36);
             this.GStabPage.Name = "GStabPage";
             this.GStabPage.Size = new System.Drawing.Size(992, 335);
             this.GStabPage.TabIndex = 0;
             this.GStabPage.Text = "Всі товари";
             // 
-            // OnlyThisShopCheckBox
+            // advancedDataGridView1
             // 
-            this.OnlyThisShopCheckBox.BackColor = System.Drawing.Color.HotPink;
-            this.OnlyThisShopCheckBox.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OnlyThisShopCheckBox.Location = new System.Drawing.Point(771, 0);
-            this.OnlyThisShopCheckBox.Name = "OnlyThisShopCheckBox";
-            this.OnlyThisShopCheckBox.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.OnlyThisShopCheckBox.Size = new System.Drawing.Size(224, 30);
-            this.OnlyThisShopCheckBox.TabIndex = 1;
-            this.OnlyThisShopCheckBox.Text = "Лише в цьому магазині";
-            this.OnlyThisShopCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.OnlyThisShopCheckBox.UseVisualStyleBackColor = false;
-            this.OnlyThisShopCheckBox.CheckedChanged += new System.EventHandler(this.OnlyThisShopCheckBox_CheckedChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.advancedDataGridView1.AllowUserToAddRows = false;
+            this.advancedDataGridView1.AllowUserToDeleteRows = false;
+            this.advancedDataGridView1.AutoGenerateColumns = false;
+            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.goodsShopsIDDataGridViewTextBoxColumn,
             this.codeDataGridViewTextBoxColumn,
             this.goodIDDataGridViewTextBoxColumn,
-            this.countDataGridViewTextBoxColumn,
-            this.shopIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.goodsShopsBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 333);
-            this.dataGridView1.TabIndex = 0;
+            this.shopIDDataGridViewTextBoxColumn,
+            this.countDataGridViewTextBoxColumn});
+            this.advancedDataGridView1.DataSource = this.goodsShopsBindingSource1;
+            this.advancedDataGridView1.FilterAndSortEnabled = true;
+            this.advancedDataGridView1.Location = new System.Drawing.Point(13, 21);
+            this.advancedDataGridView1.Name = "advancedDataGridView1";
+            this.advancedDataGridView1.ReadOnly = true;
+            this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridView1.Size = new System.Drawing.Size(942, 270);
+            this.advancedDataGridView1.TabIndex = 0;
             // 
             // goodsShopsIDDataGridViewTextBoxColumn
             // 
             this.goodsShopsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsShops_ID";
             this.goodsShopsIDDataGridViewTextBoxColumn.HeaderText = "GoodsShops_ID";
+            this.goodsShopsIDDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.goodsShopsIDDataGridViewTextBoxColumn.Name = "goodsShopsIDDataGridViewTextBoxColumn";
             this.goodsShopsIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodsShopsIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.goodsShopsIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // codeDataGridViewTextBoxColumn
             // 
             this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
             this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // goodIDDataGridViewTextBoxColumn
             // 
             this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
             this.goodIDDataGridViewTextBoxColumn.DataSource = this.goodsBindingSource;
             this.goodIDDataGridViewTextBoxColumn.DisplayMember = "Model";
-            this.goodIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Модель товару";
+            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good_ID";
+            this.goodIDDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
             this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.goodIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.goodIDDataGridViewTextBoxColumn.ValueMember = "Good_ID";
             // 
             // goodsBindingSource
             // 
             this.goodsBindingSource.DataSource = typeof(diagram.Goods);
             // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            this.countDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // shopIDDataGridViewTextBoxColumn
             // 
             this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
             this.shopIDDataGridViewTextBoxColumn.DataSource = this.shopsBindingSource;
             this.shopIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.shopIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Код магазину";
+            this.shopIDDataGridViewTextBoxColumn.HeaderText = "Shop_ID";
+            this.shopIDDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.shopIDDataGridViewTextBoxColumn.Name = "shopIDDataGridViewTextBoxColumn";
             this.shopIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.shopIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.shopIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.shopIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.shopIDDataGridViewTextBoxColumn.ValueMember = "Shop_ID";
             // 
             // shopsBindingSource
             // 
             this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
-            // goodsShopsBindingSource
+            // countDataGridViewTextBoxColumn
             // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
+            this.countDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
+            this.countDataGridViewTextBoxColumn.ReadOnly = true;
+            this.countDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // goodsShopsBindingSource1
+            // 
+            this.goodsShopsBindingSource1.DataMember = "GoodsShops";
+            this.goodsShopsBindingSource1.DataSource = this.advancedDataSet;
+            // 
+            // advancedDataSet
+            // 
+            this.advancedDataSet.DataSetName = "advancedDataSet";
+            this.advancedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // SalestabPage
             // 
-            this.SalestabPage.Controls.Add(this.dataGridView2);
+            this.SalestabPage.Controls.Add(this.advancedDataGridView2);
             this.SalestabPage.Location = new System.Drawing.Point(4, 36);
             this.SalestabPage.Name = "SalestabPage";
             this.SalestabPage.Size = new System.Drawing.Size(992, 335);
@@ -234,89 +212,40 @@
             this.SalestabPage.Text = "Продажі";
             this.SalestabPage.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // advancedDataGridView2
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.ColumnHeadersHeight = 30;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.advancedDataGridView2.AllowUserToAddRows = false;
+            this.advancedDataGridView2.AllowUserToDeleteRows = false;
+            this.advancedDataGridView2.AutoGenerateColumns = false;
+            this.advancedDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.salesIDDataGridViewTextBoxColumn,
             this.salesCodeDataGridViewTextBoxColumn,
             this.employeeIDDataGridViewTextBoxColumn,
             this.customerIDDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.salesBindingSource;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.GridColor = System.Drawing.Color.LightSkyBlue;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(992, 335);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // salesIDDataGridViewTextBoxColumn
-            // 
-            this.salesIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_ID";
-            this.salesIDDataGridViewTextBoxColumn.HeaderText = "Sales_ID";
-            this.salesIDDataGridViewTextBoxColumn.Name = "salesIDDataGridViewTextBoxColumn";
-            this.salesIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.salesIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // salesCodeDataGridViewTextBoxColumn
-            // 
-            this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
-            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "Код продажу";
-            this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
-            this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIDDataGridViewTextBoxColumn
-            // 
-            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
-            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // customerIDDataGridViewTextBoxColumn
-            // 
-            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "Customer_ID";
-            this.customerIDDataGridViewTextBoxColumn.DataSource = this.customersBindingSource;
-            this.customerIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
-            this.customerIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Покупець";
-            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
-            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.customerIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.customerIDDataGridViewTextBoxColumn.ValueMember = "Customer_ID";
+            this.advancedDataGridView2.DataSource = this.salesBindingSource1;
+            this.advancedDataGridView2.FilterAndSortEnabled = true;
+            this.advancedDataGridView2.Location = new System.Drawing.Point(18, 19);
+            this.advancedDataGridView2.Name = "advancedDataGridView2";
+            this.advancedDataGridView2.ReadOnly = true;
+            this.advancedDataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridView2.Size = new System.Drawing.Size(899, 287);
+            this.advancedDataGridView2.TabIndex = 0;
             // 
             // customersBindingSource
             // 
             this.customersBindingSource.DataSource = typeof(diagram.Customers);
             // 
-            // dateDataGridViewTextBoxColumn
+            // salesBindingSource1
             // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salesBindingSource1.DataMember = "Sales";
+            this.salesBindingSource1.DataSource = this.advancedDataSet;
             // 
-            // totalDataGridViewTextBoxColumn
+            // goodsShopsBindingSource
             // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Загальна вартість";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
             // 
             // salesBindingSource
             // 
@@ -475,6 +404,75 @@
             this.panel1.Size = new System.Drawing.Size(1000, 375);
             this.panel1.TabIndex = 11;
             // 
+            // goodsShopsTableAdapter
+            // 
+            this.goodsShopsTableAdapter.ClearBeforeFill = true;
+            // 
+            // salesTableAdapter
+            // 
+            this.salesTableAdapter.ClearBeforeFill = true;
+            // 
+            // salesIDDataGridViewTextBoxColumn
+            // 
+            this.salesIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_ID";
+            this.salesIDDataGridViewTextBoxColumn.HeaderText = "Sales_ID";
+            this.salesIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.salesIDDataGridViewTextBoxColumn.Name = "salesIDDataGridViewTextBoxColumn";
+            this.salesIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salesIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.salesIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // salesCodeDataGridViewTextBoxColumn
+            // 
+            this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
+            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "SalesCode";
+            this.salesCodeDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
+            this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salesCodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // employeeIDDataGridViewTextBoxColumn
+            // 
+            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
+            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeeIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.employeeIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // customerIDDataGridViewTextBoxColumn
+            // 
+            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "Customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.DataSource = this.customersBindingSource;
+            this.customerIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
+            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
+            this.customerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.customerIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.customerIDDataGridViewTextBoxColumn.ValueMember = "Customer_ID";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // SellerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -488,13 +486,16 @@
             this.Load += new System.EventHandler(this.SellerForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.GStabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).EndInit();
             this.SalestabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -509,13 +510,10 @@
         #endregion
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage GStabPage;
-        private System.Windows.Forms.CheckBox OnlyThisShopCheckBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.BindingSource shopsBindingSource;
         private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.TabPage SalestabPage;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private System.Windows.Forms.BindingSource salesBindingSource;
 
@@ -529,17 +527,24 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button NewConsumerBtn;
+        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView1;
+        private advancedDataSet advancedDataSet;
+        private System.Windows.Forms.BindingSource goodsShopsBindingSource1;
+        private advancedDataSetTableAdapters.GoodsShopsTableAdapter goodsShopsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn goodIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn shopIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
+        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView2;
+        private System.Windows.Forms.BindingSource salesBindingSource1;
+        private advancedDataSetTableAdapters.SalesTableAdapter salesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn customerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button NewConsumerBtn;
     }
 }

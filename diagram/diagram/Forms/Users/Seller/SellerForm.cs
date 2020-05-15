@@ -18,23 +18,12 @@ namespace diagram.Forms.Users.Seller
             InitializeComponent();
         }
 
-        private void UpdateGSTable()
-        {
-            if (OnlyThisShopCheckBox.Checked)
-            {
-                goodsShopsBindingSource.DataSource =
-                    (db.GoodsShops as IEnumerable<GoodsShops>)
-                    .Where(x => x.Shop_ID.Equals(employee.Shop_ID))
-                    .ToList();
-            }
-            else
-            {
-                goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
-            }
-        }
-
         private void SellerForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'advancedDataSet.Sales' table. You can move, or remove it, as needed.
+            this.salesTableAdapter.Fill(this.advancedDataSet.Sales);
+            // TODO: This line of code loads data into the 'advancedDataSet.GoodsShops' table. You can move, or remove it, as needed.
+            this.goodsShopsTableAdapter.Fill(this.advancedDataSet.GoodsShops);
             goodsBindingSource.DataSource = db.Goods.ToList();
             shopsBindingSource.DataSource = db.Shops.ToList();
             goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
@@ -53,7 +42,7 @@ namespace diagram.Forms.Users.Seller
 
         private void OnlyThisShopCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateGSTable();
+            goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
         }
 
         private void newSalesBtn_Click(object sender, EventArgs e)
@@ -65,7 +54,7 @@ namespace diagram.Forms.Users.Seller
                     salesBindingSource.DataSource = db.Sales.ToList();
                 }
             }
-            UpdateGSTable();
+            goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
 
         }
 

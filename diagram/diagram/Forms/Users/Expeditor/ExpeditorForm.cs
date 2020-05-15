@@ -17,10 +17,18 @@ namespace diagram.Forms.Users.Expeditor
 
         private void ExpeditorForm_Load(object sender, EventArgs e)
         {
-            deliveryBindingSource.DataSource = db.Delivery.ToList();//може знадобитися 2
+            // TODO: This line of code loads data into the 'advancedDataSet.Shipment' table. You can move, or remove it, as needed.
+            this.shipmentTableAdapter.Fill(this.advancedDataSet.Shipment);
+            // TODO: This line of code loads data into the 'advancedDataSet.Delivery' table. You can move, or remove it, as needed.
+            this.deliveryTableAdapter.Fill(this.advancedDataSet.Delivery);
+            // TODO: This line of code loads data into the 'advancedDataSet.Shipment' table. You can move, or remove it, as needed.
+            this.shipmentTableAdapter.Fill(this.advancedDataSet.Shipment);
+            // TODO: This line of code loads data into the 'advancedDataSet.Delivery' table. You can move, or remove it, as needed.
+            this.deliveryTableAdapter.Fill(this.advancedDataSet.Delivery);
+            deliveryBindingSource1.DataSource = db.Delivery.ToList();//може знадобитися 2
             goodsBindingSource.DataSource = db.Goods.ToList();
             provideOrderBindingSource.DataSource = db.ProvideOrder.ToList();
-            shipmentBindingSource.DataSource = db.Shipment.ToList();
+            //shipmentBindingSource.DataSource = db.Shipment.ToList();
             goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
             employeeBindingSource.DataSource = db.Employee.ToList();
 

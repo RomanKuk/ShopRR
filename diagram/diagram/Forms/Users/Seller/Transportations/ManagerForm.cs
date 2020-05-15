@@ -18,6 +18,8 @@ namespace diagram.Forms.Users.Seller.Transportations
         }
         private void ManagerForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'advancedDataSet.Transportation' table. You can move, or remove it, as needed.
+            this.transportationTableAdapter.Fill(this.advancedDataSet.Transportation);
             transportationBindingSource.DataSource = db.Transportation.ToList();
             goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
             employeeBindingSource1.DataSource = db.Employee.ToList();
