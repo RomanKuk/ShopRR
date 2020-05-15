@@ -29,17 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.transportationTabPage = new System.Windows.Forms.TabPage();
+            this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
+            this.transportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gSfromIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gSinIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transportationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.advancedDataSet = new diagram.advancedDataSet();
             this.panel6 = new System.Windows.Forms.Panel();
             this.newTransportationBtn = new System.Windows.Forms.Button();
             this.statisticsTabPage = new System.Windows.Forms.TabPage();
@@ -55,6 +66,7 @@
             this.StartDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.StopDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SalesShopChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.transportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -64,21 +76,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
-            this.advancedDataSet = new diagram.advancedDataSet();
-            this.transportationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.transportationTableAdapter = new diagram.advancedDataSetTableAdapters.TransportationTableAdapter();
-            this.transportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gSfromIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.gSinIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.transportationTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).BeginInit();
             this.panel6.SuspendLayout();
             this.statisticsTabPage.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -87,13 +92,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.SellerChart)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesShopChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -119,17 +122,140 @@
             this.transportationTabPage.Text = "Перевезення";
             this.transportationTabPage.UseVisualStyleBackColor = true;
             // 
+            // advancedDataGridView1
+            // 
+            this.advancedDataGridView1.AllowUserToAddRows = false;
+            this.advancedDataGridView1.AllowUserToDeleteRows = false;
+            this.advancedDataGridView1.AutoGenerateColumns = false;
+            this.advancedDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.advancedDataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.advancedDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.advancedDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.advancedDataGridView1.ColumnHeadersHeight = 30;
+            this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.transportationIDDataGridViewTextBoxColumn,
+            this.gSfromIDDataGridViewTextBoxColumn,
+            this.gSinIDDataGridViewTextBoxColumn,
+            this.employeeIDDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.countDataGridViewTextBoxColumn});
+            this.advancedDataGridView1.DataSource = this.transportationBindingSource1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.advancedDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.advancedDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedDataGridView1.FilterAndSortEnabled = true;
+            this.advancedDataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
+            this.advancedDataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.advancedDataGridView1.Name = "advancedDataGridView1";
+            this.advancedDataGridView1.ReadOnly = true;
+            this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.advancedDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.advancedDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.advancedDataGridView1.Size = new System.Drawing.Size(992, 470);
+            this.advancedDataGridView1.TabIndex = 0;
+            // 
+            // transportationIDDataGridViewTextBoxColumn
+            // 
+            this.transportationIDDataGridViewTextBoxColumn.DataPropertyName = "Transportation_ID";
+            this.transportationIDDataGridViewTextBoxColumn.HeaderText = "Transportation_ID";
+            this.transportationIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.transportationIDDataGridViewTextBoxColumn.Name = "transportationIDDataGridViewTextBoxColumn";
+            this.transportationIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transportationIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.transportationIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // gSfromIDDataGridViewTextBoxColumn
+            // 
+            this.gSfromIDDataGridViewTextBoxColumn.DataPropertyName = "GS_from_ID";
+            this.gSfromIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
+            this.gSfromIDDataGridViewTextBoxColumn.DisplayMember = "Code";
+            this.gSfromIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.gSfromIDDataGridViewTextBoxColumn.HeaderText = "Код товар/магазин (звідки)";
+            this.gSfromIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.gSfromIDDataGridViewTextBoxColumn.Name = "gSfromIDDataGridViewTextBoxColumn";
+            this.gSfromIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gSfromIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gSfromIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.gSfromIDDataGridViewTextBoxColumn.ValueMember = "GoodsShops_ID";
+            // 
             // goodsShopsBindingSource
             // 
             this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
+            // gSinIDDataGridViewTextBoxColumn
+            // 
+            this.gSinIDDataGridViewTextBoxColumn.DataPropertyName = "GS_in_ID";
+            this.gSinIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
+            this.gSinIDDataGridViewTextBoxColumn.DisplayMember = "Code";
+            this.gSinIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.gSinIDDataGridViewTextBoxColumn.HeaderText = "Код товар/магазин (куди)";
+            this.gSinIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.gSinIDDataGridViewTextBoxColumn.Name = "gSinIDDataGridViewTextBoxColumn";
+            this.gSinIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gSinIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gSinIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.gSinIDDataGridViewTextBoxColumn.ValueMember = "GoodsShops_ID";
+            // 
+            // employeeIDDataGridViewTextBoxColumn
+            // 
+            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
+            this.employeeIDDataGridViewTextBoxColumn.DataSource = this.employeeBindingSource1;
+            this.employeeIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
+            this.employeeIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Працівник";
+            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeeIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.employeeIDDataGridViewTextBoxColumn.ValueMember = "Employee_ID";
             // 
             // employeeBindingSource1
             // 
             this.employeeBindingSource1.DataSource = typeof(diagram.Employee);
             // 
-            // transportationBindingSource
+            // dateDataGridViewTextBoxColumn
             // 
-            this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // countDataGridViewTextBoxColumn
+            // 
+            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
+            this.countDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
+            this.countDataGridViewTextBoxColumn.ReadOnly = true;
+            this.countDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // transportationBindingSource1
+            // 
+            this.transportationBindingSource1.DataMember = "Transportation";
+            this.transportationBindingSource1.DataSource = this.advancedDataSet;
+            // 
+            // advancedDataSet
+            // 
+            this.advancedDataSet.DataSetName = "advancedDataSet";
+            this.advancedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel6
             // 
@@ -230,19 +356,19 @@
             // 
             this.SellerChart.BackColor = System.Drawing.Color.Transparent;
             this.SellerChart.BorderlineWidth = 0;
-            chartArea3.Name = "ChartArea1";
-            this.SellerChart.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.SellerChart.ChartAreas.Add(chartArea1);
             this.SellerChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.SellerChart.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.SellerChart.Legends.Add(legend1);
             this.SellerChart.Location = new System.Drawing.Point(3, 3);
             this.SellerChart.Name = "SellerChart";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.Legend = "Legend1";
-            series3.Name = "Продажі";
-            this.SellerChart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Продажі";
+            this.SellerChart.Series.Add(series1);
             this.SellerChart.Size = new System.Drawing.Size(978, 469);
             this.SellerChart.TabIndex = 1;
             this.SellerChart.Text = "chart1";
@@ -304,20 +430,24 @@
             // 
             // SalesShopChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.SalesShopChart.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.SalesShopChart.ChartAreas.Add(chartArea2);
             this.SalesShopChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.SalesShopChart.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.SalesShopChart.Legends.Add(legend2);
             this.SalesShopChart.Location = new System.Drawing.Point(3, 3);
             this.SalesShopChart.Name = "SalesShopChart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Продаж";
-            this.SalesShopChart.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Продаж";
+            this.SalesShopChart.Series.Add(series2);
             this.SalesShopChart.Size = new System.Drawing.Size(978, 469);
             this.SalesShopChart.TabIndex = 3;
             this.SalesShopChart.Text = "chart2";
+            // 
+            // transportationBindingSource
+            // 
+            this.transportationBindingSource.DataSource = typeof(diagram.Transportation);
             // 
             // panel2
             // 
@@ -424,108 +554,9 @@
             this.panel1.Size = new System.Drawing.Size(1000, 555);
             this.panel1.TabIndex = 11;
             // 
-            // advancedDataGridView1
-            // 
-            this.advancedDataGridView1.AllowUserToAddRows = false;
-            this.advancedDataGridView1.AllowUserToDeleteRows = false;
-            this.advancedDataGridView1.AutoGenerateColumns = false;
-            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.transportationIDDataGridViewTextBoxColumn,
-            this.gSfromIDDataGridViewTextBoxColumn,
-            this.gSinIDDataGridViewTextBoxColumn,
-            this.employeeIDDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.countDataGridViewTextBoxColumn});
-            this.advancedDataGridView1.DataSource = this.transportationBindingSource1;
-            this.advancedDataGridView1.FilterAndSortEnabled = true;
-            this.advancedDataGridView1.Location = new System.Drawing.Point(8, 17);
-            this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.ReadOnly = true;
-            this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.advancedDataGridView1.Size = new System.Drawing.Size(909, 384);
-            this.advancedDataGridView1.TabIndex = 2;
-            // 
-            // advancedDataSet
-            // 
-            this.advancedDataSet.DataSetName = "advancedDataSet";
-            this.advancedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // transportationBindingSource1
-            // 
-            this.transportationBindingSource1.DataMember = "Transportation";
-            this.transportationBindingSource1.DataSource = this.advancedDataSet;
-            // 
             // transportationTableAdapter
             // 
             this.transportationTableAdapter.ClearBeforeFill = true;
-            // 
-            // transportationIDDataGridViewTextBoxColumn
-            // 
-            this.transportationIDDataGridViewTextBoxColumn.DataPropertyName = "Transportation_ID";
-            this.transportationIDDataGridViewTextBoxColumn.HeaderText = "Transportation_ID";
-            this.transportationIDDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.transportationIDDataGridViewTextBoxColumn.Name = "transportationIDDataGridViewTextBoxColumn";
-            this.transportationIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.transportationIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.transportationIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // gSfromIDDataGridViewTextBoxColumn
-            // 
-            this.gSfromIDDataGridViewTextBoxColumn.DataPropertyName = "GS_from_ID";
-            this.gSfromIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
-            this.gSfromIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.gSfromIDDataGridViewTextBoxColumn.HeaderText = "GS_from_ID";
-            this.gSfromIDDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.gSfromIDDataGridViewTextBoxColumn.Name = "gSfromIDDataGridViewTextBoxColumn";
-            this.gSfromIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gSfromIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gSfromIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.gSfromIDDataGridViewTextBoxColumn.ValueMember = "GoodsShops_ID";
-            // 
-            // gSinIDDataGridViewTextBoxColumn
-            // 
-            this.gSinIDDataGridViewTextBoxColumn.DataPropertyName = "GS_in_ID";
-            this.gSinIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
-            this.gSinIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.gSinIDDataGridViewTextBoxColumn.HeaderText = "GS_in_ID";
-            this.gSinIDDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.gSinIDDataGridViewTextBoxColumn.Name = "gSinIDDataGridViewTextBoxColumn";
-            this.gSinIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gSinIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gSinIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.gSinIDDataGridViewTextBoxColumn.ValueMember = "GoodsShops_ID";
-            // 
-            // employeeIDDataGridViewTextBoxColumn
-            // 
-            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.DataSource = this.employeeBindingSource1;
-            this.employeeIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
-            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeeIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.employeeIDDataGridViewTextBoxColumn.ValueMember = "Employee_ID";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
-            this.countDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            this.countDataGridViewTextBoxColumn.ReadOnly = true;
-            this.countDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // ManagerForm
             // 
@@ -540,9 +571,11 @@
             this.Load += new System.EventHandler(this.ManagerForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.transportationTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).EndInit();
             this.panel6.ResumeLayout(false);
             this.statisticsTabPage.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -553,14 +586,12 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesShopChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transportationBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

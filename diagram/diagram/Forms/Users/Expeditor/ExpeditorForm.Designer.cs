@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -41,28 +44,28 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.DeliveryTabPage = new System.Windows.Forms.TabPage();
             this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
+            this.deliverIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.provideOrderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.advancedDataSet = new diagram.advancedDataSet();
             this.ShipmentTabPage = new System.Windows.Forms.TabPage();
             this.advancedDataGridView2 = new Zuby.ADGV.AdvancedDataGridView();
+            this.deliveryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.newShipmentBtn = new System.Windows.Forms.Button();
             this.newServiceBtn = new System.Windows.Forms.Button();
             this.newProvideOrder = new System.Windows.Forms.Button();
-            this.advancedDataSet = new diagram.advancedDataSet();
-            this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deliveryTableAdapter = new diagram.advancedDataSetTableAdapters.DeliveryTableAdapter();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.provideOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deliverIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.provideOrderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shipmentTableAdapter = new diagram.advancedDataSetTableAdapters.ShipmentTableAdapter();
-            this.deliveryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliverIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -75,17 +78,17 @@
             this.tabControl1.SuspendLayout();
             this.DeliveryTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
-            this.ShipmentTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).BeginInit();
+            this.ShipmentTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -215,7 +218,7 @@
             this.DeliveryTabPage.Name = "DeliveryTabPage";
             this.DeliveryTabPage.Size = new System.Drawing.Size(992, 414);
             this.DeliveryTabPage.TabIndex = 0;
-            this.DeliveryTabPage.Text = "Доставки";
+            this.DeliveryTabPage.Text = "Поставки";
             this.DeliveryTabPage.UseVisualStyleBackColor = true;
             // 
             // advancedDataGridView1
@@ -223,7 +226,18 @@
             this.advancedDataGridView1.AllowUserToAddRows = false;
             this.advancedDataGridView1.AllowUserToDeleteRows = false;
             this.advancedDataGridView1.AutoGenerateColumns = false;
-            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.advancedDataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.advancedDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.advancedDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.advancedDataGridView1.ColumnHeadersHeight = 30;
             this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deliverIDDataGridViewTextBoxColumn,
             this.codeDataGridViewTextBoxColumn,
@@ -232,13 +246,110 @@
             this.dateDataGridViewTextBoxColumn,
             this.countDataGridViewTextBoxColumn});
             this.advancedDataGridView1.DataSource = this.deliveryBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.advancedDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.advancedDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedDataGridView1.FilterAndSortEnabled = true;
-            this.advancedDataGridView1.Location = new System.Drawing.Point(487, 148);
+            this.advancedDataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
+            this.advancedDataGridView1.Location = new System.Drawing.Point(0, 0);
             this.advancedDataGridView1.Name = "advancedDataGridView1";
             this.advancedDataGridView1.ReadOnly = true;
             this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.advancedDataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.advancedDataGridView1.TabIndex = 1;
+            this.advancedDataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.advancedDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.advancedDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.advancedDataGridView1.Size = new System.Drawing.Size(990, 412);
+            this.advancedDataGridView1.TabIndex = 0;
+            // 
+            // deliverIDDataGridViewTextBoxColumn
+            // 
+            this.deliverIDDataGridViewTextBoxColumn.DataPropertyName = "Deliver_ID";
+            this.deliverIDDataGridViewTextBoxColumn.HeaderText = "Deliver_ID";
+            this.deliverIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.deliverIDDataGridViewTextBoxColumn.Name = "deliverIDDataGridViewTextBoxColumn";
+            this.deliverIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deliverIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.deliverIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Код товару";
+            this.codeDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // goodIDDataGridViewTextBoxColumn
+            // 
+            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
+            this.goodIDDataGridViewTextBoxColumn.DataSource = this.goodsBindingSource;
+            this.goodIDDataGridViewTextBoxColumn.DisplayMember = "Model";
+            this.goodIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Код товару";
+            this.goodIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
+            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.goodIDDataGridViewTextBoxColumn.ValueMember = "Good_ID";
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
+            // 
+            // provideOrderIDDataGridViewTextBoxColumn
+            // 
+            this.provideOrderIDDataGridViewTextBoxColumn.DataPropertyName = "ProvideOrder_ID";
+            this.provideOrderIDDataGridViewTextBoxColumn.DataSource = this.provideOrderBindingSource;
+            this.provideOrderIDDataGridViewTextBoxColumn.DisplayMember = "Code";
+            this.provideOrderIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.provideOrderIDDataGridViewTextBoxColumn.HeaderText = "Код загального замовлення (партії)";
+            this.provideOrderIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.provideOrderIDDataGridViewTextBoxColumn.Name = "provideOrderIDDataGridViewTextBoxColumn";
+            this.provideOrderIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.provideOrderIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.provideOrderIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.provideOrderIDDataGridViewTextBoxColumn.ValueMember = "ProvideOrder_ID";
+            // 
+            // provideOrderBindingSource
+            // 
+            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // countDataGridViewTextBoxColumn
+            // 
+            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "Кількість";
+            this.countDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
+            this.countDataGridViewTextBoxColumn.ReadOnly = true;
+            this.countDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // deliveryBindingSource
+            // 
+            this.deliveryBindingSource.DataMember = "Delivery";
+            this.deliveryBindingSource.DataSource = this.advancedDataSet;
+            // 
+            // advancedDataSet
+            // 
+            this.advancedDataSet.DataSetName = "advancedDataSet";
+            this.advancedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ShipmentTabPage
             // 
@@ -257,7 +368,11 @@
             this.advancedDataGridView2.AllowUserToAddRows = false;
             this.advancedDataGridView2.AllowUserToDeleteRows = false;
             this.advancedDataGridView2.AutoGenerateColumns = false;
-            this.advancedDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.advancedDataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.advancedDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.advancedDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.advancedDataGridView2.ColumnHeadersHeight = 30;
             this.advancedDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.shipmentIDDataGridViewTextBoxColumn,
             this.deliverIDDataGridViewTextBoxColumn1,
@@ -265,13 +380,36 @@
             this.employeeIDDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn1});
             this.advancedDataGridView2.DataSource = this.shipmentBindingSource;
+            this.advancedDataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.advancedDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedDataGridView2.FilterAndSortEnabled = true;
-            this.advancedDataGridView2.Location = new System.Drawing.Point(207, 105);
+            this.advancedDataGridView2.GridColor = System.Drawing.Color.LightSkyBlue;
+            this.advancedDataGridView2.Location = new System.Drawing.Point(0, 0);
             this.advancedDataGridView2.Name = "advancedDataGridView2";
             this.advancedDataGridView2.ReadOnly = true;
             this.advancedDataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.advancedDataGridView2.Size = new System.Drawing.Size(514, 150);
+            this.advancedDataGridView2.RowHeadersVisible = false;
+            this.advancedDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.advancedDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.advancedDataGridView2.Size = new System.Drawing.Size(990, 412);
             this.advancedDataGridView2.TabIndex = 0;
+            // 
+            // deliveryBindingSource1
+            // 
+            this.deliveryBindingSource1.DataSource = typeof(diagram.Delivery);
+            // 
+            // goodsShopsBindingSource
+            // 
+            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
+            // 
+            // shipmentBindingSource
+            // 
+            this.shipmentBindingSource.DataMember = "Shipment";
+            this.shipmentBindingSource.DataSource = this.advancedDataSet;
             // 
             // panel7
             // 
@@ -335,111 +473,13 @@
             this.newProvideOrder.UseVisualStyleBackColor = false;
             this.newProvideOrder.Click += new System.EventHandler(this.NewProvideOrder_Click);
             // 
-            // advancedDataSet
-            // 
-            this.advancedDataSet.DataSetName = "advancedDataSet";
-            this.advancedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deliveryBindingSource
-            // 
-            this.deliveryBindingSource.DataMember = "Delivery";
-            this.deliveryBindingSource.DataSource = this.advancedDataSet;
-            // 
             // deliveryTableAdapter
             // 
             this.deliveryTableAdapter.ClearBeforeFill = true;
             // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
-            // 
-            // provideOrderBindingSource
-            // 
-            this.provideOrderBindingSource.DataSource = typeof(diagram.ProvideOrder);
-            // 
-            // deliverIDDataGridViewTextBoxColumn
-            // 
-            this.deliverIDDataGridViewTextBoxColumn.DataPropertyName = "Deliver_ID";
-            this.deliverIDDataGridViewTextBoxColumn.HeaderText = "Deliver_ID";
-            this.deliverIDDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.deliverIDDataGridViewTextBoxColumn.Name = "deliverIDDataGridViewTextBoxColumn";
-            this.deliverIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deliverIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.deliverIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // goodIDDataGridViewTextBoxColumn
-            // 
-            this.goodIDDataGridViewTextBoxColumn.DataPropertyName = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.DataSource = this.goodsBindingSource;
-            this.goodIDDataGridViewTextBoxColumn.DisplayMember = "Model";
-            this.goodIDDataGridViewTextBoxColumn.HeaderText = "Good_ID";
-            this.goodIDDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.goodIDDataGridViewTextBoxColumn.Name = "goodIDDataGridViewTextBoxColumn";
-            this.goodIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.goodIDDataGridViewTextBoxColumn.ValueMember = "Good_ID";
-            // 
-            // provideOrderIDDataGridViewTextBoxColumn
-            // 
-            this.provideOrderIDDataGridViewTextBoxColumn.DataPropertyName = "ProvideOrder_ID";
-            this.provideOrderIDDataGridViewTextBoxColumn.DataSource = this.provideOrderBindingSource;
-            this.provideOrderIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.provideOrderIDDataGridViewTextBoxColumn.HeaderText = "ProvideOrder_ID";
-            this.provideOrderIDDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.provideOrderIDDataGridViewTextBoxColumn.Name = "provideOrderIDDataGridViewTextBoxColumn";
-            this.provideOrderIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.provideOrderIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.provideOrderIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.provideOrderIDDataGridViewTextBoxColumn.ValueMember = "ProvideOrder_ID";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
-            this.countDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            this.countDataGridViewTextBoxColumn.ReadOnly = true;
-            this.countDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // shipmentBindingSource
-            // 
-            this.shipmentBindingSource.DataMember = "Shipment";
-            this.shipmentBindingSource.DataSource = this.advancedDataSet;
-            // 
             // shipmentTableAdapter
             // 
             this.shipmentTableAdapter.ClearBeforeFill = true;
-            // 
-            // deliveryBindingSource1
-            // 
-            this.deliveryBindingSource1.DataSource = typeof(diagram.Delivery);
-            // 
-            // goodsShopsBindingSource
-            // 
-            this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(diagram.Employee);
             // 
             // shipmentIDDataGridViewTextBoxColumn
             // 
@@ -456,7 +496,8 @@
             this.deliverIDDataGridViewTextBoxColumn1.DataPropertyName = "Deliver_ID";
             this.deliverIDDataGridViewTextBoxColumn1.DataSource = this.deliveryBindingSource1;
             this.deliverIDDataGridViewTextBoxColumn1.DisplayMember = "Code";
-            this.deliverIDDataGridViewTextBoxColumn1.HeaderText = "Deliver_ID";
+            this.deliverIDDataGridViewTextBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.deliverIDDataGridViewTextBoxColumn1.HeaderText = "Код поставки";
             this.deliverIDDataGridViewTextBoxColumn1.MinimumWidth = 22;
             this.deliverIDDataGridViewTextBoxColumn1.Name = "deliverIDDataGridViewTextBoxColumn1";
             this.deliverIDDataGridViewTextBoxColumn1.ReadOnly = true;
@@ -469,7 +510,8 @@
             this.goodsShopsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsShops_ID";
             this.goodsShopsIDDataGridViewTextBoxColumn.DataSource = this.goodsShopsBindingSource;
             this.goodsShopsIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.goodsShopsIDDataGridViewTextBoxColumn.HeaderText = "GoodsShops_ID";
+            this.goodsShopsIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.goodsShopsIDDataGridViewTextBoxColumn.HeaderText = "Код товар/магазин";
             this.goodsShopsIDDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.goodsShopsIDDataGridViewTextBoxColumn.Name = "goodsShopsIDDataGridViewTextBoxColumn";
             this.goodsShopsIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -482,7 +524,8 @@
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
             this.employeeIDDataGridViewTextBoxColumn.DataSource = this.employeeBindingSource;
             this.employeeIDDataGridViewTextBoxColumn.DisplayMember = "LastName";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
+            this.employeeIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Працівник";
             this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
             this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -493,7 +536,7 @@
             // dateDataGridViewTextBoxColumn1
             // 
             this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Дата";
             this.dateDataGridViewTextBoxColumn1.MinimumWidth = 22;
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
             this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
@@ -518,17 +561,17 @@
             this.tabControl1.ResumeLayout(false);
             this.DeliveryTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
-            this.ShipmentTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).EndInit();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provideOrderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).EndInit();
+            this.ShipmentTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -557,23 +600,23 @@
         private advancedDataSet advancedDataSet;
         private System.Windows.Forms.BindingSource deliveryBindingSource;
         private advancedDataSetTableAdapters.DeliveryTableAdapter deliveryTableAdapter;
+        private System.Windows.Forms.BindingSource goodsBindingSource;
+        private System.Windows.Forms.BindingSource provideOrderBindingSource;
+        private System.Windows.Forms.BindingSource shipmentBindingSource;
+        private advancedDataSetTableAdapters.ShipmentTableAdapter shipmentTableAdapter;
+        private System.Windows.Forms.BindingSource deliveryBindingSource1;
+        private System.Windows.Forms.BindingSource goodsShopsBindingSource;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliverIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn goodIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn provideOrderIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource provideOrderBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource shipmentBindingSource;
-        private advancedDataSetTableAdapters.ShipmentTableAdapter shipmentTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn shipmentIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn deliverIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource deliveryBindingSource1;
         private System.Windows.Forms.DataGridViewComboBoxColumn goodsShopsIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource goodsShopsBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn employeeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
     }
 }

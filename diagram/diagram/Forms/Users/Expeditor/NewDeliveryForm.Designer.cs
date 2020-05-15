@@ -153,7 +153,7 @@
             this.formTitle.Padding = new System.Windows.Forms.Padding(6);
             this.formTitle.Size = new System.Drawing.Size(281, 42);
             this.formTitle.TabIndex = 4;
-            this.formTitle.Text = "Нове відвантаження";
+            this.formTitle.Text = "Нове загальне замовлення (партія)";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
