@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -43,59 +40,70 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ServiceTabPage = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.serviceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.breakageIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
+            this.Service_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Breakage_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.breakageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Status_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.basketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Basket_ID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.basketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.advancedDataSet = new diagram.advancedDataSet();
             this.ServiceTransportationTabPage = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.advancedDataGridView2 = new Zuby.ADGV.AdvancedDataGridView();
             this.serviceTransportationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.serviceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serviceCenterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceTransportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceTransportationBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.RepairTabPage = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.repairIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceTransportationIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.advancedDataGridView3 = new Zuby.ADGV.AdvancedDataGridView();
             this.serviceTransportationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.repairBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repairBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.repairBtn = new System.Windows.Forms.Button();
             this.newServiceBtn = new System.Windows.Forms.Button();
+            this.serviceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceTransportationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repairBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceTableAdapter = new diagram.advancedDataSetTableAdapters.ServiceTableAdapter();
+            this.serviceTransportationTableAdapter = new diagram.advancedDataSetTableAdapters.ServiceTransportationTableAdapter();
+            this.repairTableAdapter = new diagram.advancedDataSetTableAdapters.RepairTableAdapter();
+            this.repairIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceTransportationIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.ServiceTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).BeginInit();
             this.ServiceTransportationTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource2)).BeginInit();
             this.RepairTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repairBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repairBindingSource1)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repairBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -221,119 +229,100 @@
             // 
             this.ServiceTabPage.BackColor = System.Drawing.Color.Transparent;
             this.ServiceTabPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ServiceTabPage.Controls.Add(this.dataGridView1);
+            this.ServiceTabPage.Controls.Add(this.advancedDataGridView1);
             this.ServiceTabPage.Location = new System.Drawing.Point(4, 36);
             this.ServiceTabPage.Name = "ServiceTabPage";
             this.ServiceTabPage.Size = new System.Drawing.Size(992, 456);
             this.ServiceTabPage.TabIndex = 0;
             this.ServiceTabPage.Text = "Сервісні обслуговування";
             // 
-            // dataGridView1
+            // advancedDataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.serviceIDDataGridViewTextBoxColumn,
-            this.codeDataGridViewTextBoxColumn,
-            this.breakageIDDataGridViewTextBoxColumn,
-            this.statusIDDataGridViewTextBoxColumn,
-            this.basketIDDataGridViewTextBoxColumn,
+            this.advancedDataGridView1.AllowUserToAddRows = false;
+            this.advancedDataGridView1.AllowUserToDeleteRows = false;
+            this.advancedDataGridView1.AutoGenerateColumns = false;
+            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Service_ID,
+            this.Code,
+            this.Breakage_ID,
+            this.Status_ID,
+            this.Basket_ID,
             this.dateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.serviceBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 454);
-            this.dataGridView1.TabIndex = 0;
+            this.advancedDataGridView1.DataSource = this.serviceBindingSource2;
+            this.advancedDataGridView1.FilterAndSortEnabled = true;
+            this.advancedDataGridView1.Location = new System.Drawing.Point(347, 179);
+            this.advancedDataGridView1.Name = "advancedDataGridView1";
+            this.advancedDataGridView1.ReadOnly = true;
+            this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.advancedDataGridView1.TabIndex = 0;
             // 
-            // serviceIDDataGridViewTextBoxColumn
+            // Service_ID
             // 
-            this.serviceIDDataGridViewTextBoxColumn.DataPropertyName = "Service_ID";
-            this.serviceIDDataGridViewTextBoxColumn.HeaderText = "Service_ID";
-            this.serviceIDDataGridViewTextBoxColumn.Name = "serviceIDDataGridViewTextBoxColumn";
-            this.serviceIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.serviceIDDataGridViewTextBoxColumn.Visible = false;
+            this.Service_ID.DataPropertyName = "Service_ID";
+            this.Service_ID.HeaderText = "Service_ID";
+            this.Service_ID.MinimumWidth = 22;
+            this.Service_ID.Name = "Service_ID";
+            this.Service_ID.ReadOnly = true;
+            this.Service_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Service_ID.Visible = false;
             // 
-            // codeDataGridViewTextBoxColumn
+            // Code
             // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.MinimumWidth = 22;
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // breakageIDDataGridViewTextBoxColumn
+            // Breakage_ID
             // 
-            this.breakageIDDataGridViewTextBoxColumn.DataPropertyName = "Breakage_ID";
-            this.breakageIDDataGridViewTextBoxColumn.DataSource = this.breakageBindingSource;
-            this.breakageIDDataGridViewTextBoxColumn.DisplayMember = "Breakage1";
-            this.breakageIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.breakageIDDataGridViewTextBoxColumn.HeaderText = "Тип поломки";
-            this.breakageIDDataGridViewTextBoxColumn.Name = "breakageIDDataGridViewTextBoxColumn";
-            this.breakageIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.breakageIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.breakageIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.breakageIDDataGridViewTextBoxColumn.ValueMember = "Breakage_ID";
+            this.Breakage_ID.DataPropertyName = "Breakage_ID";
+            this.Breakage_ID.DataSource = this.breakageBindingSource;
+            this.Breakage_ID.DisplayMember = "Breakage1";
+            this.Breakage_ID.HeaderText = "Breakage_ID";
+            this.Breakage_ID.MinimumWidth = 22;
+            this.Breakage_ID.Name = "Breakage_ID";
+            this.Breakage_ID.ReadOnly = true;
+            this.Breakage_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Breakage_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Breakage_ID.ValueMember = "Breakage_ID";
             // 
             // breakageBindingSource
             // 
             this.breakageBindingSource.DataSource = typeof(diagram.Breakage);
             // 
-            // statusIDDataGridViewTextBoxColumn
+            // Status_ID
             // 
-            this.statusIDDataGridViewTextBoxColumn.DataPropertyName = "Status_ID";
-            this.statusIDDataGridViewTextBoxColumn.DataSource = this.statusBindingSource;
-            this.statusIDDataGridViewTextBoxColumn.DisplayMember = "Status1";
-            this.statusIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.statusIDDataGridViewTextBoxColumn.HeaderText = "Статус";
-            this.statusIDDataGridViewTextBoxColumn.Name = "statusIDDataGridViewTextBoxColumn";
-            this.statusIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.statusIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.statusIDDataGridViewTextBoxColumn.ValueMember = "Status_ID";
+            this.Status_ID.DataPropertyName = "Status_ID";
+            this.Status_ID.DataSource = this.statusBindingSource;
+            this.Status_ID.DisplayMember = "Status1";
+            this.Status_ID.HeaderText = "Status_ID";
+            this.Status_ID.MinimumWidth = 22;
+            this.Status_ID.Name = "Status_ID";
+            this.Status_ID.ReadOnly = true;
+            this.Status_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Status_ID.ValueMember = "Status_ID";
             // 
             // statusBindingSource
             // 
             this.statusBindingSource.DataSource = typeof(diagram.Status);
             // 
-            // basketIDDataGridViewTextBoxColumn
+            // Basket_ID
             // 
-            this.basketIDDataGridViewTextBoxColumn.DataPropertyName = "Basket_ID";
-            this.basketIDDataGridViewTextBoxColumn.DataSource = this.basketBindingSource;
-            this.basketIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.basketIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.basketIDDataGridViewTextBoxColumn.HeaderText = "Код кошика";
-            this.basketIDDataGridViewTextBoxColumn.Name = "basketIDDataGridViewTextBoxColumn";
-            this.basketIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.basketIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.basketIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.basketIDDataGridViewTextBoxColumn.ValueMember = "Basket_ID";
+            this.Basket_ID.DataPropertyName = "Basket_ID";
+            this.Basket_ID.DataSource = this.basketBindingSource;
+            this.Basket_ID.DisplayMember = "Code";
+            this.Basket_ID.HeaderText = "Basket_ID";
+            this.Basket_ID.MinimumWidth = 22;
+            this.Basket_ID.Name = "Basket_ID";
+            this.Basket_ID.ReadOnly = true;
+            this.Basket_ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Basket_ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Basket_ID.ValueMember = "Basket_ID";
             // 
             // basketBindingSource
             // 
@@ -342,97 +331,101 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // serviceBindingSource
+            // serviceBindingSource2
             // 
-            this.serviceBindingSource.DataSource = typeof(diagram.Service);
+            this.serviceBindingSource2.DataMember = "Service";
+            this.serviceBindingSource2.DataSource = this.advancedDataSet;
+            // 
+            // advancedDataSet
+            // 
+            this.advancedDataSet.DataSetName = "advancedDataSet";
+            this.advancedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ServiceTransportationTabPage
             // 
             this.ServiceTransportationTabPage.BackColor = System.Drawing.Color.Transparent;
             this.ServiceTransportationTabPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ServiceTransportationTabPage.Controls.Add(this.dataGridView2);
+            this.ServiceTransportationTabPage.Controls.Add(this.advancedDataGridView2);
             this.ServiceTransportationTabPage.Location = new System.Drawing.Point(4, 36);
             this.ServiceTransportationTabPage.Name = "ServiceTransportationTabPage";
             this.ServiceTransportationTabPage.Size = new System.Drawing.Size(992, 456);
             this.ServiceTransportationTabPage.TabIndex = 1;
             this.ServiceTransportationTabPage.Text = "Сервісні перевезення";
             // 
-            // dataGridView2
+            // advancedDataGridView2
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.ColumnHeadersHeight = 30;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.advancedDataGridView2.AllowUserToAddRows = false;
+            this.advancedDataGridView2.AllowUserToDeleteRows = false;
+            this.advancedDataGridView2.AutoGenerateColumns = false;
+            this.advancedDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.serviceTransportationIDDataGridViewTextBoxColumn,
-            this.codeDataGridViewTextBoxColumn1,
-            this.serviceIDDataGridViewTextBoxColumn1,
+            this.codeDataGridViewTextBoxColumn,
+            this.serviceIDDataGridViewTextBoxColumn,
             this.sCIDDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.serviceTransportationBindingSource;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.GridColor = System.Drawing.Color.LightSkyBlue;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(990, 454);
-            this.dataGridView2.TabIndex = 0;
+            this.advancedDataGridView2.DataSource = this.serviceTransportationBindingSource2;
+            this.advancedDataGridView2.FilterAndSortEnabled = true;
+            this.advancedDataGridView2.Location = new System.Drawing.Point(343, 206);
+            this.advancedDataGridView2.Name = "advancedDataGridView2";
+            this.advancedDataGridView2.ReadOnly = true;
+            this.advancedDataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.advancedDataGridView2.TabIndex = 0;
             // 
             // serviceTransportationIDDataGridViewTextBoxColumn
             // 
             this.serviceTransportationIDDataGridViewTextBoxColumn.DataPropertyName = "ServiceTransportation_ID";
             this.serviceTransportationIDDataGridViewTextBoxColumn.HeaderText = "ServiceTransportation_ID";
+            this.serviceTransportationIDDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.serviceTransportationIDDataGridViewTextBoxColumn.Name = "serviceTransportationIDDataGridViewTextBoxColumn";
             this.serviceTransportationIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviceTransportationIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.serviceTransportationIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // codeDataGridViewTextBoxColumn1
+            // codeDataGridViewTextBoxColumn
             // 
-            this.codeDataGridViewTextBoxColumn1.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn1.HeaderText = "Код сервісного перевезення";
-            this.codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
-            this.codeDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // serviceIDDataGridViewTextBoxColumn1
+            // serviceIDDataGridViewTextBoxColumn
             // 
-            this.serviceIDDataGridViewTextBoxColumn1.DataPropertyName = "Service_ID";
-            this.serviceIDDataGridViewTextBoxColumn1.DataSource = this.serviceBindingSource1;
-            this.serviceIDDataGridViewTextBoxColumn1.DisplayMember = "Code";
-            this.serviceIDDataGridViewTextBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.serviceIDDataGridViewTextBoxColumn1.HeaderText = "Код сервісного обслуговування";
-            this.serviceIDDataGridViewTextBoxColumn1.Name = "serviceIDDataGridViewTextBoxColumn1";
-            this.serviceIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.serviceIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviceIDDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.serviceIDDataGridViewTextBoxColumn1.ValueMember = "Service_ID";
+            this.serviceIDDataGridViewTextBoxColumn.DataPropertyName = "Service_ID";
+            this.serviceIDDataGridViewTextBoxColumn.DataSource = this.serviceBindingSource;
+            this.serviceIDDataGridViewTextBoxColumn.DisplayMember = "Code";
+            this.serviceIDDataGridViewTextBoxColumn.HeaderText = "Service_ID";
+            this.serviceIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.serviceIDDataGridViewTextBoxColumn.Name = "serviceIDDataGridViewTextBoxColumn";
+            this.serviceIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviceIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.serviceIDDataGridViewTextBoxColumn.ValueMember = "Service_ID";
             // 
-            // serviceBindingSource1
+            // serviceBindingSource
             // 
-            this.serviceBindingSource1.DataSource = typeof(diagram.Service);
+            this.serviceBindingSource.DataSource = typeof(diagram.Service);
             // 
             // sCIDDataGridViewTextBoxColumn
             // 
             this.sCIDDataGridViewTextBoxColumn.DataPropertyName = "SC_ID";
             this.sCIDDataGridViewTextBoxColumn.DataSource = this.serviceCenterBindingSource;
             this.sCIDDataGridViewTextBoxColumn.DisplayMember = "Code";
-            this.sCIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.sCIDDataGridViewTextBoxColumn.HeaderText = "Код сервісного центру";
+            this.sCIDDataGridViewTextBoxColumn.HeaderText = "SC_ID";
+            this.sCIDDataGridViewTextBoxColumn.MinimumWidth = 22;
             this.sCIDDataGridViewTextBoxColumn.Name = "sCIDDataGridViewTextBoxColumn";
             this.sCIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.sCIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.sCIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.sCIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.sCIDDataGridViewTextBoxColumn.ValueMember = "SC_ID";
             // 
             // serviceCenterBindingSource
@@ -442,95 +435,56 @@
             // dateDataGridViewTextBoxColumn1
             // 
             this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn1.MinimumWidth = 22;
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
             this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // serviceTransportationBindingSource
+            // serviceTransportationBindingSource2
             // 
-            this.serviceTransportationBindingSource.DataSource = typeof(diagram.ServiceTransportation);
+            this.serviceTransportationBindingSource2.DataMember = "ServiceTransportation";
+            this.serviceTransportationBindingSource2.DataSource = this.advancedDataSet;
             // 
             // RepairTabPage
             // 
             this.RepairTabPage.BackColor = System.Drawing.Color.Transparent;
             this.RepairTabPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RepairTabPage.Controls.Add(this.dataGridView3);
+            this.RepairTabPage.Controls.Add(this.advancedDataGridView3);
             this.RepairTabPage.Location = new System.Drawing.Point(4, 36);
             this.RepairTabPage.Name = "RepairTabPage";
             this.RepairTabPage.Size = new System.Drawing.Size(992, 456);
             this.RepairTabPage.TabIndex = 2;
             this.RepairTabPage.Text = "Ремонт";
             // 
-            // dataGridView3
+            // advancedDataGridView3
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView3.ColumnHeadersHeight = 30;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.advancedDataGridView3.AllowUserToAddRows = false;
+            this.advancedDataGridView3.AllowUserToDeleteRows = false;
+            this.advancedDataGridView3.AutoGenerateColumns = false;
+            this.advancedDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.repairIDDataGridViewTextBoxColumn,
             this.serviceTransportationIDDataGridViewTextBoxColumn1,
             this.commentDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn2});
-            this.dataGridView3.DataSource = this.repairBindingSource;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.GridColor = System.Drawing.Color.LightSkyBlue;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(990, 454);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // repairIDDataGridViewTextBoxColumn
-            // 
-            this.repairIDDataGridViewTextBoxColumn.DataPropertyName = "Repair_ID";
-            this.repairIDDataGridViewTextBoxColumn.HeaderText = "Repair_ID";
-            this.repairIDDataGridViewTextBoxColumn.Name = "repairIDDataGridViewTextBoxColumn";
-            this.repairIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.repairIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // serviceTransportationIDDataGridViewTextBoxColumn1
-            // 
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.DataPropertyName = "ServiceTransportation_ID";
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.DataSource = this.serviceTransportationBindingSource1;
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.DisplayMember = "Code";
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.HeaderText = "Код сервісного перевезення";
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.Name = "serviceTransportationIDDataGridViewTextBoxColumn1";
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.serviceTransportationIDDataGridViewTextBoxColumn1.ValueMember = "ServiceTransportation_ID";
+            this.advancedDataGridView3.DataSource = this.repairBindingSource1;
+            this.advancedDataGridView3.FilterAndSortEnabled = true;
+            this.advancedDataGridView3.Location = new System.Drawing.Point(375, 161);
+            this.advancedDataGridView3.Name = "advancedDataGridView3";
+            this.advancedDataGridView3.ReadOnly = true;
+            this.advancedDataGridView3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridView3.Size = new System.Drawing.Size(457, 150);
+            this.advancedDataGridView3.TabIndex = 0;
             // 
             // serviceTransportationBindingSource1
             // 
             this.serviceTransportationBindingSource1.DataSource = typeof(diagram.ServiceTransportation);
             // 
-            // commentDataGridViewTextBoxColumn
+            // repairBindingSource1
             // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "Коментар";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn2
-            // 
-            this.dateDataGridViewTextBoxColumn2.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn2.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn2.Name = "dateDataGridViewTextBoxColumn2";
-            this.dateDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // repairBindingSource
-            // 
-            this.repairBindingSource.DataSource = typeof(diagram.Repair);
+            this.repairBindingSource1.DataMember = "Repair";
+            this.repairBindingSource1.DataSource = this.advancedDataSet;
             // 
             // panel7
             // 
@@ -576,6 +530,71 @@
             this.newServiceBtn.UseVisualStyleBackColor = false;
             this.newServiceBtn.Click += new System.EventHandler(this.NewServiceBtn_Click);
             // 
+            // serviceBindingSource1
+            // 
+            this.serviceBindingSource1.DataSource = typeof(diagram.Service);
+            // 
+            // serviceTransportationBindingSource
+            // 
+            this.serviceTransportationBindingSource.DataSource = typeof(diagram.ServiceTransportation);
+            // 
+            // repairBindingSource
+            // 
+            this.repairBindingSource.DataSource = typeof(diagram.Repair);
+            // 
+            // serviceTableAdapter
+            // 
+            this.serviceTableAdapter.ClearBeforeFill = true;
+            // 
+            // serviceTransportationTableAdapter
+            // 
+            this.serviceTransportationTableAdapter.ClearBeforeFill = true;
+            // 
+            // repairTableAdapter
+            // 
+            this.repairTableAdapter.ClearBeforeFill = true;
+            // 
+            // repairIDDataGridViewTextBoxColumn
+            // 
+            this.repairIDDataGridViewTextBoxColumn.DataPropertyName = "Repair_ID";
+            this.repairIDDataGridViewTextBoxColumn.HeaderText = "Repair_ID";
+            this.repairIDDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.repairIDDataGridViewTextBoxColumn.Name = "repairIDDataGridViewTextBoxColumn";
+            this.repairIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.repairIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.repairIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // serviceTransportationIDDataGridViewTextBoxColumn1
+            // 
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.DataPropertyName = "ServiceTransportation_ID";
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.DataSource = this.serviceTransportationBindingSource1;
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.DisplayMember = "Code";
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.HeaderText = "ServiceTransportation_ID";
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.Name = "serviceTransportationIDDataGridViewTextBoxColumn1";
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.serviceTransportationIDDataGridViewTextBoxColumn1.ValueMember = "ServiceTransportation_ID";
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Comment";
+            this.commentDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.commentDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dateDataGridViewTextBoxColumn2
+            // 
+            this.dateDataGridViewTextBoxColumn2.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn2.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn2.MinimumWidth = 22;
+            this.dateDataGridViewTextBoxColumn2.Name = "dateDataGridViewTextBoxColumn2";
+            this.dateDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // ServiceCenterEmployeeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -594,21 +613,25 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ServiceTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.basketBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).EndInit();
             this.ServiceTransportationTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceCenterBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource2)).EndInit();
             this.RepairTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repairBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repairBindingSource1)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceTransportationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repairBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -629,34 +652,41 @@
         private System.Windows.Forms.TabPage ServiceTabPage;
         private System.Windows.Forms.TabPage ServiceTransportationTabPage;
         private System.Windows.Forms.TabPage RepairTabPage;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource breakageBindingSource;
         private System.Windows.Forms.BindingSource statusBindingSource;
         private System.Windows.Forms.BindingSource basketBindingSource;
         private System.Windows.Forms.BindingSource serviceBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource serviceBindingSource1;
         private System.Windows.Forms.BindingSource serviceCenterBindingSource;
         private System.Windows.Forms.BindingSource serviceTransportationBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource serviceTransportationBindingSource1;
         private System.Windows.Forms.BindingSource repairBindingSource;
+        private System.Windows.Forms.Button newServiceBtn;
+        private System.Windows.Forms.Button repairBtn;
+        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView1;
+        private advancedDataSet advancedDataSet;
+        private System.Windows.Forms.BindingSource serviceBindingSource2;
+        private advancedDataSetTableAdapters.ServiceTableAdapter serviceTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Service_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Breakage_ID;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Status_ID;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Basket_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView2;
+        private System.Windows.Forms.BindingSource serviceTransportationBindingSource2;
+        private advancedDataSetTableAdapters.ServiceTransportationTableAdapter serviceTransportationTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn serviceTransportationIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn serviceIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn serviceIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn sCIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
+        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView3;
+        private System.Windows.Forms.BindingSource repairBindingSource1;
+        private advancedDataSetTableAdapters.RepairTableAdapter repairTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn repairIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn serviceTransportationIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serviceIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn breakageIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn statusIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn basketIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button newServiceBtn;
-        private System.Windows.Forms.Button repairBtn;
     }
 }

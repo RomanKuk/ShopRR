@@ -23,6 +23,12 @@ namespace diagram.Forms.Users.SCEmployee
 
         private void ServiceCenterForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'advancedDataSet.Repair' table. You can move, or remove it, as needed.
+            this.repairTableAdapter.Fill(this.advancedDataSet.Repair);
+            // TODO: This line of code loads data into the 'advancedDataSet.ServiceTransportation' table. You can move, or remove it, as needed.
+            this.serviceTransportationTableAdapter.Fill(this.advancedDataSet.ServiceTransportation);
+            // TODO: This line of code loads data into the 'advancedDataSet.Service' table. You can move, or remove it, as needed.
+            this.serviceTableAdapter.Fill(this.advancedDataSet.Service);
             serviceBindingSource.DataSource = db.Service.ToList();
             breakageBindingSource.DataSource = db.Breakage.ToList();
             statusBindingSource.DataSource = db.Status.ToList();

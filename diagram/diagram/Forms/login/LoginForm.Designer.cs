@@ -30,17 +30,17 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.showPasswordBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
-            this.loginBtn = new System.Windows.Forms.Button();
-            this.closeBtn = new System.Windows.Forms.Button();
-            this.showPasswordBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,6 +67,20 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(45, 45);
             this.panel4.TabIndex = 1;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackgroundImage = global::diagram.Properties.Resources.close_icon;
+            this.closeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.closeBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Location = new System.Drawing.Point(3, 4);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(38, 38);
+            this.closeBtn.TabIndex = 11;
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // panel3
             // 
@@ -106,6 +120,29 @@
             this.panel1.Size = new System.Drawing.Size(400, 420);
             this.panel1.TabIndex = 11;
             // 
+            // showPasswordBtn
+            // 
+            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showPasswordBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.showPasswordBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
+            this.showPasswordBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.showPasswordBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPasswordBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.showPasswordBtn.Image = global::diagram.Properties.Resources.visibility;
+            this.showPasswordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showPasswordBtn.Location = new System.Drawing.Point(353, 144);
+            this.showPasswordBtn.Name = "showPasswordBtn";
+            this.showPasswordBtn.Size = new System.Drawing.Size(26, 25);
+            this.showPasswordBtn.TabIndex = 17;
+            this.showPasswordBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.showPasswordBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.showPasswordBtn.UseVisualStyleBackColor = true;
+            this.showPasswordBtn.MouseEnter += new System.EventHandler(this.showPasswordBtn_MouseEnter);
+            this.showPasswordBtn.MouseLeave += new System.EventHandler(this.showPasswordBtn_MouseLeave);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -127,6 +164,29 @@
             this.label2.Size = new System.Drawing.Size(59, 21);
             this.label2.TabIndex = 15;
             this.label2.Text = "Логін:";
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.loginBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.loginBtn.Image = global::diagram.Properties.Resources.check;
+            this.loginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.loginBtn.Location = new System.Drawing.Point(139, 231);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(114, 56);
+            this.loginBtn.TabIndex = 14;
+            this.loginBtn.Text = "Вхід";
+            this.loginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // loginTextBox
             // 
@@ -153,66 +213,6 @@
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
             this.loginButton.TabIndex = 0;
-            // 
-            // loginBtn
-            // 
-            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.loginBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
-            this.loginBtn.FlatAppearance.BorderSize = 0;
-            this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loginBtn.Image = global::diagram.Properties.Resources.check;
-            this.loginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.loginBtn.Location = new System.Drawing.Point(139, 231);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(114, 56);
-            this.loginBtn.TabIndex = 14;
-            this.loginBtn.Text = "Вхід";
-            this.loginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.loginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.Click += new System.EventHandler(this.LoginButton_Click);
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.BackgroundImage = global::diagram.Properties.Resources.close_icon;
-            this.closeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.closeBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.closeBtn.FlatAppearance.BorderSize = 0;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Location = new System.Drawing.Point(3, 4);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(38, 38);
-            this.closeBtn.TabIndex = 11;
-            this.closeBtn.UseVisualStyleBackColor = true;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
-            // showPasswordBtn
-            // 
-            this.showPasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.showPasswordBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.showPasswordBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
-            this.showPasswordBtn.FlatAppearance.BorderSize = 0;
-            this.showPasswordBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.showPasswordBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.showPasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showPasswordBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.showPasswordBtn.Image = global::diagram.Properties.Resources.visibility;
-            this.showPasswordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.showPasswordBtn.Location = new System.Drawing.Point(353, 144);
-            this.showPasswordBtn.Name = "showPasswordBtn";
-            this.showPasswordBtn.Size = new System.Drawing.Size(26, 25);
-            this.showPasswordBtn.TabIndex = 17;
-            this.showPasswordBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.showPasswordBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.showPasswordBtn.UseVisualStyleBackColor = true;
-            this.showPasswordBtn.MouseEnter += new System.EventHandler(this.showPasswordBtn_MouseEnter);
-            this.showPasswordBtn.MouseLeave += new System.EventHandler(this.showPasswordBtn_MouseLeave);
             // 
             // LoginForm
             // 
