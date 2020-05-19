@@ -1,4 +1,5 @@
 ﻿using diagram.Classes;
+using diagram.Forms.login;
 using diagram.Forms.Table;
 using System;
 using System.Collections.Generic;
@@ -64,7 +65,15 @@ namespace diagram.Forms.Users
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormState.PreviousPage.Show();
+            try
+            {
+                FormState.PreviousPage.Show();
+            }
+            catch(NullReferenceException)
+            {
+                this.Close();
+                new LoginForm(db).Show();
+            }
         }
     }
 

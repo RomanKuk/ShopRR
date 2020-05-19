@@ -83,8 +83,15 @@ namespace diagram.Forms.Users.SCEmployee
 
         private void backToHomeBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Classes.FormState.PreviousPage = this;
+            new InsernEdit.UserInfo(employee, db).Show();
         }
 
+        private void changeUserBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Forms.login.LoginForm(db).Show();
+        }
     }
 }

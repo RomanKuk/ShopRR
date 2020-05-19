@@ -44,13 +44,14 @@
             this.editBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.changeUserBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.changeTableBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.changeUserBtn = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
@@ -160,7 +161,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(360, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(322, 45);
+            this.panel5.Size = new System.Drawing.Size(268, 45);
             this.panel5.TabIndex = 1;
             // 
             // insertBtn
@@ -174,6 +175,7 @@
             this.insertBtn.Name = "insertBtn";
             this.insertBtn.Size = new System.Drawing.Size(38, 38);
             this.insertBtn.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.insertBtn, "Додати");
             this.insertBtn.UseVisualStyleBackColor = true;
             this.insertBtn.Click += new System.EventHandler(this.Insert_Click);
             // 
@@ -188,6 +190,7 @@
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(38, 38);
             this.editBtn.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.editBtn, "Редагувати");
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.Edit_Click);
             // 
@@ -202,6 +205,7 @@
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(38, 38);
             this.deleteBtn.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.deleteBtn, "Видалити");
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.Delete_Click);
             // 
@@ -216,6 +220,21 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(172, 45);
             this.panel4.TabIndex = 1;
+            // 
+            // changeUserBtn
+            // 
+            this.changeUserBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.changeUserBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.changeUserBtn.FlatAppearance.BorderSize = 0;
+            this.changeUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeUserBtn.Image = global::diagram.Properties.Resources.user;
+            this.changeUserBtn.Location = new System.Drawing.Point(0, 2);
+            this.changeUserBtn.Name = "changeUserBtn";
+            this.changeUserBtn.Size = new System.Drawing.Size(45, 42);
+            this.changeUserBtn.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.changeUserBtn, "Змінити користувача");
+            this.changeUserBtn.UseVisualStyleBackColor = true;
+            this.changeUserBtn.Click += new System.EventHandler(this.changeUserBtn_Click);
             // 
             // closeBtn
             // 
@@ -254,6 +273,7 @@
             this.changeTableBtn.Name = "changeTableBtn";
             this.changeTableBtn.Size = new System.Drawing.Size(38, 42);
             this.changeTableBtn.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.changeTableBtn, "Змінити таблицю");
             this.changeTableBtn.UseVisualStyleBackColor = true;
             this.changeTableBtn.Click += new System.EventHandler(this.backToHomeBtn_Click);
             // 
@@ -289,19 +309,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
-            // 
-            // changeUserBtn
-            // 
-            this.changeUserBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.changeUserBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.changeUserBtn.FlatAppearance.BorderSize = 0;
-            this.changeUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeUserBtn.Image = global::diagram.Properties.Resources.user;
-            this.changeUserBtn.Location = new System.Drawing.Point(0, 2);
-            this.changeUserBtn.Name = "changeUserBtn";
-            this.changeUserBtn.Size = new System.Drawing.Size(45, 42);
-            this.changeUserBtn.TabIndex = 14;
-            this.changeUserBtn.UseVisualStyleBackColor = true;
             // 
             // CityForm
             // 
@@ -349,5 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn Countries;
         private System.Windows.Forms.Button changeUserBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
