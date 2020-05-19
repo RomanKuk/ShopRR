@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using diagram.Forms.Users;
 
 namespace diagram.Forms.login
 {
@@ -41,32 +42,37 @@ namespace diagram.Forms.login
             {
                 case 1 ://Продавець
                     new SellerForm(db, employee).Show();
+                    this.Hide();
                     break;
                 case 2://Водій
-                    MessageBox.Show("даний користувач неіснує", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Даний користувач не існує", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case 3://Менеджер
                     new ManagerForm(db,employee).Show();
+                    this.Hide();
                     break;
                 case 4://Адмін
-                    MessageBox.Show("даний користувач неіснує", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new TableControlForm(db).Show();
+                    this.Hide();
                     break;
                 case 5://Консультант
-                    MessageBox.Show("даний користувач неіснує", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Даний користувач не існує", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case 6://Експедитор
                     new ExpeditorForm(db, employee).Show();
+                    this.Hide();
                     break;
                 case 7://Працівник сервісного центру
                     new ServiceCenterEmployeeForm(db, employee).Show();
+                    this.Hide();
                     break;
             }
-            this.Hide();
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void showPasswordBtn_MouseEnter(object sender, EventArgs e)

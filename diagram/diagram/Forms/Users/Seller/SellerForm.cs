@@ -71,7 +71,9 @@ namespace diagram.Forms.Users.Seller
 
         private void backToHomeBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Classes.FormState.PreviousPage = this;
+            new InsernEdit.UserInfo(employee, db).Show();
         }
 
         private void NewConsumerBtn_Click(object sender, EventArgs e)
@@ -83,6 +85,12 @@ namespace diagram.Forms.Users.Seller
                     customersBindingSource.DataSource = db.Customers.ToList();
                 }
             }
+        }
+
+        private void changeUserBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Forms.login.LoginForm(db).Show();
         }
     }
 }

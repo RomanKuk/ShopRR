@@ -83,5 +83,11 @@ namespace diagram.Forms.Table
             Classes.FormState.PreviousPage = this;
             new TableControlForm(db).Show();
         }
+
+        private void changeUserBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new login.LoginForm(db).Show();
+        }
     }
 }
