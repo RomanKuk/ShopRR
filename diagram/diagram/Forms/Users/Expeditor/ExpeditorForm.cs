@@ -67,7 +67,7 @@ namespace diagram.Forms.Users.Expeditor
 
         private void NewService_Click(object sender, EventArgs e)
         {
-            using (NewServiceForm form = new NewServiceForm(db))
+            using (NewServiceForm form = new NewServiceForm(db,employee))
             {
                 if (form.ShowDialog() == DialogResult.OK)
                 {

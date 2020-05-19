@@ -17,6 +17,8 @@ namespace diagram.Forms.Table
 
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'advancedDataSet.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.advancedDataSet.Employee);
             addressBindingSource.DataSource = db.Address.ToList();
             professionBindingSource.DataSource = db.Profession.ToList();
             shopsBindingSource.DataSource = db.Shops.ToList();
@@ -60,11 +62,18 @@ namespace diagram.Forms.Table
         {
             if (employeeBindingSource.Current != null)
             {
-                if (MessageBox.Show("Are you sure", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Ви впевнені ?", "Увага", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.Employee.Remove(employeeBindingSource.Current as Employee);
-                    employeeBindingSource.RemoveCurrent();
-                    db.SaveChanges();
+                    try
+                    {
+                        db.Employee.Remove(employeeBindingSource.Current as Employee);
+                        db.SaveChanges();
+                        employeeBindingSource.RemoveCurrent();
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("Дані не можливо видалити, оскільки це порушить цілісність бази даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

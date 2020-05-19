@@ -41,6 +41,7 @@
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.guaranteeCB = new System.Windows.Forms.CheckBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.addBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
@@ -169,6 +170,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.guaranteeCB);
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.totalPriceLabel);
@@ -177,6 +179,18 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1000, 181);
             this.panel7.TabIndex = 13;
+            // 
+            // guaranteeCB
+            // 
+            this.guaranteeCB.AutoSize = true;
+            this.guaranteeCB.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.guaranteeCB.Location = new System.Drawing.Point(917, 29);
+            this.guaranteeCB.Name = "guaranteeCB";
+            this.guaranteeCB.Size = new System.Drawing.Size(177, 17);
+            this.guaranteeCB.TabIndex = 12;
+            this.guaranteeCB.Text = "Включити додаткову гарантію";
+            this.guaranteeCB.UseVisualStyleBackColor = true;
+            this.guaranteeCB.CheckedChanged += new System.EventHandler(this.GuaranteeCB_CheckedChanged);
             // 
             // panel9
             // 
@@ -489,5 +503,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Goods;
         private System.Windows.Forms.DataGridViewTextBoxColumn Count;
+        private System.Windows.Forms.CheckBox guaranteeCB;
     }
 }

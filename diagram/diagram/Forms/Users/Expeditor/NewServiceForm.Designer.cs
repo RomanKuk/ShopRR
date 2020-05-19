@@ -35,6 +35,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.moneyBtn = new System.Windows.Forms.Button();
+            this.exchangeBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -115,6 +117,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.moneyBtn);
+            this.panel1.Controls.Add(this.exchangeBtn);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -128,12 +132,32 @@
             this.panel1.Size = new System.Drawing.Size(445, 420);
             this.panel1.TabIndex = 11;
             // 
+            // moneyBtn
+            // 
+            this.moneyBtn.Location = new System.Drawing.Point(62, 236);
+            this.moneyBtn.Name = "moneyBtn";
+            this.moneyBtn.Size = new System.Drawing.Size(125, 23);
+            this.moneyBtn.TabIndex = 19;
+            this.moneyBtn.Text = "Повернути гроші";
+            this.moneyBtn.UseVisualStyleBackColor = true;
+            this.moneyBtn.Click += new System.EventHandler(this.MoneyBtn_Click);
+            // 
+            // exchangeBtn
+            // 
+            this.exchangeBtn.Location = new System.Drawing.Point(282, 236);
+            this.exchangeBtn.Name = "exchangeBtn";
+            this.exchangeBtn.Size = new System.Drawing.Size(75, 23);
+            this.exchangeBtn.TabIndex = 18;
+            this.exchangeBtn.Text = "заміна";
+            this.exchangeBtn.UseVisualStyleBackColor = true;
+            this.exchangeBtn.Click += new System.EventHandler(this.ExchangeBtn_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(47, 183);
+            this.label4.Location = new System.Drawing.Point(12, 320);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 21);
             this.label4.TabIndex = 17;
@@ -173,7 +197,7 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.check;
-            this.saveBtn.Location = new System.Drawing.Point(159, 297);
+            this.saveBtn.Location = new System.Drawing.Point(322, 293);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(111, 77);
             this.saveBtn.TabIndex = 14;
@@ -189,7 +213,7 @@
             this.BreakageComboBox.DisplayMember = "Breakage1";
             this.BreakageComboBox.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BreakageComboBox.FormattingEnabled = true;
-            this.BreakageComboBox.Location = new System.Drawing.Point(230, 181);
+            this.BreakageComboBox.Location = new System.Drawing.Point(146, 313);
             this.BreakageComboBox.Name = "BreakageComboBox";
             this.BreakageComboBox.Size = new System.Drawing.Size(170, 28);
             this.BreakageComboBox.TabIndex = 5;
@@ -280,5 +304,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button moneyBtn;
+        private System.Windows.Forms.Button exchangeBtn;
     }
 }

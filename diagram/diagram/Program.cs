@@ -27,7 +27,7 @@ namespace diagram
                 .Where(e => e.Employee_ID.Equals(4))
                 .First();
             //Application.Run(new TableControlForm(db));
-            Application.Run(new LoginForm(db));
+            //Application.Run(new LoginForm(db));
             //Application.Run(new ServiceCenterEmployeeForm(db, employee));
             //Application.Run(new NewRepairForm(db));
             //Application.Run(new NewServiceTransportationForm(db));
@@ -41,7 +41,7 @@ namespace diagram
             //Application.Run(new ManagerForm(db, employee));
 
             //Application.Run(new EmployeeForm(db));
-            //Application.Run(new AddressForm(db));
+            Application.Run(new AddressForm(db));
             //Application.Run(new BasketForm(db));
             //Application.Run(new BrandForm(db));
             //Application.Run(new BrandSCForm(db));
