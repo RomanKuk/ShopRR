@@ -70,13 +70,13 @@ namespace diagram.Forms.Users.Seller
                 else
                 {
                     //повідомлення що товар уже є в списку
-                    MessageBox.Show("Current goods, presence in basket ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Товар уже присутній у списку ", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
                 // повідомлення що потрібно обрати кількість
-                MessageBox.Show("Please select count", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Оберіть кількість товару", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -128,6 +128,10 @@ namespace diagram.Forms.Users.Seller
                     .First();
                 totalPrice += price * basket.Count;
             }
+            if (guaranteeCB.Checked)
+            {
+                totalPrice = (totalPrice / 100) * 130;
+            }
             totalPriceLabel.Text = "Загальна сума : " + totalPrice;
             return totalPrice;
         }
@@ -146,41 +150,55 @@ namespace diagram.Forms.Users.Seller
         {
             if (DialogResult == DialogResult.OK)
             {
-                //TODO провірки
-                //генеруємо продажу
-                Sales sales = new Sales()
+                if (basketsContain.Count == 0)
                 {
-                    SalesCode = CodeGenerator.GenerateCode("Sales", "sl"),
-                    Employee_ID = employee.Employee_ID,
-                    Customer_ID = (int)customerComboBox.SelectedValue,
-                    Date = DateTime.Now,
-                    Total = TotalPrice()
-                };
-
-                db.Sales.Add(sales);
-                db.SaveChanges();
-                sales = (db.Sales as IEnumerable<Sales>)
-                    .Where(x => x.SalesCode.Equals(sales.SalesCode))
-                    .First();
-
-                GoodsShops gs;
-                foreach (Basket basket in basketsContain.Values)
-                {
-                    // записуємо вмістиме корзини в бд
-                    basket.Sales_ID = sales.Sales_ID;
-                    db.Basket.Add(basket);
-                    gs = db.GoodsShops
-                    .Where(x => x.GoodsShops_ID.Equals(basket.GoodsShops_ID))
-                    .First();
-                    // зменшити кількість товарів
-                    db.GoodsShops.Attach(gs);
-                    gs.Count -= basket.Count;
-                    db.SaveChanges();
+                    MessageBox.Show("Для здійснення замовлення оберіть товар", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    e.Cancel = true;
+                    return;
                 }
-                //db.SaveChanges();
-                MessageBox.Show(totalPriceLabel.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    //генеруємо продажу
+                    Sales sales = new Sales()
+                    {
+                        SalesCode = CodeGenerator.GenerateCode("Sales", "sl"),
+                        Employee_ID = employee.Employee_ID,
+                        Customer_ID = (int)customerComboBox.SelectedValue,
+                        Date = DateTime.Now,
+                        //-------------------------------------------TODO чи є гарантія -------------------------------------------------------
+                        Total = TotalPrice()
+                    };
+
+                    db.Sales.Add(sales);
+                    db.SaveChanges();
+                    sales = (db.Sales as IEnumerable<Sales>)
+                        .Where(x => x.SalesCode.Equals(sales.SalesCode))
+                        .First();
+
+                    GoodsShops gs;
+                    foreach (Basket basket in basketsContain.Values)
+                    {
+                        // записуємо вмістиме корзини в бд
+                        basket.Sales_ID = sales.Sales_ID;
+                        db.Basket.Add(basket);
+                        gs = db.GoodsShops
+                        .Where(x => x.GoodsShops_ID.Equals(basket.GoodsShops_ID))
+                        .First();
+                        // зменшити кількість товарів
+                        db.GoodsShops.Attach(gs);
+                        gs.Count -= basket.Count;
+                        db.SaveChanges();
+                    }
+                    //db.SaveChanges();
+                    MessageBox.Show(totalPriceLabel.Text, "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             e.Cancel = false;
+        }
+
+        private void GuaranteeCB_CheckedChanged(object sender, EventArgs e)
+        {
+            TotalPrice();
         }
     }
 }

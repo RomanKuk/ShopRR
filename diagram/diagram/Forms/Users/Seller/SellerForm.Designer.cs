@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.GStabPage = new System.Windows.Forms.TabPage();
             this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
@@ -45,6 +45,7 @@
             this.goodsShopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.advancedDataSet = new diagram.advancedDataSet();
             this.SalestabPage = new System.Windows.Forms.TabPage();
+            this.SalesContentBtn = new System.Windows.Forms.Button();
             this.advancedDataGridView2 = new Zuby.ADGV.AdvancedDataGridView();
             this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,9 +69,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.goodsShopsTableAdapter = new diagram.advancedDataSetTableAdapters.GoodsShopsTableAdapter();
             this.salesTableAdapter = new diagram.advancedDataSetTableAdapters.SalesTableAdapter();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.GStabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
@@ -122,14 +123,14 @@
             this.advancedDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.advancedDataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.advancedDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.advancedDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.advancedDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.advancedDataGridView1.ColumnHeadersHeight = 30;
             this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.goodsShopsIDDataGridViewTextBoxColumn,
@@ -138,14 +139,14 @@
             this.shopIDDataGridViewTextBoxColumn,
             this.countDataGridViewTextBoxColumn});
             this.advancedDataGridView1.DataSource = this.goodsShopsBindingSource1;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.advancedDataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.advancedDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.advancedDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedDataGridView1.FilterAndSortEnabled = true;
             this.advancedDataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
@@ -154,8 +155,8 @@
             this.advancedDataGridView1.ReadOnly = true;
             this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.advancedDataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.advancedDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.advancedDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.advancedDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.advancedDataGridView1.Size = new System.Drawing.Size(990, 333);
             this.advancedDataGridView1.TabIndex = 0;
@@ -236,6 +237,7 @@
             // 
             // SalestabPage
             // 
+            this.SalestabPage.Controls.Add(this.SalesContentBtn);
             this.SalestabPage.Controls.Add(this.advancedDataGridView2);
             this.SalestabPage.Location = new System.Drawing.Point(4, 36);
             this.SalestabPage.Name = "SalestabPage";
@@ -243,6 +245,16 @@
             this.SalestabPage.TabIndex = 1;
             this.SalestabPage.Text = "Продажі";
             this.SalestabPage.UseVisualStyleBackColor = true;
+            // 
+            // SalesContentBtn
+            // 
+            this.SalesContentBtn.Location = new System.Drawing.Point(916, 281);
+            this.SalesContentBtn.Name = "SalesContentBtn";
+            this.SalesContentBtn.Size = new System.Drawing.Size(75, 23);
+            this.SalesContentBtn.TabIndex = 1;
+            this.SalesContentBtn.Text = "Переглянути вміст";
+            this.SalesContentBtn.UseVisualStyleBackColor = true;
+            this.SalesContentBtn.Click += new System.EventHandler(this.SalesContentBtn_Click);
             // 
             // advancedDataGridView2
             // 
@@ -252,7 +264,7 @@
             this.advancedDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.advancedDataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.advancedDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.advancedDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.advancedDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.advancedDataGridView2.ColumnHeadersHeight = 30;
             this.advancedDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.salesIDDataGridViewTextBoxColumn,
@@ -262,7 +274,7 @@
             this.dateDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn});
             this.advancedDataGridView2.DataSource = this.salesBindingSource1;
-            this.advancedDataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.advancedDataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
             this.advancedDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedDataGridView2.FilterAndSortEnabled = true;
             this.advancedDataGridView2.GridColor = System.Drawing.Color.LightSkyBlue;
@@ -271,7 +283,7 @@
             this.advancedDataGridView2.ReadOnly = true;
             this.advancedDataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.advancedDataGridView2.RowHeadersVisible = false;
-            this.advancedDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.advancedDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.advancedDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.advancedDataGridView2.Size = new System.Drawing.Size(992, 335);
             this.advancedDataGridView2.TabIndex = 0;
@@ -608,5 +620,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button changeUserBtn;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button SalesContentBtn;
     }
 }

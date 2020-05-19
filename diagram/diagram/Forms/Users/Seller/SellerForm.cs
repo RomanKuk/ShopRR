@@ -92,5 +92,23 @@ namespace diagram.Forms.Users.Seller
             this.Hide();
             new Forms.login.LoginForm(db).Show();
         }
+
+        private void SalesContentBtn_Click(object sender, EventArgs e)
+        {
+            if (advancedDataGridView2.CurrentRow != null)
+            {
+                string code = advancedDataGridView2.CurrentRow.Cells["salesCodeDataGridViewTextBoxColumn"].Value.ToString();
+                using (SalesContentForm frm = new SalesContentForm(code, db))
+                {
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("оберіть продажу", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
