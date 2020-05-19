@@ -65,11 +65,19 @@ namespace diagram.Forms.Table
         {
             if (basketBindingSource.Current != null)
             {
-                if (MessageBox.Show("Are you sure", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Ви впевнені ?", "Увага", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.Basket.Remove(basketBindingSource.Current as Basket);
-                    basketBindingSource.RemoveCurrent();
-                    db.SaveChanges();
+                    try
+                    {
+                        db.Basket.Remove(basketBindingSource.Current as Basket);
+                        db.SaveChanges();
+                        basketBindingSource.RemoveCurrent();
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("Дані не можливо видалити, оскільки це порушить цілісність бази даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
             }
         }

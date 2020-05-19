@@ -63,11 +63,18 @@ namespace diagram.Forms.Table
         {
             if (brandBindingSource.Current != null)
             {
-                if (MessageBox.Show("Are you sure", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Ви впевнені ?", "Увага", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.Brand.Remove(brandBindingSource.Current as Brand);
-                    brandBindingSource.RemoveCurrent();
-                    db.SaveChanges();
+                    try
+                    {
+                        db.Brand.Remove(brandBindingSource.Current as Brand);
+                        db.SaveChanges();
+                        brandBindingSource.RemoveCurrent();
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("Дані не можливо видалити, оскільки це порушить цілісність бази даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

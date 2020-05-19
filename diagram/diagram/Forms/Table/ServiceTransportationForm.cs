@@ -58,11 +58,18 @@ namespace diagram.Forms.Table
         {
             if (serviceTransportationBindingSource.Current != null)
             {
-                if (MessageBox.Show("Are you sure", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Ви впевнені ?", "Увага", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.ServiceTransportation.Remove(serviceTransportationBindingSource.Current as ServiceTransportation);
-                    serviceTransportationBindingSource.RemoveCurrent();
-                    db.SaveChanges();
+                    try
+                    {
+                        db.ServiceTransportation.Remove(serviceTransportationBindingSource.Current as ServiceTransportation);
+                        db.SaveChanges();
+                        serviceTransportationBindingSource.RemoveCurrent();
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("Дані не можливо видалити, оскільки це порушить цілісність бази даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

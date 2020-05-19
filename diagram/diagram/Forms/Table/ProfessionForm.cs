@@ -56,11 +56,18 @@ namespace diagram.Forms.Table
         {
             if (professionBindingSource.Current != null)
             {
-                if (MessageBox.Show("Are you sure", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Ви впевнені ?", "Увага", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.Profession.Remove(professionBindingSource.Current as Profession);
-                    professionBindingSource.RemoveCurrent();
-                    db.SaveChanges();
+                    try
+                    {
+                        db.Profession.Remove(professionBindingSource.Current as Profession);
+                        db.SaveChanges();
+                        professionBindingSource.RemoveCurrent();
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show("Дані не можливо видалити, оскільки це порушить цілісність бази даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
