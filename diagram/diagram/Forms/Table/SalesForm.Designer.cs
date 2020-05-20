@@ -29,17 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customers = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -56,6 +50,13 @@
             this.formTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customers = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Guarante = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -75,14 +76,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.salesIDDataGridViewTextBoxColumn,
@@ -90,86 +91,32 @@
             this.Customers,
             this.dateDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn,
-            this.Employee});
+            this.Employee,
+            this.Guarante});
             this.dataGridView1.DataSource = this.salesBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.LightSkyBlue;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 375);
             this.dataGridView1.TabIndex = 0;
             // 
-            // salesIDDataGridViewTextBoxColumn
-            // 
-            this.salesIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_ID";
-            this.salesIDDataGridViewTextBoxColumn.HeaderText = "Sales_ID";
-            this.salesIDDataGridViewTextBoxColumn.Name = "salesIDDataGridViewTextBoxColumn";
-            this.salesIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.salesIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // salesCodeDataGridViewTextBoxColumn
-            // 
-            this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
-            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
-            this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Customers
-            // 
-            this.Customers.DataPropertyName = "Customer_ID";
-            this.Customers.DataSource = this.customersBindingSource;
-            this.Customers.DisplayMember = "LastName";
-            this.Customers.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Customers.HeaderText = "Прізвище покупця";
-            this.Customers.Name = "Customers";
-            this.Customers.ReadOnly = true;
-            this.Customers.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Customers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Customers.ValueMember = "Customer_ID";
-            // 
             // customersBindingSource
             // 
             this.customersBindingSource.DataSource = typeof(diagram.Customers);
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Сума";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Employee
-            // 
-            this.Employee.DataPropertyName = "Employee_ID";
-            this.Employee.DataSource = this.employeeBindingSource;
-            this.Employee.DisplayMember = "LastName";
-            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Employee.HeaderText = "Прізвище продавця";
-            this.Employee.Name = "Employee";
-            this.Employee.ReadOnly = true;
-            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Employee.ValueMember = "Employee_ID";
             // 
             // employeeBindingSource
             // 
@@ -349,6 +296,68 @@
             this.panel1.Size = new System.Drawing.Size(800, 375);
             this.panel1.TabIndex = 11;
             // 
+            // salesIDDataGridViewTextBoxColumn
+            // 
+            this.salesIDDataGridViewTextBoxColumn.DataPropertyName = "Sales_ID";
+            this.salesIDDataGridViewTextBoxColumn.HeaderText = "Sales_ID";
+            this.salesIDDataGridViewTextBoxColumn.Name = "salesIDDataGridViewTextBoxColumn";
+            this.salesIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salesIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // salesCodeDataGridViewTextBoxColumn
+            // 
+            this.salesCodeDataGridViewTextBoxColumn.DataPropertyName = "SalesCode";
+            this.salesCodeDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.salesCodeDataGridViewTextBoxColumn.Name = "salesCodeDataGridViewTextBoxColumn";
+            this.salesCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Customers
+            // 
+            this.Customers.DataPropertyName = "Customer_ID";
+            this.Customers.DataSource = this.customersBindingSource;
+            this.Customers.DisplayMember = "LastName";
+            this.Customers.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Customers.HeaderText = "Прізвище покупця";
+            this.Customers.Name = "Customers";
+            this.Customers.ReadOnly = true;
+            this.Customers.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Customers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Customers.ValueMember = "Customer_ID";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Сума";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Employee
+            // 
+            this.Employee.DataPropertyName = "Employee_ID";
+            this.Employee.DataSource = this.employeeBindingSource;
+            this.Employee.DisplayMember = "LastName";
+            this.Employee.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Employee.HeaderText = "Прізвище продавця";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            this.Employee.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Employee.ValueMember = "Employee_ID";
+            // 
+            // Guarante
+            // 
+            this.Guarante.DataPropertyName = "Guarante";
+            this.Guarante.HeaderText = "Гарантія";
+            this.Guarante.Name = "Guarante";
+            this.Guarante.ReadOnly = true;
+            // 
             // SalesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -394,13 +403,14 @@
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private System.Windows.Forms.BindingSource salesBindingSource;
+        private System.Windows.Forms.Button changeUserBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn Customers;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn Employee;
-        private System.Windows.Forms.Button changeUserBtn;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Guarante;
     }
 }
