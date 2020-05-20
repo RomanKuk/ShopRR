@@ -31,7 +31,8 @@ namespace diagram.Forms.login
                 login();
             } catch (InvalidOperationException)
             {
-                MessageBox.Show("Введіть коректні логін та пароль", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Введіть коректні логін та пароль", "Message", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 passwordTextBox.Text = "";
             }
         }
@@ -45,7 +46,10 @@ namespace diagram.Forms.login
                     this.Hide();
                     break;
                 case 2://Водій
-                    MessageBox.Show("Даний користувач не існує", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Для водіїв поки що не передбачено інтерфейсу", "Message", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loginTextBox.Text = "";
+                    passwordTextBox.Text = "";
                     break;
                 case 3://Менеджер
                     new ManagerForm(db,employee).Show();
@@ -56,7 +60,10 @@ namespace diagram.Forms.login
                     this.Hide();
                     break;
                 case 5://Консультант
-                    MessageBox.Show("Даний користувач не існує", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Для консультантів поки що не передбачено інтерфейсу", "Message", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loginTextBox.Text = "";
+                    passwordTextBox.Text = "";
                     break;
                 case 6://Експедитор
                     new ExpeditorForm(db, employee).Show();

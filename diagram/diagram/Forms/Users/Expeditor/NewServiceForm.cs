@@ -104,7 +104,7 @@ namespace diagram.Forms.Users.Expeditor
                 {
                     if (DateTime.Now > dt.AddYears(1))
                     {
-                        MessageBox.Show("Ганатійний термін вийшов", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Гарантійний термін вийшов", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -127,21 +127,28 @@ namespace diagram.Forms.Users.Expeditor
             if (code.Equals(EXCHANGE_STATUS))
             {
                 // провірити чи є товар в даний момент на складі
-                GoodsShops goodsShop = (db.GoodsShops as IEnumerable<GoodsShops>)
-                    .Where(x => x.Good_ID.Equals(GoodsComboBox.SelectedValue) &&
-                    x.Shop_ID.Equals(employee.Shop_ID))
-                    .FirstOrDefault();
-                if (goodsShop.Count > 0)
+                try
                 {
-                    db.GoodsShops.Attach(goodsShop);
-                    goodsShop.Count -= 1;
-                    db.SaveChanges();
-                    createService(code);
-                    this.Close();
+                    GoodsShops goodsShop = (db.GoodsShops as IEnumerable<GoodsShops>)
+                        .Where(x => x.Good_ID.Equals(GoodsComboBox.SelectedValue) &&
+                        x.Shop_ID.Equals(employee.Shop_ID))
+                        .FirstOrDefault();
+                    if (goodsShop.Count > 0)
+                    {
+                        db.GoodsShops.Attach(goodsShop);
+                        goodsShop.Count -= 1;
+                        db.SaveChanges();
+                        createService(code);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("В даний момент у магазині немає цього товару", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch(NullReferenceException)
                 {
-                    MessageBox.Show("В даний момент у мангазині немає цього товару", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("В даний момент у магазині немає цього товару", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else

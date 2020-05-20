@@ -35,6 +35,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,14 +44,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
             this.codeTB = new System.Windows.Forms.TextBox();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.employeeLastNameCB = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerLastNameCB = new System.Windows.Forms.ComboBox();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.totalNUD = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -138,6 +138,24 @@
             this.panel1.Size = new System.Drawing.Size(400, 420);
             this.panel1.TabIndex = 11;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.salesBindingSource, "Guarante", true));
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckAlign", this.salesBindingSource, "Guarante", true));
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.salesBindingSource, "Guarante", true));
+            this.checkBox1.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(203, 284);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(176, 24);
+            this.checkBox1.TabIndex = 20;
+            this.checkBox1.Text = "Включити гарантію";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(diagram.Sales);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -223,10 +241,6 @@
             this.codeTB.Size = new System.Drawing.Size(170, 27);
             this.codeTB.TabIndex = 1;
             // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataSource = typeof(diagram.Sales);
-            // 
             // datePicker
             // 
             this.datePicker.BackColor = System.Drawing.Color.Cornsilk;
@@ -287,22 +301,14 @@
             0,
             65536});
             this.totalNUD.Location = new System.Drawing.Point(203, 198);
+            this.totalNUD.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.totalNUD.Name = "totalNUD";
             this.totalNUD.Size = new System.Drawing.Size(170, 27);
             this.totalNUD.TabIndex = 5;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.salesBindingSource, "Guarante", true));
-            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckAlign", this.salesBindingSource, "Guarante", true));
-            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.salesBindingSource, "Guarante", true));
-            this.checkBox1.Location = new System.Drawing.Point(132, 291);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(122, 17);
-            this.checkBox1.TabIndex = 20;
-            this.checkBox1.Text = "Включити гарантію";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // SalesIEF
             // 
