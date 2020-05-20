@@ -79,6 +79,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.transportationTableAdapter = new diagram.advancedDataSetTableAdapters.TransportationTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.newServiceBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.transportationTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
@@ -168,7 +169,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.advancedDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.advancedDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.advancedDataGridView1.Size = new System.Drawing.Size(992, 470);
+            this.advancedDataGridView1.Size = new System.Drawing.Size(992, 456);
             this.advancedDataGridView1.TabIndex = 0;
             // 
             // transportationIDDataGridViewTextBoxColumn
@@ -262,11 +263,12 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Orange;
+            this.panel6.Controls.Add(this.newServiceBtn);
             this.panel6.Controls.Add(this.newTransportationBtn);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 470);
+            this.panel6.Location = new System.Drawing.Point(0, 456);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(992, 45);
+            this.panel6.Size = new System.Drawing.Size(992, 59);
             this.panel6.TabIndex = 1;
             // 
             // newTransportationBtn
@@ -281,7 +283,7 @@
             this.newTransportationBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newTransportationBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.newTransportationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.newTransportationBtn.Location = new System.Drawing.Point(545, 0);
+            this.newTransportationBtn.Location = new System.Drawing.Point(546, 7);
             this.newTransportationBtn.Name = "newTransportationBtn";
             this.newTransportationBtn.Size = new System.Drawing.Size(244, 45);
             this.newTransportationBtn.TabIndex = 8;
@@ -577,6 +579,23 @@
             // 
             this.transportationTableAdapter.ClearBeforeFill = true;
             // 
+            // newServiceBtn
+            // 
+            this.newServiceBtn.BackColor = System.Drawing.Color.Transparent;
+            this.newServiceBtn.BackgroundImage = global::diagram.Properties.Resources.repair;
+            this.newServiceBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.newServiceBtn.FlatAppearance.BorderSize = 0;
+            this.newServiceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newServiceBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newServiceBtn.Location = new System.Drawing.Point(251, 0);
+            this.newServiceBtn.Name = "newServiceBtn";
+            this.newServiceBtn.Size = new System.Drawing.Size(230, 59);
+            this.newServiceBtn.TabIndex = 9;
+            this.newServiceBtn.Text = "Прийняти товар \r\nвід покупця";
+            this.newServiceBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.newServiceBtn.UseVisualStyleBackColor = false;
+            this.newServiceBtn.Click += new System.EventHandler(this.newServiceBtn_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -659,5 +678,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button changeUserBtn;
+        private System.Windows.Forms.Button newServiceBtn;
     }
 }

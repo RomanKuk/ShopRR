@@ -529,9 +529,9 @@
             this.newServiceBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newServiceBtn.Location = new System.Drawing.Point(234, 19);
             this.newServiceBtn.Name = "newServiceBtn";
-            this.newServiceBtn.Size = new System.Drawing.Size(226, 46);
+            this.newServiceBtn.Size = new System.Drawing.Size(230, 59);
             this.newServiceBtn.TabIndex = 6;
-            this.newServiceBtn.Text = "Товар в ремонт";
+            this.newServiceBtn.Text = "Прийняти товар \r\nвід покупця";
             this.newServiceBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.newServiceBtn.UseVisualStyleBackColor = false;
             this.newServiceBtn.Click += new System.EventHandler(this.NewService_Click);

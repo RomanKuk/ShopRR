@@ -183,10 +183,11 @@
             // guaranteeCB
             // 
             this.guaranteeCB.AutoSize = true;
+            this.guaranteeCB.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guaranteeCB.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guaranteeCB.Location = new System.Drawing.Point(917, 29);
             this.guaranteeCB.Name = "guaranteeCB";
-            this.guaranteeCB.Size = new System.Drawing.Size(177, 17);
+            this.guaranteeCB.Size = new System.Drawing.Size(327, 29);
             this.guaranteeCB.TabIndex = 12;
             this.guaranteeCB.Text = "Включити додаткову гарантію";
             this.guaranteeCB.UseVisualStyleBackColor = true;

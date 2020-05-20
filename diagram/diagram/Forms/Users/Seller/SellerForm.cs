@@ -95,6 +95,11 @@ namespace diagram.Forms.Users.Seller
 
         private void SalesContentBtn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void showPasswordBtn_Click(object sender, EventArgs e)
+        {
             if (advancedDataGridView2.CurrentRow != null)
             {
                 string code = advancedDataGridView2.CurrentRow.Cells["salesCodeDataGridViewTextBoxColumn"].Value.ToString();

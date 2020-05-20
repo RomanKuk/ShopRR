@@ -134,9 +134,16 @@
             // 
             // moneyBtn
             // 
-            this.moneyBtn.Location = new System.Drawing.Point(62, 236);
+            this.moneyBtn.AutoSize = true;
+            this.moneyBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.moneyBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.moneyBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.moneyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moneyBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.moneyBtn.Location = new System.Drawing.Point(62, 230);
             this.moneyBtn.Name = "moneyBtn";
-            this.moneyBtn.Size = new System.Drawing.Size(125, 23);
+            this.moneyBtn.Size = new System.Drawing.Size(150, 32);
             this.moneyBtn.TabIndex = 19;
             this.moneyBtn.Text = "Повернути гроші";
             this.moneyBtn.UseVisualStyleBackColor = true;
@@ -144,11 +151,18 @@
             // 
             // exchangeBtn
             // 
-            this.exchangeBtn.Location = new System.Drawing.Point(282, 236);
+            this.exchangeBtn.AutoSize = true;
+            this.exchangeBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exchangeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.exchangeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.exchangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exchangeBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exchangeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.exchangeBtn.Location = new System.Drawing.Point(282, 230);
             this.exchangeBtn.Name = "exchangeBtn";
-            this.exchangeBtn.Size = new System.Drawing.Size(75, 23);
+            this.exchangeBtn.Size = new System.Drawing.Size(95, 33);
             this.exchangeBtn.TabIndex = 18;
-            this.exchangeBtn.Text = "заміна";
+            this.exchangeBtn.Text = "Обміняти";
             this.exchangeBtn.UseVisualStyleBackColor = true;
             this.exchangeBtn.Click += new System.EventHandler(this.ExchangeBtn_Click);
             // 

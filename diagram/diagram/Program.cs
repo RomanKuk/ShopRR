@@ -38,10 +38,10 @@ namespace diagram
             //Application.Run(new NewTransportationForm(db,employee));
             //Application.Run(new NewSalesForm(db,employee));
             //Application.Run(new SellerForm(db, employee));
-            //Application.Run(new ManagerForm(db, employee));
+            Application.Run(new ManagerForm(db, employee));
 
             //Application.Run(new EmployeeForm(db));
-            Application.Run(new AddressForm(db));
+            //Application.Run(new AddressForm(db));
             //Application.Run(new BasketForm(db));
             //Application.Run(new BrandForm(db));
             //Application.Run(new BrandSCForm(db));

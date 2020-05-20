@@ -38,8 +38,13 @@ namespace diagram.Forms.Users.Seller
                     .FirstOrDefault();
                 dataGridView1.Rows.Add(model, b.Count);
             }
-            salesCodeLabel.Text = "Продаж номер : " + sales;
+            formTitle.Text = "Перегляд продажу: " + sales;
 
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
