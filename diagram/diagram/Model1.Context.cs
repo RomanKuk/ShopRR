@@ -51,7 +51,6 @@ namespace diagram
         public virtual DbSet<Shipment> Shipment { get; set; }
         public virtual DbSet<Shops> Shops { get; set; }
         public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Transportation> Transportation { get; set; }
     }
 }

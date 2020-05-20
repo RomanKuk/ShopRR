@@ -34,7 +34,7 @@ namespace diagram.Forms.Users.Expeditor
 
         private void SalesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<int> baskets =  (db.Basket as IEnumerable<Basket>)
+            List<int> baskets = (db.Basket as IEnumerable<Basket>)
                 .Where(x => x.Sales_ID.Equals(SalesComboBox.SelectedValue))
                 .Select(x => x.GoodsShops_ID)
                 .ToList();
@@ -59,7 +59,7 @@ namespace diagram.Forms.Users.Expeditor
 
         private void MoneyBtn_Click(object sender, EventArgs e)
         {
-            twoWeekTerm(MONEY_STATUS,"Товар не підлягає поверненю після 14 днів після купівлі");
+            twoWeekTerm(MONEY_STATUS, "Товар не підлягає поверненю після 14 днів після купівлі");
         }
 
         private void ExchangeBtn_Click(object sender, EventArgs e)
@@ -93,41 +93,61 @@ namespace diagram.Forms.Users.Expeditor
 
         private void twoWeekTerm(int code, string message)
         {
-            DateTime dt = (db.Sales as IEnumerable<Sales>)
+            Sales sales = (db.Sales as IEnumerable<Sales>)
                 .Where(x => x.Sales_ID.Equals(SalesComboBox.SelectedValue))
-                .Select(x => x.Date)
                 .FirstOrDefault();
+            DateTime dt = sales.Date;
+
             if (DateTime.Now > dt.AddDays(14))
             {
-                MessageBox.Show(message, "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (code.Equals(EXCHANGE_STATUS))
+                if (sales.Guarante)
                 {
-                    // провірити чи є товар в даний момент на складі----------------------------------------------
-                    GoodsShops goodsShop = (db.GoodsShops as IEnumerable<GoodsShops>)
-                        .Where(x => x.Good_ID.Equals(GoodsComboBox.SelectedValue) &&
-                        x.Shop_ID.Equals(employee.Shop_ID) )
-                        .FirstOrDefault();
-                    if (goodsShop.Count > 0)
+                    if (DateTime.Now > dt.AddYears(1))
                     {
-                        db.GoodsShops.Attach(goodsShop);
-                        goodsShop.Count -= 1;
-                        db.SaveChanges();
-                        createService(code);
-                        this.Close();
+                        MessageBox.Show("Ганатійний термін вийшов", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("В даний момент у мангазині немає цього товару", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CheckExchangesStatus(code);
                     }
                 }
                 else
                 {
+                    MessageBox.Show(message, "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                CheckExchangesStatus(code);
+            }
+        }
+
+        private void CheckExchangesStatus(int code)
+        {
+            if (code.Equals(EXCHANGE_STATUS))
+            {
+                // провірити чи є товар в даний момент на складі
+                GoodsShops goodsShop = (db.GoodsShops as IEnumerable<GoodsShops>)
+                    .Where(x => x.Good_ID.Equals(GoodsComboBox.SelectedValue) &&
+                    x.Shop_ID.Equals(employee.Shop_ID))
+                    .FirstOrDefault();
+                if (goodsShop.Count > 0)
+                {
+                    db.GoodsShops.Attach(goodsShop);
+                    goodsShop.Count -= 1;
+                    db.SaveChanges();
                     createService(code);
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("В даний момент у мангазині немає цього товару", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                createService(code);
+                this.Close();
             }
         }
     }

@@ -25,6 +25,7 @@ namespace diagram
         public int Employee_ID { get; set; }
         public int Customer_ID { get; set; }
         public System.DateTime Date { get; set; }
+        public bool Guarante { get; set; }
         public decimal Total { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

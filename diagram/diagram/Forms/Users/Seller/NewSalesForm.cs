@@ -165,7 +165,7 @@ namespace diagram.Forms.Users.Seller
                         Employee_ID = employee.Employee_ID,
                         Customer_ID = (int)customerComboBox.SelectedValue,
                         Date = DateTime.Now,
-                        //-------------------------------------------TODO чи є гарантія -------------------------------------------------------
+                        Guarante = guaranteeCB.Checked,
                         Total = TotalPrice()
                     };
 
