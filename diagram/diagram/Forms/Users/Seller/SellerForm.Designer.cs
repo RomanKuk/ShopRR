@@ -38,20 +38,16 @@
             this.goodsShopsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shopIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodsShopsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.advancedDataSet = new diagram.advancedDataSet();
             this.SalestabPage = new System.Windows.Forms.TabPage();
-            this.SalesContentBtn = new System.Windows.Forms.Button();
             this.advancedDataGridView2 = new Zuby.ADGV.AdvancedDataGridView();
             this.salesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -70,24 +66,28 @@
             this.goodsShopsTableAdapter = new diagram.advancedDataSetTableAdapters.GoodsShopsTableAdapter();
             this.salesTableAdapter = new diagram.advancedDataSetTableAdapters.SalesTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.showСontentBtn = new System.Windows.Forms.Button();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsShopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.GStabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).BeginInit();
             this.SalestabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -194,10 +194,6 @@
             this.goodIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.goodIDDataGridViewTextBoxColumn.ValueMember = "Good_ID";
             // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
-            // 
             // shopIDDataGridViewTextBoxColumn
             // 
             this.shopIDDataGridViewTextBoxColumn.DataPropertyName = "Shop_ID";
@@ -211,10 +207,6 @@
             this.shopIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.shopIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.shopIDDataGridViewTextBoxColumn.ValueMember = "Shop_ID";
-            // 
-            // shopsBindingSource
-            // 
-            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
             // 
             // countDataGridViewTextBoxColumn
             // 
@@ -237,7 +229,7 @@
             // 
             // SalestabPage
             // 
-            this.SalestabPage.Controls.Add(this.SalesContentBtn);
+            this.SalestabPage.Controls.Add(this.showСontentBtn);
             this.SalestabPage.Controls.Add(this.advancedDataGridView2);
             this.SalestabPage.Location = new System.Drawing.Point(4, 36);
             this.SalestabPage.Name = "SalestabPage";
@@ -245,16 +237,6 @@
             this.SalestabPage.TabIndex = 1;
             this.SalestabPage.Text = "Продажі";
             this.SalestabPage.UseVisualStyleBackColor = true;
-            // 
-            // SalesContentBtn
-            // 
-            this.SalesContentBtn.Location = new System.Drawing.Point(916, 281);
-            this.SalesContentBtn.Name = "SalesContentBtn";
-            this.SalesContentBtn.Size = new System.Drawing.Size(75, 23);
-            this.SalesContentBtn.TabIndex = 1;
-            this.SalesContentBtn.Text = "Переглянути вміст";
-            this.SalesContentBtn.UseVisualStyleBackColor = true;
-            this.SalesContentBtn.Click += new System.EventHandler(this.SalesContentBtn_Click);
             // 
             // advancedDataGridView2
             // 
@@ -331,10 +313,6 @@
             this.customerIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.customerIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.customerIDDataGridViewTextBoxColumn.ValueMember = "Customer_ID";
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataSource = typeof(diagram.Customers);
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -537,6 +515,42 @@
             // 
             this.salesTableAdapter.ClearBeforeFill = true;
             // 
+            // showСontentBtn
+            // 
+            this.showСontentBtn.AutoSize = true;
+            this.showСontentBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showСontentBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.showСontentBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(74)))), ((int)(((byte)(50)))));
+            this.showСontentBtn.FlatAppearance.BorderSize = 0;
+            this.showСontentBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.showСontentBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.showСontentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showСontentBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showСontentBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.showСontentBtn.Image = global::diagram.Properties.Resources.visibility;
+            this.showСontentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showСontentBtn.Location = new System.Drawing.Point(188, 3);
+            this.showСontentBtn.Name = "showСontentBtn";
+            this.showСontentBtn.Size = new System.Drawing.Size(28, 25);
+            this.showСontentBtn.TabIndex = 18;
+            this.showСontentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.showСontentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.showСontentBtn, "Переглянути вміст");
+            this.showСontentBtn.UseVisualStyleBackColor = true;
+            this.showСontentBtn.Click += new System.EventHandler(this.showPasswordBtn_Click);
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataSource = typeof(diagram.Goods);
+            // 
+            // shopsBindingSource
+            // 
+            this.shopsBindingSource.DataSource = typeof(diagram.Shops);
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataSource = typeof(diagram.Customers);
+            // 
             // goodsShopsBindingSource
             // 
             this.goodsShopsBindingSource.DataSource = typeof(diagram.GoodsShops);
@@ -559,13 +573,11 @@
             this.tabControl1.ResumeLayout(false);
             this.GStabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataSet)).EndInit();
             this.SalestabPage.ResumeLayout(false);
+            this.SalestabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -573,6 +585,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsShopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -620,6 +635,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button changeUserBtn;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button SalesContentBtn;
+        private System.Windows.Forms.Button showСontentBtn;
     }
 }
