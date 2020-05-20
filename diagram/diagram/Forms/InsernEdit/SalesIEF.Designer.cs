@@ -49,6 +49,7 @@
             this.customerLastNameCB = new System.Windows.Forms.ComboBox();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.totalNUD = new System.Windows.Forms.NumericUpDown();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -119,6 +120,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -289,6 +291,19 @@
             this.totalNUD.Size = new System.Drawing.Size(170, 27);
             this.totalNUD.TabIndex = 5;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.salesBindingSource, "Guarante", true));
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckAlign", this.salesBindingSource, "Guarante", true));
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.salesBindingSource, "Guarante", true));
+            this.checkBox1.Location = new System.Drawing.Point(132, 291);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(122, 17);
+            this.checkBox1.TabIndex = 20;
+            this.checkBox1.Text = "Включити гарантію";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // SalesIEF
             // 
             this.AcceptButton = this.saveBtn;
@@ -339,5 +354,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

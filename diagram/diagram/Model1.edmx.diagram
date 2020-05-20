@@ -4,34 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6aaa48787383445ab1fcb29dea92474a" Name="Diagram1">
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Address" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Basket" Width="1.5" PointX="15" PointY="16.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Brand" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.BrandSC" Width="1.5" PointX="10" PointY="17.375" IsExpanded="true" />
+      <Diagram DiagramId="ce6f45c2982a426fa9fc4288dcfad8b4" Name="Diagram1">
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Address" Width="1.5" PointX="5.25" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Basket" Width="1.5" PointX="15" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Brand" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.BrandSC" Width="1.5" PointX="9.75" PointY="18" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.Breakage" Width="1.5" PointX="15" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Categories" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Categories" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.CategoriesSC" Width="1.5" PointX="12.75" PointY="25.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.City" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Countries" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Customers" Width="1.5" PointX="7.5" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Delivery" Width="1.5" PointX="12" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Employee" Width="1.5" PointX="9.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.City" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Countries" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Customers" Width="1.5" PointX="7.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Delivery" Width="1.5" PointX="12" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Employee" Width="1.5" PointX="9.75" PointY="25.125" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.Goods" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.GoodsShops" Width="1.5" PointX="12.75" PointY="19.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Makers" Width="1.5" PointX="5.25" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Profession" Width="1.5" PointX="7.5" PointY="31.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Provide" Width="1.5" PointX="7.5" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.ProvideOrder" Width="1.5" PointX="9.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Repair" Width="1.5" PointX="21.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.GoodsShops" Width="1.5" PointX="12.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Makers" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Profession" Width="1.5" PointX="7.5" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Provide" Width="1.5" PointX="7.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.ProvideOrder" Width="1.5" PointX="9.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Repair" Width="1.5" PointX="21.75" PointY="21" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.Sales" Width="1.5" PointX="9.75" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.Service" Width="1.5" PointX="17.25" PointY="16.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.ServiceCenter" Width="1.5" PointX="7.5" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.ServiceCenter" Width="1.5" PointX="7.5" PointY="25" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.ServiceTransportation" Width="1.5" PointX="19.5" PointY="20.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Shipment" Width="1.5" PointX="15" PointY="21" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.Shops" Width="1.5" PointX="7.5" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Shipment" Width="1.5" PointX="15" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="my_db_for_db_2Model.Shops" Width="1.5" PointX="7.5" PointY="28.375" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.Status" Width="1.5" PointX="15" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="my_db_for_db_2Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="my_db_for_db_2Model.Transportation" Width="1.5" PointX="15" PointY="25" IsExpanded="true" />
         <AssociationConnector Association="my_db_for_db_2Model.fk_Address_City_City_ID" ManuallyRouted="false" />
         <AssociationConnector Association="my_db_for_db_2Model.fk_Customers_Address_Address" ManuallyRouted="false" />
