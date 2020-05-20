@@ -59,12 +59,12 @@ namespace diagram.Forms.Users.Expeditor
 
         private void MoneyBtn_Click(object sender, EventArgs e)
         {
-            twoWeekTerm(MONEY_STATUS,"Товар не підлягає поверненю після двох тижнів");
+            twoWeekTerm(MONEY_STATUS,"Товар не підлягає поверненю після 14 днів після купівлі");
         }
 
         private void ExchangeBtn_Click(object sender, EventArgs e)
         {
-            twoWeekTerm(EXCHANGE_STATUS, "Товар не підлягає заміні після двох тижнів");
+            twoWeekTerm(EXCHANGE_STATUS, "Товар не підлягає заміні після 14 днів після купівлі");
         }
 
         private void createService(int status)

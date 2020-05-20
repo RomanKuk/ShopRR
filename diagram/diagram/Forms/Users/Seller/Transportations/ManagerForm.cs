@@ -1,4 +1,5 @@
-﻿using System;
+﻿using diagram.Forms.Users.Expeditor;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -126,6 +127,16 @@ namespace diagram.Forms.Users.Seller.Transportations
         {
             this.Hide();
             new Forms.login.LoginForm(db).Show();
+        }
+
+        private void newServiceBtn_Click(object sender, EventArgs e)
+        {
+            using (NewServiceForm form = new NewServiceForm(db, employee))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                }
+            }
         }
     }
 }
