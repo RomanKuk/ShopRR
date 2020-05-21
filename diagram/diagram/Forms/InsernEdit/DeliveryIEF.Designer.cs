@@ -118,7 +118,7 @@
             this.countNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countNUD.Location = new System.Drawing.Point(202, 267);
             this.countNUD.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});

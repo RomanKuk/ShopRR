@@ -331,7 +331,7 @@
             65536});
             this.priceNUD.Location = new System.Drawing.Point(186, 185);
             this.priceNUD.Maximum = new decimal(new int[] {
-            100000,
+            10000000,
             0,
             0,
             0});
@@ -352,7 +352,7 @@
             65536});
             this.revenuePriceNUD.Location = new System.Drawing.Point(186, 218);
             this.revenuePriceNUD.Maximum = new decimal(new int[] {
-            100000,
+            10000000,
             0,
             0,
             0});

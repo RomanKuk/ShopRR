@@ -252,6 +252,11 @@
             this.countNUD.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.goodsShopsBindingSource, "Count", true));
             this.countNUD.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countNUD.Location = new System.Drawing.Point(187, 214);
+            this.countNUD.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.countNUD.Name = "countNUD";
             this.countNUD.Size = new System.Drawing.Size(170, 27);
             this.countNUD.TabIndex = 3;

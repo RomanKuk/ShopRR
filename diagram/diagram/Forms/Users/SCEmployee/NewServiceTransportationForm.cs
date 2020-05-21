@@ -23,7 +23,7 @@ namespace diagram.Forms.Users.SCEmployee
                 .ToList();
             if (serviceBindingSource.Count.Equals(0))
             {
-                MessageBox.Show("немає нових заявок на ремонт", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Немає нових заявок на ремонт", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             SelectSC();

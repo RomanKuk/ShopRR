@@ -25,7 +25,9 @@ namespace diagram.Forms.Users.Expeditor
                 .Where(x => !shipments.Contains(x.Deliver_ID))
                 .ToList();
             shopsBindingSource.DataSource = db.Shops.ToList();
-            employeeBindingSource.DataSource = db.Employee.ToList();
+            employeeBindingSource.DataSource = (db.Employee as IEnumerable<Employee>)
+                .Where( x => x.Profession_ID == 1)
+                .ToList();
         }
 
         private void Confirm_Click(object sender, EventArgs e)

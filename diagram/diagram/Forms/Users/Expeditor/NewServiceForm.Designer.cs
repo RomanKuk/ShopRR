@@ -171,7 +171,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 320);
+            this.label4.Location = new System.Drawing.Point(12, 285);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 21);
             this.label4.TabIndex = 17;
@@ -211,7 +211,7 @@
             this.saveBtn.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveBtn.Image = global::diagram.Properties.Resources.check;
-            this.saveBtn.Location = new System.Drawing.Point(322, 293);
+            this.saveBtn.Location = new System.Drawing.Point(155, 331);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(111, 77);
             this.saveBtn.TabIndex = 14;
@@ -227,9 +227,9 @@
             this.BreakageComboBox.DisplayMember = "Breakage1";
             this.BreakageComboBox.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BreakageComboBox.FormattingEnabled = true;
-            this.BreakageComboBox.Location = new System.Drawing.Point(146, 313);
+            this.BreakageComboBox.Location = new System.Drawing.Point(155, 283);
             this.BreakageComboBox.Name = "BreakageComboBox";
-            this.BreakageComboBox.Size = new System.Drawing.Size(170, 28);
+            this.BreakageComboBox.Size = new System.Drawing.Size(254, 28);
             this.BreakageComboBox.TabIndex = 5;
             this.BreakageComboBox.ValueMember = "Breakage_ID";
             // 

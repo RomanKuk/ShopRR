@@ -150,9 +150,9 @@
             this.TableComboBox.BackColor = System.Drawing.Color.Cornsilk;
             this.TableComboBox.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TableComboBox.FormattingEnabled = true;
-            this.TableComboBox.Location = new System.Drawing.Point(113, 169);
+            this.TableComboBox.Location = new System.Drawing.Point(70, 168);
             this.TableComboBox.Name = "TableComboBox";
-            this.TableComboBox.Size = new System.Drawing.Size(200, 28);
+            this.TableComboBox.Size = new System.Drawing.Size(275, 28);
             this.TableComboBox.TabIndex = 1;
             // 
             // TableControlForm
