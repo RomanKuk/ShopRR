@@ -51,6 +51,11 @@ namespace diagram.Forms.Table
                 {
                     makersBindingSource.DataSource = db.Makers.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    makersBindingSource.DataSource = db.Makers.ToList();
+                }
             }
         }
 

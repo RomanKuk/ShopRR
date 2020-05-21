@@ -45,21 +45,26 @@ namespace diagram.Forms.Users.SCEmployee
                 Comment = CommentTextBox.Text,
                 Date = DateTime.Now
             };
-            int serviceID = (db.ServiceTransportation as IEnumerable<ServiceTransportation>)
-                .Where(x => x.ServiceTransportation_ID.Equals((int)STComboBox.SelectedValue))
-                .Select(x => x.Service_ID)
-                .FirstOrDefault();
-            Service service = (db.Service as IEnumerable<Service>)
-                .Where(x => x.Service_ID.Equals(serviceID))
-                .FirstOrDefault();
-            if (!service.Status_ID.Equals(StatusComboBox.SelectedValue))
+            try
             {
-                db.Service.Attach(service);
-                service.Status_ID = (int) StatusComboBox.SelectedValue;
+                int serviceID = (db.ServiceTransportation as IEnumerable<ServiceTransportation>)
+                    .Where(x => x.ServiceTransportation_ID.Equals((int)STComboBox.SelectedValue))
+                    .Select(x => x.Service_ID)
+                    .FirstOrDefault();
+                Service service = (db.Service as IEnumerable<Service>)
+                    .Where(x => x.Service_ID.Equals(serviceID))
+                    .FirstOrDefault();
+                if (!service.Status_ID.Equals(StatusComboBox.SelectedValue))
+                {
+                    db.Service.Attach(service);
+                    service.Status_ID = (int)StatusComboBox.SelectedValue;
+                }
+                db.Repair.Add(repair);
+                db.SaveChanges();
+                updateTableContent();
             }
-            db.Repair.Add(repair);
-            db.SaveChanges();
-            updateTableContent();
+            catch (Exception)// переробити
+            { }
         }
 
 

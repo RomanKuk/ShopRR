@@ -51,6 +51,11 @@ namespace diagram.Forms.Table
                 {
                     serviceTransportationBindingSource.DataSource = db.ServiceTransportation.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    serviceTransportationBindingSource.DataSource = db.ServiceTransportation.ToList();
+                }
             }
         }
 

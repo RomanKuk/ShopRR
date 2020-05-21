@@ -49,6 +49,11 @@ namespace diagram
                 {
                     cityBindingSource.DataSource = db.City.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    cityBindingSource.DataSource = db.City.ToList();
+                }
             }
         }
 

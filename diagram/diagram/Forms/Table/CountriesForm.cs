@@ -56,6 +56,11 @@ namespace diagram
                 {
                     countriesBindingSource.DataSource = db.Countries.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    countriesBindingSource.DataSource = db.Countries.ToList();
+                }
             }
         }
 

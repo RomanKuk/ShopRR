@@ -168,7 +168,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 94);
+            this.label3.Location = new System.Drawing.Point(9, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(203, 21);
             this.label3.TabIndex = 16;
@@ -179,7 +179,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(109, 138);
+            this.label2.Location = new System.Drawing.Point(115, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 21);
             this.label2.TabIndex = 15;

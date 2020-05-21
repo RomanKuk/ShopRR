@@ -51,6 +51,11 @@ namespace diagram.Forms.Table
                 {
                     addressBindingSource.DataSource = db.Address.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    addressBindingSource.DataSource = db.Address.ToList();
+                }
             }
         }
 

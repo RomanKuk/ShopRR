@@ -50,6 +50,11 @@ namespace diagram.Forms.Table
                 {
                     serviceCenterBindingSource.DataSource = db.ServiceCenter.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    serviceCenterBindingSource.DataSource = db.ServiceCenter.ToList();
+                }
             }
         }
 

@@ -58,6 +58,11 @@ namespace diagram.Forms.Table
                 {
                     basketBindingSource.DataSource = db.Basket.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    basketBindingSource.DataSource = db.Basket.ToList();
+                }
             }
         }
 

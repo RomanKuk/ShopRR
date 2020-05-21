@@ -50,6 +50,11 @@ namespace diagram.Forms.Table
                 {
                     categoriesBindingSource.DataSource = db.Categories.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    categoriesBindingSource.DataSource = db.Categories.ToList();
+                }
             }
         }
 
