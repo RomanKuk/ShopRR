@@ -80,6 +80,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.transportationTableAdapter = new diagram.advancedDataSetTableAdapters.TransportationTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.transportationTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
@@ -334,6 +335,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.SellerComboBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.SellerChart);
@@ -596,6 +598,16 @@
             // 
             this.transportationTableAdapter.ClearBeforeFill = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(366, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(341, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Статистика за останній тиждень ";
+            // 
             // ManagerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -679,5 +691,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button changeUserBtn;
         private System.Windows.Forms.Button newServiceBtn;
+        private System.Windows.Forms.Label label4;
     }
 }
