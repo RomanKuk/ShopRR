@@ -52,9 +52,11 @@ namespace diagram.Forms.Users.Seller
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     salesBindingSource.DataSource = db.Sales.ToList();
+                    this.salesTableAdapter.Fill(this.advancedDataSet.Sales);
                 }
             }
             goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
+            this.goodsShopsTableAdapter.Fill(this.advancedDataSet.GoodsShops);
 
         }
 

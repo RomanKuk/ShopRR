@@ -24,7 +24,7 @@ namespace diagram
             var db = new my_db_for_db_2Entities();
             var employee =db.Employee.Where(e => e.Employee_ID.Equals(4)).First();
             //Application.Run(new TableControlForm(db));
-            Application.Run(new LoginForm(db));
+            //Application.Run(new LoginForm(db));
             //Application.Run(new ServiceCenterEmployeeForm(db, employee));
             //Application.Run(new NewRepairForm(db));
             //Application.Run(new NewServiceTransportationForm(db));

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace diagram.Forms.Users.SCEmployee
@@ -53,7 +47,8 @@ namespace diagram.Forms.Users.SCEmployee
             {
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    serviceTransportationBindingSource.DataSource = db.ServiceTransportation.ToList();
+                    this.serviceTableAdapter.Fill(this.advancedDataSet.Service);
+                    this.serviceTransportationTableAdapter.Fill(this.advancedDataSet.ServiceTransportation);
                 }
             }
 
@@ -66,7 +61,7 @@ namespace diagram.Forms.Users.SCEmployee
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                 }
-                repairBindingSource.DataSource = db.Repair.ToList();
+                this.repairTableAdapter.Fill(this.advancedDataSet.Repair);
             }
         }
 
