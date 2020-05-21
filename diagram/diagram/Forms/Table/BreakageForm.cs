@@ -49,6 +49,11 @@ namespace diagram.Forms.Table
                 {
                     breakageBindingSource.DataSource = db.Breakage.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    breakageBindingSource.DataSource = db.Breakage.ToList();
+                }
             }
         }
 

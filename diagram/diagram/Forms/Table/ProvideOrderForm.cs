@@ -50,6 +50,12 @@ namespace diagram.Forms.Table
                 {
                     provideOrderBindingSource.DataSource = db.ProvideOrder.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    provideOrderBindingSource.DataSource = db.ProvideOrder.ToList();
+                }
+
             }
         }
 

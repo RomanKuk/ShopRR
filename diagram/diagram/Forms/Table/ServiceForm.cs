@@ -52,6 +52,11 @@ namespace diagram.Forms.Table
                 {
                     serviceBindingSource.DataSource = db.Service.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    serviceBindingSource.DataSource = db.Service.ToList();
+                }
             }
         }
 

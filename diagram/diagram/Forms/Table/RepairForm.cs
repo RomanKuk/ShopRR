@@ -50,6 +50,11 @@ namespace diagram.Forms.Table
                 {
                     repairBindingSource.DataSource = db.Repair.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    repairBindingSource.DataSource = db.Repair.ToList();
+                }
             }
         }
 

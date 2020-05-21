@@ -49,6 +49,11 @@ namespace diagram.Forms.Table
                 {
                     professionBindingSource.DataSource = db.Profession.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    professionBindingSource.DataSource = db.Profession.ToList();
+                }
             }
         }
 

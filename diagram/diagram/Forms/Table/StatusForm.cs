@@ -49,6 +49,11 @@ namespace diagram.Forms.Table
                 {
                     statusBindingSource.DataSource = db.Status.ToList();
                 }
+                else
+                {
+                    db = new my_db_for_db_2Entities();
+                    statusBindingSource.DataSource = db.Status.ToList();
+                }
             }
         }
 
