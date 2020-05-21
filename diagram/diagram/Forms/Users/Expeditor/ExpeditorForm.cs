@@ -47,6 +47,7 @@ namespace diagram.Forms.Users.Expeditor
                 {
                     provideOrderBindingSource.DataSource = db.ProvideOrder.ToList();
                     deliveryBindingSource.DataSource = db.Delivery.ToList();
+                    this.deliveryTableAdapter.Fill(this.advancedDataSet.Delivery);
                 }
             }
 
@@ -60,6 +61,7 @@ namespace diagram.Forms.Users.Expeditor
                 {
                     goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
                     shipmentBindingSource.DataSource = db.Shipment.ToList();
+                    this.shipmentTableAdapter.Fill(this.advancedDataSet.Shipment);
                 }
             }
 

@@ -52,6 +52,7 @@
             this.transportationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.advancedDataSet = new diagram.advancedDataSet();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.newServiceBtn = new System.Windows.Forms.Button();
             this.newTransportationBtn = new System.Windows.Forms.Button();
             this.statisticsTabPage = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -79,7 +80,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.transportationTableAdapter = new diagram.advancedDataSetTableAdapters.TransportationTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.newServiceBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.transportationTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
@@ -271,6 +271,23 @@
             this.panel6.Size = new System.Drawing.Size(992, 59);
             this.panel6.TabIndex = 1;
             // 
+            // newServiceBtn
+            // 
+            this.newServiceBtn.BackColor = System.Drawing.Color.Transparent;
+            this.newServiceBtn.BackgroundImage = global::diagram.Properties.Resources.repair;
+            this.newServiceBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.newServiceBtn.FlatAppearance.BorderSize = 0;
+            this.newServiceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newServiceBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newServiceBtn.Location = new System.Drawing.Point(251, 0);
+            this.newServiceBtn.Name = "newServiceBtn";
+            this.newServiceBtn.Size = new System.Drawing.Size(230, 59);
+            this.newServiceBtn.TabIndex = 9;
+            this.newServiceBtn.Text = "Прийняти товар \r\nвід покупця";
+            this.newServiceBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.newServiceBtn.UseVisualStyleBackColor = false;
+            this.newServiceBtn.Click += new System.EventHandler(this.newServiceBtn_Click);
+            // 
             // newTransportationBtn
             // 
             this.newTransportationBtn.BackgroundImage = global::diagram.Properties.Resources.add;
@@ -368,7 +385,6 @@
             this.SellerChart.Location = new System.Drawing.Point(3, 3);
             this.SellerChart.Name = "SellerChart";
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Legend = "Legend1";
             series1.Name = "Продажі";
@@ -442,6 +458,7 @@
             this.SalesShopChart.Location = new System.Drawing.Point(3, 3);
             this.SalesShopChart.Name = "SalesShopChart";
             series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
             series2.Name = "Продаж";
             this.SalesShopChart.Series.Add(series2);
@@ -578,23 +595,6 @@
             // transportationTableAdapter
             // 
             this.transportationTableAdapter.ClearBeforeFill = true;
-            // 
-            // newServiceBtn
-            // 
-            this.newServiceBtn.BackColor = System.Drawing.Color.Transparent;
-            this.newServiceBtn.BackgroundImage = global::diagram.Properties.Resources.repair;
-            this.newServiceBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.newServiceBtn.FlatAppearance.BorderSize = 0;
-            this.newServiceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newServiceBtn.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newServiceBtn.Location = new System.Drawing.Point(251, 0);
-            this.newServiceBtn.Name = "newServiceBtn";
-            this.newServiceBtn.Size = new System.Drawing.Size(230, 59);
-            this.newServiceBtn.TabIndex = 9;
-            this.newServiceBtn.Text = "Прийняти товар \r\nвід покупця";
-            this.newServiceBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.newServiceBtn.UseVisualStyleBackColor = false;
-            this.newServiceBtn.Click += new System.EventHandler(this.newServiceBtn_Click);
             // 
             // ManagerForm
             // 

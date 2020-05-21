@@ -101,6 +101,7 @@ namespace diagram.Forms.Users.Seller.Transportations
                 {
                     goodsShopsBindingSource.DataSource = db.GoodsShops.ToList();
                     transportationBindingSource.DataSource = db.Transportation.ToList();
+                    this.transportationTableAdapter.Fill(this.advancedDataSet.Transportation);
                 }
             }
         }
